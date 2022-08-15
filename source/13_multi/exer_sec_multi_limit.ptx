@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<exercises>
+  <exercise>
+    <statement>
+      <p>
+        Describe in your own words the difference between boundary and interior points of a set.
+        </p>
+    </statement>
+    <answer>
+      <p>
+        Answers will vary.
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        Use your own words to describe (informally) what <m>\displaystyle \lim _{(x,y)\rightarrow (1,2)} f(x,y) = 17</m> means.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        Answers will vary. One answer is “As <m>(x,y)</m> gets close to <m>(1,2)</m>, <m>f(x,y)</m> gets close to 17.”
+      </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        Give an example of a closed, bounded set.
+        </p>
+    </statement>
+    <answer>
+      <p>
+        Answers will vary.One possible answer: <m>\lbrace (x,y) | x^2+y^2\le 1\rbrace </m>
+      </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        Give an example of a closed, unbounded set.
+        </p>
+    </statement>
+    <answer>
+      <p>
+        Answers will vary.One possible answer: <m>\lbrace (x,y) | y\ge x^2 \rbrace </m>
+      </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        Give an example of a open, bounded set.
+        </p>
+    </statement>
+    <answer>
+      <p>
+        Answers will vary.One possible answer: <m>\lbrace (x,y) | x^2+y^2\lt 1 \rbrace </m>
+      </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        Give an example of a open, unbounded set.
+        </p>
+    </statement>
+    <answer>
+      <p>
+        Answers will vary.One possible answer: <m>\lbrace (x,y) | y\gt x^2 \rbrace </m>
+      </p>
+    </answer>
+  </exercise>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In the following exercises, a set <m>S</m> is given.
+      </p>
+      <ol>
+        <li>
+          <p>
+            Give one boundary point and one interior point, when possible, of <m>S</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            State whether <m>S</m> is open, closed, or neither.
+          </p>
+        </li>
+        <li>
+          <p>
+            State whether <m>S</m> is bounded or unbounded.
+          </p>
+        </li>
+      </ol>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle S = \left\lbrace (x,y)\,\left| \, \frac{(x-1)^2}{4}+\frac{(y-3)^2}{9}\le 1\right.\right\rbrace </m>
+        </p>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              Answers will vary.interior point: <m>(1,3)</m>boundary point: <m>(3,3)</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>S</m> is a closed set</p>
+          </li>
+          <li>
+            <p>
+              <m>S</m> is bounded</p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle S = \left\lbrace (x,y)\,| \, y\ne x^2\right\rbrace </m>
+        </p>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              Answers will vary.interior point: <m>(-5,28)</m>boundary point: <m>(3,9)</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>S</m> is an open set</p>
+          </li>
+          <li>
+            <p>
+              <m>S</m> is unbounded</p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle S = \left\lbrace (x,y)\,| \, x^2+y^2=1\right\rbrace </m>
+        </p>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              Answers will vary.interior point: noneboundary point: <m>(0,-1)</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>S</m> is a closed set, consisting only of boundary points</p>
+          </li>
+          <li>
+            <p>
+              <m>S</m> is bounded</p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle S=\lbrace  (x,y) | y\gt\sin x\rbrace </m>
+        </p>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              Answers will vary.Interior point: <m>(0,1)</m>Boundary point: <m>(0,0)</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>S</m> is a closed set, containing all of its boundary points.</p>
+          </li>
+          <li>
+            <p>
+              <m>S</m> is unbounded.</p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 11–14:
+        </p>
+      <ol>
+        <li>
+          <p>
+            Find the domain <m>D</m> of the given function.
+          </p>
+        </li>
+        <li>
+          <p>
+            State whether <m>D</m> is an open or closed set.
+          </p>
+        </li>
+        <li>
+          <p>
+            State whether <m>D</m> is bounded or unbounded.
+          </p>
+        </li>
+      </ol>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x,y) = \sqrt{9-x^2-y^2}</m>
+        </p>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              <m>D = \left\lbrace (x,y)\, |\, 9-x^2-y^2\ge 0\right\rbrace </m>.</p>
+          </li>
+          <li>
+            <p>
+              <m>D</m> is a closed set.</p>
+          </li>
+          <li>
+            <p>
+              <m>D</m> is bounded.</p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x,y) = \sqrt{y-x^2}</m>
+        </p>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              <m>D = \left\lbrace (x,y)\, |\, y\ge x^2\right\rbrace </m>.</p>
+          </li>
+          <li>
+            <p>
+              <m>D</m> is a closed set.</p>
+          </li>
+          <li>
+            <p>
+              <m>D</m> is unbounded.</p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x,y) = \frac{1}{\sqrt{y-x^2}}</m>
+        </p>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              <m>D = \left\lbrace (x,y)\, |\, y\gt x^2\right\rbrace </m>.</p>
+          </li>
+          <li>
+            <p>
+              <m>D</m> is an open set.</p>
+          </li>
+          <li>
+            <p>
+              <m>D</m> is unbounded.</p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x,y) = \frac{x^2-y^2}{x^2+y^2}</m>
+        </p>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              <m>D = \left\lbrace (x,y)\, |\, (x,y)\ne (0,0) \right\rbrace </m>.</p>
+          </li>
+          <li>
+            <p>
+              <m>D</m> is an open set.</p>
+          </li>
+          <li>
+            <p>
+              <m>D</m> is unbounded.</p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In the following exercises, a limit is given. Evaluate the limit along the paths given, then state why these results show the given limit does not exist.
+        </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lim _{(x,y)\rightarrow (0,0)} \frac{x^2-y^2}{x^2+y^2}</m>
+        </p>
+        <ol>
+          <li>
+            <p>
+              Along the path <m>y=0</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Along the path <m>x=0</m>.
+            </p>
+          </li>
+        </ol>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              Along <m>y=0</m>, the limit is 1.
+            </p>
+          </li>
+          <li>
+            <p>
+              Along <m>x=0</m>, the limit is <m>-1</m>.
+            </p>
+          </li>
+        </ol>
+        <p>
+          Since the above limits are not equal, the limit does not exist.
+          </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lim _{(x,y)\rightarrow (0,0)} \frac{x+y}{x-y}</m>
+        </p>
+        <ol>
+          <li>
+            <p>
+              Along the path <m>y=mx</m>.
+            </p>
+          </li>
+        </ol>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              Along <m>y=mx</m>, the limit is <m>\frac{m+1}{m-1}</m>.
+            </p>
+          </li>
+        </ol>
+        <p>
+          Since the above limit varies according to what <m>m</m> is used, each limit is different, meaning the overall limit does not exist.
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lim _{(x,y)\rightarrow (0,0)} \frac{xy-y^2}{y^2+x}</m>
+        </p>
+        <ol>
+          <li>
+            <p>
+              Along the path <m>y=mx</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Along the path <m>x=0</m>.
+            </p>
+          </li>
+        </ol>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              Along <m>y=mx</m>, the limit is <m>\displaystyle \frac{mx(1-m)}{m^2x+1}=0</m> for all <m>m</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Along <m>x=0</m>, the limit is <m>-1</m>.
+            </p>
+          </li>
+        </ol>
+        <p>
+          Since the above limits are not equal, the limit does not exist.
+          </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lim _{(x,y)\rightarrow (0,0)} \frac{\sin (x^2)}{y}</m>
+        </p>
+        <ol>
+          <li>
+            <p>
+              Along the path <m>y=mx</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Along the path <m>y=x^2</m>.
+            </p>
+          </li>
+        </ol>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              Along <m>y=mx</m>, the limit is: <error c="Undefined command" l="1373" n="\intertext" /><md>
+                <mrow> \lim _{(x,y)\rightarrow (0,0)} \frac{\sin (x^2)}{y} \amp = \lim _{x\rightarrow 0} \frac{\sin (x^2)}{mx} {apply L^{\prime }Hôpital^{\prime }s Rule} \amp= \lim _{x\rightarrow 0} \frac{2x\cos (x^2)}{m}</mrow>
+                <mrow> \amp= 0. </mrow>
+              </md>
+              
+            </p>
+          </li>
+          <li>
+            <p>
+              Along <m>x=0</m>, the limit is:<md>
+                <mrow> \lim _{(x,y)\rightarrow (0,0)} \frac{\sin (x^2)}{y} = \lim _{x\rightarrow 0} \frac{\sin (x^2)}{x^2}.</mrow>
+              </md>
+              This can be evaluated with L'Hôpital's Rule or from known limits; it is 1.
+            </p>
+          </li>
+        </ol>
+        <p>
+          Since the limits along the lines <m>y=mx</m> are not the same as the limit along <m>y=x^2</m>, the overall limit does not exist.
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lim _{(x,y)\rightarrow (1,2)} \frac{x+y-3}{x^2-1}</m>
+        </p>
+        <ol>
+          <li>
+            <p>
+              Along the path <m>y=2</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Along the path <m>y=x+1</m>.
+            </p>
+          </li>
+        </ol>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              Along <m>y=2</m>, the limit is:<md>
+                <mrow> \lim _{(x,y)\rightarrow (1,2)} \frac{x+y-3}{x^2-1} \amp = \lim _{x\rightarrow 1} \frac{x-1}{x^2-1}</mrow>
+                <mrow> \amp= \lim _{x\rightarrow 1} \frac{1}{x+1}</mrow>
+                <mrow> \amp= 1/2. </mrow>
+              </md>
+              
+            </p>
+          </li>
+          <li>
+            <p>
+              Along <m>y=x+1</m>, the limit is:<md>
+                <mrow> \lim _{(x,y)\rightarrow (1,2)} \frac{x+y-3}{x^2-1} \amp = \lim _{x\rightarrow 1} \frac{2(x-1)}{x^2-1}</mrow>
+                <mrow> \amp= \lim _{x\rightarrow 1} \frac{2}{x+1}</mrow>
+                <mrow> \amp= 1. </mrow>
+              </md>
+              
+            </p>
+          </li>
+        </ol>
+        <p>
+          Since the limits along the lines <m>y=2</m> and <m>y=x+1</m> differ, the overall limit does not exist.
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lim _{(x,y)\rightarrow (\pi ,\pi /2)} \frac{\sin x}{\cos y}</m>
+        </p>
+        <ol>
+          <li>
+            <p>
+              Along the path <m>x=\pi </m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Along the path <m>y=x-\pi /2</m>.
+            </p>
+          </li>
+        </ol>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              Along <m>x=\pi </m>, the limit is:<md>
+                <mrow> \lim _{(x,y)\rightarrow (\pi ,\pi /2)} \frac{\sin x}{\cos y} \amp = \lim _{y\rightarrow \pi /2} \frac{0}{\cos y}</mrow>
+                <mrow> \amp= 0. </mrow>
+              </md>
+              
+            </p>
+          </li>
+          <li>
+            <p>
+              Along <m>y=x-\pi /2</m>, the limit is: <error c="Undefined command" l="1412" n="\intertext" /><md>
+                <mrow> \lim _{(x,y)\rightarrow (\pi ,\pi /2)} \frac{\sin x}{\cos y} \amp = \lim _{x\rightarrow \pi } \frac{\sin x}{\cos (x-\pi /2)}{Apply L^{\prime }Hôpital^{\prime }s Rule:} \amp= \lim _{x\rightarrow \pi } \frac{\cos x}{\sin (x-\pi /2)}</mrow>
+                <mrow> \amp= -1. </mrow>
+              </md>
+              
+            </p>
+          </li>
+        </ol>
+        <p>
+          Since the limits along the lines <m>x=\pi </m> and <m>y=x-\pi </m> differ, the overall limit does not exist.
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+</exercises>

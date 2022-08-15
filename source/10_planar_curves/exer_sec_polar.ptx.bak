@@ -1,0 +1,1422 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<exercises>
+  <subexercises>
+    <title>Terms and Concepts</title>
+    <exercise>
+          <statement>
+            <p>
+              In your own words,
+              describe how to plot the polar point <m>P(r,\theta)</m>.
+            </p>
+          </statement>
+          <answer>
+            <p>
+              Answers will vary.
+            </p>
+          </answer>
+    </exercise>
+
+    <exercise>
+          <statement>
+            <p>
+              True or False?
+              When plotting a point with polar coordinate <m>P(r,\theta)</m>,
+              <m>r</m> must be positive.
+            </p>
+          </statement>
+          <answer>
+            <p>False</p>
+          </answer>
+    </exercise>
+
+    <exercise>
+          <statement>
+            <p>
+              True or False?
+              Every point in the Cartesian plane can be represented by a polar coordinate.
+            </p>
+          </statement>
+          <answer>
+            <p>True</p>
+          </answer>
+    </exercise>
+
+    <exercise>
+          <statement>
+            <p>
+              True or False?
+              Every point in the Cartesian plane can be represented uniquely by a polar coordinate.
+            </p>
+          </statement>
+          <answer>
+            <p>FAlse</p>
+          </answer>
+    </exercise>
+  </subexercises>
+  <subexercises>
+    <title>Problems</title>
+      <exercise>
+        <statement>
+          <p>
+            Plot the points with the given polar coordinates.
+          </p>
+
+          <p>
+            <ol cols="2">
+              <li>
+                <p>
+                  <m>A=P(2,0)</m>
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <m>B=P(1,\pi)</m>
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <m>C=P(-2,\pi/2)</m>
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <m>D=P(1,\pi/4)</m>
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+        <answer>
+          <image xml:id="img_polar7bX1" width="47%">
+            <description></description>
+            <latex-image>
+
+            \begin{tikzpicture}
+
+            \foreach \x in {1,2}
+            {
+              \draw (0,0) circle (\x);
+              \draw (\x,0) node [below right] {\(\x\)};
+            }
+            \draw [thick,-&gt;,&gt;=stealth] (0,0) node [below] {\(O\)} -- (2.5,0);
+
+            \filldraw (xyz polar cs: angle=0,radius=2) circle (2pt) node [above right] {\(A\)}
+                      (xyz polar cs: angle=180,radius=1)circle (2pt) node [right] {\(B\)}
+                      (xyz polar cs: angle=90,radius=-2)circle (2pt) node [right] {\(C\)}
+                      (xyz polar cs: angle=45,radius=1)circle (2pt) node [right] {\(D\)};
+
+            \end{tikzpicture}
+
+            </latex-image>
+          </image>
+        </answer>
+      </exercise>
+
+      <exercise>
+            <statement>
+              <p>
+                Plot the points with the given polar coordinates.
+              </p>
+
+              <p>
+                <ol cols="2">
+                  <li>
+                    <p>
+                      <m>A=P(2,3\pi)</m>
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      <m>B=P(1,-\pi)</m>
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      <m>C=P(1,2)</m>
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      <m>D=P(1/2,5\pi/6)</m>
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </statement>
+            <answer>
+                <image xml:id="img_polar7bX3" width="47%">
+                  <description></description>
+                  <latex-image>
+
+                  \begin{tikzpicture}
+
+                  \foreach \x in {1,2}
+                  {
+                    \draw (0,0) circle (\x);
+                    \draw (\x,0) node [below right] {\(\x\)};
+                  }
+                  \draw [thick,-&gt;,&gt;=stealth] (0,0) node [below] {\(O\)} -- (2.5,0);
+
+                  \filldraw (xyz polar cs: angle=180,radius=2) circle (2pt) node [above] {\(A\)}
+                            (xyz polar cs: angle=180,radius=1)circle (2pt) node [above] {\(B\)}
+                            (xyz polar cs: angle=114.6,radius=1)circle (2pt) node [right] {\(C\)}
+                            (xyz polar cs: angle=150,radius=.5)circle (2pt) node [right] {\(D\)};
+
+                  \end{tikzpicture}
+
+                  </latex-image>
+                </image>
+            </answer>
+      </exercise>
+
+      <exercise>
+            <statement>
+              <p>
+                For each of the given points give two sets of polar coordinates that identify it,
+                where <m>0\leq \theta\leq 2\pi</m>.
+              </p>
+
+                <image xml:id="img_polar7bX4" width="47%">
+                  <description></description>
+                  <latex-image>
+
+                  \begin{tikzpicture}
+
+                  \draw [dashed,gray] (-3.1,0) -- (0,0);
+                  \draw [thick,-&gt;,&gt;=stealth] (0,0) node [below] {\(O\)} -- (3.5,0);
+
+                  \filldraw (0,0) circle (1.5pt);
+
+                  \foreach \x in {1,2,3}
+                  {
+                    \draw (0,0) circle (\x cm);
+                    \draw (\x,0) node [below right] {\x};
+                  }
+
+                  \foreach \x in {30,45,60,90,120,135,150}
+                  {
+                    \draw [rotate=\x,dashed,gray] (-3.1,0) -- (3.1,0);
+                  }
+
+                  \filldraw (xyz polar cs: angle=45,radius=2.5) circle (2pt) node [above] {\(A\)}
+                            (xyz polar cs: angle=-30,radius=1)circle (2pt) node [below] {\(B\)}
+                            (xyz polar cs: angle=240,radius=3)circle (2pt) node [right] {\(C\)}
+                            (xyz polar cs: angle=120,radius=1.5)circle (2pt) node [right] {\(D\)};
+
+                  \end{tikzpicture}
+
+                  </latex-image>
+                </image>
+
+            </statement>
+            <answer>
+              <p>
+                <m>A=P(2.5,\pi/4)</m> and <m>P(-2.5,5\pi/4)</m>;
+              </p>
+
+              <p>
+                <m>B=P(-1,5\pi/6)</m> and <m>P(1,11\pi/6)</m>;
+              </p>
+
+              <p>
+                <m>C=P(3,4\pi/3)</m> and <m>P(-3,\pi/3)</m>;
+              </p>
+
+              <p>
+                <m>D=P(1.5,2\pi/3)</m> and <m>P(-1.5,5\pi/3)</m>;
+              </p>
+            </answer>
+      </exercise>
+
+      <exercise>
+            <statement>
+              <p>
+                Convert each of the following polar coordinates to rectangular,
+                and each of the following rectangular coordinates to polar.
+              </p>
+
+              <p>
+                <ol cols="2" marker="a">
+                  <li>
+                    <p>
+                      <m>A=P(2,\pi/4)</m>
+                    </p>
+
+                    <p>
+                      <m>(x,y)=</m>
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      <m>B=P(2,-\pi/4)</m>
+                    </p>
+
+                    <p>
+                      <m>(x,y)=</m>
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      <m>C=(2,-1)</m>
+                    </p>
+
+                    <p>
+                      <m>P(r,\theta)=P</m>
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      <m>D=(-2,1)</m>
+                    </p>
+
+                    <p>
+                      <m>P(r,\theta)=P</m>
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                <m>A=(\sqrt{2},\sqrt{2})</m>
+              </p>
+
+              <p>
+                <m>B=(\sqrt{2},-\sqrt{2})</m>
+              </p>
+
+              <p>
+                <m>C=P(\sqrt{5},-0.46)</m>
+              </p>
+
+              <p>
+                <m>D=P(\sqrt{5},2.68)</m>
+              </p>
+            </answer>
+      </exercise>
+
+      <exercise>
+          <statement>
+            <p>
+              Convert each of the following polar coordinates to rectangular,
+              and each of the following rectangular coordinates to polar.
+            </p>
+
+            <p>
+              <ol cols="2" marker="a">
+                <li>
+                  <p>
+                    <m>A=P(3,\pi)</m>
+                  </p>
+
+                  <p>
+                    <m>(x,y)=</m>
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <m>B=P(1,2\pi/3)</m>
+                  </p>
+
+                  <p>
+                    <m>(x,y)=</m>
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <m>C=(0,4)</m>
+                  </p>
+
+                  <p>
+                    <m>P(r,\theta)=P</m>
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <m>D=(1,-\sqrt{3})</m>
+                  </p>
+
+                  <p>
+                    <m>P(r,\theta)=P</m>
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </statement>
+          <answer>
+            <p>
+              <m>A=(-3,0)</m>
+            </p>
+
+            <p>
+              <m>B=(-1/2,\sqrt{3}/2)</m>
+            </p>
+
+            <p>
+              <m>C=P(4,\pi/2)</m>
+            </p>
+
+            <p>
+              <m>D=P(2,-\pi/3)</m>
+            </p>
+          </answer>
+      </exercise>
+
+      <exercisegroup cols="2">
+
+        <introduction>
+          <p>
+            In the following exercises, graph the polar function on the given interval.
+          </p>
+        </introduction>
+
+        <exercise>
+              <statement>
+                <p>
+                  <m>r=2</m>,<m>0\leq \theta\leq \pi/2</m>
+                </p>
+              </statement>
+              <answer>
+              <!-- START figures/fig_09_04_ex_11.tex -->
+                  <image xml:id="img_09_04_ex_11X">
+                    <description></description>
+                    <latex-image>
+
+                    \begin{tikzpicture}
+
+                    \begin{axis}[
+                    ymin=-.5,ymax=2.1,
+                    xmin=-.5,xmax=2.6
+                    ]
+
+                    \addplot+ [-,domain=0:90] ({2*cos(x)},{2*sin(x)});
+
+                    \end{axis}
+
+                    \end{tikzpicture}
+
+                    </latex-image>
+                  </image>
+              <!-- figures/fig_09_04_ex_11.tex END -->
+              </answer>
+        </exercise>
+
+        <exercise>
+              <statement>
+                <p>
+                  <m>\theta=\pi/6</m>,<m>-1\leq r\leq 2</m>
+                </p>
+              </statement>
+              <answer>
+              <!-- START figures/fig_09_04_ex_12.tex -->
+                  <image xml:id="img_09_04_ex_12X">
+                    <description></description>
+                    <latex-image>
+
+                    \begin{tikzpicture}
+
+                    \begin{axis}[
+                    xtick={1,2,-1,-2},
+                    ymin=-2.1,ymax=2.1,
+                    xmin=-2.5,xmax=2.5
+                    ]
+
+                    \addplot+ [-,domain=-.866:1.73] ({x},{.577*x});
+
+                    \end{axis}
+
+                    \end{tikzpicture}
+
+                    </latex-image>
+                  </image>
+              <!-- figures/fig_09_04_ex_12.tex END -->
+            </answer>
+        </exercise>
+
+        <exercise>
+              <statement>
+                <p>
+                  <m>r=1-\cos(\theta)</m>,<m>[0,2\pi]</m>
+                </p>
+              </statement>
+              <answer>
+              <!-- START figures/fig_09_04_ex_13.tex -->
+                  <image xml:id="img_09_04_ex_13X">
+                    <description></description>
+                    <latex-image>
+
+                    \begin{tikzpicture}
+
+                    \begin{axis}[
+                    ymin=-2.1,ymax=2.1,
+                    xmin=-2.5,xmax=2.5
+                    ]
+
+                    \addplot+ [-,domain=0:360,samples=80] ({cos(x)*(1-cos(x))},{sin(x)*(1-cos(x))});
+
+                    \end{axis}
+
+                    \end{tikzpicture}
+
+                    </latex-image>
+                  </image>
+              <!-- figures/fig_09_04_ex_13.tex END -->
+              </answer>
+        </exercise>
+
+        <exercise>
+              <statement>
+                <p>
+                  <m>r=2+\sin(\theta)</m>,<m>[0,2\pi]</m>
+                </p>
+              </statement>
+              <answer>
+              <!-- START figures/fig_09_04_ex_14.tex -->
+                  <image xml:id="img_09_04_ex_14X">
+                    <description></description>
+                    <latex-image>
+
+                    \begin{tikzpicture}
+
+                    \begin{axis}[
+                    ymin=-2.6,ymax=3.6,
+                    xmin=-3.7,xmax=3.7
+                    ]
+
+                    \addplot+ [-,domain=0:360,samples=80] ({cos(x)*(2+sin(x))},{sin(x)*(2+sin(x))});
+
+                    \end{axis}
+
+                    \end{tikzpicture}
+
+                    </latex-image>
+                  </image>
+              <!-- figures/fig_09_04_ex_14.tex END -->
+              </answer>
+        </exercise>
+
+        <exercise>
+              <statement>
+                <p>
+                  <m>r=2-\sin(\theta)</m>,<m>[0,2\pi]</m>
+                </p>
+              </statement>
+              <answer>
+              <!-- START figures/fig_09_04_ex_15.tex -->
+                  <image xml:id="img_09_04_ex_15X">
+                    <description></description>
+                    <latex-image>
+
+                    \begin{tikzpicture}
+
+                    \begin{axis}[
+                    ymin=-3.6,ymax=2.6,
+                    xmin=-3.7,xmax=3.7
+                    ]
+
+                    \addplot+ [-,domain=0:360,samples=70] ({cos(x)*(2-sin(x))},{sin(x)*(2-sin(x))});
+
+                    \end{axis}
+
+                    \end{tikzpicture}
+
+                    </latex-image>
+                  </image>
+              <!-- figures/fig_09_04_ex_15.tex END -->
+              </answer>
+        </exercise>
+
+        <exercise>
+              <statement>
+                <p>
+                  <m>r=1-2\sin(\theta)</m>,<m>[0,2\pi]</m>
+                </p>
+              </statement>
+              <answer>
+              <!-- START figures/fig_09_04_ex_16.tex -->
+                  <image xml:id="img_09_04_ex_16X">
+                    <description></description>
+                    <latex-image>
+
+                    \begin{tikzpicture}
+
+                    \begin{axis}[
+                    ymin=-3.6,ymax=2.6,
+                    xmin=-3.7,xmax=3.7
+                    ]
+
+                    \addplot+ [-,domain=0:360,samples=90] ({cos(x)*(1-2*sin(x))},{sin(x)*(1-2*sin(x))});
+
+                    \end{axis}
+
+                    \end{tikzpicture}
+
+                    </latex-image>
+                  </image>
+              <!-- figures/fig_09_04_ex_16.tex END -->
+              </answer>
+        </exercise>
+
+        <exercise>
+              <statement>
+                <p>
+                  <m>r=1+2\sin(\theta)</m>,<m>[0,2\pi]</m>
+                </p>
+              </statement>
+              <answer>
+              <!-- START figures/fig_09_04_ex_17.tex -->
+                  <image xml:id="img_09_04_ex_17X">
+                    <description></description>
+                    <latex-image>
+
+                    \begin{tikzpicture}
+
+                    \begin{axis}[
+                    ymin=-2.6,ymax=3.6,
+                    xmin=-3.7,xmax=3.7
+                    ]
+
+                    \addplot+ [-,domain=0:360,samples=90] ({cos(x)*(1+2*sin(x))},{sin(x)*(1+2*sin(x))});
+
+                    \end{axis}
+
+                    \end{tikzpicture}
+
+                    </latex-image>
+                  </image>
+              <!-- figures/fig_09_04_ex_17.tex END -->
+              </answer>
+        </exercise>
+
+        <exercise>
+              <statement>
+                <p>
+                  <m>r=\cos(2\theta)</m>,<m>[0,2\pi]</m>
+                </p>
+              </statement>
+              <answer>
+              <!-- START figures/fig_09_04_ex_18.tex -->
+                  <image xml:id="img_09_04_ex_18X">
+                    <description></description>
+                    <latex-image>
+
+                    \begin{tikzpicture}
+
+                    \begin{axis}[
+                    axis on top,
+                    ytick={-1,1},
+                    ymin=-1.1,ymax=1.1,
+                    xmin=-1.3,xmax=1.3
+                    ]
+
+                    \addplot+ [-,domain=0:360,samples=150] ({cos(x)*(cos(2*x))},{sin(x)*(cos(2*x))});
+
+                    \end{axis}
+
+                    \end{tikzpicture}
+
+                    </latex-image>
+                  </image>
+              <!-- figures/fig_09_04_ex_18.tex END -->
+              </answer>
+        </exercise>
+
+        <exercise>
+              <statement>
+                <p>
+                  <m>r=\sin(3\theta)</m>,<m>[0,\pi]</m>
+                </p>
+              </statement>
+              <answer>
+              <!-- START figures/fig_09_04_ex_19.tex -->
+                  <image xml:id="img_09_04_ex_19X">
+                    <description></description>
+                    <latex-image>
+
+                    \begin{tikzpicture}
+
+                    \begin{axis}[
+                    ytick={-1,1},
+                    ymin=-1.1,ymax=1.1,
+                    xmin=-1.3,xmax=1.3
+                    ]
+
+                    \addplot+ [-,domain=0:180,samples=100] ({cos(x)*(sin(3*x))},{sin(x)*(sin(3*x))});
+
+                    \end{axis}
+
+                    \end{tikzpicture}
+
+                    </latex-image>
+                  </image>
+              <!-- figures/fig_09_04_ex_19.tex END -->
+              </answer>
+        </exercise>
+
+        <exercise>
+              <statement>
+                <p>
+                  <m>r=\cos(\theta/3)</m>,<m>[0,3\pi]</m>
+                </p>
+              </statement>
+              <answer>
+              <!-- START figures/fig_09_04_ex_20.tex -->
+                  <image xml:id="img_09_04_ex_20X">
+                    <description></description>
+                    <latex-image>
+
+                    \begin{tikzpicture}
+
+                    \begin{axis}[
+                    axis on top,
+                    ytick={-1,1},
+                    ymin=-1.1,ymax=1.1,
+                    xmin=-1.3,xmax=1.3
+                    ]
+
+                    \addplot+ [-,domain=0:540,samples=120] ({cos(x)*(cos(x/3))},{sin(x)*(cos(x/3))});
+
+                    \end{axis}
+
+                    \end{tikzpicture}
+
+                    </latex-image>
+                  </image>
+              <!-- figures/fig_09_04_ex_20.tex END -->
+              </answer>
+        </exercise>
+
+        <exercise>
+              <statement>
+                <p>
+                  <m>r=\cos(2\theta/3)</m>,<m>[0,6\pi]</m>
+                </p>
+              </statement>
+              <answer>
+              <!-- START figures/fig_09_04_ex_21.tex -->
+                  <image xml:id="img_09_04_ex_21X">
+                    <description></description>
+                    <latex-image>
+
+                    \begin{tikzpicture}
+
+                    \begin{axis}[
+                    ytick={-1,1},
+                    ymin=-1.1,ymax=1.1,
+                    xmin=-1.3,xmax=1.3
+                    ]
+
+                    \addplot+ [-,domain=0:1080,samples=300] ({cos(x)*(cos(2*x/3))},{sin(x)*(cos(2*x/3))});
+
+                    \end{axis}
+
+                    \end{tikzpicture}
+
+                    </latex-image>
+                  </image>
+              <!-- figures/fig_09_04_ex_21.tex END -->
+              </answer>
+        </exercise>
+
+        <exercise>
+              <statement>
+                <p>
+                  <m>r=\theta/2</m>,<m>[0,4\pi]</m>
+                </p>
+              </statement>
+              <answer>
+              <!-- START figures/fig_09_04_ex_22.tex -->
+                  <image xml:id="img_09_04_ex_22X">
+                    <description></description>
+                    <latex-image>
+
+                    \begin{tikzpicture}
+
+                    \begin{axis}[
+                    ymin=-5.9,ymax=4.9,
+                    xmin=-6.5,xmax=6.5
+                    ]
+
+                    \addplot+ [-,domain=0:720,samples=150] ({cos(x)*(x*3.14/360)},{sin(x)*(x*3.14/360)});
+
+                    \end{axis}
+
+                    \end{tikzpicture}
+
+                    </latex-image>
+                  </image>
+              <!-- figures/fig_09_04_ex_22.tex END -->
+              </answer>
+        </exercise>
+
+        <exercise>
+              <statement>
+                <p>
+                  <m>r=3\sin(\theta)</m>,<m>[0,\pi]</m>
+                </p>
+              </statement>
+              <answer>
+              <!-- START figures/fig_09_04_ex_23.tex -->
+                  <image xml:id="img_09_04_ex_23X">
+                    <description></description>
+                    <latex-image>
+
+                    \begin{tikzpicture}
+
+                    \begin{axis}[
+                    ytick={2,3,1},
+                    ymin=-.9,ymax=3.9,
+                    xmin=-2.9,xmax=2.9
+                    ]
+
+                    \addplot+ [-,domain=0:180,samples=60] ({cos(x)*(3*sin(x))},{sin(x)*(3*sin(x))});
+
+                    \end{axis}
+
+                    \end{tikzpicture}
+
+                    </latex-image>
+                  </image>
+              <!-- figures/fig_09_04_ex_23.tex END -->
+              </answer>
+        </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            <m>r=2\cos(\theta)</m>,<m>[0,\pi/2]</m>
+          </p>
+        </statement>
+        <answer>
+            <image xml:id="img_09_04_ex_57">
+              <description></description>
+              <latex-image>
+                \begin{tikzpicture}
+                \begin{axis}[
+                ymin=-2.3,ymax=2.3,%
+                xmin=-2.5,xmax=2.5%
+                ]
+
+                \addplot+ [-,domain=0:90,samples=60] ({cos(x)*(2*cos(x))},{sin(x)*(2*cos(x))});
+
+                \end{axis}
+
+                \end{tikzpicture}
+              </latex-image>
+            </image>
+        </answer>
+      </exercise>
+
+
+      <exercise>
+            <statement>
+              <p>
+                <m>r=\cos(\theta) \sin(\theta)</m>,<m>[0,2\pi]</m>
+              </p>
+            </statement>
+            <answer>
+            <!-- START figures/fig_09_04_ex_24.tex -->
+                <image xml:id="img_09_04_ex_24X">
+                  <description></description>
+                  <latex-image>
+
+                  \begin{tikzpicture}
+
+                  \begin{axis}[
+                  ymin=-1.1,ymax=1.1,
+                  xmin=-1.3,xmax=1.3
+                  ]
+
+                  \addplot+ [-,domain=0:360,samples=120] ({cos(x)*(cos(x)*sin(x))},{sin(x)*(cos(x)*sin(x))});
+
+                  \end{axis}
+
+                  \end{tikzpicture}
+
+                  </latex-image>
+                </image>
+            <!-- figures/fig_09_04_ex_24.tex END -->
+            </answer>
+      </exercise>
+
+      <exercise>
+            <statement>
+              <p>
+                <m>r=\theta^2-(\pi/2)^2</m>,<m>[-\pi,\pi]</m>
+              </p>
+            </statement>
+            <answer>
+            <!-- START figures/fig_09_04_ex_25.tex -->
+                <image xml:id="img_09_04_ex_25X">
+                  <description></description>
+                  <latex-image>
+
+                  \begin{tikzpicture}
+
+                  \begin{axis}[
+                  ymin=-3.75,ymax=3.75,
+                  xmin=-8.1,xmax=.9
+                  ]
+
+                  \addplot+ [-,domain=-3.14:3.14,samples=120] ({cos(deg(x))*(x^2-2.4674)},{sin(deg(x))*(x^2-2.4674)});
+
+                  \end{axis}
+
+                  \end{tikzpicture}
+
+                  </latex-image>
+                </image>
+            <!-- figures/fig_09_04_ex_25.tex END -->
+            </answer>
+      </exercise>
+
+      <exercise>
+            <statement>
+              <p>
+                <m>\ds r=\frac{3}{5\sin(\theta) -\cos(\theta) }</m>,<m>[0,2\pi]</m>
+              </p>
+            </statement>
+            <answer>
+            <!-- START figures/fig_09_04_ex_26.tex -->
+                <image xml:id="img_09_04_ex_26X">
+                  <description></description>
+                  <latex-image>
+
+                  \begin{tikzpicture}
+
+                  \begin{axis}[
+                  ymin=-4.9,ymax=4.96,
+                  xmin=-5.9,xmax=5.9
+                  ]
+
+                  \addplot+ [-,domain=.1:3] ({cos(deg(x))*(3/(5*sin(deg(x))-cos(deg(x)))},{sin(deg(x))*(3/(5*sin(deg(x))-cos(deg(x)))});
+
+                  \end{axis}
+
+                  \end{tikzpicture}
+
+                  </latex-image>
+                </image>
+            <!-- figures/fig_09_04_ex_26.tex END -->
+            </answer>
+      </exercise>
+
+      <exercise>
+            <statement>
+              <p>
+                <m>\ds r=\frac{-2}{3\cos(\theta) -2\sin(\theta) }</m>,<m>[0,2\pi]</m>
+              </p>
+            </statement>
+            <answer>
+            <!-- START figures/fig_09_04_ex_27.tex -->
+                <image xml:id="img_09_04_ex_27X">
+                  <description></description>
+                  <latex-image>
+
+                  \begin{tikzpicture}
+
+                  \begin{axis}[
+                  ymin=-4.9,ymax=4.96,
+                  xmin=-5.9,xmax=5.9
+                  ]
+
+                  \addplot+ [-,domain=.1:3] ({cos(deg(x))*(-2/(3*cos(deg(x))-2*sin(deg(x)))},{sin(deg(x))*(-2/(3*cos(deg(x))-2*sin(deg(x)))});
+
+                  \end{axis}
+
+                  \end{tikzpicture}
+
+                  </latex-image>
+                </image>
+            <!-- figures/fig_09_04_ex_27.tex END -->
+            </answer>
+      </exercise>
+
+      <exercise>
+            <statement>
+              <p>
+                <m>\ds r=3\sec(\theta)</m>,<m>(-\pi/2,\pi/2)</m>
+              </p>
+            </statement>
+            <answer>
+            <!-- START figures/fig_09_04_ex_28.tex -->
+                <image xml:id="img_09_04_ex_28X">
+                  <description></description>
+                  <latex-image>
+
+                  \begin{tikzpicture}
+
+                  \begin{axis}[
+                  ymin=-4.9,ymax=4.96,
+                  xmin=-5.9,xmax=5.9
+                  ]
+
+                  \addplot+ [-,domain=-5:5] ({3},{x});
+
+                  \end{axis}
+
+                  \end{tikzpicture}
+
+                  </latex-image>
+                </image>
+            <!-- figures/fig_09_04_ex_28.tex END -->
+            </answer>
+      </exercise>
+
+      <exercise>
+            <statement>
+              <p>
+                <m>\ds r=3\csc(\theta)</m>,<m>(0,\pi)</m>
+              </p>
+            </statement>
+            <answer>
+            <!-- START figures/fig_09_04_ex_29.tex -->
+                <image xml:id="img_09_04_ex_29X">
+                  <description></description>
+                  <latex-image>
+
+                  \begin{tikzpicture}
+
+                  \begin{axis}[
+                  ymin=-4.9,ymax=4.96,
+                  xmin=-5.9,xmax=5.9
+                  ]
+
+                  \addplot+ [-,domain=-5:5] ({x},{4});
+
+                  \end{axis}
+
+                  \end{tikzpicture}
+
+                  </latex-image>
+                </image>
+            <!-- figures/fig_09_04_ex_29.tex END -->
+            </answer>
+      </exercise>
+
+    </exercisegroup>
+    <exercisegroup cols="2">
+
+      <introduction>
+        <p>
+          In the following exercises,
+          convert the polar equation to a rectangular equation.
+        </p>
+      </introduction>
+
+      <exercise>
+            <statement>
+              <p>
+                <m>r=6\cos(\theta)</m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                <m>(x-3)^2 + y^2=9</m>
+              </p>
+            </answer>
+      </exercise>
+
+      <exercise>
+            <statement>
+              <p>
+                <m>r=-4\sin(\theta)</m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                <m>x^2+(y+2)^2=4</m>
+              </p>
+            </answer>
+      </exercise>
+
+      <exercise>
+            <statement>
+              <p>
+                <m>r=\cos(\theta) +\sin(\theta)</m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                <m>(x-1/2)^2+(y-1/2)^2=1/2</m>
+              </p>
+            </answer>
+      </exercise>
+
+      <exercise>
+            <statement>
+              <p>
+                <m>r=\dfrac{7}{5\sin(\theta)-2\cos(\theta)}</m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                <m>y=\frac25x+\frac75</m>
+              </p>
+            </answer>
+      </exercise>
+
+      <exercise>
+            <statement>
+              <p>
+                <m>r=\dfrac{3}{\cos(\theta)}</m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                <m>x=3</m>
+              </p>
+            </answer>
+      </exercise>
+
+      <exercise>
+            <statement>
+              <p>
+                <m>r=\dfrac{4}{\sin(\theta)}</m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                <m>y=4</m>
+              </p>
+            </answer>
+      </exercise>
+
+      <exercise>
+            <statement>
+              <p>
+                <m>\ds r=\tan(\theta)</m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                <m>x^4+x^2y^2x^2-y^2=0</m>
+              </p>
+            </answer>
+      </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          <m>\ds r=\cot\theta</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>y^4+x^2y^2-x^2=0</m>
+        </p>
+      </answer>
+    </exercise>
+
+      <exercise>
+            <statement>
+              <p>
+                <m>r=2</m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                <m>x^2+y^2=4</m>
+              </p>
+            </answer>
+      </exercise>
+
+      <exercise>
+            <statement>
+              <p>
+                <m>\theta=\pi/6</m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                <m>\ds y=\frac{x}{\sqrt{3}</m>
+              </p>
+            </answer>
+      </exercise>
+
+    </exercisegroup>
+    <exercisegroup cols="2">
+
+      <introduction>
+        <p>
+          In the following exercises, convert the rectangular equation to a polar equation.
+        </p>
+      </introduction>
+
+      <exercise>
+            <statement>
+              <p>
+                <m>y=x</m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                <m>\theta=\frac{\pi}{4}</m>
+              </p>
+            </answer>
+      </exercise>
+
+      <exercise>
+            <statement>
+              <p>
+                <m>y=4x+7</m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                <m>\ds r=\frac{7}{\sin\theta} -4 \cos \theta</m>
+              </p>
+            </answer>
+      </exercise>
+
+      <exercise>
+            <statement>
+              <p>
+                <m>x=5</m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                <m>r=5\sec\theta</m>
+              </p>
+            </answer>
+      </exercise>
+
+      <exercise>
+            <statement>
+              <p>
+                <m>y=5</m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                <m>r=5\csc\theta</m>
+              </p>
+            </answer>
+      </exercise>
+
+      <exercise>
+            <statement>
+              <p>
+                <m>x=y^2</m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                <m>\ds r=\frac{\cos\theta}{\sin^2 \theta}</m>
+              </p>
+            </answer>
+      </exercise>
+
+      <exercise>
+            <statement>
+              <p>
+                <m>\ds x^2y=1</m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                <m>r=1/\sqrt[3]{\cos^2(\theta) \sin(\theta) }</m>
+              </p>
+            </answer>
+      </exercise>
+
+      <exercise>
+            <statement>
+              <p>
+                <m>x^2+y^2=7</m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                <m>r=\sqrt{7}</m>
+              </p>
+            </answer>
+      </exercise>
+
+      <exercise>
+            <statement>
+              <p>
+                <m>\ds (x+1)^2+y^2=1</m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                <m>r=-2\cos(\theta)</m>
+              </p>
+            </answer>
+      </exercise>
+
+    </exercisegroup>
+    <exercisegroup cols="2">
+
+      <introduction>
+        <p>
+          In the following exercises,
+          find the points of intersection of the polar graphs.
+        </p>
+      </introduction>
+
+      <exercise>
+            <statement>
+              <p>
+                <m>r=\sin(2\theta)</m> and <m>r=\cos(\theta)</m> on <m>[0,\pi]</m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                <m>(\sqrt(3)/2,\pi/6)</m>, <m>P(0,\pi/2)</m>, <m>P(-sqrt(3)/2,5pi/6)</m>
+              </p>
+            </answer>
+      </exercise>
+
+      <exercise>
+            <statement>
+              <p>
+                <m>r=\cos(2\theta)</m> and <m>r=\cos(\theta)</m> on <m>[0,\pi]</m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                <m>P(1,0)</m>, <m>P(0,\pi/2)=P(0,\pi/4)</m>, <m>P(-1/2,2\pi/3)</m>
+              </p>
+            </answer>
+      </exercise>
+
+      <exercise>
+            <statement>
+              <p>
+                <m>r=2\cos(\theta)</m> and <m>r=2\sin(\theta)</m> on <m>[0,\pi]</m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                <m>P(0,0)</m> and
+                <m>P(\sqrt(2),\pi/4)</m>
+              </p>
+            </answer>
+      </exercise>
+
+      <exercise>
+            <statement>
+              <p>
+                <m>r=\sin(\theta)</m> and <m>r=\sqrt{3}+3\sin(\theta)</m> on <m>[0,2\pi]</m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                <m>P(\sqrt{3}/2,\pi/3)=P(-\sqrt{3}/2,4\pi/3)</m>,
+                <m>P(\sqrt{3}/2,2\pi/3)=P(-\sqrt{3}/2,5\pi/3)</m>, <m>P(0,\pi/2)</m>
+              </p>
+            </answer>
+      </exercise>
+
+      <exercise>
+            <statement>
+              <p>
+                <m>r=\sin(3\theta)</m> and <m>r=\cos(3\theta)</m> on <m>[0,\pi]</m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                <m>P(0,0)=P(0,\pi/6)</m>,
+                <m>P(\sqrt{2}/2,\pi/12)</m>,
+                <m>P(-\sqrt{2}/2,5\pi/12)</m>,
+                <m>P(\sqrt{2}/2,3\pi/4)</m>
+              </p>
+            </answer>
+      </exercise>
+
+      <exercise>
+            <statement>
+              <p>
+                <m>r=3\cos(\theta)</m> and
+                <m>r=1+\cos(\theta)</m> on <m>[-\pi,\pi]</m>.
+              </p>
+            </statement>
+            <answer>
+              <p>
+                <m>P(3/2,\pi/3)</m>
+                <m>P(3/2,-\pi/3)</m>
+                <m>P(0,\pi)</m>
+              </p>
+            </answer>
+      </exercise>
+
+      <exercise>
+            <statement>
+              <p>
+                <m>r=1</m> and <m>r=2\sin(2\theta)</m> on <m>[0,2\pi]</m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                For all points, <m>r=1</m>;
+                <m>\theta = \pi/12,\,5\pi/12,\,7\pi/12,\,11\pi/12,\,13\pi/12,\,17\pi/12,\,19\pi/12,\,23\pi/12</m>.
+              </p>
+            </answer>
+      </exercise>
+
+      <exercise>
+            <statement>
+              <p>
+                <m>r=1-\cos(\theta)</m> and <m>r=1+\sin(\theta)</m> on <m>[0,2\pi]</m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                <m>P(0,0)=P(0,3\pi/2)</m>,
+                <m>P(1+\sqrt{2}/2,3\pi/4)</m>,
+                <m>P(1-\sqrt{2}/2,7\pi/4)</m>
+              </p>
+            </answer>
+      </exercise>
+
+    </exercisegroup>
+
+    <exercise>
+          <statement>
+            <p>
+              Pick a integer value for <m>n</m>, where <m>n\neq 2,3</m>,
+              and use technology to plot
+              <m>\ds r=\sin\left(\frac mn\theta\right)</m> for three different integer values of <m>m</m>.
+              Sketch these and determine a minimal interval on which the entire graph is shown.
+            </p>
+          </statement>
+          <answer>
+            <p>
+              Answers will vary.
+              If <m>m</m> and <m>n</m> do not have any common factors,
+              then an interval of <m>2n\pi</m> is needed to sketch the entire graph.
+            </p>
+          </answer>
+    </exercise>
+
+    <exercise>
+          <statement>
+            <p>
+              Create your own polar function,
+              <m>r=f(\theta)</m> and sketch it.
+              Describe why the graph looks as it does.
+            </p>
+          </statement>
+          <answer>
+            <p>
+              Answers will vary.
+            </p>
+          </answer>
+    </exercise>
+  </subexercises>
+</exercises>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<exercises>
+  <exercisegroup>
+  	<introduction>
+  		<p>In Exercises 1-4, decide whether the differential equation is separable or not separable.  If the equation is separable. write it in separated form.</p>
+  	</introduction>
+  	<exercise>
+  		<statement>
+  			<m>\displaystyle y'=y^2-y</m>
+  		</statement>
+  		<answer>
+  			<p>Separable, <m>\displaystyle\frac{1}{y^2-y}\,dy = dx</m></p>
+  		</answer>
+  	</exercise>
+  	<exercise>
+  		<statement>
+  			<m>\displaystyle  x\yp + x^2y = \frac{\sin x}{x-y}</m>
+  		</statement>
+  		<answer>
+  			<p>Not separable.</p>
+  		</answer>
+  	</exercise>
+  	<exercise>
+  		<statement>
+  			<m>\displaystyle  (y + 3)\yp + (\ln x) \yp - x\sin y = (y+3)\ln x</m>
+  		</statement>
+  		<answer>
+  			<p>Not separable.</p>
+  		</answer>
+  	</exercise>
+  	<exercise>
+  		<statement>
+  			<m>\displaystyle \yp  -x^2\cos y + y = \cos y - x^2 y</m>
+  		</statement>
+  		<answer>
+  			<p>Separable. <m>\displaystyle \frac{1}{\cos y - y}\,dy = (x^2+1)\,dx</m></p>
+  		</answer>
+  	</exercise>
+  </exercisegroup>
+
+  <exercisegroup>
+    <introduction>
+      <p>In Exercises 5-12, find the general solution to the separable differential equation.  Be sure to check for missing constant solutions.</p>
+    </introduction>
+  	<exercise>
+  		<statement><m>\displaystyle \yp  +1 - y^2 = 0</m></statement>
+  		<answer><m>\left \{ \displaystyle y = \frac{1 + Ce^{2x}}{1 - Ce^{2x}}, y = -1\right \}</m></answer>
+  	</exercise>
+  	<exercise>
+  		<statement><m>\yp = y-2</m></statement>
+  		<answer><m>y = 2 + Ce^x</m></answer>
+  	</exercise>
+  	<exercise>
+  		<statement><m>x \yp = 4y</m></statement>
+  		<answer><m>y = Cx^4</m></answer>
+  	</exercise>
+  	<exercise>
+  		<statement><m> y\yp = 4x</m></statement>
+  		<answer><m>y^2 - 4x^2 = C</m></answer>
+  	</exercise>
+  	<exercise>
+  		<statement><m>\displaystyle e^xy \yp = e^{-y} + e^{-2x - y}</m></statement>
+  		<answer><m>\displaystyle (y-1)e^y = -e^{-x} - \frac{1}{3}e^{-3x} + C</m></answer>
+  	</exercise>
+  	<exercise>
+  		<statement><m>\displaystyle (x^2 + 1) \yp = \frac{x}{y-1}</m></statement>
+  		<answer><m>\displaystyle (y-1)^2 = \ln(x^2+1) + C</m></answer>
+  	</exercise>
+  	<exercise>
+  		<statement><m>\displaystyle \yp = \frac{x\sqrt{1-4y^2}}{x^4 + 2x^2 + 2}</m></statement>
+  		<answer><m>\left \{ \arcsin{2y} - \arctan(x^2+1) = C, y = \pm \displaystyle \frac{1}{2} \right \}</m></answer>
+  	</exercise>
+  	<exercise>
+  		<statement><m>\displaystyle (e^x + e^{-x})\yp = y^2</m></statement>
+  		<answer><m>\left \{ \displaystyle y = \frac{1}{C - \arctan x}, y = 0 \right \}</m></answer>
+  	</exercise>
+  </exercisegroup>
+
+  <exercisegroup>
+    <introduction>
+      <p>In Exercises 13-20, find the particular solution to the separable initial value problem.</p>
+    </introduction>
+    <exercise>
+      <statement>
+        <m>\displaystyle \yp = \frac{\sin x}{\cos y}</m>, with <m>y(0) = \displaystyle \frac{\pi}{2}</m>
+      </statement>
+      <answer>
+        <m>\sin y + \cos x = 2</m>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <m>\displaystyle \yp = \frac{x^2}{1-y^2}</m>, with <m>y(0) = 1</m>
+      </statement>
+      <answer>
+        <m>-x^3 + 3y - y^3 = 2</m>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <m>\displaystyle \yp = \frac{2x}{y+x^2y}</m>, with <m>y(0) = -4</m>
+      </statement>
+      <answer>
+        <m>\frac{1}{2}y^2 - \ln(1+x^2) = 8</m>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <m>\displaystyle x + ye^{-x}\yp = 0</m>, with <m>y(0) = -2</m>
+      </statement>
+      <answer>
+        <m>y^2+2xe^x - 2e^x = 2</m>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <m>\displaystyle \yp = \frac{x\ln(x^2+1)}{y-1}</m>, with <m>y(0) = 2</m>
+      </statement>
+      <answer>
+        <m>\displaystyle \frac{1}{2}y^2 - y = \frac{1}{2}\big ( (x^2+1)\ln(x^2+1) - (x^2 + 1)\big) + \frac{1}{2}</m>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <m>\displaystyle \sqrt{1-x^2}\,\yp - \frac{\arcsin x}{y\cos(y^2)}= 0</m>, with <m>y(0) = \sqrt{\displaystyle\frac{7\pi}{6}}</m>
+      </statement>
+      <answer>
+        <m>\sin(y^2)-(\arcsin x)^2 = -\frac{1}{2}</m>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <m>\displaystyle \yp = (\cos^2x)(\cos^2 2y)</m>, with <m>y(0) = 0</m>
+      </statement>
+      <answer>
+        <m>2\tan 2y = 2x + \sin 2x</m>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <m>\displaystyle \yp = \frac{y^2\sqrt{1-y^2}}{x}</m>, with <m>y(0) = 1</m>
+      </statement>
+      <answer>
+        <m>x = exp \displaystyle \left ( -\frac{\sqrt{1-y^2}}{y}\right )</m>
+      </answer>
+    </exercise>
+  </exercisegroup>
+
+</exercises>

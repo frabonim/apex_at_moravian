@@ -1,0 +1,1001 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec_par_calc">
+  <title>Calculus and Parametric Equations</title>
+  <introduction>
+    <p>
+      The previous section defined curves based on parametric equations.
+      In this section we'll employ the techniques of calculus to study these curves.
+    </p>
+
+    <p>
+      We are still interested in lines tangent to points on a curve.
+      They describe how the <m>y</m>-values are changing with respect to the <m>x</m>-values,
+      they are useful in making approximations,
+      and they indicate instantaneous direction of travel.
+    </p>
+
+    <figure xml:id="vid-planecurves-parcalc-intro">
+      <caption>Video introduction to <xref ref="sec_par_calc"/></caption>
+      <video youtube="FIvX66HAaj8"/>
+    </figure>
+
+    <p>
+      The slope of the tangent line is still <m>\frac{dy}{dx}</m>,
+      and the Chain Rule allows us to calculate this in the context of parametric equations.
+      If <m>x=f(t)</m> and <m>y=g(t)</m>,
+      the Chain Rule states that
+      <me>
+        \frac{dy}{dt} = \frac{dy}{dx}\cdot\frac{dx}{dt}
+      </me>.
+    </p>
+
+    <p>
+      Solving for <m>\frac{dy}{dx}</m>, we get
+      <me>
+        \frac{dy}{dx} = \frac{dy}{dt}\Bigg/\frac{dx}{dt} = \frac{g'(t)}{\fp(t)}
+      </me>,
+      provided that <m>\fp(t)\neq 0</m>.
+      This is important so we label it a Key Idea.
+    </p>
+
+    <insight xml:id="idea_dydxpar">
+      <title>Finding <m>\frac{dy}{dx}</m> with Parametric Equations</title>
+      <p>
+        Let <m>x=f(t)</m> and <m>y=g(t)</m>,
+        where <m>f</m> and <m>g</m> are differentiable on some open interval <m>I</m> and <m>\fp(t)\neq 0</m> on <m>I</m>.
+        Then
+        <idx><h>parametric equations</h><h>finding <m>\frac{dy}{dx}</m></h></idx>
+        <idx><h>derivative</h><h>parametric equations</h></idx>
+        <me>
+          \frac{dy}{dx} = \frac{g'(t)}{\fp(t)}
+        </me>.
+      </p>
+    </insight>
+
+    <p>
+      We use this to define the tangent line.
+    </p>
+
+    <definition xml:id="def_tangent_par">
+      <title>Tangent and Normal Lines</title>
+      <statement>
+        <p>
+          Let a curve <m>C</m> be parametrized by <m>x=f(t)</m> and <m>y=g(t)</m>,
+          where <m>f</m> and <m>g</m> are differentiable functions on some interval <m>I</m> containing <m>t=t_0</m>.
+          The <term>tangent line</term> to <m>C</m> at <m>t=t_0</m> is the line through
+          <m>\big(f(t_0),g(t_0)\big)</m> with slope <m>m=g'(t_0)/\fp(t_0)</m>,
+          provided <m>\fp(t_0)\neq 0</m>.
+        </p>
+
+        <p>
+          The <term>normal line</term> to <m>C</m> at <m>t=t_0</m> is the line through
+          <m>\big(f(t_0),g(t_0)\big)</m> with slope <m>m=-\fp(t_0)/g'(t_0)</m>,
+          provided <m>g'(t_0)\neq 0</m>.
+              <idx><h>tangent line</h></idx>
+              <idx><h>normal line</h></idx>
+              <idx><h>parametric equations</h><h>tangent line</h></idx>
+              <idx><h>parametric equations</h><h>normal line</h></idx>
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      The definition leaves two special cases to consider.
+      When the tangent line is horizontal,
+      the normal line is undefined by the above definition as <m>g'(t_0)=0</m>.
+      Likewise, when the normal line is horizontal,
+      the tangent line is undefined.
+      It seems reasonable that these lines be defined
+      (one can draw a line tangent to the <q>right side</q>
+      of a circle, for instance),
+      so we add the following to the above definition.
+    </p>
+
+    <p>
+      <ol>
+        <li>
+          <p>
+            If the tangent line at <m>t=t_0</m> has a slope of 0, the normal line to <m>C</m> at <m>t=t_0</m> is the line <m>x=f(t_0)</m>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            If the normal line at <m>t=t_0</m> has a slope of 0, the tangent line to <m>C</m> at <m>t=t_0</m> is the line <m>x=f(t_0)</m>.
+          </p>
+        </li>
+      </ol>
+    </p>
+
+    <example xml:id="ex_parcalc1">
+      <title>Tangent and Normal Lines to Curves</title>
+      <statement>
+        <p>
+          Let <m>x=5t^2-6t+4</m> and <m>y=t^2+6t-1</m>,
+          and let <m>C</m> be the curve defined by these equations.
+        </p>
+
+        <p>
+          <ol>
+            <li>
+              <p>
+                Find the equations of the tangent and normal lines to <m>C</m> at <m>t=3</m>.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Find where <m>C</m> has vertical and horizontal tangent lines.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+      <solution>
+        <video width="98%" youtube="A62eUDxiOw4" xml:id="vid-planecurves-parcalc-example-tangent"/>
+        <p>
+          <ol>
+            <li>
+              <p>
+                We start by computing <m>\fp(t) = 10t-6</m> and <m>g'(t) =2t+6</m>.
+                Thus
+                <me>
+                  \frac{dy}{dx} = \frac{2t+6}{10t-6}
+                </me>.
+                Make note of something that might seem unusual:
+                <m>\frac{dy}{dx}</m> is a function of <m>t</m>, not <m>x</m>.
+                Just as points on the curve are found in terms of <m>t</m>,
+                so are the slopes of the tangent lines.
+                The point on <m>C</m> at <m>t=3</m> is <m>(31,26)</m>.
+                The slope of the tangent line is <m>m=1/2</m> and the slope of the normal line is <m>m=-2</m>.
+                Thus,
+
+                <ul>
+                  <li>
+                    <p>
+                      the equation of the tangent line is <m>\ds y=\frac12(x-31)+26</m>, and
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      the equation of the normal line is <m>\ds y=-2(x-31)+26</m>.
+                    </p>
+                  </li>
+                </ul>
+              </p>
+
+              <p>
+                This is illustrated in <xref ref="fig_parcalc1">Figure</xref>.
+              </p>
+
+              <figure xml:id="fig_parcalc1">
+                <caption>Graphing tangent and normal lines in <xref ref="ex_parcalc1">Example</xref></caption>
+              <!-- START figures/fig_parcalc1.tex -->
+                <image xml:id="img_parcalc1" width="47%">
+                  <description></description>
+                  <latex-image>
+
+                  \begin{tikzpicture}
+
+                  \begin{axis}[
+                  ymin=-20,ymax=55,
+                  xmin=-5,xmax=90
+                  ]
+
+                  \addplot+ [-,domain=-3.5:5,samples=40] ({5*x^2-6*x+4},{x^2+6*x-1});
+
+                  \addplot [secondcurvestyle,-,solid,domain=-5:90] ({x},{.5*(x-31)+26});
+                  \addplot [secondcurvestyle,-,solid,domain=-20:55] ({x},{-2*(x-31)+26});
+
+                  \draw [&gt;=latex,-&gt;] (axis cs: 12.14,-5.204) -- (axis cs: 12,-5.16);
+
+                  \filldraw (axis cs: 67,-10) circle (1.5pt)
+                            (axis cs: 2.2,2.96) circle (1.5pt);
+
+                  \end{axis}
+
+                  \end{tikzpicture}
+
+                  </latex-image>
+                </image>
+              <!-- figures/fig_parcalc1.tex END -->
+              </figure>
+
+            </li>
+
+            <li>
+              <p>
+                To find where <m>C</m> has a horizontal tangent line,
+                we set <m>\frac{dy}{dx}=0</m> and solve for <m>t</m>.
+                In this case,
+                this amounts to setting <m>g'(t)=0</m> and solving for <m>t</m> (and making sure that <m>\fp(t)\neq 0</m>).
+                <me>
+                  g'(t)=0  \Rightarrow  2t+6=0  \Rightarrow  t=-3
+                </me>.
+                The point on <m>C</m> corresponding to <m>t=-3</m> is <m>(67,-10)</m>;
+                the tangent line at that point is horizontal
+                (hence with equation <m>y=-10</m>).
+                To find where <m>C</m> has a vertical tangent line,
+                we find where it has a horizontal normal line,
+                and set <m>-\frac{\fp(t)}{g'(t)}=0</m>.
+                This amounts to setting <m>\fp(t)=0</m> and solving for <m>t</m> (and making sure that <m>g'(t)\neq 0</m>).
+                <me>
+                  \fp(t)=0  \Rightarrow  10t-6=0  \Rightarrow  t=0.6
+                </me>.
+                The point on <m>C</m> corresponding to <m>t=0.6</m> is <m>(2.2,2.96)</m>.
+                The tangent line at that point is <m>x=2.2</m>.
+                The points where the tangent lines are vertical and horizontal are indicated on the graph in <xref ref="fig_parcalc1">Figure</xref>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </solution>
+    </example>
+
+    <example xml:id="ex_parcalc2">
+      <title>Tangent and Normal Lines to a Circle</title>
+      <statement>
+        <p>
+          <ol>
+            <li>
+              <p>
+                Find where the unit circle,
+                defined by <m>x=\cos(t)</m> and <m>y=\sin(t)</m> on <m>[0,2\pi]</m>,
+                has vertical and horizontal tangent lines.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Find the equation of the normal line at <m>t=t_0</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+      <solution>
+        <video width="98%" youtube="PpmsaMVJAZI" xml:id="vid-planecurves-parcalc-circle"/>
+        <p>
+          <ol>
+            <li>
+              <p>
+                We compute the derivative following <xref ref="idea_dydxpar">Key Idea</xref>:
+                <me>
+                  \frac{dy}{dx} = \frac{g'(t)}{\fp(t)} = -\frac{\cos(t) }{\sin(t) }
+                </me>.
+                The derivative is <m>0</m> when <m>\cos(t) = 0</m>;
+                that is, when <m>t=\pi/2,\, 3\pi/2</m>.
+                These are the points <m>(0,1)</m> and <m>(0,-1)</m> on the circle.
+
+                The normal line is horizontal (and hence, the tangent line is vertical) when <m>\sin(t) =0</m>; that is, when <m>t= 0,\,\pi,\,2\pi</m>, corresponding to the points <m>(-1,0)</m> and <m>(0,1)</m> on the circle. These results should make intuitive sense.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                The slope of the normal line at <m>t=t_0</m> is <m>\ds m=\frac{\sin(t_0) }{\cos(t_0) } = \tan(t_0)</m>.
+                This normal line goes through the point <m>(\cos(t_0) ,\sin(t_0) )</m>,
+                giving the line
+                <md>
+                  <mrow>y \amp =\frac{\sin(t_0) }{\cos(t_0) }(x-\cos(t_0) ) + \sin(t_0)</mrow>
+                  <mrow>\amp = (\tan(t_0) )x</mrow>
+                </md>,
+                as long as <m>\cos(t_0) \neq 0</m>.
+                It is an important fact to recognize that the normal lines to a circle pass through its center,
+                as illustrated in <xref ref="fig_parcalc2">Figure</xref>.
+                Stated in another way,
+                any line that passes through the center of a circle intersects the circle at right angles.
+              </p>
+
+              <figure xml:id="fig_parcalc2">
+                <caption>Illustrating how a circle's normal lines pass through its center</caption>
+            <!-- START figures/fig_parcalc2.tex -->
+                <image xml:id="img_parcalc2" width="47%">
+                  <description></description>
+                  <latex-image>
+
+                  \begin{tikzpicture}
+
+                  \begin{axis}[
+                  ytick={-1,1},
+                  ymin=-1.1,ymax=1.1,
+                  xmin=-1.3,xmax=1.3
+                  ]
+
+                  \addplot+ [-,domain=0:360,samples=70] ({cos(x)},{sin(x)});
+                  \addplot+ [-,solid,domain=-1:1] ({x},{2*x});
+
+                  \filldraw (axis cs: .447,.894) circle (1.5pt);
+
+                  \end{axis}
+
+                  \end{tikzpicture}
+
+                  </latex-image>
+                </image>
+            <!-- figures/fig_parcalc2.tex END -->
+              </figure>
+            </li>
+          </ol>
+        </p>
+      </solution>
+    </example>
+
+    <example xml:id="ex_parcalc3">
+      <title>Tangent lines when <m>\frac{dy}{dx}</m> is not defined</title>
+      <statement>
+        <p>
+          Find the equation of the tangent line to the astroid <m>x=\cos^3(t)</m>,
+          <m>y=\sin^3(t)</m> at <m>t=0</m>,
+          shown in <xref ref="fig_parcalc3">Figure</xref>.
+        </p>
+        <figure xml:id="fig_parcalc3">
+          <caption>A graph of an astroid</caption>
+          <!-- START figures/fig_planecurve1.tex -->
+          <image xml:id="img_parcalc3" width="47%">
+            <description></description>
+            <latex-image>
+
+            \begin{tikzpicture}
+
+            \begin{axis}[
+            xtick={-1,1},
+            ytick={-1,1},
+            ymin=-1.1,ymax=1.1,
+            xmin=-1.1,xmax=1.1
+            ]
+
+            \addplot+ [-,domain=0:360,samples=70] ({(cos(x))^3},{(sin(x))^3});
+
+            \end{axis}
+
+            \end{tikzpicture}
+
+            </latex-image>
+          </image>
+          <!-- figures/fig_planecurve1.tex END -->
+        </figure>
+      </statement>
+      <solution>
+        <video width="98%" youtube="rb4wEkhcUtE" xml:id="vid-planecurves-parcalc-astroid"/>
+        <p>
+          We start by finding <m>x'(t)</m> and <m>y'(t)</m>:
+          <me>
+            x'(t) = -3\sin(t) \cos^2(t) , \qquad y'(t) = 3\cos(t) \sin^2(t)
+          </me>.
+        </p>
+
+        <p>
+          Note that both of these are 0 at <m>t=0</m>;
+          the curve is not smooth at <m>t=0</m> forming a cusp on the graph.
+          Evaluating <m>\frac{dy}{dx}</m> at this point returns the indeterminate form of <q>0/0</q>.
+        </p>
+
+        <p>
+          We can, however,
+          examine the slopes of tangent lines near <m>t=0</m>,
+          and take the limit as <m>t\to 0</m>.
+          <md>
+            <mrow>\lim_{t\to0} \frac{y'(t)}{x'(t)} \amp =\lim_{t\to0} \frac{3\cos(t) \sin^2(t) }{-3\sin(t) \cos^2(t) }  \text{ (We can cancel as \(t\neq 0\).) }</mrow>
+            <mrow>\amp = \lim_{t\to0} -\frac{\sin(t) }{\cos(t) }</mrow>
+            <mrow>\amp = 0</mrow>
+          </md>.
+        </p>
+
+        <p>
+          We have accomplished something significant.
+          When the derivative <m>\frac{dy}{dx}</m> returns an indeterminate form at <m>t=t_0</m>,
+          we can define its value by setting it to be
+          <m>\lim\limits_{t\to t_0}</m><m>\frac{dy}{dx}</m>, if that limit exists.
+          This allows us to find slopes of tangent lines at cusps,
+          which can be very beneficial.
+        </p>
+
+        <p>
+          We found the slope of the tangent line at <m>t=0</m> to be 0;
+          therefore the tangent line is <m>y=0</m>, the <m>x</m>-axis.
+        </p>
+      </solution>
+    </example>
+  </introduction>
+
+  <subsection>
+    <title>Concavity</title>
+    <p>
+      We continue to analyze curves in the plane by considering their concavity;
+      that is, we are interested in <m>\frac{d^2y}{dx^2}</m>,
+      <q>the second derivative of <m>y</m> with respect to <m>x</m>.</q> To find this,
+      we need to find the derivative of
+      <m>\frac{dy}{dx}</m> with respect to <m>x</m>; that is,
+      <me>
+        \frac{d^2y}{dx^2}=\frac{d}{dx}\left[\frac{dy}{dx}\right]
+      </me>,
+      but recall that <m>\frac{dy}{dx}</m> is a function of <m>t</m>,
+      not <m>x</m>, making this computation not straightforward.
+          <idx><h>concavity</h></idx>
+          <idx><h>parametric equations</h><h>concavity</h></idx>
+    </p>
+
+    <p>
+      To make the upcoming notation a bit simpler,
+      let <m>h(t) = \frac{dy}{dx}</m>.
+      We want <m>\frac{d}{dx}[h(t)]</m>;
+      that is, we want <m>\frac{dh}{dx}</m>.
+      We again appeal to the Chain Rule.
+      Note:
+      <me>
+        \frac{dh}{dt} = \frac{dh}{dx}\cdot\frac{dx}{dt}  \Rightarrow  \frac{dh}{dx} = \frac{dh}{dt}\Bigg/\frac{dx}{dt}
+      </me>.
+    </p>
+
+    <p>
+      In words, to find <m>\frac{d^2y}{dx^2}</m>,
+      we first take the derivative of <m>\frac{dy}{dx}</m>
+      <em>with respect to <m>t</m></em>,
+      then divide by <m>x'(t)</m>.
+      We restate this as a Key Idea.
+    </p>
+
+    <insight xml:id="idea_second_der_par">
+      <title>Finding <m>\frac{d^2y}{dx^2}</m> with Parametric Equations</title>
+      <p>
+        Let <m>x=f(t)</m> and <m>y=g(t)</m> be twice differentiable functions on an open interval <m>I</m>,
+        where <m>\fp(t)\neq 0</m> on <m>I</m>.
+        Then
+        <idx><h>parametric equations</h><h>finding <m>\frac{d^2y}{dx^2}</m></h></idx>
+        <me>
+          \frac{d^2y}{dx^2} = \frac{d}{dt}\left[\frac{dy}{dx}\right]\Bigg/\frac{dx}{dt} = \frac{d}{dt}\left[\frac{dy}{dx}\right]\Bigg/\fp(t)
+        </me>.
+      </p>
+    </insight>
+
+    <p>
+      Examples will help us understand this Key Idea.
+    </p>
+
+    <example xml:id="ex_parcalc4">
+      <title>Concavity of Plane Curves</title>
+      <statement>
+        <p>
+          Let <m>x=5t^2-6t+4</m> and
+          <m>y=t^2+6t-1</m> as in <xref ref="ex_parcalc1">Example</xref>.
+          Determine the <m>t</m>-intervals on which the graph is concave up/down.
+        </p>
+      </statement>
+      <solution>
+        <video width="98%" youtube="rb4wEkhcUtE" xml:id="vid-planecurves-parcalc-concavity"/>
+        <p>
+          Concavity is determined by the second derivative of <m>y</m> with respect to <m>x</m>,
+          <m>\frac{d^2y}{dx^2}</m>,
+          so we compute that here following <xref ref="idea_second_der_par">Key Idea</xref>.
+        </p>
+
+        <p>
+          In <xref ref="ex_parcalc1">Example</xref>,
+          we found <m>\ds\frac{dy}{dx} = \frac{2t+6}{10t-6}</m> and <m>\fp(t) = 10t-6</m>.
+          So:
+          <md>
+            <mrow>\frac{d^2y}{dx^2} \amp = \frac{d}{dt}\left[\frac{2t+6}{10t-6}\right]\Bigg/(10t-6)</mrow>
+            <mrow>\amp = -\frac{72}{(10t-6)^2}\Bigg/(10t-6)</mrow>
+            <mrow>\amp = -\frac{72}{(10t-6)^3}</mrow>
+            <mrow>\amp = -\frac{9}{(5t-3)^3}</mrow>
+          </md>
+        </p>
+
+        <figure xml:id="fig_parcalc4">
+          <caption>Graphing the parametric equations in <xref ref="ex_parcalc4">Example</xref> to demonstrate concavity</caption>
+          <!-- START figures/fig_parcalc4.tex -->
+          <image xml:id="img_parcalc4" width="47%">
+            <description></description>
+            <latex-image>
+
+            \begin{tikzpicture}
+
+            \begin{axis}[
+            ymin=-20,ymax=55,
+            xmin=-5,xmax=90
+            ]
+
+            \addplot+ [-,domain=-3.5:5,samples=50] ({5*x^2-6*x+4},{x^2+6*x-1});
+
+            \draw [&gt;=latex,-&gt;] (axis cs: 12.14,-5.204) -- (axis cs: 12,-5.16);
+
+            \filldraw (axis cs: 2.2,2.96) circle (1.5pt);
+
+            \draw (axis cs: 31,26) node [above,rotate=26.56] { $t&gt;3/5$; concave down};
+            \draw (axis cs: 50.25,-9.75) node [below] { $t&lt;3/5$; concave up};
+
+            \end{axis}
+
+            \end{tikzpicture}
+
+            </latex-image>
+          </image>
+          <!-- figures/fig_parcalc4.tex END -->
+        </figure>
+
+        <p>
+          The graph of the parametric functions is concave up when
+          <m>\frac{d^2y}{dx^2} \gt 0</m> and concave down when <m>\frac{d^2y}{dx^2} \lt 0</m>.
+          We determine the intervals when the second derivative is greater/less than 0 by first finding when it is 0 or undefined.
+        </p>
+
+        <p>
+          As the numerator of <m>\ds -\frac{9}{(5t-3)^3}</m> is never 0, <m>\frac{d^2y}{dx^2} \neq 0</m> for all <m>t</m>.
+          It is undefined when <m>5t-3=0</m>;
+          that is, when <m>t= 3/5</m>.
+          Following the work established in <xref ref="sec_concavity">Section</xref>,
+          we look at values of <m>t</m> greater/less than <m>3/5</m> on a number line:
+        </p>
+
+        <image xml:id="img_parcalc4X" width="70%">
+          <description></description>
+          <latex-image>
+
+          \begin{tikzpicture}
+          \begin{axis}[numberline,
+          xmin=-0.9,xmax=0.9,
+          after end axis/.code={
+          \path (axis cs:0,0)
+          node [anchor=north,yshift=-0.075cm] {\footnotesize $3/5$};
+          },]
+          \addplot[guideline] coordinates {(0,0) (0,2)};
+          \addplot[mark=none] coordinates {(-0.5,1)} node {\parbox{8em}{\centering \small $\frac{d^2y}{dx^2}&gt; 0$\\concave up}};
+          \addplot[mark=none] coordinates {(0.5,1)} node {\parbox{8em}{\centering \small $\frac{d^2y}{dx^2}&lt;0$\\concave down}};
+          \end{axis}
+
+          \end{tikzpicture}
+
+          </latex-image>
+        </image>
+
+        <p>
+          Reviewing <xref ref="ex_parcalc1">Example</xref>,
+          we see that when <m>t=3/5=0.6</m>,
+          the graph of the parametric equations has a vertical tangent line.
+          This point is also a point of inflection for the graph,
+          illustrated in <xref ref="fig_parcalc4">Figure</xref>.
+        </p>
+        <p xml:id="vidint-planecurves-parcalc-sketch">
+          The video in <xref ref="vid-planecurves-parcalc-sketch">Figure</xref>
+          shows how this information can be used to sketch the curve by hand.
+        </p>
+
+        <figure xml:id="vid-planecurves-parcalc-sketch">
+          <caption>Sketching the curve in <xref ref="ex_parcalc4"/></caption>
+          <video youtube="HSBSVFSVqms"/>
+        </figure>
+      </solution>
+    </example>
+
+    <example xml:id="ex_parcalc5">
+      <title>Concavity of Plane Curves</title>
+      <statement>
+        <p>
+          Find the points of inflection of the graph of the parametric equations <m>x=\sqrt{t}</m>,
+          <m>y=\sin(t)</m>, for <m>0\leq t\leq 16</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We need to compute <m>\frac{dy}{dx}</m> and <m>\frac{d^2y}{dx^2}</m>.
+          <me>
+            \frac{dy}{dx} = \frac{y'(t)}{x'(t)} = \frac{\cos(t) }{1/(2\sqrt{t})} = 2\sqrt{t}\cos(t)
+          </me>.
+          <me>
+            \frac{d^2y}{dx^2} = \frac{\frac{d}{dt}\left[\frac{dy}{dx}\right]}{x'(t)} = \frac{\cos(t) /\sqrt{t}-2\sqrt{t}\sin(t) }{1/(2\sqrt{t})}=2\cos(t) -4t\sin(t)
+          </me>.
+        </p>
+
+        <p>
+          The points of inflection are found by setting <m>\frac{d^2y}{dx^2}=0</m>.
+          This is not trivial,
+          as equations that mix polynomials and trigonometric functions generally do not have <q>nice</q> solutions.
+        </p>
+
+        <p>
+          In <xref ref="fig_parcalc5a">Figure</xref> we see a plot of the second derivative.
+          It shows that it has zeros at approximately <m>t=0.5,\,3.5,\,6.5,\,9.5,\,12.5</m> and <m>16</m>.
+          These approximations are not very good,
+          made only by looking at the graph.
+          Newton's Method provides more accurate approximations.
+          Accurate to 2 decimal places, we have:
+          <me>
+            t=0.65,\,3.29,\,6.36,\,9.48,\,12.61\,\text{ and } \,15.74
+          </me>.
+        </p>
+
+        <p>
+          The corresponding points have been plotted on the graph of the parametric equations in <xref ref="fig_parcalc5b">Figure</xref>.
+          Note how most occur near the <m>x</m>-axis,
+          but not exactly on the axis.
+        </p>
+
+        <figure xml:id="fig_parcalc5">
+          <caption>In (a), a graph of <m>\frac{d^2y}{dx^2}</m>, showing where it is approximately 0. In (b), graph of the parametric equations in <xref ref="ex_parcalc5">Example</xref> along with the points of inflection</caption>
+          <sidebyside widths="47% 47%" margins="0%" valign="bottom">
+            <figure xml:id="fig_parcalc5a">
+              <caption/>
+            <!-- START figures/fig_parcalc5b.tex -->
+              <image xml:id="img_parcalc5a">
+                <description></description>
+                <latex-image>
+
+                \begin{tikzpicture}
+
+                \begin{axis}[
+                minor x tick num=4,
+                minor y tick num=4,
+                ymin=-59,ymax=59,
+                xmin=-.5,xmax=16.9,
+                xlabel={$t$}
+                ]
+
+                \addplot+ [-,domain=0:16,samples=120] ({x},{2*cos(deg(x))-4*x*sin(deg(x))});
+
+                \draw (axis cs: 5,-40) node { $y=2\cos(t) -4t\sin(t) $};
+
+                \end{axis}
+                \end{tikzpicture}
+
+                </latex-image>
+              </image>
+            <!-- figures/fig_parcalc5b.tex END -->
+            </figure>
+
+            <figure xml:id="fig_parcalc5b">
+              <caption/>
+            <!-- START figures/fig_parcalc5.tex -->
+              <image xml:id="img_parcalc5">
+                <description></description>
+                <latex-image>
+
+                \begin{tikzpicture}
+
+                \begin{axis}[
+                xtick={3,1,2,4},
+                ymin=-1.1,ymax=1.1,
+                xmin=-.5,xmax=4.5
+                ]
+
+                \addplot+ [-,domain=0:.5,samples=40] ({sqrt(x)},{sin(deg(x))});
+                \addplot [firstcurvestyle,-,domain=.5:3,samples=50] ({sqrt(x)},{sin(deg(x))});
+                \addplot [firstcurvestyle,-,domain=3:18,samples=120] ({sqrt(x)},{sin(deg(x))});
+
+                \filldraw (axis cs: 0.808252, 0.607787) circle (1.5pt)
+                          (axis cs: 1.81447, -0.150147) circle (1.5pt)
+                          (axis cs: 2.52223, 0.0783547) circle (1.5pt)
+                          (axis cs: 3.07855, -0.0526833) circle (1.5pt)
+                          (axis cs: 3.55049, 0.0396324) circle (1.5pt)
+                          (axis cs:3.96733, -0.0317508) circle (1.5pt);
+
+                \end{axis}
+
+                \end{tikzpicture}
+
+                </latex-image>
+              </image>
+            <!-- figures/fig_parcalc5.tex END -->
+            </figure>
+          </sidebyside>
+
+        </figure>
+      </solution>
+    </example>
+  </subsection>
+
+  <subsection>
+    <title>Arc Length</title>
+    <p>
+      We continue our study of the features of the graphs of parametric equations by computing their arc length.
+    </p>
+
+    <figure xml:id="vid-planecurves-parcalc-arclength">
+      <caption>Video introduction to arc length for parametric curves</caption>
+      <video youtube="57F7ZspP0lU"/>
+    </figure>
+    <p>
+      Recall in <xref ref="sec_arc_length">Section</xref>
+      we found the arc length of the graph of a function,
+      from <m>x=a</m> to <m>x=b</m>, to be
+      <me>
+        L = \int_a^b\sqrt{1+\left(\frac{dy}{dx}\right)^2}\, dx
+      </me>.
+    </p>
+
+    <p>
+      We can use this equation and convert it to the parametric equation context.
+      Letting <m>x=f(t)</m> and <m>y=g(t)</m>,
+      we know that <m>\frac{dy}{dx} = g'(t)/\fp(t)</m>.
+      It will also be useful to calculate the differential of <m>x</m>:
+      <me>
+        dx = \fp(t)dt \qquad \Rightarrow \qquad dt = \frac{1}{\fp(t)}\cdot dx
+      </me>.
+    </p>
+
+    <p>
+      Starting with the arc length formula above, consider:
+      <md>
+        <mrow>L \amp = \int_a^b\sqrt{1+\left(\frac{dy}{dx}\right)^2}\, dx</mrow>
+        <mrow>\amp = \int_a^b \sqrt{1+\frac{g'(t)^2}{\fp(t)^2}}\, dx.</mrow>
+        <intertext>Factor out the <m>\fp(t)^2</m>:</intertext>
+        <mrow>\amp = \int_a^b \sqrt{\fp(t)^2+g'(t)^2}\cdot\underbrace{\frac1{\fp(t)}\, dx}_{=dt}</mrow>
+        <mrow>\amp = \int_{t_1}^{t_2} \sqrt{\fp(t)^2+g'(t)^2}\, dt</mrow>
+      </md>.
+    </p>
+
+    <p>
+      Note the new bounds
+      (no longer <q><m>x</m></q> bounds,
+      but <q><m>t</m></q> bounds).
+      They are found by finding <m>t_1</m> and <m>t_2</m> such that <m>a= f(t_1)</m> and <m>b=f(t_2)</m>.
+      This formula is important, so we restate it as a theorem.
+    </p>
+
+    <theorem xml:id="thm_arc_length_parametric">
+      <title>Arc Length of Parametric Curves</title>
+      <statement>
+        <p>
+          Let <m>x=f(t)</m> and <m>y=g(t)</m> be parametric equations with <m>\fp</m> and <m>g'</m> continuous on <m>[t_1,t_2]</m>,
+          on which the graph traces itself only once.
+          The arc length of the graph, from <m>t=t_1</m> to <m>t=t_2</m>,
+          is
+          <idx><h>parametric equations</h><h>arc length</h></idx>
+          <idx><h>arc length</h></idx>
+          <me>
+            L = \int_{t_1}^{t_2} \sqrt{\fp(t)^2+g'(t)^2}\, dt
+          </me>.
+        </p>
+      </statement>
+    </theorem>
+
+    <aside>
+      <p>
+        <em>Note:</em> <xref ref="thm_arc_length_parametric">Theorem</xref>
+        makes use of differentiability on closed intervals,
+        just as was done in <xref ref="sec_arc_length">Section</xref>.
+      </p>
+    </aside>
+    <p>
+      As before, these integrals are often not easy to compute.
+      We start with a simple example,
+      then give another where we approximate the solution.
+    </p>
+
+    <example xml:id="ex_parcalc6">
+      <title>Arc Length of a Circle</title>
+      <statement>
+        <p>
+          Find the arc length of the circle parametrized by <m>x=3\cos(t)</m>,
+          <m>y=3\sin(t)</m> on <m>[0,3\pi/2]</m>.
+        </p>
+      </statement>
+      <solution>
+        <video width="98%" youtube="It8vHw3RHEw" xml:id="vid-planecurves-parcalc-arclength-example1"/>
+        <p>
+          By direct application of <xref ref="thm_arc_length_parametric">Theorem</xref>, we have
+          <md>
+            <mrow>L \amp = \int_0^{3\pi/2} \sqrt{(-3\sin(t) )^2 +(3\cos(t) )^2} \, dt.</mrow>
+            <intertext>Apply the Pythagorean Theorem.</intertext>
+            <mrow>\amp = \int_0^{3\pi/2} 3 \, dt</mrow>
+            <mrow>\amp = 3t\Big|_0^{3\pi/2} = 9\pi/2</mrow>
+          </md>.
+        </p>
+
+        <p>
+          This should make sense;
+          we know from geometry that the circumference of a circle with radius 3 is <m>6\pi</m>;
+          since we are finding the arc length of <m>3/4</m> of a circle,
+          the arc length is <m>3/4\cdot 6\pi = 9\pi/2</m>.
+        </p>
+      </solution>
+    </example>
+
+    <example xml:id="ex_parcalc7">
+      <title>Arc Length of a Parametric Curve</title>
+      <statement>
+        <p>
+          The graph of the parametric equations <m>x=t(t^2-1)</m>,
+          <m>y=t^2-1</m> crosses itself as shown in <xref ref="fig_parcalc7">Figure</xref>,
+          forming a <q>teardrop.</q> Find the arc length of the teardrop.
+        </p>
+        <figure xml:id="fig_parcalc7">
+          <caption>A graph of the parametric equations in <xref ref="ex_parcalc7">Example</xref>, where the arc length of the teardrop is calculated</caption>
+          <!-- START figures/fig_parcalc7.tex -->
+          <image xml:id="img_parcalc7" width="47%">
+            <description></description>
+            <latex-image>
+
+            \begin{tikzpicture}
+
+            \begin{axis}[
+            xtick={1,-1},
+            ytick={-1,1},
+            ymin=-1.1,ymax=1.1,
+            xmin=-1.1,xmax=1.1
+            ]
+
+            \addplot+ [-,domain=-1.5:1.5,samples=60] ({x^3-x},{x^2-1});
+
+            \end{axis}
+
+            \end{tikzpicture}
+
+            </latex-image>
+          </image>
+          <!-- figures/fig_parcalc7.tex END -->
+        </figure>
+      </statement>
+      <solution>
+        <video width="98%" youtube="G5U9BVhB3PE" xml:id="vid-planecurves-parcalc-arclength-example2"/>
+        <p>
+          We can see by the parametrizations of <m>x</m> and <m>y</m> that when <m>t=\pm 1</m>,
+          <m>x=0</m> and <m>y=0</m>.
+          This means we'll integrate from <m>t=-1</m> to <m>t=1</m>.
+          Applying <xref ref="thm_arc_length_parametric">Theorem</xref>, we have
+          <md>
+            <mrow>L   \amp = \int_{-1}^1\sqrt{(3t^2-1)^2+(2t)^2}\, dt</mrow>
+            <mrow>\amp =  \int_{-1}^1 \sqrt{9t^4-2t^2+1} \, dt</mrow>
+          </md>.
+        </p>
+
+        <p>
+          Unfortunately,
+          the integrand does not have an antiderivative expressible by elementary functions.
+          We turn to numerical integration to approximate its value.
+          Using 4 subintervals, Simpson's Rule approximates the value of the integral as <m>2.65051</m>.
+          Using a computer, more subintervals are easy to employ,
+          and <m>n=20</m> gives a value of <m>2.71559</m>.
+          Increasing <m>n</m> shows that this value is stable and a good approximation of the actual value.
+        </p>
+      </solution>
+    </example>
+  </subsection>
+
+  <subsection>
+    <title>Surface Area of a Solid of Revolution</title>
+    <p>
+      Related to the formula for finding arc length is the formula for finding surface area.
+      We can adapt the formula found in <xref ref="idea_surface_area"/>
+      from <xref ref="sec_arc_length">Section</xref>
+      in a similar way as done to produce the formula for arc length done before.
+    </p>
+
+    <theorem xml:id="thm_surface_area_parametric">
+      <title>Surface Area of a Solid of Revolution</title>
+      <statement>
+        <p>
+          Consider the graph of the parametric equations <m>x=f(t)</m> and <m>y=g(t)</m>,
+          where <m>\fp</m> and <m>g'</m> are continuous on an open interval <m>I</m> containing <m>t_1</m> and <m>t_2</m> on which the graph does not cross itself.
+              <idx><h>surface area</h><h>solid of revolution</h></idx>
+              <idx><h>integration</h><h>surface area</h></idx>
+              <idx><h>parametric equations</h><h>surface area</h></idx>
+        </p>
+
+        <p>
+          <ol>
+            <li>
+              <p>
+                The surface area of the solid formed by revolving the graph about the <m>x</m>-axis is (where
+                <m>g(t)\geq 0</m> on <m>[t_1,t_2]</m>):
+                <me>
+                  \text{ Surface Area }  = 2\pi\int_{t_1}^{t_2} g(t)\sqrt{\fp(t)^2+g'(t)^2}\, dt
+                </me>.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                The surface area of the solid formed by revolving the graph about the <m>y</m>-axis is (where
+                <m>f(t)\geq 0</m> on <m>[t_1,t_2]</m>):
+                <me>
+                  \text{ Surface Area }  = 2\pi\int_{t_1}^{t_2} f(t)\sqrt{\fp(t)^2+g'(t)^2}\, dt
+                </me>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </theorem>
+
+    <example xml:id="ex_parcalc8">
+      <title>Surface Area of a Solid of Revolution</title>
+      <statement>
+        <p>
+          Consider the teardrop shape formed by the parametric equations <m>x=t(t^2-1)</m>,
+          <m>y=t^2-1</m> as seen in <xref ref="ex_parcalc7">Example</xref>.
+          Find the surface area if this shape is rotated about the <m>x</m>-axis,
+          as shown in <xref ref="fig_parcalc8">Figure</xref>.
+        </p>
+        <figure xml:id="fig_parcalc8">
+          <caption>Rotating a teardrop shape about the <m>x</m>-axis in <xref ref="ex_parcalc8">Example</xref></caption>
+
+          <!-- START figures/figparcalc8_3D.asy -->
+          <image xml:id="img_parcalc8" width="47%">
+            <description></description>
+            <asymptote>
+
+
+
+              //ASY file for figparcalc8_3D.asy in Chapter 9
+
+              size(282,282,IgnoreAspect);
+              //currentprojection=perspective(7,2,1);
+              currentprojection=orthographic(4,3,2);
+              defaultrender.merge=true;
+
+              // setup and draw the axes
+              real[] myxchoice={};
+              real[] myychoice={};
+              real[] myzchoice={};
+              defaultpen(0.5mm);
+
+              pair xbounds=(-1.5,1.5);
+              pair ybounds=(-1.,1.);
+              pair zbounds=(-1.25,1.25);
+
+              xaxis3("",xbounds.x,xbounds.y,black,OutTicks(myxchoice));
+              yaxis3("",ybounds.x,ybounds.y,black,OutTicks(myychoice),Arrow3(size=3mm));
+              zaxis3("",zbounds.x,zbounds.y,black,OutTicks(myzchoice),Arrow3(size=3mm));
+
+              //label("$x$",(xbounds.y+0.05*(xbounds.y-xbounds.x),0,0));
+              label("$x$",(0,ybounds.y+0.05*(ybounds.y-ybounds.x),0));
+              label("$y$",(0,0,zbounds.y+0.05*(zbounds.y-zbounds.x)));
+
+              //surface t(t^2-1), t^2-1 revolved around x axis //({(x^2-1)*cos(y)},{x^3-x},{(x^2-1)*sin(y)});
+              triple f(pair t) {
+                return ((t.x^2-1)*cos(t.y),(t.x^3-t.x),(t.x^2-1)*sin(t.y));
+              }
+              surface s=surface(f,(-1,0),(1,2*pi),8,8,Spline);
+              pen p=apexmeshpen;
+              draw(s,surfacepen,meshpen=p);
+
+              //curve on the surfaces
+              triple g(real t) {return (0,t^3-t,-1+t^2);}
+              path3 mypath=graph(g,-1,1,operator ..);
+              draw(mypath,bluepen+linewidth(2));
+
+            </asymptote>
+          </image>
+          <!-- figures/figparcalc8_3D.asy END -->
+        </figure>
+      </statement>
+      <solution>
+        <p>
+          The teardrop shape is formed between <m>t=-1</m> and <m>t=1</m>.
+          Using <xref ref="thm_surface_area_parametric">Theorem</xref>,
+          we see we need for <m>g(t)\geq 0</m> on <m>[-1,1]</m>,
+          and this is not the case.
+          To fix this, we simplify replace <m>g(t)</m> with <m>-g(t)</m>,
+          which flips the whole graph about the <m>x</m>-axis
+          (and does not change the surface area of the resulting solid).
+          The surface area is:
+          <md>
+            <mrow>\text{ Area } \,S \amp = 2\pi\int_{-1}^1 (1-t^2)\sqrt{(3t^2-1)^2+(2t)^2}\, dt</mrow>
+            <mrow>\amp =  2\pi\int_{-1}^1 (1-t^2)\sqrt{9t^4-2t^2+1} \, dt</mrow>
+          </md>.
+        </p>
+
+        <p>
+          Once again we arrive at an integral that we cannot compute in terms of elementary functions.
+          Using Simpson's Rule with <m>n=20</m>,
+          we find the area to be <m>S=9.44</m>.
+          Using larger values of <m>n</m> shows this is accurate to 2 places after the decimal.
+        </p>
+      </solution>
+    </example>
+
+    <p>
+      After defining a new way of creating curves in the plane,
+      in this section we have applied calculus techniques to the parametric equation defining these curves to study their properties.
+      In the next section,
+      we define another way of forming curves in the plane.
+      To do so, we create a new coordinate system,
+      called <em>polar coordinates</em>,
+      that identifies points in the plane in a manner different than from measuring distances from the <m>y</m>- and <m>x</m>- axes.
+    </p>
+  </subsection>
+
+  <xi:include href="exer_sec_par_calc.ptx" />
+</section>

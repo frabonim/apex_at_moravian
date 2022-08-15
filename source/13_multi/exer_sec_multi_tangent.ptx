@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<exercises>
+  <exercise>
+    <statement>
+      <p>
+        Explain how the vector <m>\vec{v}=\la 1,0,3\ra </m> can be thought of as having a “slope” of 3.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        Answers will vary. The displacement of the vector is one unit in the <m>x</m>-direction and 3 units in the <m>z</m>-direction, with no change in <m>y</m>. Thus along a line parallel to <m>\vec{v}</m>, the change in <m>z</m> is 3 times the change in <m>x</m> – i.e., a “slope” of 3. Specifically, the line in the <m>x</m>-<m>z</m> plane parallel to <m>z</m> has a slope of 3.
+      </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        Explain how the vector <m>\vec{v}=\la 0.6,0.8, -2\ra </m> can be thought of as having a “slope” of <m>-2</m>.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        Answers will vary. Let <m>\vec{u} = \la 0.6,0.8\ra </m>; this is a unit vector. The displacement of the vector is one unit in the <m>\vec{u}</m>-direction and <m>-2</m> units in the <m>z</m>-direction. In the plane containing the <m>z</m>-axis and the vector <m>\vec{u}</m>, the line parallel to <m>\vec{v}</m> has slope <m>-2</m>.
+      </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        T/F: Let <m>z=f(x,y)</m> be differentiable at <m>P</m>. If <m>\vec{n}</m> is a normal vector to the tangent plane of <m>f</m> at <m>P</m>, then <m>\vec{n}</m> is orthogonal to <m>\ell _x</m> and <m>\ell _y</m> at <m>P</m>.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        T
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        Explain in your own words why we do not refer to <em>the</em> tangent line to a surface at a point, but rather to <em>directional</em> tangent line<em>s</em> to a surface at a point.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        On a surface through a point, there are many different smooth curves, each with a tangent line at the point. Each of these tangent lines is also “tangent” to the surface. There is not just one tangent line, but many, each in a different direction. Therefore we refer to directional tangent lines, not just <em>the</em> tangent line.
+      </p>
+    </answer>
+  </exercise>
+  <exercisegroup>
+    <introduction>
+      <p>
+        A function <m>z=f(x,y)</m>, a vector <m>\vec{v}</m> and a point <m>P</m> are given. Give the parametric equations of the following directional tangent lines to <m>f</m> at <m>P</m>:
+      </p>
+      <ol>
+        <li>
+          <p>
+            <m>\ell _x(t)</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>\ell _y(t)</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>\ell _{\vec{u}\,}(t)</m>, where <m>\vec{u}</m> is the unit vector in the direction of <m>\vec{v}</m>.</p>
+        </li>
+      </ol>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x,y) = 2x^2y-4xy^2</m>, <m>\vec{v} = \la 1,3\ra </m>, <m>P=(2,3)</m>.</p>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              <m>\ell _x(t) = \left\lbrace \begin{array}{l} x=2+t\\ y=3 \\ z = -48-12t\end{array}\right.</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\ell _y(t) = \left\lbrace \begin{array}{l} x=2\\ y=3+t \\ z = -48-40t\end{array}\right.</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\ell _{\vec{u}\,}(t) = \left\lbrace \begin{array}{l} x=2+t/\sqrt{10}\\ y=3+3t/\sqrt{10} \\ z = -48-66\sqrt{2/5}t\end{array}\right.</m>
+            </p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x,y) = 3\cos x\sin y</m>, <m>\vec{v} = \la 1,2\ra </m>, <m>P=(\pi /3, \pi /6)</m>.</p>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              <m>\ell _x(t) = \left\lbrace \begin{array}{l} x = \pi /3+t\\ y = \pi /6 \\ z = 3/4 -\frac{3\sqrt{3}}{4}t \end{array} \right.</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\ell _y(t) = \left\lbrace \begin{array}{l} x = \pi /3\\ y = \pi /6 +t\\ z = 3/4 +\frac{3\sqrt{3}}{4}t \end{array} \right.</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\ell _{\vec{u}\,}(t) = \left\lbrace \begin{array}{l} x = \pi /3+t/\sqrt{5}\\ y = \pi /6+2t/\sqrt{5} \\ z = 3/4 +\frac{3\sqrt{3/5}}{4}t \end{array} \right.</m>
+            </p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x,y) = 3x-5y</m>, <m>\vec{v} = \la 1,1\ra </m>, <m>P=(4,2)</m>.</p>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              <m>\ell _x(t) = \left\lbrace \begin{array}{l} x = 4+t\\ y = 2 \\ z = 2 + 3t \end{array} \right.</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\ell _y(t) = \left\lbrace \begin{array}{l} x = 4\\ y = 2+t\\ z = 2-5t \end{array} \right.</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\ell _{\vec{u}\,}(t) = \left\lbrace \begin{array}{l} x = 4+t/\sqrt{2}\\ y = 2+t/\sqrt{2} \\ z = 2 -\sqrt{2}t \end{array} \right.</m>
+            </p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x,y) = x^2-2x-y^2+4y</m>, <m>\vec{v} = \la 1,1\ra </m>, <m>P=(1,2)</m>.</p>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              <m>\ell _x(t) = \left\lbrace \begin{array}{l} x = 1+t\\ y = 2 \\ z = 3 \end{array} \right.</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\ell _y(t) = \left\lbrace \begin{array}{l} x = 1\\ y = 2+t\\ z = 3 \end{array} \right.</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\ell _{\vec{u}\,}(t) = \left\lbrace \begin{array}{l} x = 1+t/\sqrt{2}\\ y = 2+t/\sqrt{2} \\ z = 3 \end{array} \right.</m>
+            </p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        A function <m>z=f(x,y)</m> and a point <m>P</m> are given. Find the equation of the normal line to <m>f</m> at <m>P</m>.
+      </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x,y) = 2x^2y-4xy^2</m>, <m>P=(2,3)</m>.</p>
+      </statement>
+      <answer>
+        <p>
+          <m>\ell _{\vec{n}}(t) = \left\lbrace \begin{array}{l} x=2-12t\\ y=3-40t \\ z = -48-t\end{array}\right.</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x,y) = 3\cos x\sin y</m>, <m>P=(\pi /3, \pi /6)</m>.</p>
+      </statement>
+      <answer>
+        <p>
+          <m>\ell _{\vec{n}}(t) = \left\lbrace \begin{array}{l} x = \pi /3-\frac{3\sqrt{3}}{4}t\\ y = \pi /6+\frac{3\sqrt{3}}{4}t \\ z = 3/4 -t \end{array} \right.</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x,y) = 3x-5y</m>, <m>P=(4,2)</m>.</p>
+      </statement>
+      <answer>
+        <p>
+          <m>\ell _{\vec{n}}(t) = \left\lbrace \begin{array}{l} x = 4+3t\\ y = 2-5t \\ z = 2 -t \end{array} \right.</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x,y) = x^2-2x-y^2+4y</m>, <m>P=(1,2)</m>.</p>
+      </statement>
+      <answer>
+        <p>
+          <m>\ell _{\vec{n}}(t) = \left\lbrace \begin{array}{l} x = 1\\ y = 2 \\ z = 3 -t \end{array} \right.</m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        A function <m>z=f(x,y)</m> and a point <m>P</m> are given. Find the two points that are 2 units from the surface <m>f</m> at <m>P</m>. 
+      </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x,y) = 2x^2y-4xy^2</m>, <m>P=(2,3)</m>.</p>
+      </statement>
+      <answer>
+        <p>
+          <m>(1.425, 1.085, -48.078)</m>, <m>(2.575, 4.915, -47.952)</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x,y) = 3\cos x\sin y</m>, <m>P=(\pi /3, \pi /6)</m>.</p>
+      </statement>
+      <answer>
+        <p>
+          <m>(-0.195,1.766,-0.206)</m> and <m>(2.289,-0.719, 1.706)</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x,y) = 3x-5y</m>, <m>P=(4,2)</m>.</p>
+      </statement>
+      <answer>
+        <p>
+          <m>(5.014, 0.31, 1.662)</m> and <m>(2.986, 3.690, 2.338)</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x,y) = x^2-2x-y^2+4y</m>, <m>P=(1,2)</m>.</p>
+      </statement>
+      <answer>
+        <p>
+          <m>(1,2,1)</m> and <m>(1,2,5)</m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        A function <m>z=f(x,y)</m> and a point <m>P</m> are given. Find the equation of the tangent plane to <m>f</m> at <m>P</m>.
+      </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x,y) = 2x^2y-4xy^2</m>, <m>P=(2,3)</m>.</p>
+      </statement>
+      <answer>
+        <p>
+          <m>-12(x-2)-40(y-3) -(z+48) = 0</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x,y) = 3\cos x\sin y</m>, <m>P=(\pi /3, \pi /6)</m>.</p>
+      </statement>
+      <answer>
+        <p>
+          <m>-\frac{3\sqrt{3}}{4}(x-\pi /3)+\frac{3\sqrt{3}}{4}(y-\pi /6) - (z-3/4) = 0</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x,y) = 3x-5y</m>, <m>P=(4,2)</m>.</p>
+      </statement>
+      <answer>
+        <p>
+          <m>3(x-4)-5(y-2) - (z-2) = 0</m> (Note that this tangent plane is the same as the original function, a plane.)</p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x,y) = x^2-2x-y^2+4y</m>, <m>P=(1,2)</m>.</p>
+      </statement>
+      <answer>
+        <p>
+          <m>- (z-3) = 0</m>, or <m>z=3</m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        An implicitly defined function of <m>x</m>, <m>y</m> and <m>z</m> is given along with a point <m>P</m> that lies on the surface. Use the gradient <m>\nabla F</m> to:
+      </p>
+      <ol>
+        <li>
+          <p>
+            find the equation of the normal line to the surface at <m>P</m>, and
+          </p>
+        </li>
+        <li>
+          <p>
+            find the equation of the plane tangent to the surface at <m>P</m>.
+          </p>
+        </li>
+      </ol>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \frac{x^2}{8}+\frac{y^2}{4}+\frac{z^2}{16}=1</m>, at <m>P = (1,\sqrt{2},\sqrt{6})</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\nabla F = \la x/4, y/2, z/8\ra </m>; at <m>P</m>, <m>\nabla F = \la 1/4, \sqrt{2}/2, \sqrt{6}/8\ra </m>
+        </p>
+        <ol>
+          <li>
+            <p>
+              <m>\ell _{\vec{n}}(t) = \left\lbrace \begin{array}{l} x= 1+ t/4 \\ y = \sqrt{2}+ \sqrt{2}t/2\\ z = \sqrt{6} + \sqrt{6}t/8 \end{array}\right.</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\frac{1}{4}(x-1) + \frac{\sqrt{2}}{2}(y-\sqrt{2}) + \frac{\sqrt{6}}{8}(z-\sqrt{6}) = 0</m>.</p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle z^2-\frac{x^2}{4} - \frac{y^2}{9}=0</m>, at <m>P = (4,-3,\sqrt{5})</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\nabla F = \la -\frac{x}{2}, -\frac{2y}{9},2z \ra </m>; at <m>P</m>, <m>\nabla F = \la -2, 2/3, 2\sqrt{5}\ra </m>
+        </p>
+        <ol>
+          <li>
+            <p>
+              <m>\ell _{\vec{n}}(t) = \left\lbrace \begin{array}{l} x= 4-2t \\ y = -3+ 2t/3\\ z = \sqrt{5} + 2\sqrt{5}t \end{array}\right.</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>-2(x-4) + \frac{2}{3}(y+3) + 2\sqrt{5}(z-\sqrt{5}) = 0</m>.</p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle xy^2-xz^2=0</m>, at <m>P = (2,1,-1)</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\nabla F = \la y^2-z^2, 2xy, -2xz\ra </m>; at <m>P</m>, <m>\nabla F = \la 0, 4, 4\ra </m>
+        </p>
+        <ol>
+          <li>
+            <p>
+              <m>\ell _{\vec{n}}(t) = \left\lbrace \begin{array}{l} x= 2 \\ y = 1+4t\\ z = -1+4t \end{array}\right.</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>4(y-1) + 4(z+1) = 0</m>.</p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \sin (xy)+\cos (yz)=0</m>, at <m>P = (2, \pi /12, 4)</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\nabla F = \la y\cos (xy), x\cos (xy)-z\sin (yz), -y\sin (yz)\ra </m>; at <m>P</m>, <m>\nabla F = \la \frac{\pi }{8\sqrt{3}}, -\sqrt{3},-\frac{\pi }{8\sqrt{3}}\ra </m>
+        </p>
+        <ol>
+          <li>
+            <p>
+              <m>\ell _{\vec{n}}(t) = \left\lbrace \begin{array}{l} x= 2 +\frac{\pi }{8\sqrt{3}}t\\ y = \frac{\pi }{12}-\sqrt{3}t\\ z = 4-\frac{\pi }{8\sqrt{3}}t \end{array}\right.</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\frac{\pi }{8\sqrt{3}}(x-2) -\sqrt{3}(y-\frac{\pi }{12}) -\frac{\pi }{8\sqrt{3}}(z-4) = 0</m>.</p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+  </exercisegroup>
+</exercises>

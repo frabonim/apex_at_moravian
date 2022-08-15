@@ -1,0 +1,667 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<exercises>
+  <exercise>
+    <statement>
+      <p>
+        T/F: Integration by Parts is useful in evaluating integrands that contain products of functions.
+        </p>
+    </statement>
+    <answer>
+      <p>
+        T
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        T/F: Integration by Parts can be thought of as the “opposite of the Chain Rule.”
+        </p>
+    </statement>
+    <answer>
+      <p>
+        F
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        For what is “LIATE” useful?
+        </p>
+    </statement>
+    <answer>
+      <p>
+        Determining which functions in the integrand to set equal to “<m>u</m>” and which to set equal to “<m>dv</m>”.
+      </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        T/F: If the integral that results from Integration by Parts appears to also need Integration by Parts, then a mistake was made in the original choice of “<m>u</m>”.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        F; it is not uncommon to need to use Integration by Parts several times to fully evaluate an integral.
+        </p>
+    </answer>
+  </exercise>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 5–34, evaluate the given indefinite integral.
+        </p>
+    </introduction>
+    <exercise xml:id="exer_ibp_first">
+      <statement>
+        <p>
+          <m>\displaystyle \int x\sin x\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\sin x - x\cos x+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int xe^{-x}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>-e^{-x}-xe^{-x}+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int x^2\sin x\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>-x^2\cos x+2x\sin x+2\cos x+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int x^3\sin x\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>-x^3\cos x + 3x^2\sin x+6x\cos x-6\sin x+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int xe^{x^2}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>1/2e^{x^2}+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int x^3e^{x}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>x^3e^x-3x^2e^x+6xe^x-6e^x+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int xe^{-2x}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>-\frac{1}{2}x e^{-2 x}-\frac{e^{-2 x}}{4}+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int e^x\sin x\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>1/2e^x(\sin x-\cos x)+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int e^{2x}\cos x\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>1/5e^{2x}(\sin x+2\cos x)+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int e^{2x}\sin (3x)\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>1/13e^{2x}(2\sin (3x)-3\cos (3x))+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int e^{5x}\cos (5x)\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>1/10e^{5x}(\sin (5x)+\cos (5x))+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \sin x\cos x\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>-1/2\cos ^2x+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \sin ^{-1} x\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\sqrt{1-x^2}+x \sin ^{-1}(x)+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \tan ^{-1} (2x)\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>x \tan ^{-1}(2 x)-\frac{1}{4} \ln \left|4 x^2+1\right|+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int x\tan ^{-1} x\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\frac{1}{2} x^2 \tan ^{-1}(x)-\frac{x}{2}+\frac{1}{2} \tan ^{-1}(x)+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \sin ^{-1} x\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\sqrt{1-x^2}+x\sin ^{-1}x+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int x\ln x\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\frac{1}{2} x^2 \ln |x|-\frac{x^2}{4}+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int (x-2)\ln x\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>-\frac{x^2}{4}+\frac{1}{2} x^2 \ln |x|+2 x-2 x \ln |x|+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int x\ln (x-1)\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>-\frac{x^2}{4}+\frac{1}{2} x^2 \ln |x-1|-\frac{x}{2}-\frac{1}{2} \ln |x-1|+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int x\ln (x^2)\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\frac{1}{2} x^2 \ln \left(x^2\right)-\frac{x^2}{2}+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int x^2\ln x\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\frac{1}{3} x^3 \ln |x|-\frac{x^3}{9}+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \left(\ln x\right)^2\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>2 x+x \left(\ln x\right)^2-2 x \ln x+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \left(\ln (x+1)\right)^2\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>2 (x+1)+(x+1) \left(\ln (x+1)\right)^2-2 (x+1)\ln (x+1)+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int x\sec ^2x\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>x \tan (x)+\ln |\cos (x)|+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int x\csc ^2x\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\ln |\sin (x)|-x \cot (x)+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int x\sqrt{x-2}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\frac{2}{5}(x-2)^{5/2}+\frac{4}{3} (x-2)^{3/2}+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int x\sqrt{x^2-2}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\frac{1}{3}(x^2-2)^{3/2}+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \sec x\tan x\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\sec x+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int x\sec x\tan x\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>x\sec x-\ln |\sec x+\tan x|+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise xml:id="exer_ibp_last">
+      <statement>
+        <p>
+          <m>\displaystyle \int x\csc x\cot x\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>-x\csc x-\ln |\csc x+\cot x|+C</m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 35–40, evaluate the indefinite integral after first making a substitution.
+        </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \sin (\ln x)\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>1/2x\big (\sin (\ln x)-\cos (\ln x)\big )+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int e^{2x}\cos \big (e^x\big )\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\cos \big (e^x\big ) + e^x\sin \big (e^x\big )+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \sin (\sqrt{x})\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>2 \sin \left(\sqrt{x}\right)-2 \sqrt{x} \cos \left(\sqrt{x}\right)+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \ln (\sqrt{x})\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\frac{1}{2} x \ln |x|-\frac{x}{2}+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int e^{\sqrt{x}}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>2\sqrt{x} e^{\sqrt{x}} -2 e^{\sqrt{x}}+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int e^{\ln x}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>1/2x^2+C</m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 41–49, evaluate the definite integral. Note: the corresponding indefinite integrals appear in Exercises <xref text="local" first="exer_ibp_first" last="exer_ibp_last" />.
+      </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _0^\pi x\sin x\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\pi </m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{-1}^1 xe^{-x}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>-2/e</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{-\pi /4}^{\pi /4} x^2\sin x\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>0</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{-\pi /2}^{\pi /2} x^3\sin x\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\frac{3 \pi ^2}{2}-12</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _0^{\sqrt{\ln 2}} xe^{x^2}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>1/2</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _0^1 x^3e^{x}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>6-2e</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _1^2 xe^{-2x}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\frac{3}{4 e^2}-\frac{5}{4 e^4}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _0^{\pi } e^x\sin x\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\frac{1}{2}+\frac{e^{\pi }}{2}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{-\pi /2}^{\pi /2} e^{2x}\cos x\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>1/5\left(e^{\pi }+e^{-\pi }\right)</m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 50–53, find <m>F\hspace{0.75pt}^{\prime }(x)</m>.
+      </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle F(x) = \int _2^{x^3+x} \frac{1}{t}\ dt</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>F^{\prime }(x) = (3x^2+1)\frac{1}{x^3+x}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle F(x) = \int _{x^3}^{0} t^3\ dt</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>F^{\prime }(x) = -3x^{11}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle F(x) = \int _{x}^{x^2} (t+2)\ dt</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>F^{\prime }(x) = 2x(x^2+2)-(x+2)</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle F(x) = \int _{\ln x}^{e^x} \sin t\ dt</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>F^{\prime }(x) = e^x\sin (e^x) - 1/x\sin (\ln x)</m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+</exercises>

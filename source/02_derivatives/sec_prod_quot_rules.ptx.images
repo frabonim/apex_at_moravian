@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec_prod_quot_rules">
+  <title>The Product and Quotient Rules</title>
+  <p>
+    <xref ref="sec_basic_diff_rules">Section</xref> showed that, in some ways, derivatives behave nicely. The <xref text="title" ref="constant-multiple-derivative-rule" /> and <xref text="title" ref="sum-difference-derivative-rule" /> established that the derivative of <m>f(x) = 5x^2+\sin(x)</m> was not complicated. We neglected computing the derivative of things like <m>g(x) = 5x^2\sin(x)</m> and <m>h(x) = \frac{5x^2}{\sin(x) }</m> on purpose; their derivatives are <em>not</em> as straightforward. (If you had to guess what their respective derivatives are, you would probably guess wrong.) For these, we need the Product and Quotient Rules, respectively, which are defined in this section. We begin with the Product Rule.</p>
+  <theorem xml:id="thm_ProductRule">
+    <title>Product Rule</title>
+    <statement>
+      <p>
+        Let <m>f</m> and <m>g</m> be differentiable functions on an open interval <m>I</m>.<idx><h>Power Rule</h>differentiation</idx><idx><h>derivative</h>Product Rule</idx> Then <m>fg</m> is a differentiable function on <m>I</m>, and
+          <me>
+            \lzoo{x}{f(x)g(x)} = f(x)g'(x) + \fp(x)g(x)
+          </me>.
+        
+      </p>
+    </statement>
+  </theorem>
+  <warning>
+    <p>
+      <m>\lzoo{x}{f(x)g(x)}\neq \fp(x)g'(x)</m>! While this would be simpler than the <xref text="title" ref="thm_ProductRule" />, it is wrong.</p>
+  </warning>
+  <p>
+    We practice using this new rule in an example, followed by an example that demonstrates why this theorem is true.
+    </p>
+  <example xml:id="ex_prod1">
+    <title>Using the Product Rule</title>
+    <statement>
+      <p>
+        Use the Product Rule to compute the derivative of <m>y=5x^2\sin(x)</m>. Evaluate the derivative at <m>x=\pi/2</m>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        To make our use of the <xref text="title" ref="thm_ProductRule" /> explicit, let's set <m>f(x) = 5x^2</m> and <m>g(x) = \sin(x)</m>. We easily compute/recall that <m>\fp(x) = 10x</m> and <m>g'(x) = \cos(x)</m>. Employing the rule, we have
+          <md>
+          <mrow>\lzoo{x}{5x^2\sin(x)} \amp= 5x^2\lzoo{x}{\sin(x)} + \lzoo{x}{5x^2}\sin(x)</mrow>
+          <mrow>\amp= 5x^2\cos(x) + 10x\sin(x).</mrow>
+        </md>
+        
+      </p>
+      <p>
+        At <m>x=\pi/2</m>, we have
+          <me>
+            y'(\pi/2) = 5\left(\frac{\pi}{2}\right)^2\cos\left(\frac{\pi}2\right) + 10\cdot\frac{\pi}2 \sin\left(\frac{\pi}{2}\right) = 5\pi
+          </me>.
+
+        
+      </p>
+      <p>
+        We graph <m>y</m> and its tangent line at <m>x=\pi/2</m>, which has a slope of <m>5\pi</m>, in <xref ref="fig_5xsquaredsinx">Figure</xref>. While this does not <em>prove</em> that the Product Rule is the correct way to handle derivatives of products, it helps validate its truth.
+      </p>
+      <sidebyside width="47%">
+        <figure xml:id="fig_5xsquaredsinx">
+          <caption>A graph of <m>y = 5x^2\sin(x)</m> and its tangent line at <m>x=\pi/2</m>.</caption>
+          <image xml:id="img_5xsquaredsinx">
+            <description />
+            <latex-image>
+                
+                \begin{tikzpicture}
+                  \begin{axis}[xmin=-0.1,xmax=3.5,
+                              ymin=-1.1,ymax=21,
+                              xtick={1.57,3.14},
+                              xticklabels={$\frac{\pi}2$,$\pi$},]
+                      \addplot+[domain=0:3.14,samples=100] {5*(x^2)*sin(x*180/3.14)};
+                      \addplot [tangentline,domain=0.75:2] {15.7*(x-1.57)+12.34};
+                      \addplot[soliddot] coordinates{(1.57,12.34)};
+                  \end{axis}
+                \end{tikzpicture}
+                
+              </latex-image>
+          </image>
+        </figure>
+      </sidebyside>
+    </solution>
+  </example>
+  <p>
+    We now investigate why the <xref text="title" ref="thm_ProductRule" /> is true.
+  </p>
+  <proof statement="thm_ProductRule">
+    <p>
+      We can use the definition of the derivative to prove <xref ref="thm_ProductRule">Theorem</xref>.
+    </p>
+    <p>
+      By the limit definition, we have
+          <me>
+            \lzoo{x}{f(x)g(x)} =\lim_{h\to0} \frac{f(x+h)g(x+h)-f(x)g(x)}{h}.
+          </me>
+        
+    </p>
+    <p>
+      We now do something a bit unexpected; add <m>0</m> to the numerator (so that nothing is changed) in the form of <m>{}-f(x+h)g(x)+f(x+h)g(x)</m>, then do some regrouping as shown.<fn>Adding <m>0</m> in some clever form is a common mathematical proof technique.</fn>
+          <md>
+        <mrow>\amp\lzoo{x}{f(x)g(x)} = \lim_{h\to0} \frac{f(x+h)g(x+h)-f(x)g(x)}{h}</mrow>
+        <mrow>\amp \text{ (now add 0 to the numerator) }</mrow>
+        <mrow>\amp = \lim_{h\to0} \frac{f(x+h)g(x+h)-f(x+h)g(x)+f(x+h)g(x)-f(x)g(x)}{h}</mrow>
+        <mrow>\amp \text{ (regroup) }</mrow>
+        <mrow>\amp = \lim_{h\to0} \frac{\left[f(x+h)g(x+h)-f(x+h)g(x)\right]+\left[f(x+h)g(x)-f(x)g(x)\right]}{h}</mrow>
+        <mrow>\amp \text{ (split fraction)}</mrow>
+        <mrow>\amp = \lim_{h\to0} \frac{f(x+h)g(x+h)-f(x+h)g(x)}{h}+\lim_{h\to0}\frac{f(x+h)g(x)-f(x)g(x)}{h}</mrow>
+        <mrow>\amp \text{ (factor) }</mrow>
+        <mrow>\amp = \lim_{h\to0} f(x+h)\frac{g(x+h)-g(x)}{h}+\lim_{h\to0}\frac{f(x+h)-f(x)}{h}g(x)</mrow>
+        <mrow>\amp \text{ (apply limit properties) }</mrow>
+        <mrow>\amp = \lim_{h\to0} f(x+h)\cdot \lim_{h\to0} \frac{g(x+h)-g(x)}{h}+\lim_{h\to0}\frac{f(x+h)-f(x)}{h}\cdot \lim_{h\to0} g(x)</mrow>
+        <mrow>\amp \text{ (apply limits) }</mrow>
+        <mrow>\amp =f(x)g'(x) + \fp(x)g(x)</mrow>
+        <mrow>\amp \text{ (by definition of the derivative).}</mrow>
+      </md>
+      
+          We have proven the product rule as desired.
+        
+    </p>
+  </proof>
+  <p>
+    It is often true that we can recognize that a theorem is true through its proof yet somehow doubt its applicability to real problems. In the following example, we compute the derivative of a product of functions in two ways to verify that the <xref text="title" ref="thm_ProductRule" /> is indeed <q>right.</q>
+  </p>
+  <example xml:id="ex_prod2">
+    <title>Exploring alternate derivative methods</title>
+    <statement>
+      <p>
+        Let <m>y = (x^2+3x+1)(2x^2-3x+1)</m>. Find <m>y'</m> two ways: first, by expanding the given product and then taking the derivative, and second, by applying the <xref text="title" ref="thm_ProductRule" />. Verify that both methods give the same answer.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        We first expand the expression for <m>y</m>; a little algebra shows that <m>y = 2x^4+3x^3-6x^2+1</m>. It is easy to compute <m>y'</m>;
+          <me>
+            y' = 8x^3+9x^2-12x
+          </me>.
+        
+      </p>
+      <p>
+        Instead, let's apply the <xref text="title" ref="thm_ProductRule" /> to the original factored form:
+          <md>
+          <mrow>y' \amp = (x^2+3x+1)\lzoo{x}{2x^2-3x+1}+\lzoo{x}{x^2+3x+1}(2x^2-3x+1)</mrow>
+          <mrow>\amp = (x^2+3x+1)(4x-3)+(2x+3)(2x^2-3x+1)</mrow>
+          <mrow>\amp = \left(4x^3+9x^2-5x-3\right) + \left(4x^3-7x+3\right)</mrow>
+          <mrow>\amp  = 8x^3+9x^2-12x.</mrow>
+        </md>
+        
+      </p>
+      <p>
+        The uninformed usually assume that <q>the derivative of the product is the product of the derivatives.</q> Thus we are tempted to say that <m>y' = (2x+3)(4x-3) = 8x^2+6x-9</m>. Obviously this is not correct.
+      </p>
+    </solution>
+  </example>
+  <example xml:id="ex_prod10">
+    <title>Using the Product Rule with a product of three functions</title>
+    <statement>
+      <p>
+        Let <m>y = x^3\ln(x) \cos(x)</m>. Find <m>y'</m>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        We have a product of three functions while the <xref text="title" ref="thm_ProductRule" /> only specifies how to handle a product of two functions. Our method of handling this problem is to simply group the latter two functions together, and consider <m>y = x^3\cdot\left[\ln(x) \cos(x) \right]</m>. Following the <xref text="title" ref="thm_ProductRule" />, we have
+          <md>
+          <mrow>\yp \amp = (x^3)\lzoo{x}{\ln(x) \cos(x)} + \lzoo{x}{x^3}\ln(x) \cos(x)</mrow>
+          <intertext>To evaluate <m>\lzoo{x}{\ln(x) \cos(x)}</m>, we apply the Product Rule again:</intertext>
+          <mrow>\yp \amp = (x^3)\left[\ln(x) (-\sin(x) ) + \frac1x\cos(x) \right]+ 3x^2\left[\ln(x) \cos(x) \right]</mrow>
+          <mrow>\amp = x^3\ln(x) (-\sin(x) ) + x^3\frac{1}{x}\cos(x) + 3x^2\ln(x) \cos(x).</mrow>
+        </md>
+        
+      </p>
+      <p>
+        Recognize the pattern in our answer above: when applying the <xref text="title" ref="thm_ProductRule" /> to a product of three functions, there are three terms added together in the final derivative. Each terms contains only one derivative of one of the original functions, and each function's derivative shows up in only one term. It is straightforward to extend this pattern to finding the derivative of a product of four or more functions.
+      </p>
+      <p>
+        Ultimately though, we would simplify our final computation to:
+          <me>\yp=-x^3\ln(x)\sin(x) + x^2\cos(x) + 3x^2\ln(x)\cos(x)</me>
+          If you check this answer with a <init>CAS</init>, it may factor and give the answer:
+          <me>\yp=-x^2\left[x\ln(x)\sin(x) + \cos(x) + 3\ln(x)\cos(x)\right]</me>
+      </p>
+    </solution>
+  </example>
+  <p>
+    We consider one more example before discussing another derivative rule.
+    </p>
+  <example xml:id="ex_deriv_ln">
+    <title>Using the Product Rule</title>
+    <statement>
+      <p>
+        Find the derivatives of the following functions.<ol>
+          <li><p><m>f(x) = x\ln(x)</m></p></li>
+
+          <li><p><m>g(x) = x\ln(x) - x</m>.</p></li>
+        </ol>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Recalling that the derivative of <m>\ln(x)</m> is <m>1/x</m>, we use the <xref text="title" ref="thm_ProductRule" /> to find our answers.
+      </p>
+      <p>
+        <ol>
+          <li>
+            <p>
+              Applying the <xref text="title" ref="thm_ProductRule" />:<md>
+                <mrow>\lzoo{x}{x\ln(x)}\amp= x\cdot 1/x + 1\cdot \ln(x)</mrow>
+                <mrow>\amp = 1+\ln(x).</mrow>
+              </md>
+              
+            </p>
+          </li>
+          <li>
+            <p>
+              Using the result from above, we compute
+              <md>
+                <mrow>\lzoo{x}{x\ln(x) -x}\amp= 1+\ln(x) -1</mrow>
+                <mrow>\amp= \ln(x).</mrow>
+              </md>
+            
+            </p>
+          </li>
+        </ol>
+      </p>
+      <p>
+        This seems significant; if the natural log function <m>\ln(x)</m> is an important function (it is), it seems worthwhile to know a function whose derivative is <m>\ln(x)</m>. We have found one. (We leave it to the reader to find another; a correct answer will be <em>very</em> similar to this one.)
+      </p>
+    </solution>
+  </example>
+  <p>
+    We have learned how to compute the derivatives of sums, differences, and products of functions. We now learn how to find the derivative of a quotient of functions.
+    </p>
+  <theorem xml:id="thm_QuotientRule">
+    <title>Quotient Rule</title>
+    <statement>
+      <p>
+        Let <m>f</m> and <m>g</m> be functions defined on an open interval <m>I</m>, where <m>g(x) \neq 0</m> on <m>I</m>.<idx><h>derivative</h>Quotient Rule</idx><idx><h>Quotient Rule</h></idx> Then <m>f/g</m> is differentiable on <m>I</m>, and
+          <me>
+            \lzoo{x}{\frac{f(x)}{g(x)}} = \frac{g(x)\fp(x) - f(x)g'(x)}{g(x)^2}
+          </me>.
+        
+      </p>
+    </statement>
+  </theorem>
+  <p>
+    The <xref text="title" ref="thm_QuotientRule" /> is not hard to use, although it might be a bit tricky to remember. A useful mnemonic works as follows. Consider a fraction's numerator and denominator as <q>HI</q> and <q>LO</q>, respectively. Then
+      <me>
+        \lzoo{x}{\frac{\text{ HI } }{\text{ LO } }} = \frac{\text{ LO}\cdot\text{dHI}-\text{HI}\cdot\text{dLO }}{\text{ LOLO } }
+      </me>,
+      read <q>low dee high minus high dee low, over low low.</q> Said fast, that phrase can roll off the tongue, making it easy to memorize. The <q>dee high</q> and <q>dee low</q> parts refer to the derivatives of the numerator and denominator, respectively.
+  </p>
+  <p>
+    Let's practice using the Quotient Rule.
+    </p>
+  <example xml:id="ex_quot1">
+    <title>Using the Quotient Rule</title>
+    <statement>
+      <p>
+        Let <m>f(x) = \frac{5x^2}{\sin(x) }</m>. Find <m>\fp(x)</m>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Directly applying the <xref text="title" ref="thm_QuotientRule" /> gives:
+          <md>
+          <mrow>\lzoo{x}{frac{5x^2}{\sin(x) }} \amp = \frac{\sin(x) \cdot \lzoo{x}{5x^2} - 5x^2\cdot \lzoo{x}{\sin(x)} }{\sin^2(x) }</mrow>
+          <mrow>\amp =    \frac{10x\sin(x) - 5x^2\cos(x) }{\sin^2(x) }.</mrow>
+        </md>
+        
+      </p>
+    </solution>
+  </example>
+  <p>
+    The <xref text="title" ref="thm_QuotientRule" /> allows us to fill in holes in our understanding of derivatives of the common trigonometric functions. We start with finding the derivative of the tangent function.
+  </p>
+  <example xml:id="ex_der_tan">
+    <title>Using the Quotient Rule to find <m>\lzoo{x}{\tan(x)}</m>
+    </title>
+    <statement>
+      <p>
+        Find the derivative of <m>y=\tan(x)</m>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        At first, one might feel unequipped to answer this question. But recall that <m>\tan(x) = \sin(x) /\cos(x)</m>, so we can apply the <xref text="title" ref="thm_QuotientRule" />.
+          <md>
+          <mrow>\lzoo{x}{\tan(x)}\amp = \lzoo{x}{\frac{\sin(x) }{\cos(x) }}</mrow>
+          <mrow>\amp = \frac{\cos(x) \lzoo{x}{\sin(x)} - \sin(x)\lzoo{x}{\cos(x)}}{\cos^2(x) }</mrow>
+          <mrow>\amp = \frac{\cos(x) \cos(x) - \sin(x) (-\sin(x) )}{\cos^2(x) }</mrow>
+          <mrow>\amp = \frac{\cos^2(x) +\sin^2(x) }{\cos^2(x) }</mrow>
+          <mrow>\amp = \frac{1}{\cos^2(x) }</mrow>
+          <mrow>\amp = \sec^2(x).</mrow>
+        </md>
+        
+      </p>
+      <p>
+        This is a beautiful result. To confirm its truth, we can find the equation of the tangent line to <m>y=\tan(x)</m> at <m>x=\pi/4</m>. The slope is <m>\sec^2(\pi/4) = 2</m>; <m>y=\tan(x)</m>, along with its tangent line, is graphed in <xref ref="fig_tanx">Figure</xref>.
+      </p>
+      <sidebyside width="47%">
+        <figure xml:id="fig_tanx">
+          <caption>A graph of <m>y=\tan(x)</m> along with its tangent line at <m>x=\pi/4</m>.</caption>
+          <image xml:id="img_tanx">
+            <description />
+            <latex-image>
+                
+                \begin{tikzpicture}
+                  \begin{axis}[xmin=-1.65,xmax=1.7,
+                              ymin=-11,ymax=11,
+                              xtick={-1.57,-.785,.785,1.57},
+                              xticklabels={$-\frac{\pi}{2}$,$-\frac{\pi}{4}$,$\frac{\pi}{4}$,$\frac{\pi}{2}$},]
+                    \addplot+[samples=100,domain=-11:11] ({atan(x)*pi/180},{x});
+                    \addplot [tangentline,domain=-1.0:1.5] {2*(x-pi/4)+1};
+                    \addplot [soliddot] coordinates{(0.785,1)};
+                  \end{axis}
+                \end{tikzpicture}
+                
+              </latex-image>
+          </image>
+        </figure>
+      </sidebyside>
+    </solution>
+  </example>
+  <p>
+    We include this result in the following theorem about the derivatives of the trigonometric functions. Recall we found the derivative of <m>y=\sin(x)</m> in <xref ref="ex_deriv_sinx">Example</xref> and stated the derivative of the cosine function in <xref ref="thm_deriv_common">Theorem</xref>. The derivatives of the cotangent, cosecant and secant functions can all be computed directly using <xref ref="thm_deriv_common">Theorem</xref> and the <xref text="title" ref="thm_QuotientRule" />.
+  </p>
+  <theorem xml:id="thm_deriv_trig">
+    <title>Derivatives of Trigonometric Functions</title>
+    <statement>
+      <p>
+        <ol cols="2">
+          <li>
+            <p>
+              <m>\displaystyle \lzoo{x}{\sin(x)} = \cos(x)</m>
+              <idx>
+                <h>derivative</h>
+                trigonometric functions
+              </idx>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\displaystyle \lzoo{x}{\cos(x)} = -\sin(x)</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\displaystyle \lzoo{x}{\tan(x)} = \sec^2(x)</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\displaystyle \lzoo{x}{\cot(x)} = -\csc^2(x)</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\displaystyle \lzoo{x}{\sec(x)} = \sec(x) \tan(x)</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\displaystyle \lzoo{x}{\csc(x)} = -\csc(x) \cot(x)</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </theorem>
+  <p>
+    To remember the above, it may be helpful to keep in mind that the derivatives of the trigonometric functions that start with <q>c</q> have a minus sign in them.
+  </p>
+  <example xml:id="ex_prod_quot">
+    <title>Exploring alternate derivative methods</title>
+    <statement>
+      <p>
+        In <xref ref="ex_quot1">Example</xref> the derivative of <m>f(x) = \frac{5x^2}{\sin(x) }</m> was found using the <xref text="title" ref="thm_QuotientRule" />. Rewriting <m>f</m> as <m>f(x) = 5x^2\csc(x)</m>, find <m>\fp</m> using <xref ref="thm_deriv_trig">Theorem</xref> and verify the two answers are the same.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        We found in <xref ref="ex_quot1">Example</xref> that <m>\fp(x) = \frac{10x\sin(x) - 5x^2\cos(x) }{\sin^2(x) }</m>. We now find <m>\fp</m> using the <xref text="title" ref="thm_ProductRule" />, considering <m>f</m> as <m>f(x) = 5x^2\csc(x)</m>.
+          <md>
+          <mrow>\fp(x) \amp = \lzoo{x}{5x^2\csc(x)}</mrow>
+          <mrow>\amp = 5x^2\lzoo{x}{\csc(x)} + \lzoo{x}{5x^2}\csc(x)</mrow>
+          <mrow>\amp = 5x^2\left(-\csc(x) \cot(x) \right) + 10x\csc(x) \amp\amp\text{ (now rewrite trig functions) }</mrow>
+          <mrow>\amp = 5x^2\cdot \frac{-1}{\sin(x) }\cdot \frac{\cos(x) }{\sin(x) } + \frac{10x}{\sin(x) }</mrow>
+          <mrow>\amp = \frac{-5x^2\cos(x) }{\sin^2(x) }+\frac{10x}{\sin(x) } \amp\amp\text{ (get common denominator) }</mrow>
+          <mrow>\amp = \frac{10x\sin(x) - 5x^2\cos(x) }{\sin^2(x) }.</mrow>
+        </md>
+        
+      </p>
+      <p>
+        Finding <m>\fp</m> using either method returned the same result. At first, the answers looked different, but some algebra verified they are the same. In general, there is not one final form that we seek; the immediate result from the Product Rule is fine. Work to <q>simplify</q> your results into a form that is most readable and useful to you.
+      </p>
+    </solution>
+  </example>
+  <p>
+    The <xref text="title" ref="thm_QuotientRule" /> gives other useful results, as shown in the next example.
+  </p>
+  <example xml:id="ex_deriv_power">
+    <title>Using the Quotient Rule to expand the Power Rule</title>
+    <statement>
+      <p>
+        Find the derivatives of the following functions.<ol>
+          <li><p><m>f(x) = \dfrac{1}{x}</m></p></li>
+
+          <li><p><m>f(x)= \dfrac{1}{x^n}</m>, where <m>n&gt;0</m> is an integer.</p></li>
+        </ol>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        We employ the <xref text="title" ref="thm_QuotientRule" />.<ol>
+          <li><p><md>
+            <mrow>\fp(x)\amp = \frac{x\cdot 0 - 1\cdot 1}{x^2}</mrow>
+            <mrow>\amp = -\frac{1}{x^2}</mrow>
+          </md></p></li>
+
+          <li><p><md>
+            <mrow>\fp(x)\amp = \frac{x^n\cdot 0 - 1\cdot nx^{n-1}}{(x^n)^2}</mrow>
+            <mrow>\amp = -\frac{nx^{n-1}}{x^{2n}}</mrow>
+            <mrow>\amp = -\frac{n}{x^{n+1}}</mrow>
+          </md>.</p></li>
+        </ol>
+      </p>
+    </solution>
+  </example>
+  <p>
+    The derivative of <m>y=\frac{1}{x^n}</m> turned out to be rather nice. It gets better. Consider:
+      <md>
+      <mrow>\lzoo{x}{\frac{1}{x^n}} \amp = \lzoo{x}{x^{-n}} \amp\amp\text{ (apply result from } <xref ref="ex_deriv_power">Example</xref>\text{)} </mrow>
+      <mrow>\amp = -\frac{n}{x^{n+1}} \amp\amp \text{ (rewrite algebraically) }</mrow>
+      <mrow>\amp = -nx^{-(n+1)}\amp</mrow>
+      <mrow>\amp = -nx^{-n-1}.\amp</mrow>
+    </md>
+    
+  </p>
+  <p>
+    This is reminiscent of the <xref text="title" ref="power-derivative-rule" />: multiply by the power, then subtract <m>1</m> from the power. We now add to our previous Power Rule, which had the restriction of <m>n&gt;0</m>.
+  </p>
+  <theorem xml:id="thm_PowerRule">
+    <title>Power Rule with Integer Exponents</title>
+    <statement>
+      <p>
+        Let <m>f(x) = x^n</m>, where <m>n\neq 0</m> is an integer.<idx><h>derivative</h>Power Rule</idx><idx><h>Power Rule</h>differentiation</idx> Then
+          <me>
+            \fp(x) = n\cdot x^{n-1}.
+          </me>
+        
+      </p>
+    </statement>
+  </theorem>
+  <p>
+    Taking the derivative of many functions is relatively straightforward. It is clear (with practice) what rules apply and in what order they should be applied. Other functions present multiple paths; different rules may be applied depending on how the function is treated. One of the beautiful things about calculus is that there is not <q>the</q> right way; each path, when applied correctly, leads to the same result, the derivative. We demonstrate this concept in an example.
+  </p>
+  <example xml:id="ex_multiple_deriv">
+    <title>Exploring alternate derivative methods</title>
+    <statement>
+      <p>
+        Let <m>f(x) = \frac{x^2-3x+1}{x}</m>. Find <m>\fp(x)</m> in each of the following ways:<ol>
+          <li><p>By applying the <xref text="title" ref="thm_QuotientRule" />,</p></li>
+
+          <li><p>by viewing <m>f</m> as <m>f(x) = \left(x^2-3x+1\right)\cdot x^{-1}</m> and applying the <xref text="title" ref="thm_ProductRule" /> and <xref text="title" ref="thm_PowerRule" />, and</p></li>
+
+          <li><p>by <q>simplifying</q> first through division.</p></li>
+        </ol>Verify that all three methods give the same result.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <ol>
+          <li>
+            <p>
+              Applying the <xref text="title" ref="thm_QuotientRule" /> gives:
+              <md>
+                <mrow>\fp(x) \amp =\frac{x\cdot\lzoo{x}{x^2-3x+1}-\left(x^2-3x+1\right)\lzoo{x}{x}}{x^2}</mrow>
+                <mrow>\amp = \frac{x\cdot(2x-3)-\left(x^2-3x+1\right)\cdot 1}{x^2}</mrow>
+                <mrow>\amp = \frac{x^2-1}{x^2} </mrow>
+                <mrow>\amp = 1-\frac{1}{x^2}.</mrow>
+              </md>
+              
+            </p>
+          </li>
+          <li>
+            <p>
+              By rewriting <m>f</m>, we can apply the <xref text="title" ref="thm_ProductRule" /> and <xref text="title" ref="thm_PowerRule" /> as follows:
+              <md>
+                <mrow>\fp(x) \amp = \left(x^2-3x+1\right)\lzoo{x}{x^{-1}} + \lzoo{x}{x^2-3x+1} x^{-1}</mrow>
+                <mrow>\amp = \left(x^2-3x+1\right)\cdot (-1)x^{-2} + (2x-3)\cdot x^{-1}</mrow>
+                <mrow>\amp = -\frac{x^2-3x+1}{x^2}+\frac{2x-3}{x}</mrow>
+                <mrow>\amp = -\frac{x^2-3x+1}{x^2}+\frac{2x^2-3x}{x^2}</mrow>
+                <mrow>\amp = \frac{x^2-1}{x^2} = 1-\frac{1}{x^2},</mrow>
+              </md>
+              
+              the same result as above.
+            </p>
+          </li>
+          <li>
+            <p>
+              As <m>x\neq 0</m>, we can divide through by <m>x</m> first, giving <m>f(x) = x-3+x^{-1}</m>. Now apply the <xref text="title" ref="thm_PowerRule" />.
+              <me>
+                \fp(x) = 1-\frac{1}{x^2},
+              </me>
+              the same result as before.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </solution>
+  </example>
+  <p>
+    <xref ref="ex_multiple_deriv">Example</xref> demonstrates three methods of finding <m>\fp</m>. One is hard pressed to argue for a <q>best method</q> as all three gave the same result without too much difficulty, although it is clear that using the <xref text="title" ref="thm_ProductRule" /> required more steps. Ultimately, the important principle to take away from this is: reduce the answer to a form that seems <q>simple</q> and easy to interpret. In that example, we saw different expressions for <m>\fp</m>, including:
+      <md>
+      <mrow>\amp 1-\frac{1}{x^2} </mrow>
+      <mrow>\amp \frac{x\cdot(2x-3)-\left(x^2-3x+1\right)\cdot 1}{x^2} </mrow>
+      <mrow>\amp \left(x^2-3x+1\right)\cdot (-1)x^{-2} + (2x-3)\cdot x^{-1}.</mrow>
+    </md>
+  </p>
+  <p>
+     They are equal; they are all correct; only the first is <q>simple.</q> Work to make answers simple.
+  </p>
+  <p>
+    In the next section we continue to learn rules that allow us to more easily compute derivatives than using the limit definition directly. We have to memorize the derivatives of a certain set of functions, such as <q>the derivative of <m>\sin(x)</m> is <m>\cos(x)</m>.</q> The <xref text="title" ref="sum-difference-derivative-rule" />, <xref text="title" ref="constant-multiple-derivative-rule" />, <xref ref="thm_PowerRule">Power Rule</xref>, <xref text="title" ref="thm_ProductRule" /> and <xref text="title" ref="thm_QuotientRule" /> show us how to find the derivatives of certain combinations of these functions. The next section shows how to find the derivatives when we <em>compose</em> these functions together.
+  </p>
+  <xi:include href="exer_sec_prod_quot_rules.ptx" />
+</section>

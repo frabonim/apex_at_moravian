@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<exercises>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 1–12, use the tools in the section to answer the questions presented.
+        </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          Suppose the rate of change of <m>y</m> with respect to <m>x</m> is proportional to <m>10 - y</m>. Write down and solve a differential equation for <m>y</m>.
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>y = 10 + Ce^{-kx}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          A rumor is spreading through a middle school with 250 students. Suppose the rumor spreads at a rate proportional to the number of students who haven't heard the rumor yet. If 1 person starts the rumor, and 75 students have heard the rumor 3 days later, how many days will it take until 80% of the students in the school have heard the rumor?
+          </p>
+      </statement>
+      <answer>
+        <p>
+          13.66 days
+          </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          A rumor is spreading through a middle school with 250 students. Suppose the rumor spreads at a rate proportional to the product of number of students who have heard the rumor and the number who haven't heard the rumor. If 1 person starts the rumor, and 75 students have heard the rumor 3 days later, how many days will it take until 80% of the students in the school have heard the rumor?
+          </p>
+      </statement>
+      <answer>
+        <p>
+          4.43 days
+          </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          A feature of radioactive decay is that the amount of a radioactive substance decreases at a rate proportional to the current amount of the substance. The <em>half life</em> of a substance is the amount of time it takes for half of a given amount of substance to decay. The half life of carbon-14 is approximately 5730 years. If an ancient object has a carbon-14 amount that is 20% of the original amount, how old is the object?
+        </p>
+      </statement>
+      <answer>
+        <p>
+          13,304.65 years old
+          </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Consider a chemical reaction where molecules of type <m>A</m> combine with molecules of type <m>B</m> to form molecules of type <m>C</m>. Suppose one molecule of type A combines with one molecule of type B to form one molecule of type <m>C</m>, and that type <m>C</m> is produced at a rate proportional the product of the remaining number of molecules of types <m>A</m> and <m>B</m>. Let <m>x</m> denote moles of molecules of type <m>C</m>. Find a function giving the number of moles of type <m>C</m> at time <m>t</m> if there are originally <m>a</m> moles of type <m>A</m>, <m>b</m> moles of type <m>B</m>, and zero moles of type <m>C</m>.
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m> x = {\left\lbrace \begin{array}{ll} \displaystyle \frac{ab(1 - e^{(a-b)kt})}{b-ae^{(a-b)kt}} &amp; \text{ if } a \ne b\\ \displaystyle \frac{a^2kt}{1+akt} &amp; \text{ if } a = b \end{array}\right.}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Suppose an object with a temperature of <m>100^\circ </m> is introduced into a room with an ambient temperature of <m>70^\circ </m>. Suppose the temperature of the object changes at a rate proportional to the difference between the temperature of the object and the temperature of the room (Newton's Law of Cooling). If the object has cooled to <m>92^\circ </m> in 10 minutes, how long until the object has cooled to <m>84^\circ ?</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          24.57 minutes
+          </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Suppose an object with a temperature of <m>100^\circ </m> is introduced into a room with an ambient temperature given by <m>60 + 20e^{-\frac{1}{4}t}</m> degrees. Suppose the temperature of the object changes at a rate proportional to the difference between the temperature of the object and the temperature of the room (Newton's Law of Cooling). If the object is <m>80^\circ </m> after 20 minutes, find a formula giving the temperature of the object at time <m>t</m>. (Note: This problem requires a numerical technique to solve for the unknown constants.)
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\displaystyle y = 60 - 3.69858e^{-\frac{1}{4}t} + 43.69858e^{-0.0390169 t}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          A tank contains 5 gallons of salt solution with concentration <m>0.5</m> g/gal. Pure water flows into the tank at a rate of <m>1</m> gallon per minute. Salt solution flows out of the tank at a rate of <m>1</m> gallon per minute. (Assume instantaneous mixing.) Find the concentration of the salt solution at <m>10</m> minutes.
+          </p>
+      </statement>
+      <answer>
+        <p>
+          0.06767 g/gal
+          </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Dead leaves accumulate on the ground at a rate of <m>4</m> grams per square centimeter per year. The dead leaves on the ground decompose at a rate of <m>50\%</m> per year. Find a formula giving grams per square centimeter on the ground if there are no leaves on the ground at time <m>t=0</m>.
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>y = 8(1-e^{-\frac{1}{2}t})</m> g/cm<m>^2</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          A pond initially contains <m>10</m> million gallons of fresh water. Water containing an undesirable chemical flows into the pond at a rate of <m>5</m> million gallons per year, and fluid from the pond flows out at the same rate. (Assume instantaneous mixing.) If the concentration (in grams per million gallons) of the incoming chemical varies periodically according to the expression <m>2 + \sin (2t)</m>, find a formula giving the amount of chemical in the pond at time <m>t</m>.
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>y = \displaystyle 20 - \frac{10}{17}\left(4\cos (2t)- \sin (2t)\right) - \frac{300}{17}e^{-\frac{1}{2}t}</m> g</p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          A large tank contains <m>1</m> gallon of a salt solution with concentration <m>2</m> g/gal. A salt solution with concentration <m>1</m> g/gal flows into the tank at a rate of <m>4</m> gal/min. Salt solution flows out of the tank at a rate of <m>3</m> gal/min. (Assume instantaneous mixing.) Find the amount of salt in the tank at <m>10</m> minutes.
+          </p>
+      </statement>
+      <answer>
+        <p>
+          11.00075 g
+          </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          A stream flows into a pond containing <m>2</m> million gallons of fresh water at a rate of <m>1</m> million gallons per day. The stream flows out of the first pond and into a second pond containing <m>3</m> million gallons of fresh water. The stream then flows out of the second pond. Suppose the inflow and outflow rates are the same so that both ponds maintain their volumes. A factory upstream of the first pond starts polluting the stream. Directly below the factory, pollutant has a concentration of <m>55</m> grams per million gallons, and this concentration starts to flow into the first pond. Find the concentration of pollutant in the first and second ponds at five days.
+          </p>
+      </statement>
+      <answer>
+        <p>
+          pond 1: 50.4853 grams per million gallonspond 2: 32.8649 grams per million gallons
+          </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+</exercises>

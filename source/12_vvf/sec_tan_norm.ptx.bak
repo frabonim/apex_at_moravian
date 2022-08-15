@@ -1,0 +1,924 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec_tan_norm">
+  <title>Unit Tangent and Normal Vectors</title>
+  <subsection>
+    <title>Unit Tangent Vector</title>
+    <p>
+      Given a smooth vector-valued function <m>\vrt</m>,
+      we defined in <xref ref="def_vector_tangent">Definition</xref>
+      that any vector parallel to <m>\vrp(t_0)</m> is <em>tangent</em>
+      to the graph of <m>\vrt</m> at <m>t=t_0</m>.
+      It is often useful to consider just the <em>direction</em>
+      of <m>\vrp(t)</m> and not its magnitude.
+      Therefore we are interested in the unit vector in the direction of <m>\vrp(t)</m>.
+      This leads to a definition.
+    </p>
+
+    <definition xml:id="def_unit_tangent">
+      <title>Unit Tangent Vector</title>
+      <statement>
+        <p>
+          Let <m>\vrt</m> be a smooth function on an open interval <m>I</m>.
+          The unit tangent vector <m>\unittangent(t)</m> is
+            <idx><h>unit tangent vector</h><h>definition</h></idx>
+            <idx><h>unit vector</h><h>unit tangent vector</h></idx>
+          <me>
+            \unittangent(t) = \frac{1}{\norm{\vrp(t)}}\vrp(t)
+          </me>.
+        </p>
+      </statement>
+    </definition>
+
+    <example xml:id="ex_tannorm1">
+      <title>Computing the unit tangent vector</title>
+      <statement>
+        <p>
+          Let <m>\vrt = \la 3\cos(t) , 3\sin(t) , 4t\ra</m>.
+          Find <m>\unittangent(t)</m> and compute
+          <m>\unittangent(0)</m> and <m>\unittangent(1)</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We apply <xref ref="def_unit_tangent">Definition</xref> to find <m>\unittangent(t)</m>.
+          <md>
+            <mrow>\unittangent(t) \amp = \frac{1}{\norm{\vrp(t)}}\vrp(t)</mrow>
+            <mrow>\amp =\frac{1}{\sqrt{\big(-3\sin(t) \big)^2+\big(3\cos(t) \big)^2+ 4^2}}\la -3\sin(t) ,3\cos(t) , 4\ra</mrow>
+            <mrow>\amp = \la -\frac35\sin(t) ,\frac35\cos(t) ,\frac45\ra</mrow>
+          </md>.
+        </p>
+
+        <p>
+          We can now easily compute <m>\unittangent(0)</m> and <m>\unittangent(1)</m>:
+          <me>
+            \unittangent(0) = \la 0,\frac35,\frac45\ra\,; \unittangent(1) = \la -\frac35\sin(1) ,\frac35\cos(1) ,\frac45\ra \approx \la -0.505,0.324,0.8\ra
+          </me>.
+        </p>
+
+        <p>
+          These are plotted in <xref ref="fig_tannorm1">Figure</xref>
+          with their initial points at
+          <m>\vec r(0)</m> and <m>\vec r(1)</m>, respectively.
+          (They look rather <q>short</q>
+          since they are only length 1.)
+        </p>
+
+        <figure xml:id="fig_tannorm1">
+          <caption>Plotting unit tangent vectors in <xref ref="ex_tannorm1">Example</xref></caption>
+
+          <!-- START figures/figtannorm1_3D.asy -->
+          <image xml:id="img_tannorm1" width="47%">
+            <description></description>
+            <asymptote>
+
+
+
+              //ASY file for figtannorm13D.asy in Chapter 11
+              //ASPECT RATIO IS MAKING THE UNIT NORMAL LOOK LONGER THAN THE UNIT TANGENT
+
+              size(282,282,IgnoreAspect);
+              //currentprojection=perspective(7,2,1);
+              currentprojection=orthographic(10,10,43);
+              defaultrender.merge=true;
+
+              // setup and draw the axes
+              real[] myxchoice={-2,2};
+              real[] myychoice={-2,2};
+              real[] myzchoice={-10,10};
+              defaultpen(0.5mm);
+              pair xbounds=(-4,4);
+              pair ybounds=(-4,4);
+              pair zbounds=(-15,15);
+
+              xaxis3("",xbounds.x,xbounds.y,black,OutTicks(myxchoice),Arrow3(size=3mm));
+              yaxis3("",ybounds.x,ybounds.y,black,OutTicks(myychoice),Arrow3(size=3mm));
+              zaxis3("",zbounds.x,zbounds.y,black,OutTicks(myzchoice),Arrow3(size=3mm));
+
+              label("$x$",(xbounds.y+0.05*(xbounds.y-xbounds.x),0,0));
+              label("$y$",(0,ybounds.y+0.05*(ybounds.y-ybounds.x),0));
+              label("$z$",(0,0,zbounds.y+0.05*(zbounds.y-zbounds.x)));
+
+              //Draw the curve &lt;3cos t,3sin t,4t&gt; for t from -pi to pi
+              triple g(real t) {return (3*cos(t),3*sin(t),4*t);}
+              path3 mypath=graph(g,-pi,pi,operator ..); draw(mypath,bluepen);
+              //Draw the unit tangent and norma on the curve at t=pi/2
+              draw((3,0,0)--(3,.6,.8),redpen+linewidth(2),Arrow3(size=3mm));//T
+              draw((1.62,2.52,4)--(1.12,2.85,4.8),redpen+linewidth(2),Arrow3(size=3mm));//N
+
+            </asymptote>
+          </image>
+          <!-- figures/figtannorm1_3D.asy END -->
+        </figure>
+
+        <p>
+          The unit tangent vector <m>\unittangent(t)</m> always has a magnitude of 1, though it is sometimes easy to doubt that is true.
+          We can help solidify this thought in our minds by computing <m>\norm{\unittangent(1)}</m>:
+          <me>
+            \norm{\unittangent(1)} \approx \sqrt{(-0.505)^2+0.324^2+0.8^2} = 1.000001
+          </me>.
+        </p>
+
+        <p>
+          We have rounded in our computation of <m>\unittangent(1)</m>,
+          so we don't get 1 exactly.
+          We leave it to the reader to use the exact representation of
+          <m>\unittangent(1)</m> to verify it has length 1.
+        </p>
+      </solution>
+    </example>
+
+    <p>
+      In many ways, the previous example was <q>too nice.</q>
+      It turned out that <m>\vrp(t)</m> was always of length 5.
+      In the next example the length of <m>\vrp(t)</m> is variable,
+      leaving us with a formula that is not as clean.
+    </p>
+
+    <example xml:id="ex_tannorm2">
+      <title>Computing the unit tangent vector</title>
+      <statement>
+        <p>
+          Let <m>\vrt=\la t^2-t,t^2+t\ra</m>.
+          Find <m>\unittangent(t)</m> and compute
+          <m>\unittangent(0)</m> and <m>\unittangent(1)</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We find <m>\vrp(t) = \la 2t-1,2t+1\ra</m>, and
+          <me>
+            \norm{\vrp(t)} = \sqrt{(2t-1)^2+(2t+1)^2} = \sqrt{8t^2+2}
+          </me>.
+        </p>
+
+        <p>
+          Therefore
+          <me>
+            \unittangent(t) = \frac{1}{\sqrt{8t^2+2}}\la 2t-1,2t+1\ra = \la \frac{2t-1}{\sqrt{8t^2+2}},\frac{2t+1}{\sqrt{8t^2+2}}\ra
+          </me>.
+        </p>
+
+        <p>
+          When <m>t=0</m>,
+          we have <m>\unittangent(0) = \la -1/\sqrt{2},1/\sqrt{2}\ra</m>;
+          when <m>t=1</m>,
+          we have <m>\unittangent(1) = \la 1/\sqrt{10}, 3/\sqrt{10}\ra</m>.
+          We leave it to the reader to verify each of these is a unit vector.
+          They are plotted in <xref ref="fig_tannorm2">Figure</xref>
+        </p>
+
+        <figure xml:id="fig_tannorm2">
+          <caption>Plotting unit tangent vectors in <xref ref="ex_tannorm2">Example</xref></caption>
+          <!-- START figures/fig_tannorm2.tex -->
+          <image xml:id="img_tannorm2" width="47%">
+            <description></description>
+            <latex-image>
+
+            \begin{tikzpicture}[&gt;=stealth]
+
+            \begin{axis}[
+            ymin=-1.1,ymax=6.5,
+            xmin=-2.1,xmax=7
+            ]
+
+            \addplot+ [-,domain=-2:2,samples=40] ({x^2-x},{x^2+x});
+
+            \draw [thick,-&gt;,secondcolor] (axis cs:0,0) -- (axis cs:-.707,.707);
+            \draw [thick,-&gt;,secondcolor] (axis cs:0,2) -- (axis cs:0.32,2.95);
+            \draw [thick,-&gt;,firstcolor] (axis cs:3.79,.77) -- (axis cs:3.75,.75);
+
+            \end{axis}
+
+            \end{tikzpicture}
+
+            </latex-image>
+          </image>
+          <!-- figures/fig_tannorm2.tex END -->
+        </figure>
+      </solution>
+    </example>
+  </subsection>
+
+  <subsection>
+    <title>Unit Normal Vector</title>
+    <p>
+      Just as knowing the direction tangent to a path is important,
+      knowing a direction orthogonal to a path is important.
+      When dealing with real-valued functions,
+      we defined the normal line at a point to the be the line through the point that was perpendicular to the tangent line at that point.
+      We can do a similar thing with vector-valued functions.
+      Given <m>\vrt</m> in <m>\mathbb{R}^2</m>,
+      we have 2 directions perpendicular to the tangent vector,
+      as shown in <xref ref="fig_tannorm_intro1">Figure</xref>.
+      It is good to wonder <q>Is one of these two directions preferable over the other?</q>
+    </p>
+
+    <figure xml:id="fig_tannorm_intro1">
+      <caption>Given a direction in the plane, there are always two directions orthogonal to it</caption>
+      <!-- START figures/fig_tannorm_intro1.tex -->
+      <image xml:id="img_tannorm_intro1" width="47%">
+        <description></description>
+        <latex-image>
+
+        \begin{tikzpicture}[&gt;=stealth]
+
+        \begin{axis}[
+        ytick=\empty,
+        ymin=-.1,ymax=1.9,
+        xmin=-.1,xmax=2.3
+        ]
+
+        \addplot+ [-,domain=-1:1,samples=40] ({x^2-x+.6},{x^2+x+.3});
+
+        \draw[thick,-&gt;,black] (axis cs:.51,.41) -- (axis cs:.233,.83);
+        \draw[thick,-&gt;,secondcolor] (axis cs:.51,.41) -- (axis cs:.1,0.13);
+        \draw[thick,-&gt;,secondcolor] (axis cs:.51,.41) -- (axis cs:.93,.69);
+        \draw[thick,-&gt;,firstcolor] (axis cs:0.71, 0.21) -- (axis cs:.698,.218);
+
+        \end{axis}
+
+        \end{tikzpicture}
+
+        </latex-image>
+      </image>
+      <!-- figures/fig_tannorm_intro1.tex END -->
+    </figure>
+
+    <p>
+      Given <m>\vrt</m> in <m>\mathbb{R}^3</m>,
+      there are infinitely many vectors orthogonal to the tangent vector at a given point.
+      Again, we might wonder <q>Is one of these infinite choices preferable over the others?
+      Is one of these the <sq>right</sq> choice?</q>
+    </p>
+
+    <p>
+      The answer in both <m>\mathbb{R}^2</m> and <m>\mathbb{R}^3</m> is <q>Yes,
+      there is one vector that is not only preferable,
+      it is the <sq>right</sq> one to choose.</q>
+      Recall <xref ref="thm_vects_of_constant_length">Theorem</xref>,
+      which states that if <m>\vrt</m> has constant length,
+      then <m>\vrt</m> is orthogonal to <m>\vrp(t)</m> for all <m>t</m>.
+      We know <m>\unittangent(t)</m>, the unit tangent vector, has constant length.
+      Therefore <m>\unittangent(t)</m> is orthogonal to
+      <m>\unittangentprime(t)</m>.
+        <idx><h>vector-valued function</h><h>of constant length</h></idx>
+    </p>
+
+    <p>
+      We'll see that <m>\unittangentprime(t)</m> is more than just a convenient choice of vector that is orthogonal to <m>\vrp(t)</m>;
+      rather, it is the <q>right</q> choice.
+      Since all we care about is the direction,
+      we define this newly found vector to be a unit vector.
+    </p>
+    <aside>
+      <p>
+        <m>\unittangent(t)</m> is a unit vector, by definition.
+        This <em>does not</em> imply that
+        <m>\unittangentprime(t)</m> is also a unit vector.
+      </p>
+    </aside>
+
+    <definition xml:id="def_unit_normal">
+      <title>Unit Normal Vector</title>
+      <statement>
+        <p>
+          Let <m>\vrt</m> be a vector-valued function where the unit tangent vector,
+          <m>\unittangent(t)</m>, is smooth on an open interval <m>I</m>.
+          The <term>unit normal vector</term>
+          <m>\unitnormal(t)</m> is
+            <idx><h>unit normal vector</h><h>definition</h></idx>
+            <idx><h>unit vector</h><h>unit normal vector</h></idx>
+          <me>
+            \unitnormal(t) = \frac1{\norm{\unittangentprime(t)}}\unittangentprime(t)
+          </me>.
+        </p>
+      </statement>
+    </definition>
+
+    <example xml:id="ex_tannorm3">
+      <title>Computing the unit normal vector</title>
+      <statement>
+        <p>
+          Let <m>\vrt = \la 3\cos(t) , 3\sin(t) , 4t\ra</m> as in <xref ref="ex_tannorm1">Example</xref>.
+          Sketch both <m>\unittangent(\pi/2)</m> and
+          <m>\unitnormal(\pi/2)</m> with initial points at <m>\vec r(\pi/2)</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          In <xref ref="ex_tannorm1">Example</xref>,
+          we found
+          <me>
+            \unittangent(t) = \la  (-3/5)\sin(t) ,(3/5)\cos(t) ,4/5\ra
+          </me>.
+          Therefore
+          <me>
+            \unittangentprime(t) = \la -\frac35\cos(t) ,-\frac35\sin(t) ,0\ra \text{ and }   \norm{\unittangentprime(t)} = \frac35
+          </me>.
+        </p>
+
+        <p>
+          Thus
+          <me>
+            \unitnormal(t) = \frac{\unittangentprime(t)}{3/5} = \la -\cos(t) ,-\sin(t) ,0\ra
+          </me>.
+        </p>
+
+        <p>
+          We compute <m>\unittangent(\pi/2) = \la -3/5,0,4/5\ra</m> and <m>\unitnormal(\pi/2) = \la 0,-1,0\ra</m>.
+          These are sketched in <xref ref="fig_tannorm3">Figure</xref>.
+        </p>
+
+        <figure xml:id="fig_tannorm3">
+          <caption>Plotting unit tangent and normal vectors in <xref ref="fig_tannorm3">Example</xref></caption>
+
+          <!-- START figures/figtannorm3_3D.asy -->
+          <image xml:id="img_tannorm3" width="47%">
+            <description></description>
+            <asymptote>
+
+
+
+              //ASY file for figtannorm13D.asy in Chapter 11
+              //ASPECT RATIO IS MAKING THE UNIT NORMAL LOOK LONGER THAN THE UNIT TANGENT
+
+              size(282,282,IgnoreAspect);
+              //currentprojection=perspective(7,2,1);
+              currentprojection=orthographic(10,10,34);
+              defaultrender.merge=true;
+
+              // setup and draw the axes
+              real[] myxchoice={-3,3};
+              real[] myychoice={-3,3};
+              real[] myzchoice={-10,10};
+              defaultpen(0.5mm);
+              //pair xbounds=(-5,5);
+              //pair ybounds=(-5,5);
+              //pair zbounds=(-1,9);
+
+              pair xbounds=(-4,4);
+              pair ybounds=(-4,4);
+              pair zbounds=(-15,15);
+
+              xaxis3("",xbounds.x,xbounds.y,black,OutTicks(myxchoice),Arrow3(size=3mm));
+              yaxis3("",ybounds.x,ybounds.y,black,OutTicks(myychoice),Arrow3(size=3mm));
+              zaxis3("",zbounds.x,zbounds.y,black,OutTicks(myzchoice),Arrow3(size=3mm));
+
+              label("$x$",(xbounds.y+0.05*(xbounds.y-xbounds.x),0,0));
+              label("$y$",(0,ybounds.y+0.05*(ybounds.y-ybounds.x),0));
+              label("$z$",(0,0,zbounds.y+0.05*(zbounds.y-zbounds.x)));
+
+              //Draw the curve &lt;3cos t,3sin t,4t&gt; for t from -pi to pi
+              triple g(real t) {return (3*cos(t),3*sin(t),4*t);}
+              //path3 mypath=graph(g,0,pi/2+pi/4,operator ..); draw(mypath,bluepen);
+              path3 mypath=graph(g,-pi,pi,operator ..); draw(mypath,bluepen);
+
+              //Draw the unit tangent and norma on the curve at t=pi/2
+              //draw((0,3,2*pi)--(-3/5,3,2*pi+4/5),redpen+linewidth(2),Arrow3(size=3mm));//T
+              draw((0,3,2*pi)--(-.942,3,2*pi+1.256),redpen+linewidth(2),Arrow3(size=3mm));//T
+              draw((0,3,2*pi)--(0,2,2*pi),redpen+linewidth(2),Arrow3(size=3mm));//N
+
+            </asymptote>
+          </image>
+          <!-- figures/figtannorm3_3D.asy END -->
+        </figure>
+      </solution>
+    </example>
+
+    <p>
+      The previous example was once again
+      <q>too nice.</q> In general,
+      the expression for <m>\unittangent(t)</m> contains fractions of square roots,
+      hence the expression of <m>\unittangentprime(t)</m> is very messy.
+      We demonstrate this in the next example.
+    </p>
+
+    <example xml:id="ex_tannorm4">
+      <title>Computing the unit normal vector</title>
+      <statement>
+        <p>
+          Let <m>\vrt=\la t^2-t,t^2+t\ra</m> as in <xref ref="ex_tannorm2">Example</xref>.
+          Find <m>\unitnormal(t)</m> and sketch <m>\vrt</m> with the unit tangent and normal vectors at <m>t=-1,0</m> and 1.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          In <xref ref="ex_tannorm2">Example</xref>, we found
+          <me>
+            \unittangent(t) = \la \frac{2t-1}{\sqrt{8t^2+2}},\frac{2t+1}{\sqrt{8t^2+2}}\ra
+          </me>.
+        </p>
+
+        <p>
+          Finding <m>\unittangentprime(t)</m> requires two applications of the Quotient Rule:
+          <md>
+            <mrow>T\,'(t) \amp = \la \frac{\sqrt{8t^2+2}(2)-(2t-1)\left(\frac12(8t^2+2)^{-1/2}(16t)\right)}{8t^2+2},\right.</mrow>
+            <mrow>\amp  \left.\frac{\sqrt{8t^2+2}(2)-(2t+1)\left(\frac12(8t^2+2)^{-1/2}(16t)\right)}{8t^2+2} \ra</mrow>
+            <mrow>\amp = \la \frac{4 (2 t+1)}{\left(8 t^2+2\right)^{3/2}},\frac{4
+            (1-2 t)}{\left(8 t^2+2\right)^{3/2}}\ra</mrow>
+          </md>
+        </p>
+
+        <p>
+          This is not a unit vector; to find <m>\unitnormal(t)</m>,
+          we need to divide <m>\unittangentprime(t)</m> by its magnitude.
+          <md>
+            <mrow>\norm{\unittangentprime(t)} \amp = \sqrt{\frac{16(2t+1)^2}{(8t^2+2)^3}+\frac{16(1-2t)^2}{(8t^2+2)^3}}</mrow>
+            <mrow>\amp = \sqrt{\frac{16(8t^2+2)}{(8t^2+2)^3}}</mrow>
+            <mrow>\amp = \frac{4}{8t^2+2}</mrow>
+          </md>.
+        </p>
+
+        <p>
+          Finally,
+          <md>
+            <mrow>\unitnormal(t) \amp = \frac1{4/(8t^2+2)}\la \frac{4 (2 t+1)}{\left(8 t^2+2\right)^{3/2}},\frac{4
+            (1-2 t)}{\left(8 t^2+2\right)^{3/2}}\ra</mrow>
+            <mrow>\amp = \la \frac{2t+1}{\sqrt{8t^2+2}},-\frac{2t-1}{\sqrt{8t^2+2}}\ra</mrow>
+          </md>.
+        </p>
+
+        <p>
+          Using this formula for <m>\unitnormal(t)</m>,
+          we compute the unit tangent and normal vectors for <m>t=-1,0</m> and 1 and sketch them in <xref ref="fig_tannorm4">Figure</xref>.
+        </p>
+
+        <figure xml:id="fig_tannorm4">
+          <caption>Plotting unit tangent and normal vectors in <xref ref="ex_tannorm4">Example</xref></caption>
+          <!-- START figures/fig_tannorm4.tex -->
+          <image xml:id="img_tannorm4" width="47%">
+            <description></description>
+            <latex-image>
+
+            \begin{tikzpicture}[&gt;=stealth]
+
+            \begin{axis}[
+            ymin=-1.1,ymax=6.5,
+            xmin=-2.1,xmax=7
+            ]
+
+            \addplot+ [-,domain=-2:2,samples=60] ({x^2-x},{x^2+x});
+
+            \draw [thick,-&gt;,secondcolor] (axis cs:0,0) -- (axis cs:-.707,.707);
+            \draw [thick,-&gt;,secondcolor] (axis cs:0,2) -- (axis cs:0.32,2.95);
+            \draw [thick,-&gt;,secondcolor] (axis cs:2,0) -- (axis cs:1.05,-.32);
+
+            \draw [thick,-&gt;,secondcolor] (axis cs:0,0) -- (axis cs:.707,.707);
+            \draw [thick,-&gt;,secondcolor] (axis cs:0,2) -- (axis cs:.95,1.68);
+            \draw [thick,-&gt;,secondcolor] (axis cs:2,0) -- (axis cs:1.68,0.95);
+
+            \draw [thick,-&gt;,firstcolor] (axis cs:3.79,.77) -- (axis cs:3.75,.75);
+
+            \end{axis}
+
+            \end{tikzpicture}
+
+            </latex-image>
+          </image>
+          <!-- figures/fig_tannorm4.tex END -->
+        </figure>
+      </solution>
+    </example>
+
+    <p>
+      The final result for <m>\unitnormal(t)</m> in <xref ref="ex_tannorm4">Example</xref>
+      is suspiciously similar to <m>\unittangent(t)</m>.
+      There is a clear reason for this.
+      If <m>\vec u = \la u_1,u_2\ra</m> is a unit vector in <m>\mathbb{R}^2</m>,
+      then the <em>only</em> unit vectors orthogonal to <m>\vec u</m> are
+      <m>\la -u_2,u_1\ra</m> and <m>\la u_2,-u_1\ra</m>.
+      Given <m>\unittangent(t)</m>, we can quickly determine
+      <m>\unitnormal(t)</m> if we know which term to multiply by <m>(-1)</m>.
+    </p>
+
+    <p>
+      Consider again <xref ref="fig_tannorm4">Figure</xref>,
+      where we have plotted some unit tangent and normal vectors.
+      Note how <m>\unitnormal(t)</m> always points
+      <q>inside</q> the curve,
+      or to the concave side of the curve.
+      This is not a coincidence; this is true in general.
+      Knowing the direction that <m>\vec r(t)</m> <q>turns</q>
+      allows us to quickly find <m>\unitnormal(t)</m>.
+    </p>
+
+    <theorem xml:id="thm_concave">
+      <title>Unit Normal Vectors in <m>\mathbb{R}^2</m></title>
+      <statement>
+        <p>
+          Let <m>\vec r(t)</m> be a vector-valued function in <m>\mathbb{R}^2</m> where
+          <m>\unittangentprime(t)</m> is smooth on an open interval <m>I</m>.
+          Let <m>t_0</m> be in <m>I</m> and
+          <m>\unittangent(t_0) = \la t_1,t_2\ra</m> Then <m>\unitnormal(t_0)</m> is either
+          <me>
+            \unitnormal(t_0) = \la -t_2,t_1\ra  \text{ or }  \unitnormal(t_0) = \la t_2,-t_1\ra
+          </me>,
+          whichever is the vector that points to the concave side of the graph of <m>\vec r</m>.
+              <idx><h>unit tangent vector</h><h>in <m>\mathbb{R}^2</m></h></idx>
+              <idx><h>unit normal vector</h><h>in <m>\mathbb{R}^2</m></h></idx>
+        </p>
+      </statement>
+    </theorem>
+  </subsection>
+
+  <subsection>
+    <title>Application to Acceleration</title>
+    <p>
+      Let <m>\vrt</m> be a position function.
+      It is a fact (stated later in <xref ref="thm_acc_plane">Theorem</xref>)
+      that acceleration, <m>\vat</m>,
+      lies in the plane defined by <m>\unittangent</m> and <m>\unitnormal</m>.
+      That is, there are scalar functions
+      <m>a_\text{T}(t)</m> and <m>a_\text{N}(t)</m> such that
+      <me>
+        \vat = a_\text{T}(t)\unittangent(t) + a_\text{N}(t)\unitnormal(t)
+      </me>.
+    </p>
+
+    <p>
+      We generally drop the <q>of <m>t</m></q>
+      part of the notation and just write
+      <m>a_\text{T}</m> and <m>a_\text{N}</m>.
+    </p>
+
+    <p>
+      The scalar <m>a_\text{T}</m> measures <q>how much</q>
+      acceleration is in the direction of travel, that is,
+      it measures the component of acceleration that affects the speed.
+      The scalar <m>a_\text{N}</m> measures <q>how much</q>
+      acceleration is perpendicular to the direction of travel, that is,
+      it measures the component of acceleration that affects the direction of travel.
+          <idx><h>unit tangent vector</h><h>and acceleration</h></idx>
+          <idx><h>unit normal vector</h><h>and acceleration</h></idx>
+    </p>
+
+    <p>
+      We can find <m>a_\text{T}</m> using the orthogonal projection of
+      <m>\vec a(t)</m> onto <m>\unittangent(t)</m>
+      (review <xref ref="def_orthogonal_projection">Definition</xref>
+      in <xref ref="sec_dot_product">Section</xref> if needed).
+      Recalling that since <m>\unittangent(t)</m> is a unit vector,
+      <m>\unittangent(t)\cdot\unittangent(t)=1</m>, so we have
+      <me>
+        \proj{a(t)}{T(t)} = \frac{\vec a(t)\cdot\unittangent(t)}{\unittangent(t)\cdot\unittangent(t)}\unittangent(t) = \underbrace{\big(\vec a(t)\cdot\unittangent(t)\big)}_{a_\text{T}}\unittangent(t)
+      </me>.
+    </p>
+
+    <p>
+      Thus the amount of <m>\vat</m> in the direction of
+      <m>\unittangent(t)</m> is <m>a_\text{T}=\vat\cdot\unittangent(t)</m>.
+      The same logic gives <m>a_\text{N} = \vat\cdot\unitnormal(t)</m>.
+    </p>
+
+    <p>
+      While this is a fine way of computing <m>a_\text{T}</m>,
+      there are simpler ways of finding <m>a_\text{N}</m>
+      (as finding <m>\unitnormal</m> itself can be complicated).
+      The following theorem gives alternate formulas for
+      <m>a_\text{T}</m> and <m>a_\text{N}</m>.
+    </p>
+    <aside>
+      <p>
+        Keep in mind that both <m>a_\text{T}</m> and
+        <m>a_\text{N}</m> are functions of <m>t</m>;
+        that is, the scalar changes depending on <m>t</m>.
+        It is convention to drop the <q><m>(t)</m></q>
+        notation from <m>a_\text{T} (t)</m> and simply write <m>a_\text{T}</m>.
+      </p>
+    </aside>
+
+    <theorem xml:id="thm_acc_plane">
+      <title>Acceleration in the Plane Defined by <m>\unittangent</m> and <m>\unitnormal</m></title>
+      <statement>
+        <p>
+          Let <m>\vrt</m> be a position function with acceleration <m>\vat</m> and unit tangent and normal vectors
+          <m>\unittangent(t)</m> and <m>\unitnormal(t)</m>.
+          Then <m>\vat</m> lies in the plane defined by
+          <m>\unittangent(t)</m> and <m>\unitnormal(t)</m>;
+          that is, there exists scalars
+          <m>a_\text{T}</m> and <m>a_\text{N}</m> such that
+          <me>
+            \vat = a_\text{T} \unittangent(t) + a_\text{N} \unitnormal(t)
+          </me>.
+        </p>
+
+        <p>
+          Moreover,
+          <md>
+            <mrow>a_\text{T}  \amp = \vat\cdot\unittangent(t) = \frac{d}{dt}\Big(\norm{\vec v(t)}\Big)</mrow>
+            <mrow>a_\text{N}  \amp = \vat\cdot \unitnormal(t) = \sqrt{\norm{\vec a(t)}^2-a_\text{T} ^2} = \frac{\norm{\vat\times\vvt}}{\norm{\vvt}} = \norm{\vvt}\,\norm{\unittangentprime(t)}</mrow>
+          </md>
+        </p>
+      </statement>
+    </theorem>
+
+    <p>
+          <idx><h>unit tangent vector</h><h>and acceleration</h></idx>
+          <idx><h>unit normal vector</h><h>and acceleration</h></idx>
+          <idx><h>an@<m>a_\text{N}</m></h></idx>
+          <idx><h>at@<m>a_\text{T}</m></h></idx>
+          <idx><h>unit normal vector</h><h>an@<m>a_\text{N}</m></h></idx>
+          <idx><h>unit tangent vector</h><h>at@<m>a_\text{T}</m></h></idx>
+    </p>
+
+    <p>
+      Note the second formula for <m>a_\text{T}</m>:
+      <m>\ds \frac{d}{dt}\Big(\norm{\vvt}\Big)</m>.
+      This measures the rate of change of speed,
+      which again is the amount of acceleration in the direction of travel.
+    </p>
+
+    <example xml:id="ex_tannorm5">
+      <title>Computing <m>a_T</m> and <m>a_N</m></title>
+      <statement>
+        <p>
+          Let <m>\vrt = \la 3\cos(t) , 3\sin(t) , 4t\ra</m> as in <xref ref="ex_tannorm1">Examples</xref>
+          and <xref ref="ex_tannorm3"/>.
+          Find <m>a_\text{T}</m> and <m>a_\text{N}</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          The previous examples give <m>\vat = \la -3\cos(t) ,-3\sin(t) ,0\ra</m> and
+          <me>
+            \unittangent(t) = \la -\frac35\sin(t) ,\frac35\cos(t) ,\frac45\ra  \text{ and }  \unitnormal(t) = \la -\cos(t) ,-\sin(t) ,0\ra
+          </me>.
+        </p>
+
+        <p>
+          We can find <m>a_\text{T}</m> and
+          <m>a_\text{N}</m> directly with dot products:
+          <md>
+            <mrow>a_\text{T}  \amp = \vat\cdot \unittangent(t) = \frac95\cos(t) \sin(t) -\frac95\cos(t) \sin(t) +0 = 0.</mrow>
+            <mrow>a_\text{N}  \amp = \vat\cdot \unitnormal(t) = 3\cos^2(t) +3\sin^2(t) + 0 = 3</mrow>
+          </md>.
+        </p>
+
+        <p>
+          Thus <m>\vat = 0\unittangent(t) + 3\unitnormal(t) = 3\unitnormal(t)</m>,
+          which is clearly the case.
+        </p>
+
+        <p>
+          What is the practical interpretation of these numbers?
+          <m>a_\text{T} =0</m> means the object is moving at a constant speed,
+          and hence all acceleration comes in the form of direction change.
+        </p>
+      </solution>
+    </example>
+
+    <example xml:id="ex_tannorm6">
+      <title>Computing <m>a_T</m> and <m>a_N</m></title>
+      <statement>
+        <p>
+          Let <m>\vrt=\la t^2-t,t^2+t\ra</m> as in <xref ref="ex_tannorm2">Examples</xref>
+          and <xref ref="ex_tannorm4"/>.
+          Find <m>a_\text{T}</m> and <m>a_\text{N}</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          The previous examples give <m>\vat = \la 2,2\ra</m> and
+          <me>
+            \unittangent(t) = \la \frac{2t-1}{\sqrt{8t^2+2}},\frac{2t+1}{\sqrt{8t^2+2}}\ra  \text{ and }  \unitnormal(t) = \la \frac{2t+1}{\sqrt{8t^2+2}},-\frac{2t-1}{\sqrt{8t^2+2}}\ra
+          </me>.
+        </p>
+
+        <p>
+          While we can compute <m>a_\text{N}</m> using <m>\unitnormal(t)</m>,
+          we instead demonstrate using another formula from <xref ref="thm_acc_plane">Theorem</xref>.
+          <md>
+            <mrow>a_\text{T}  \amp = \vat\cdot\unittangent(t) = \frac{4t-2}{\sqrt{8t^2+2}}+\frac{4t+2}{\sqrt{8t^2+2}} = \frac{8t}{\sqrt{8t^2+2}}.</mrow>
+            <mrow>a_\text{N}  \amp = \sqrt{\norm{\vat}^2-a_\text{T} ^2} = \sqrt{8-\left(\frac{8t}{\sqrt{8t^2+2}}\right)^2}=\frac{4}{\sqrt{8t^2+2}}</mrow>
+          </md>.
+        </p>
+
+        <p>
+          When <m>t=2</m>,
+          <m>\ds a_\text{T} = \frac{16}{\sqrt{34}}\approx 2.74</m> and <m>\ds a_\text{N} = \frac{4}{\sqrt{34}} \approx 0.69</m>.
+          We interpret this to mean that at <m>t=2</m>,
+          the particle is accelerating mostly by increasing speed,
+          not by changing direction.
+          As the path near <m>t=2</m> is relatively straight,
+          this should make intuitive sense.
+          <xref ref="fig_tannorm6">Figure</xref>
+          gives a graph of the path for reference.
+        </p>
+
+        <figure xml:id="fig_tannorm6">
+          <caption>Graphing <m>\vec r(t)</m> in <xref ref="ex_tannorm6">Example</xref></caption>
+          <!-- START figures/fig_tannorm6.tex -->
+          <image xml:id="img_tannorm6" width="47%">
+            <description></description>
+            <latex-image>
+
+            \begin{tikzpicture}
+
+            \begin{axis}[
+            ymin=-1.1,ymax=6.5,
+            xmin=-2.1,xmax=7
+            ]
+
+            \addplot+ [-,domain=-2.1:2.1,samples=60] ({x^2-x},{x^2+x});
+
+            \filldraw [black] (axis cs: 2,6) circle (1.5pt) node [below right] { $t=2$};
+            \filldraw [black] (axis cs: 0,0) circle (1.5pt) node [above right] { $t=0$};
+
+            \draw (axis cs: 4.2,1.8) node { $\vec r(t)$};
+            \draw [thick,-&gt;,firstcolor,&gt;=stealth] (axis cs:3.79,.77) -- (axis cs:3.75,.75);
+
+            \end{axis}
+
+            \end{tikzpicture}
+
+            </latex-image>
+          </image>
+          <!-- figures/fig_tannorm6.tex END -->
+        </figure>
+
+        <p>
+          Contrast this with <m>t=0</m>,
+          where <m>a_\text{T} = 0</m> and <m>a_\text{N} = 4/\sqrt{2}\approx 2.82</m>.
+          Here the particle's speed is not changing and all acceleration is in the form of direction change.
+        </p>
+      </solution>
+    </example>
+
+    <example xml:id="ex_tannorm7">
+      <title>Analyzing projectile motion</title>
+      <statement>
+        <p>
+          A ball is thrown from a height of <quantity><mag>240</mag><unit base="foot"/></quantity>
+          with an initial speed of <quantity><mag>64</mag><unit base="foot"/><per base="second"/></quantity>
+          and an angle of elevation of <m>30^\circ</m>.
+          Find the position function <m>\vrt</m> of the ball and analyze
+          <m>a_\text{T}</m> and <m>a_\text{N}</m>.
+              <idx><h>projectile motion</h></idx>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Using <xref ref="idea_projectile">Key Idea</xref>
+          of <xref ref="sec_vvf_motion">Section</xref>
+          we form the position function of the ball:
+          <me>
+            \vrt = \la \big(64\cos(30^\circ) \big)t, -16t^2+\big(64\sin(30^\circ) \big)t+240\ra
+          </me>,
+          which we plot in <xref ref="fig_tannorm7b">Figure</xref>.
+        </p>
+
+        <figure xml:id="fig_tannorm7b">
+          <caption>Plotting the position of a thrown ball, with 1s increments shown</caption>
+          <!-- START figures/fig_tannorm7b.tex -->
+          <image xml:id="img_tannorm7b" width="47%">
+            <description></description>
+            <latex-image>
+
+            \begin{tikzpicture}
+
+            \begin{axis}[
+            ymin=-10,ymax=260,
+            xmin=-10,xmax=310
+            ]
+
+            \addplot+ [-,domain=0:5,samples=40] ({64*cos(30)*x},{-16*x^2+64*sin(30)*x+240});
+
+            \filldraw [black] (axis cs: 0,240) circle (1.5pt) node [below right] { $t=0$};
+            \filldraw [black] (axis cs: 55.4,256) circle (1.5pt) node (A)[ ] {};
+            \filldraw [black] (axis cs: 111,240) circle (1.5pt) node [above right] { $t=2$};
+            \filldraw [black] (axis cs: 166,192) circle (1.5pt) node [above right] { $t=3$};
+            \filldraw [black] (axis cs: 222,112) circle (1.5pt) node [above right] { $t=4$};
+            \filldraw [black] (axis cs: 277,0) circle (1.5pt) node (B) [] {};
+
+            \draw [thick,-&gt;,firstcolor] (axis cs:149.649, 209.76) -- (axis cs:152,207);
+
+            \end{axis}
+
+            \draw (A) node[ above] {{ $t=1$}};
+            \draw (B) node [shift={(-16pt,8pt)}] { $t=5$};
+
+            \end{tikzpicture}
+
+            </latex-image>
+          </image>
+          <!-- figures/fig_tannorm7b.tex END -->
+        </figure>
+
+        <p>
+          From this we find <m>\vvt = \la 64\cos(30^\circ) , -32t+64\sin(30^\circ) \ra</m> and <m>\vat = \la 0,-32\ra</m>.
+          Computing <m>\unittangent(t)</m> is not difficult,
+          and with some simplification we find
+          <me>
+            \unittangent(t) = \la \frac{\sqrt{3}}{\sqrt{t^2-2t+4}}, \frac{1-t}{\sqrt{t^2-2t+4}}\ra
+          </me>.
+        </p>
+
+        <p>
+          With <m>\vat</m> as simple as it is,
+          finding <m>a_\text{T}</m> is also simple:
+          <me>
+            a_\text{T}  = \vat\cdot \unittangent(t) = \frac{32t-32}{\sqrt{t^2-2t+4}}
+          </me>.
+        </p>
+
+        <p>
+          We choose to not find <m>\unitnormal(t)</m> and find
+          <m>a_\text{N}</m> through the formula <m>a_\text{N}  = \sqrt{\norm{\vat}^2-a_\text{T}^2\,}</m> :
+          <me>
+            a_\text{N}  = \sqrt{32^2-\left(\frac{32t-32}{\sqrt{t^2-2t+4}}\right)^2} = \frac{32\sqrt{3}}{\sqrt{t^2-2t+4}}
+          </me>.
+        </p>
+
+        <p>
+          <xref ref="fig_tannorm7a">Figure</xref>
+          gives a table of values of
+          <m>a_\text{T}</m> and <m>a_\text{N}</m>.
+          When <m>t=0</m>, we see the ball's speed is decreasing;
+          when <m>t=1</m> the speed of the ball is unchanged.
+          This corresponds to the fact that at <m>t=1</m> the ball reaches its highest point.
+        </p>
+
+        <p>
+          After <m>t=1</m> we see that
+          <m>a_\text{N}</m> is decreasing in value.
+          This is because as the ball falls,
+          its path becomes straighter and most of the acceleration is in the form of speeding up the ball,
+          and not in changing its direction.
+        </p>
+
+        <figure xml:id="fig_tannorm7a">
+          <caption>A table of values of <m>a_T</m> and <m>a_N</m> in <xref ref="ex_tannorm7">Example</xref></caption>
+          <tabular>
+            <row>
+              <cell><m>t</m></cell>
+              <cell><m>a_\text{T}</m></cell>
+              <cell><m>a_\text{N}</m></cell>
+            </row>
+            <row bottom="minor">
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+            </row>
+            <row>
+              <cell><m>0</m></cell>
+              <cell><m>-16</m></cell>
+              <cell><m>27.7</m></cell>
+            </row>
+            <row>
+              <cell><m>1</m></cell>
+              <cell><m>0</m></cell>
+              <cell><m>32</m></cell>
+            </row>
+            <row>
+              <cell><m>2</m></cell>
+              <cell><m>16</m></cell>
+              <cell><m>27.7</m></cell>
+            </row>
+            <row>
+              <cell><m>3</m></cell>
+              <cell><m>24.2</m></cell>
+              <cell><m>20.9</m></cell>
+            </row>
+            <row>
+              <cell><m>4</m></cell>
+              <cell><m>27.7</m></cell>
+              <cell><m>16</m></cell>
+            </row>
+            <row>
+              <cell><m>5</m></cell>
+              <cell><m>29.4</m></cell>
+              <cell><m>12.7</m></cell>
+            </row>
+          </tabular>
+
+        </figure>
+
+      </solution>
+    </example>
+
+    <p>
+      Our understanding of the unit tangent and normal vectors is aiding our understanding of motion.
+      The work in <xref ref="ex_tannorm7">Example</xref>
+      gave quantitative analysis of what we intuitively knew.
+    </p>
+
+    <p>
+      The next section provides two more important steps towards this analysis.
+      We currently describe position only in terms of time.
+      In everyday life,
+      though, we often describe position in terms of distance
+      (<q>The gas station is about 2 miles ahead, on the left.</q>).
+      The <em>arc length parameter</em>
+      allows us to reference position in terms of distance traveled.
+    </p>
+
+    <p>
+      We also intuitively know that some paths are straighter than others <mdash/> and some are curvier than others,
+      but we lack a measurement of <q>curviness.</q>
+      The arc length parameter provides a way for us to compute <em>curvature</em>,
+      a quantitative measurement of how curvy a curve is.
+    </p>
+  </subsection>
+
+  <xi:include href="exer_sec_tan_norm.ptx" />
+</section>

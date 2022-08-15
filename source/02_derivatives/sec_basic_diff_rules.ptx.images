@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec_basic_diff_rules">
+  <title>Basic Differentiation Rules</title>
+  <introduction>
+    <p>
+      The derivative is a powerful tool but is admittedly awkward given its reliance on limits. Fortunately, one thing mathematicians are good at is <em>abstraction.</em> For instance, instead of continually finding derivatives at a point, we abstracted and found the derivative function.
+    </p>
+    <p>
+      Let's practice abstraction on linear functions, <m>y=mx+b</m>. What is <m>y'</m>? Without limits, recognize that linear function are characterized by being functions with a constant rate of change (the slope). The derivative, <m>y'</m>, gives the instantaneous rate of change; with a linear function, this is constant, <m>m</m>. Thus <m>y'=m</m>.
+    </p>
+    <p>
+      Let's abstract once more. Let's find the derivative of the general quadratic function, <m>f(x) = ax^2+bx+c</m>. Using the definition of the derivative, we have:
+      <md>
+        <mrow>\fp(x)     \amp =    \lim_{h\to 0}\frac{a(x+h)^2+b(x+h)+c-(ax^2+bx+c)}{h}</mrow>
+        <mrow>\amp =\lim_{h\to 0}\frac{ax^2+2ahx+ah^2+bx+bh+c-ax^2-bx-c)}{h}</mrow>
+        <mrow>\amp =    \lim_{h\to 0} \frac{ah^2+2ahx+bh}{h}</mrow>
+        <mrow>\amp =    \lim_{h\to 0} ah+2ax+b</mrow>
+        <mrow>\amp = 2ax+b.</mrow>
+      </md>
+      
+    </p>
+    <p>
+      So if <m>y = 6x^2+11x-13</m>, we can immediately compute <m>y' = 12x+11</m>.
+    </p>
+    <p>
+      In this section (and in some sections to follow) we will learn some of what mathematicians have already discovered about the derivatives of certain functions and how derivatives interact with arithmetic operations. We start with a theorem.
+      </p>
+    <theorem xml:id="thm_deriv_common">
+      <title>Derivatives of Common Functions</title>
+      <statement>
+        <p>
+          <dl>
+            <li>
+              <title>Constant Rule</title>
+              <idx>
+                <h>derivative</h>
+                Constant Rule
+              </idx>
+              <p>
+                <m>\lzoo{x}{c} = 0</m>, where <m>c</m> is a constant.</p>
+            </li>
+            <li xml:id="power-derivative-rule">
+              <title>Power Rule</title>
+              <idx>
+                <h>derivative</h>
+                Power Rule
+              </idx>
+              <idx>
+                <h>Power Rule</h>
+                differentiation
+              </idx>
+              <p>
+                <m>\lzoo{x}{x^n}= nx^{n-1}</m>, where <m>n</m> is an integer, <m>n&gt;0</m>.</p>
+            </li>
+            <li>
+              <title>Other common functions</title>
+              <p>
+                <m>\lzoo{x}{\sin(x)} = \cos(x)</m>
+              </p>
+              <p>
+                <m>\lzoo{x}{\cos(x)} = {-\sin(x)}</m>
+              </p>
+              <p>
+                <m>\lzoo{x}{e^x} = e^x</m>
+              </p>
+              <p>
+                <m>\lzoo{x}{\ln(x)} = \frac{1}{x}</m>, for <m>x\gt 0</m>.</p>
+            </li>
+          </dl>
+          <idx>
+            <h>derivative</h>
+            basic rules
+          </idx>
+        </p>
+      </statement>
+    </theorem>
+    <p>
+      This theorem starts by stating an intuitive fact: constant functions have zero rate of change as they are <em>constant</em>. Therefore their derivative is <m>0</m> (they change at the rate of <m>0</m>). The theorem then states some fairly amazing things. The <xref text="title" ref="power-derivative-rule" /> states that the derivatives of Power Functions (of the form <m>y=x^n</m>) are very straightforward: multiply by the power, then subtract <m>1</m> from the power. We see something incredible about the function <m>y=e^x</m>: it is its own derivative. We also see a new connection between the sine and cosine functions.
+    </p>
+    <p>
+      One special case of the <xref text="title" ref="power-derivative-rule" /> is when <m>n=1</m>, i.e., when <m>f(x) = x</m>. What is <m>\fp(x)</m>? According to the <xref text="title" ref="power-derivative-rule" />,
+      <me>
+        \fp(x) = \lzoo{x}{x} = \lzoo{x}{x^1} = 1\cdot x^0 = 1.
+      </me>
+    
+    </p>
+    <p>
+      In words, we are asking <q>At what rate does <m>f</m> change with respect to <m>x</m>?</q> Since <m>f</m> <em>is</em> <m>x</m>, we are asking <q>At what rate does <m>x</m> change with respect to <m>x</m>?</q> The answer is: <m>1</m>. They change at the same rate. We can also interpret the derivative as the slope of the tangent line to the function at a point <m>(c,f(c))</m>. Since <m>f(x)=x</m> is a linear function with constant slope <m>1</m>, we can say that the derivative of <m>f(x)=x</m> is <m>\fp(x)=1</m>.
+    </p>
+    <p>
+      Let's practice using this theorem.
+      </p>
+    <example xml:id="ex_deriv_rule1">
+      <title>Using common derivative rules to find, and use, derivatives</title>
+      <statement>
+        <p>
+          Let <m>f(x)=x^3</m>.<ol>
+          <li><p>Find <m>\fp(x)</m>.</p></li>
+          <li xml:id="item-tangent-line"><p>Find the equation of the line tangent to the graph of <m>f</m> at <m>x=-1</m>.</p></li>
+          <li><p>Use the tangent line to approximate <m>(-1.1)^3</m>.</p></li>
+          <li><p>Sketch <m>f</m>, <m>\fp</m> and the tangent line from <xref ref="item-tangent-line" /> on the same axis.</p></li>
+        </ol>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <ol>
+            <li>
+              <p>
+                The <xref text="title" ref="power-derivative-rule" /> states that if <m>f(x) = x^3</m>, then <m>\fp(x) = 3x^2</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                To find the equation of the line tangent to the graph of <m>f</m> at <m>x=-1</m>, we need a point and the slope. The point is <m>(-1,f(-1)) = (-1, -1)</m>. The slope is <m>\fp(-1)= 3</m>. Thus the tangent line has equation <m>y = 3(x-(-1))+(-1) = 3x+2</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                We can use the tangent line to approximate <m>(-1.1)^3</m> since <m>-1.1</m> is close to <m>-1</m>. We have
+              <me>
+                (-1.1)^3 \approx 3(-1.1)+2 = -1.3.
+              </me>
+              We can easily find the actual value: <m>(-1.1)^3 = -1.331</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                See <xref ref="fig_xcubedwithderiv">Figure</xref>.
+              </p>
+            </li>
+          </ol>
+        </p>
+        <sidebyside width="47%">
+          <figure xml:id="fig_xcubedwithderiv">
+            <caption>A graph of <m>f(x) = x^3</m>, along with its derivative <m>\fp(x) = 3x^2</m> and its tangent line at <m>x=-1</m>.</caption>
+            <image xml:id="img_xcubedwithderiv">
+              <description />
+              <latex-image>
+                
+                \begin{tikzpicture}
+                    \begin{axis}[xmin=-2.1,xmax=2.1,
+                                  ymin=-5.1,ymax=5.1,
+                                  clip=false]
+                        \addplot+[domain=-1.5:1.5] {x^3} node[below right] {$f(x)$};
+                        \addplot+[domain=-1.2:1.2] {3*x^2} node[right] {$f'(x)$};
+                        \addplot[tangentline,domain=-2:1] {3*(x+1)-1} node[above left] {$\ell(x)$};
+                        \addplot[soliddot] coordinates {(-1,-1) (-1,3)};
+                    \end{axis}
+                \end{tikzpicture}
+                
+              </latex-image>
+            </image>
+          </figure>
+        </sidebyside>
+      </solution>
+    </example>
+    <p>
+      <xref ref="thm_deriv_common">Theorem</xref> gives useful information, but we will need much more. For instance, using the theorem, we can easily find the derivative of <m>y=x^3</m>, but it does not tell how to compute the derivative of <m>y=2x^3</m>, <m>y=x^3+\sin(x)</m> nor <m>y=x^3\sin(x)</m>. The following theorem helps with the first two of these examples (the third is answered in the next section).</p>
+    <theorem xml:id="thm_deriv_prop">
+      <title>Properties of the Derivative</title>
+      <statement>
+        <p>
+          Let <m>f</m> and <m>g</m> be differentiable on an open interval <m>I</m> and let <m>c</m> be a real number. Then:<dl>
+          <li xml:id="sum-difference-derivative-rule"><title>Sum/Difference Rule</title>
+            <p><md>
+                <mrow>\lzoo{x}{f(x) \pm g(x)} \amp= \lzoo{x}{f(x)} \pm \lzoo{x}{g(x)}</mrow>
+                <mrow>\amp= \fp(x)\pm g'(x)</mrow>
+            </md>
+            <idx><h>derivative</h>Sum/Difference Rule</idx><idx><h>Sum/Difference Rule</h>of derivatives</idx></p></li>
+
+          <li xml:id="constant-multiple-derivative-rule"><title>Constant Multiple Rule</title>
+            <p>
+            <md>
+              <mrow>\lzoo{x}{c\cdot f(x)} \amp= c\cdot\lzoo{x}{f(x)}</mrow>
+              <mrow>\amp = c\cdot\fp(x)\text{.}</mrow>
+            </md><idx><h>derivative</h>Constant Multiple Rule</idx><idx><h>Constant Multiple Rule</h>of derivatives</idx></p></li>
+        </dl>
+        </p>
+      </statement>
+    </theorem>
+    <p>
+      <xref ref="thm_deriv_prop">Theorem</xref> allows us to find the derivatives of a wide variety of functions. It can be used in conjunction with the <xref text="title" ref="power-derivative-rule" /> to find the derivatives of any polynomial. Recall in <xref ref="ex_deriv1">Example</xref> that we found, using the limit definition, the derivative of <m>f(x) = 3x^2+5x-7</m>. We can now find its derivative without expressly using limits:
+      <md>
+        <mrow>\lzoo{x}{3x^2+5x+7} \amp = 3\lzoo{x}{x^2} + 5\lzoo{x}{x} + \lzoo{x}{7}</mrow>
+        <mrow>\amp = 3\cdot 2x+5\cdot 1+ 0</mrow>
+        <mrow>\amp = 6x+5.</mrow>
+      </md>
+    </p>
+    <p>
+      We were a bit pedantic here, showing every step. Normally we would do all the arithmetic and steps in our head and readily find <m>\lzoo{x}{3x^2+5x+7}= 6x+5</m>.
+    </p>
+    <example xml:id="ex_der2">
+      <title>Using the tangent line to approximate a function value</title>
+      <statement>
+        <p>
+          Let <m>f(x) = \sin(x) + 2x+1</m>. Approximate <m>f(3)</m> using an appropriate tangent line.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          This problem is intentionally ambiguous; we are to <em>approximate</em> using an <em>appropriate</em> tangent line. How good of an approximation are we seeking? What does <q>appropriate</q> mean?
+        </p>
+        <p>
+          In the <q>real world,</q> people solving problems deal with these issues all time. One must make a judgment using whatever seems reasonable. In this example, the actual answer is <m>f(3) = \sin(3) + 7</m>, where the real problem spot is <m>\sin(3)</m>. What is <m>\sin(3)</m>?
+        </p>
+        <p>
+          Since <m>3</m> is close to <m>\pi</m>, we can assume <m>\sin(3) \approx \sin(\pi) = 0</m>. Thus one guess is <m>f(3) \approx 7</m>. Can we do better? Let's use a tangent line as instructed and examine the results; it seems best to find the tangent line at <m>x=\pi</m>.
+        </p>
+        <p>
+          Using <xref ref="thm_deriv_common">Theorem</xref> we find <m>\fp(x) = \cos(x) + 2</m>. The slope of the tangent line is thus <m>\fp(\pi) = \cos(\pi) + 2 =1</m>. Also, <m>f(\pi) = 2\pi+1 \approx 7.28</m>. So the tangent line to the graph of <m>f</m> at <m>x=\pi</m> is <m>y=1(x-\pi)+ 2\pi+1 =x+\pi+1 \approx x+4.14</m>. Evaluated at <m>x=3</m>, our tangent line gives <m>y=3+4.14 = 7.14</m>. Using the tangent line, our final approximation is that <m>f(3) \approx 7.14</m>.
+        </p>
+        <p>
+          Using a calculator, we get an answer accurate to four places after the decimal: <m>f(3) = 7.1411</m>. Our initial guess was <m>7</m>; our tangent line approximation was more accurate, at <m>7.14</m>.
+        </p>
+        <p>
+          The point is <em>not</em> <q>Here's a cool way to do some math without a calculator.</q> Sure, that might be handy sometime, but your phone could probably give you the answer. Rather, the point is to say that tangent lines are a good way of approximating, and many scientists, engineers and mathematicians often face problems too hard to solve directly. So they approximate.
+        </p>
+        <p>
+          The graphs in <xref ref="fig_sintangapprox">Figure</xref> shows the graph of the function <m>f(x)</m> along with the tangent line constructed at <m>x=\pi</m>. The graph in <xref ref="fig_sintangapprox">Figure</xref> shows the same tangent line and function. Once zoomed in, you can barely distinguish the tangent line from the function. This indicates that the tangent line is a good a approximation of the function so long as we are near the point of tangency. 
+        </p>
+        <sidebyside margins="auto" widths="47% 47%">
+          <figure xml:id="fig_sintangapprox">
+            <caption>A graph of <m>f(x) = \sin(x)+2x+1</m> along with its tangent line approximation at <m>x=\pi</m>.</caption>
+            <image xml:id="img_sintangapprox">
+              <description />
+              <latex-image>
+                    
+                    \begin{tikzpicture}
+                        \begin{axis}[xmin=-1.1,xmax=5.1,
+                                    ymin=-1,ymax=10,]
+                            \addplot+[domain=-.5:5] {sin(deg(x))+2*x+1};
+                            \addplot[tangentline,domain=1:4.5] {x+4.14};
+                            \addplot[soliddot] coordinates {(3,7.1411) (3.14,7.28)};
+                            \draw (axis cs:0.5,1.2) node {\scriptsize $f(x)$};
+                            \draw (axis cs:0.5,5) node {\scriptsize $l(x)$};
+                    \end{axis}
+
+
+
+                    \end{tikzpicture}
+                    
+                  </latex-image>
+            </image>
+          </figure>
+          <figure xml:id="fig_sintangapproxzoom">
+            <caption>A graph of <m>f(x) = \sin(x)+2x+1</m> along with its tangent line approximation at <m>x=\pi</m>, zoomed in.</caption>
+            <image xml:id="img_sintangapproxzoom">
+              <description />
+              <latex-image>
+                    
+                    \begin{tikzpicture}
+                    \begin{axis}[ymin=6.7,ymax=7.4,
+                                 xmin=2.5,xmax=3.5,
+                                 xdiscontinuity,
+                                 ydiscontinuity]
+                    \addplot+[domain=2.6:3.25] {sin(deg(x))+2*x+1};
+                    \addplot[tangentline,domain=2.6:3.25] {x+4.14};
+                    \addplot[soliddot] coordinates {(3,7.1411) (3.14,7.28)};
+                    %\draw (axis cs:0.5,1.2) node {\scriptsize $f(x)$};
+                    %\draw (axis cs:0.5,5) node {\scriptsize $l(x)$};
+                    \end{axis}
+
+
+
+                    \end{tikzpicture}
+                    
+                  </latex-image>
+            </image>
+          </figure>
+        </sidebyside>
+      </solution>
+    </example>
+  </introduction>
+  <subsection>
+    <title>Higher Order Derivatives</title>
+    <p>
+      The derivative of a function <m>f</m> is itself a function, therefore we can take its derivative. The following definition gives a name to this concept and introduces its notation.
+    </p>
+    <definition xml:id="def_Higher_Deriv">
+      <title>Higher Order Derivatives</title>
+      <statement>
+        <p>
+          Let <m>y=f(x)</m> be a differentiable function on <m>I</m>. <idx><h>derivative</h>higher order</idx><idx><h>derivative</h>notation</idx>
+        <ol>
+          <li><p>The <em>second derivative</em> of <m>f</m> is:
+              <me>
+                \fp'(x) = \lzoo{x}{\fp(x)} = \lzoo{x}{\lz{y}{x}} = \lzn{y}{x}{2}=y''.
+              </me>
+            </p></li>
+
+          <li><p>The <em>third derivative</em> of <m>f</m> is:
+              <me>
+                \fp''(x) = \lzoo{x}{\fp'(x)} = \lzoo{x}{\lzn{y}{x}{2}} = \lzn{y}{x}{3}=y'''.
+              </me>
+            </p></li>
+
+          <li><p>The <em><m>n</m>th derivative</em> of <m>f</m> is:
+              <me>
+                f^{(n)}(x) = \lzoo{x}{f^{(n-1)}(x)} = \lzoo{x}{\lzn{y}{x}{n-1}} = \lzn{y}{x}{n}=y^{(n)}.
+              </me>
+            </p></li>
+        </ol>
+        </p>
+      </statement>
+    </definition>
+    <aside>
+      <title>Higher Order Derivative Caveat</title>
+      <p>
+        <xref ref="def_Higher_Deriv">Definition</xref> comes with the caveat <q>Where the corresponding limits exist.</q> With <m>f</m> differentiable on <m>I</m>, it is possible that <m>\fp</m> is <em>not</em> differentiable on all of <m>I</m>, and so on.</p>
+    </aside>
+    <p>
+      In general, when finding the fourth derivative and on, we resort to the <m>f^{(4)}(x)</m> notation, not <m>\fp'''(x)</m>; after a while, too many ticks is too confusing.
+    </p>
+    <p>
+      Let's practice using this new concept.
+      </p>
+    <example xml:id="ex_high_order">
+      <title>Finding higher order derivatives</title>
+      <statement>
+        <p>
+          Find the first four derivatives of the following functions:
+        <ol cols="3">
+          <li><p><m>f(x) = 4x^2</m></p></li>
+
+          <li><p><m>f(x) = \sin(x)</m></p></li>
+
+          <li><p><m>f(x) = 5e^x</m></p></li>
+        </ol>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <ol>
+            <li>
+              <p>
+                Using the Power and Constant Multiple Rules, we have: <m>\fp(x) = 8x</m>. Continuing on, we have
+              <md>
+                  <mrow>\fp'(x)\amp=\lzoo{x}{8x}=8\amp\fp''(x)\amp=0\amp f^{(4)}(x)\amp=0.</mrow>
+                </md>
+                
+              Notice how all successive derivatives will also be <m>0</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                We employ <xref ref="thm_deriv_common">Theorem</xref> repeatedly.
+              <md>
+                  <mrow>\fp(x)\amp=\cos(x)\amp \fp''(x)\amp= -\cos(x)</mrow>
+                  <mrow>\fp'(x)\amp= -\sin(x)\amp f^{(4)}(x)\amp = \sin(x)</mrow>
+                </md>
+                
+              Note how we have come right back to <m>f(x)</m> again. (Can you quickly figure what <m>f^{(23)}(x)</m> is?)
+              </p>
+            </li>
+            <li>
+              <p>
+                Employing <xref ref="thm_deriv_common">Theorem</xref> and the Constant Multiple Rule, we can see that
+              <me>
+                \fp(x) = \fp'(x) = \fp''(x) = f^{(4)}(x) = 5e^x.
+              </me>
+            
+              </p>
+            </li>
+          </ol>
+        </p>
+      </solution>
+    </example>
+  </subsection>
+  <subsection>
+    <title>Interpreting Higher Order Derivatives</title>
+    <p>
+      What do higher order derivatives <em>mean</em>? What is the practical interpretation? <idx><h>derivative</h>higher order!interpretation</idx>
+    </p>
+    <p>
+      Our first answer is a bit wordy, but is technically correct and beneficial to understand. That is,
+      </p>
+    <blockquote>
+      <p>
+        The second derivative of a function <m>f</m> is the rate of change of the rate of change of <m>f</m>.
+      </p>
+    </blockquote>
+    <p>
+      One way to grasp this concept is to let <m>f</m> describe a position function. Then, as stated in <xref ref="idea_motion">Key Idea</xref>, <m>\fp</m> describes the rate of position change: velocity. We now consider <m>\fp'</m>, which describes the rate of velocity change. Sports car enthusiasts talk of how fast a car can go from <m>0</m> to <quantity><mag>60</mag><unit base="mileperhour" /></quantity>; they are bragging about the <em>acceleration</em> of the car.
+    </p>
+    <p>
+      We started this chapter with amusement-park riders free-falling with position function <m>f(t) = -16t^2+150</m>. It is easy to compute <m>\fp(t)=-32t</m> ft/s and <m>\fp'(t) = -32</m> (ft/s)/s. We may recognize this latter constant; it is the acceleration due to gravity. In keeping with the unit notation introduced in the previous section, we say the units are <q>feet per second per second.</q> This is usually shortened to <q>feet per second squared,</q> written as <q>ft/s<m>^2</m>.</q>
+    </p>
+    <p>
+      It can be difficult to consider the meaning of the third, and higher order, derivatives. The third derivative is <q>the rate of change of the rate of change of the rate of change of <m>f</m>.</q> That is essentially meaningless to the uninitiated. In the context of our position/velocity/acceleration example, the third derivative is the <q>rate of change of acceleration,</q> commonly referred to as <q>jerk.</q>
+    </p>
+    <p>
+      Make no mistake: higher order derivatives have great importance even if their practical interpretations are hard (or <q>impossible</q>) to understand. The mathematical topic of <term>series</term> makes extensive use of higher order derivatives.
+    </p>
+  </subsection>
+  <xi:include href="exer_sec_basic_diff_rules.ptx" />
+</section>

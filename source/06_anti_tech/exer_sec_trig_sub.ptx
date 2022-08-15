@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<exercises>
+  <exercise>
+    <statement>
+      <p>
+        Trigonometric Substitution works on the same principles as Integration by Substitution, though it can feel “<fillin/>”.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        backwards
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        If one uses Trigonometric Substitution on an integrand containing <m>\sqrt{25-x^2}</m>, then one should set <m>x=</m><fillin/>.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        <m>5\sin \theta </m>
+      </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        Consider the Pythagorean Identity <m>\sin ^2\theta +\cos ^2\theta = 1</m>.
+      </p>
+      <ol>
+        <li>
+          <p>
+            What identity is obtained when both sides are divided by <m>\cos ^2\theta </m>?
+          </p>
+        </li>
+        <li>
+          <p>
+            Use the new identity to simplify <m>9\tan ^2\theta + 9.</m>
+          </p>
+        </li>
+      </ol>
+    </statement>
+    <answer>
+      <ol>
+        <li>
+          <p>
+            <m>\tan ^2\theta + 1 = \sec ^2\theta </m>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>9\sec ^2\theta </m>.</p>
+        </li>
+      </ol>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        Why does <xref ref="idea_trigsub" />(a) state that <m>\sqrt{a^2-x^2} = a\cos \theta </m>, and not <m>|a\cos \theta |</m>?
+      </p>
+    </statement>
+    <answer>
+      <p>
+        Because we are considering <m>a\gt0</m> and <m>x=a\sin \theta </m>, which means <m>\theta = \sin ^{-1}(x/a)</m>. The arcsine function has a domain of <m>-\pi /2\le \theta \le \pi /2</m>; on this domain, <m>\cos \theta \ge 0</m>, so <m>a\cos \theta </m> is always non-negative, allowing us to drop the absolute value signs.
+      </p>
+    </answer>
+  </exercise>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 5–16, apply Trigonometric Substitution to evaluate the indefinite integrals.
+        </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \sqrt{x^2+1}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\frac{1}{2}\left(x\sqrt{x^2+1}+\ln |\sqrt{x^2+1}+x|\right) + C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \sqrt{x^2+4}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>2\left(\frac{x}{4}\sqrt{x^2+4}+\ln |\frac{\sqrt{x^2+4}}{2}+\frac{x}{2}|\right) + C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \sqrt{1-x^2}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\frac{1}{2}\left(\sin ^{-1}x+x\sqrt{1-x^2}\right)+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \sqrt{9-x^2}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\frac{1}{2}\left(9\sin ^{-1}(x/3)+x\sqrt{9-x^2}\right)+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \sqrt{x^2-1}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\frac{1}{2}x\sqrt{x^2-1}-\frac{1}{2}\ln |x+\sqrt{x^2-1}|+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \sqrt{x^2-16}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\frac{1}{2}x\sqrt{x^2-16}-8\ln \left|\frac{x}{4}+\frac{\sqrt{x^2-16}}{4}\right|+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \sqrt{4x^2+1}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>x\sqrt{x^2+1/4}+\frac{1}{4}\ln |2\sqrt{x^2+1/4}+2x| + C = \frac{1}{2}x\sqrt{4x^2+1}+\frac{1}{4}\ln |\sqrt{4x^2+1}+2x|+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \sqrt{1-9x^2}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\frac{1}{6}\sin ^{-1}(3x)+\frac{3}{2}\sqrt{1/9-x^2}+C=\frac{1}{6}\sin ^{-1}(3x)+\frac{1}{2}\sqrt{1-9x^2}+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \sqrt{16x^2-1}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>4\left(\frac{1}{2}x\sqrt{x^2-1/16}-\frac{1}{32}\ln |4x+4\sqrt{x^2-1/16}|\right)+C = \frac{1}{2}x\sqrt{16x^2-1}-\frac{1}{8}\ln |4x+\sqrt{16x^2-1}|+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \frac{8}{\sqrt{x^2+2}}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>8\ln \left|\frac{\sqrt{x^2+2}}{\sqrt{2}}+\frac{x}{\sqrt{2}}\right|+C</m>.</p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \frac{3}{\sqrt{7-x^2}}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>3\sin ^{-1}\left(\frac{x}{\sqrt{7}}\right)+C</m> (Trig. Subst. is not needed)</p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \frac{5}{\sqrt{x^2-8}}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>5\ln \left|\frac{x}{\sqrt{8}}+\frac{\sqrt{x^2-8}}{\sqrt{8}}\right|+C</m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In the following, evaluate the indefinite integrals. Some may be evaluated without Trigonometric Substitution.
+        </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \frac{\sqrt{x^2-11}}{x}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\sqrt{x^2-11}-\sqrt{11}\sec ^{-1}(x/\sqrt{11})+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \frac{1}{(x^2+1)^2}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\frac{1}{2}\left(\tan ^{-1}x+\frac{x}{x^2+1}\right)+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \frac{x}{\sqrt{x^2-3}}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\sqrt{x^2-3}+C</m> (Trig. Subst. is not needed)</p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int x^2\sqrt{1-x^2}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\frac{1}{8}\sin ^{-1}x-\frac{1}{8}x\sqrt{1-x^2}(1-2x^2)+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \frac{x}{(x^2+9)^{3/2}}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>-\frac{1}{\sqrt{x^2+9}}+C</m>   (Trig. Subst. is not needed)</p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \frac{5x^2}{\sqrt{x^2-10}}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\frac{5}{2}x\sqrt{x^2-10}+25\ln \left|\frac{x}{\sqrt{10}}+\frac{\sqrt{x^2-10}}{\sqrt{10}}\right|+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \frac{1}{(x^2+4x+13)^2}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\frac{1}{18}\frac{x+2}{x^2+4x+13}+\frac{1}{54}\tan ^{-1}\left(\frac{x+2}{3}\right)+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int x^2(1-x^2)^{-3/2}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\frac{x}{\sqrt{1-x^2}} - \sin ^{-1}x+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \frac{\sqrt{5-x^2}}{7x^2}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\frac{1}{7}\left(-\frac{\sqrt{5-x^2}}{x}-\sin ^{-1}(x/\sqrt{5})\right)+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \frac{x^2}{\sqrt{x^2+3}}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\frac{1}{2}x\sqrt{x^2+3}-\frac{3}{2}\ln \left|\frac{\sqrt{x^2+3}}{\sqrt{3}}+\frac{x}{\sqrt{3}}\right|+C</m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 27–32, evaluate the definite integrals by making the proper trigonometric substitution <em>and</em> changing the bounds of integration. (Note: each of the corresponding indefinite integrals has appeared previously in this Exercise set.)
+      </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{-1}^1 \sqrt{1-x^2}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\pi /2</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{4}^8 \sqrt{x^2-16}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>16\sqrt{3}-8\ln (2+\sqrt{3})</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{0}^2 \sqrt{x^2+4}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>2\sqrt{2}+2\ln (1+\sqrt{2})</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{-1}^1 \frac{1}{(x^2+1)^2}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\pi /4+1/2)</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{-1}^1 \sqrt{9-x^2}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>9\sin ^{-1}(1/3)+\sqrt{8}</m>   Note: the new lower bound is <m>\theta =\sin ^{-1}(-1/3)</m> and the new upper bound is <m>\theta =\sin ^{-1}(1/3)</m>. The final answer comes with recognizing that <m>\sin ^{-1}(-1/3)=-\sin ^{-1}(1/3)</m> and that <m>\cos \big (\sin ^{-1}(1/3)\big )=\cos \big (\sin ^{-1}(-1/3)\big ) = \sqrt{8}/3</m>.</p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{-1}^1 x^2\sqrt{1-x^2}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\pi /8</m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+</exercises>

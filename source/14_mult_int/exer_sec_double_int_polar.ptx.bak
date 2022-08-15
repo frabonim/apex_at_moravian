@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<exercises>
+  <exercise>
+    <statement>
+      <p>
+        When evaluating <m>\iint _R f(x,y)\ dA</m> using polar coordinates, <m>f(x,y)</m> is replaced with <fillin/> and <m>dA</m> is replaced with <fillin/>.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        <m>f\big (r\cos \theta ,r\sin \theta \big )</m>, <m>r\ dr\ d\theta </m>
+      </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        Why would one be interested in evaluating a double integral with polar coordinates?
+        </p>
+    </statement>
+    <answer>
+      <p>
+        Some regions in the <m>x</m>-<m>y</m> plane are easier to describe using polar coordinates than using rectangular coordinates. Also, some integrals are easier to evaluate one the polar substitutions have been made.
+      </p>
+    </answer>
+  </exercise>
+  <exercisegroup>
+    <introduction>
+      <p>
+        A function <m>f(x,y)</m> is given and a region <m>R</m> of the <m>x</m>-<m>y</m> plane is described. Set up and evaluate <m>\iint _Rf(x,y)\ dA</m> using polar coordinates.
+      </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x,y) = 3x-y+4</m>; <m>R</m> is the region enclosed by the circle <m>x^2+y^2=1</m>.</p>
+      </statement>
+      <answer>
+        <p>
+          <m>\displaystyle \int _0^{2\pi }\int _0^1 \big (3r\cos \theta -r\sin \theta +4\big )r\ dr\ d\theta = 4\pi </m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x,y) = 4x+4y</m>; <m>R</m> is the region enclosed by the circle <m>x^2+y^2=4</m>.</p>
+      </statement>
+      <answer>
+        <p>
+          <m>\displaystyle \int _0^{2\pi }\int _0^2 \big (4r\cos \theta +4r\sin \theta \big )r\ dr\ d\theta = 0</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x,y) = 8-y</m>; <m>R</m> is the region enclosed by the circles with polar equations <m>r=\cos \theta </m> and <m>r=3\cos \theta </m>.</p>
+      </statement>
+      <answer>
+        <p>
+          <m>\displaystyle \int _0^{\pi }\int _{\cos \theta }^{3\cos \theta } \big (8-r\sin \theta \big )r\ dr\ d\theta = 16\pi </m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x,y) = 4</m>; <m>R</m> is the region enclosed by the petal of the rose curve <m>r=\sin (2\theta )</m> in the first quadrant.</p>
+      </statement>
+      <answer>
+        <p>
+          <m>\displaystyle \int _0^{\pi /2}\int _{0}^{\sin (2\theta )} \big (4\big )r\ dr\ d\theta = \pi /2</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x,y) = \ln \big (x^2+y^2)</m>; <m>R</m> is the annulus enclosed by the circles <m>x^2+y^2=1</m> and <m>x^2+y^2=4</m>.</p>
+      </statement>
+      <answer>
+        <p>
+          <m>\displaystyle \int _0^{2\pi }\int _{1}^{2} \big (\ln (r^2)\big )r\ dr\ d\theta = 2\pi \big (\ln 16-3/2\big )</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x,y) = 1-x^2-y^2</m>; <m>R</m> is the region enclosed by the circle <m>x^2+y^2=1</m>.</p>
+      </statement>
+      <answer>
+        <p>
+          <m>\displaystyle \int _0^{2\pi }\int _{0}^{1} \big (1-r^2\big )r\ dr\ d\theta = \pi /2</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x,y) = x^2-y^2</m>; <m>R</m> is the region enclosed by the circle <m>x^2+y^2=36</m> in the first and fourth quadrants.</p>
+      </statement>
+      <answer>
+        <p>
+          <m>\displaystyle \int _{-\pi /2}^{\pi /2}\int _{0}^{6} \big (r^2\cos ^2\theta -r^2\sin ^2\theta \big )r\ dr\ d\theta = \int _{-\pi /2}^{\pi /2}\int _{0}^{6} \big (r^2\cos (2\theta )\big )r\ dr\ d\theta = 0</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x,y) = (x-y)/(x+y)</m>; <m>R</m> is the region enclosed by the lines <m>y=x</m>, <m>y=0</m> and the circle <m>x^2+y^2=1</m> in the first quadrant.</p>
+      </statement>
+      <answer>
+        <p>
+          <m>\displaystyle \int _{0}^{\pi /4}\int _{0}^{1} \left(\frac{\cos \theta -\sin \theta }{\cos \theta +\sin \theta }\right)r\ dr\ d\theta = \ln 2</m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        An iterated integral in rectangular coordinates is given. Rewrite the integral using polar coordinates and evaluate the new double integral.
+        </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{0}^{5}\int _{-\sqrt{25-x^2}}^{\sqrt{25-x^2}} \sqrt{x^2+y^2}\ dy\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\displaystyle \int _{-\pi /2}^{\pi /2}\int _{0}^{5} \big (r^2\big )\ dr\ d\theta =125\pi /3</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{-4}^{4}\int _{-\sqrt{16-y^2}}^{0} \big (2y-x\big )\ dx\ dy</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\displaystyle \int _{\pi /2}^{3\pi /2}\int _{0}^{4} \big (2r\sin \theta -r\cos \theta \big )r\ dr\ d\theta =128/3</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{0}^{2}\int _{y}^{\sqrt{8-y^2}} \big (x+y\big )\ dx\ dy</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\displaystyle \int _{0}^{\pi /4}\int _{0}^{\sqrt{8}} \big (r\cos \theta +r\sin \theta \big )r\ dr\ d\theta =16\sqrt{2}/3</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{-2}^{-1}\int _{0}^{\sqrt{4-x^2}} \big (x+5\big )\ dy\ dx+\int _{-1}^{1}\int _{\sqrt{1-x^2}}^{\sqrt{4-x^2}} \big (x+5\big )\ dy\ dx +\int _{1}^{2}\int _{0}^{\sqrt{4-x^2}} \big (x+5\big )\ dy\ dx</m>
+        </p>
+        <p spacebefore="5.0pt">
+          <em>Hint:</em> draw the region of each integral carefully and see how they all connect.</p>
+      </statement>
+      <answer>
+        <p>
+          <m>\displaystyle \int _{0}^{\pi }\int _{1}^{2} \big (r\cos \theta +5\big )r\ dr\ d\theta =15\pi /2</m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        Special double integrals are presented that are especially well suited for evaluation in polar coordinates.
+        </p>
+    </introduction>
+    <exercise xml:id="ex_double_int_polar_gaussian">
+      <statement>
+        <p>
+          Consider <m>\displaystyle \iint _R e^{-(x^2+y^2)}\ dA</m>.
+        </p>
+        <ol>
+          <li>
+            <p>
+              Why is this integral difficult to evaluate in rectangular coordinates, regardless of the region <m>R</m>?
+            </p>
+          </li>
+          <li>
+            <p>
+              Let <m>R</m> be the region bounded by the circle of radius <m>a</m> centered at the origin. Evaluate the double integral using polar coordinates.
+            </p>
+          </li>
+          <li>
+            <p>
+              Take the limit of your answer from (b), as <m>a\rightarrow \infty </m>. What does this imply about the volume under the surface of <m>\displaystyle e^{-(x^2+y^2)}</m> over the entire <m>x</m>-<m>y</m> plane?
+            </p>
+          </li>
+        </ol>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              This is impossible to integrate with rectangular coordinates as <m>e^{-(x^2+y^2)}</m> does not have an antiderivative in terms of elementary functions.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\displaystyle \int _0^{2\pi }\int _0^a re^{r^2}\ dr\ d\theta = \pi (1-e^{-a^2})</m>.</p>
+          </li>
+          <li>
+            <p>
+              <m>\displaystyle \lim _{a\rightarrow \infty } \pi (1-e^{-a^2})=\pi </m>. This implies that there is a finite volume under the surface <m>e^{-(x^2+y^2)}</m> over the entire <m>x</m>-<m>y</m> plane.</p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          The surface of a right circular cone with height <m>h</m> and base radius <m>a</m> can be described by the equation <m>\displaystyle f(x,y) = h-h\sqrt{\frac{x^2}{a^2}+\frac{y^2}{a^2}}</m>, where the tip of the cone lies at <m>(0,0,h)</m> and the circular base lies in the <m>x</m>-<m>y</m> plane, centered at the origin.Confirm that the volume of a right circular cone with height <m>h</m> and base radius <m>a</m> is <m>\displaystyle V = \frac{1}{3}\pi a^2h</m> by evaluating <m>\displaystyle \iint _R f(x,y)\ dA</m> in polar coordinates.
+        </p>
+      </statement>
+      <answer>
+        <md>
+          <mrow> \iint _R f(x,y)\ dA \amp= \int _0^{2\pi }\int _0^a \left(h-h\sqrt{\frac{r^2\cos ^2\theta }{a^2}+\frac{r^2\sin ^2\theta }{a^2}}\right)r\ dr\ d\theta </mrow>
+          <mrow> \amp= \int _0^{2\pi }\int _0^a \left(hr-h\frac{r^2}{a}\right)\ dr\ d\theta </mrow>
+          <mrow> \amp= \int _0^{2\pi }\left.\left(\frac{1}{2}hr^2-\frac{h}{3a}r^3\right)\right|_0^a d\theta </mrow>
+          <mrow> \amp= \int _0^{2\pi } \left(\frac{1}{6}a^2h\right)\ d\theta </mrow>
+          <mrow> \amp= \frac{1}{3}\pi a^2h. </mrow>
+        </md>
+      </answer>
+    </exercise>
+  </exercisegroup>
+</exercises>

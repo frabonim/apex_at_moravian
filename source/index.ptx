@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pretext xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+
+  <xi:include href="./docinfo.ptx"/>
+
+  <book>
+  <title>Calculus at Moravian University</title>
+  <frontmatter>
+  <titlepage>
+
+<!--
+    <author>
+      <personname>Based on <url href="http://www.apexcalculus.com/" visual="apexcalculus.com">APEX Calculus</url></personname>
+    </author>
+-->
+
+    <credit>
+      <title>
+        The material in this book is remixed from <url href="http://www.apexcalculus.com/" visual="apexcalculus.com">APEX Calculus</url> by Gregory Hartman et. al. under a CC BY_NC license.
+      </title>
+    </credit>
+
+    <editor>
+        <personname>Michael Fraboni</personname>
+        <department>Department of Mathematics and Computer Science</department>
+        <institution>Moravian College</institution>
+    </editor>
+
+  
+    <date><today /></date>
+
+  </titlepage>
+
+
+  <colophon>
+
+    <p>
+      The material in this book has been remixed from the excellent open source text <url href="http://www.apexcalculus.com/" visual="apexcalculus.com">APEX Calculus</url>, copyright 2017 Gregory Hartman, used under a CC BY_NC license.
+    </p>
+
+    <p>
+      Please visit the <url href="http://www.apexcalculus.com/about" visual="apexcalculus.com">APEX Calculus acknowledgment site</url> for the complete list of contributors to that project.
+    </p>
+
+      <copyright>
+          <year>2021</year>
+          <holder>Michael Fraboni</holder>
+          <minilicense>Creative Commons BY NC</minilicense>
+          <shortlicense>Licensed to the public under Creative Commons Attribution-Noncommercial 4.0 International Public License</shortlicense>
+      </copyright>
+
+  </colophon>
+
+
+  </frontmatter>
+  <xi:include href="chapter_limits.ptx" />
+  <xi:include href="chapter_derivatives.ptx" />
+  <xi:include href="chapter_graph_behavior.ptx" />
+  <xi:include href="chapter_deriv_apps.ptx" />
+  <xi:include href="chapter_integration.ptx" />
+  
+  <xi:include href="chapter_anti_tech.ptx" />
+  <xi:include href="chapter_app_of_int.ptx" />
+  <xi:include href="chapter_differential_equations.ptx" />
+  <xi:include href="chapter_sequences_series.ptx" />
+  <xi:include href="./chapter_planar_curves.ptx" />
+  <xi:include href="./chapter_vectors.ptx" />
+  <xi:include href="./chapter_vvf.ptx" />
+  <xi:include href="./chapter_multi.ptx" />
+  <xi:include href="./chapter_mult_int.ptx" />
+  <xi:include href="./chapter_vector_calc.ptx" />
+<!--
+-->
+  <backmatter>
+  <xi:include href="appendix_ref.ptx" /> 
+
+<!-- odd solutions
+  <solutions xml:id="solutions-backmatter" struct="" divisional="solution answer" admit="odd">
+    <title>Answers to Selected Odd Exercises</title>
+  </solutions>
+-->
+
+    <index>
+      <title>Index</title>
+      <index-list />
+    </index>
+  </backmatter>
+
+
+  </book>
+</pretext>

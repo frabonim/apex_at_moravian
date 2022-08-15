@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<exercises>
+  <exercise>
+    <statement>
+      <p>
+        Define the term “antiderivative” in your own words.
+        </p>
+    </statement>
+    <answer>
+      <p>
+        Answers will vary.
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        Is it more accurate to refer to “the” antiderivative of <m>f(x)</m> or “an” antiderivative of <m>f(x)</m>?
+      </p>
+    </statement>
+    <answer>
+      <p>
+        “an”
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        Use your own words to define the indefinite integral of <m>f(x)</m>.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        Answers will vary.
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        Fill in the blanks: “Inverse operations do the <fillin/> things in the <fillin/> order.”
+      </p>
+    </statement>
+    <answer>
+      <p>
+        opposite; opposite
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        What is an “initial value problem”?
+        </p>
+    </statement>
+    <answer>
+      <p>
+        Answers will vary.
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        The derivative of a position function is a <fillin/> function.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        velocity
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        The antiderivative of an acceleration function is a <fillin/> function.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        velocity
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        If <m>F(x)</m> is an antiderivative of <m>f(x)</m>, and <m>G(x)</m> is an antiderivative of <m>g(x)</m>, give an antiderivative of <m>f(x)+g(x)</m>.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        <m>F(x)+G(x)</m>
+      </p>
+    </answer>
+  </exercise>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 9–27, evaluate the given indefinite integral.
+        </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int 3x^3\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>3/4x^4+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int x^8\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>1/9x^9+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int (10x^2-2)\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>10/3x^3-2x+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int dt</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>t+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int 1\ ds</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>s+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \frac{1}{3t^2}\ dt</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>-1/(3t)+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \frac{3}{t^2}\ dt</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>-3/(t)+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \frac{1}{\sqrt{x}}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>2\sqrt{x}+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \sec ^2\theta \ d\theta </m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\tan \theta +C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \sin \theta \ d\theta </m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>-\cos \theta +C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int (\sec x\tan x + \csc x\cot x)\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\sec x - \csc x+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int 5e^\theta \ d\theta </m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>5e^\theta +C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int 3^t\ dt</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>3^t/\ln 3+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \frac{5^t}{2}\ dt</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\frac{5^t}{2\ln 5}+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int (2t+3)^2\ dt</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>4/3t^3+6t^2+9t+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int (t^2+3)(t^3-2t)\ dt</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>t^6/6+t^4/4-3t^2+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int x^2x^3\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>x^6/6+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int e^\pi \ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>e^\pi x+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int a\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>ax+C</m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercise>
+    <statement>
+      <p>
+        This problem investigates why <xref ref="thm_indef_alg" /> states that <m>\displaystyle \int \frac{1}{x}\ dx = \ln |x| + C</m>.
+      </p>
+      <ol>
+        <li>
+          <p>
+            What is the domain of <m>y = \ln x</m>?
+          </p>
+        </li>
+        <li>
+          <p>
+            Find <m>\frac{d}{dx}\big (\ln x\big )</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            What is the domain of <m>y = \ln (-x)</m>?
+          </p>
+        </li>
+        <li>
+          <p>
+            Find <m>\frac{d}{dx}\big (\ln (-x)\big )</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            You should find that <m>1/x</m> has two types of antiderivatives, depending on whether <m>x\gt0</m> or <m>x\lt 0</m>. In one expression, give a formula for <m>\displaystyle \int \frac{1}{x}\ dx</m> that takes these different domains into account, and explain your answer.
+          </p>
+        </li>
+      </ol>
+    </statement>
+    <answer>
+      <ol>
+        <li>
+          <p>
+            <m>x\gt0</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>1/x</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>x\lt 0</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>1/x</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>\ln |x|+C</m>. Explanations will vary.</p>
+        </li>
+      </ol>
+    </answer>
+  </exercise>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 29–39, find <m>f(x)</m> described by the given initial value problem.
+      </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>f\,^{\prime }(x) = \sin x</m> and <m>f(0)= 2</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>-\cos x+3</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f\,^{\prime }(x) = 5e^x</m> and <m>f(0)= 10</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>5e^x+5</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f\,^{\prime }(x) = 4x^3-3x^2</m> and <m>f(-1)= 9</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>x^4-x^3+7</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f\,^{\prime }(x) = \sec ^2 x</m> and <m>f(\pi /4)= 5</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\tan x + 4</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f\,^{\prime }(x) = 7^x</m> and <m>f(2)= 1</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>7^x/\ln 7 + 1-49/\ln 7</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f\,^{\prime \prime }(x) = 5</m> and <m>f\,^{\prime }(0)= 7</m>, <m>f(0) = 3</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>5/2x^2+7x+3</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f\,^{\prime \prime }(x) = 7x</m> and <m>f\,^{\prime }(1)= -1</m>, <m>f(1) = 10</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\frac{7 x^3}{6}-\frac{9 x}{2}+\frac{40}{3}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f\,^{\prime \prime }(x) = 5e^x</m> and <m>f\,^{\prime }(0)= 3</m>, <m>f(0) = 5</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>5e^x-2x</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f\,^{\prime \prime }(\theta ) = \sin \theta </m> and <m>f\,^{\prime }(\pi )= 2</m>, <m>f(\pi ) = 4</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\theta -\sin (\theta )-\pi +4</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f\,^{\prime \prime }(x) = 24x^2+2^x-\cos x</m> and <m>f\,^{\prime }(0)= 5</m>, <m>f(0) = 0</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>2x^4+\cos x+\frac{2^x}{(\ln 2)^2}+(5-\frac{1}{\ln 2})x -1 - \frac{1}{(\ln 2)^2}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f\,^{\prime \prime }(x) = 0</m> and <m>f\,^{\prime }(1)= 3</m>, <m>f(1) = 1</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>3x-2</m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercise>
+    <statement>
+      <p>
+        Use information gained from the first and second derivatives to sketch <m>\displaystyle f(x) = \frac{1}{e^x+1}</m>.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        No answer provided.
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        Given <m>y = x^2e^x\cos x</m>, find <m>dy</m>.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        <m>dy = (2xe^x\cos x+ x^2e^x\cos x- x^2e^x\sin x)dx</m>
+      </p>
+    </answer>
+  </exercise>
+</exercises>

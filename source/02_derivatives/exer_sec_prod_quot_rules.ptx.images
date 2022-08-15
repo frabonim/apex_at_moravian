@@ -1,0 +1,906 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<exercises>
+  <exercise>
+    <statement>
+      <p>
+        T/F: The Product Rule states that <m>\displaystyle \frac{d}{dx}\big (x^2\sin x\big ) = 2x\cos x</m>.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        F
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        T/F: The Quotient Rule states that <m>\displaystyle \frac{d}{dx}\left(\frac{x^2}{\sin x}\right) = \frac{\cos x}{2x}</m>.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        F
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        T/F: The derivatives of the trigonometric functions that start with “c” have minus signs in them.
+        </p>
+    </statement>
+    <answer>
+      <p>
+        T
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        What derivative rule is used to extend the Power Rule to include negative integer exponents?
+        </p>
+    </statement>
+    <answer>
+      <p>
+        Quotient Rule
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        T/F: Regardless of the function, there is always exactly one right way of computing its derivative.
+        </p>
+    </statement>
+    <answer>
+      <p>
+        F
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        In your own words, explain what it means to make your answers “clear.”
+        </p>
+    </statement>
+    <answer>
+      <p>
+        Answers will vary.
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        Give an example of a function where <m>f\,^{\prime }(x) \ne 0</m> and <m>f\,^{\prime \prime }(x) = 0</m>.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        One possible answer is <m>f(x) = 17x-205</m>.
+      </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        Explain in your own words what the second derivative “means.”
+        </p>
+    </statement>
+    <answer>
+      <p>
+        Answers will vary.
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        If <m>f(x)</m> describes a position function, then <m>f\,^{\prime }(x)</m> describes what kind of function? What kind of function is <m>f\,^{\prime \prime }(x)</m>?
+      </p>
+    </statement>
+    <answer>
+      <p>
+        <m>f\,^{\prime }(x)</m> is a velocity function, and <m>f\,^{\prime \prime }(x)</m> is acceleration.</p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        Let <m>f(x)</m> be a function measured in pounds, where <m>x</m> is measured in feet. What are the units of <m>f\,^{\prime \prime }(x)</m>?
+      </p>
+    </statement>
+    <answer>
+      <p>
+        lbs/ft<m>^2</m>.
+      </p>
+    </answer>
+  </exercise>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 11–14:
+        </p>
+      <ol>
+        <li>
+          <p>
+            Use the Product Rule to differentiate the function.
+            </p>
+        </li>
+        <li>
+          <p>
+            Manipulate the function algebraically and differentiate without the Product Rule.
+            </p>
+        </li>
+        <li>
+          <p>
+            Show that the answers from (a) and (b) are equivalent.
+            </p>
+        </li>
+      </ol>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x) = x(x^2+3x)</m>
+        </p>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              <m>f\,^{\prime }(x) = (x^2+3x) + x(2x+3)</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>f\,^{\prime }(x) = 3x^2 + 6x</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              They are equal.
+              </p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>g(x) = 2x^2(5x^3)</m>
+        </p>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              <m>g^{\prime }(x) = 4x(5x^3)+2x^2(15x^2)</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>g^{\prime }(x) = 50x^4</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              They are equal.
+              </p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>h(s) = (2s-1)(s+4)</m>
+        </p>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              <m>h^{\prime }(s) = 2(s+4) + (2s-1)(1)</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>h^{\prime }(s) = 4s + 7</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              They are equal.
+              </p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x)= (x^2+5)(3-x^3)</m>
+        </p>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              <m>f\,^{\prime }(x) = 2x(3-x^3)+(x^2+5)(-3x^2)</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>f\,^{\prime }(x) = -5x^4-15x^2+6x</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              They are equal.
+              </p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 15–18:
+        </p>
+      <ol>
+        <li>
+          <p>
+            Use the Quotient Rule to differentiate the function.
+            </p>
+        </li>
+        <li>
+          <p>
+            Manipulate the function algebraically and differentiate without the Quotient Rule.
+            </p>
+        </li>
+        <li>
+          <p>
+            Show that the answers from (a) and (b) are equivalent.
+            </p>
+        </li>
+      </ol>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x)= \frac{x^2+3}{x}</m>
+        </p>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              <m>f\,^{\prime }(x) = \frac{x(2x)-(x^2+3)1}{x^2}</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>f\,^{\prime }(x) = 1-\frac{3}{x^2}</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              They are equal.
+              </p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle g(x)= \frac{x^3-2x^2}{2x^2}</m>
+        </p>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              <m>g^{\prime }(x) = \frac{2x^2(3x^2-4x)-(x^3-2x^2)(4x)}{4x^4}</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>g^{\prime }(x) = 1/2</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              They are equal.
+              </p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle h(s)= \frac{3}{4s^3}</m>
+        </p>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              <m>h^{\prime }(s) = \frac{4s^3(0) - 3(12s^2)}{16s^6}</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>h^{\prime }(s) = -9/4s^{-4}</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              They are equal.
+              </p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(t)= \frac{t^2-1}{t+1}</m>
+        </p>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              <m>f\,^{\prime }(t) = \frac{(t+1)(2t) - (t^2-1)(1)}{(t+1)^2}</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>f(t) = t-1</m> when <m>t\ne -1</m>, so <m>f\,^{\prime }(t) = 1</m>.</p>
+          </li>
+          <li>
+            <p>
+              They are equal.
+              </p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 19–40, compute the derivative of the given function.
+        </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x) = x\sin x</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>f\,^{\prime }(x) = \sin x + x\cos x</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x) = x^2\cos x</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>f\,^{\prime }(x) = 2x\cos x - x^2\sin x</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x) = e^x\ln x</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>f\,^{\prime }(x) = e^x\ln x + e^x\frac{1}{x}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(t) = \frac{1}{t^2}(\csc t-4)</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>f\,^{\prime }(t) = \frac{-2}{t^3}(\csc t-4) + \frac{1}{t^2}(-\csc t\cot t)</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle g(x) = \frac{x+7}{x-5}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>g^{\prime }(x) = \frac{-12}{(x-5)^2}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle g(t) = \frac{t^5}{\cos t-2t^2}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>g^{\prime }(t) = \frac{(\cos t-2t^2)(5t^4)-(t^5)(-\sin t-4t)}{(\cos t-2t^2)^2}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>h(x) =\cot x - e^x</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>h^{\prime }(x) = -\csc ^2x-e^x</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x) = \big (\tan x\big )\ln x</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>f\,^{\prime }(x) = \big (\sec ^2x\big )\ln x + \big (\tan x\big )\frac{1}{x}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>h(t) =7t^2+6t-2</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>h^{\prime }(t) = 14t+6</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x)= \frac{x^4+2x^3}{x+2}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>f\,^{\prime }(x) = \frac{(x+2)(4x^3+6x^2)-(x^4+2x^3)(1)}{(x+2)^2}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x) = \big (3x^2+8x+7\big )e^x</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>f\,^{\prime }(x) = \big (6x+8\big )e^x + \big (3x^2+8x+7\big )e^x</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle g(t) = \frac{t^5-t^3}{e^t}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>g\,^{\prime }(t) = \frac{e^t(5t^4-3t^2)-(t^5-t^3)e^t}{(e^t)^2}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x) = (16x^3+24x^2+3x)\frac{7x-1}{16x^3+24x^2+3x}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>f\,^{\prime }(x) = 7</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m> f(t) = t^5(\sec t + e^t)</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>f\,^{\prime }(t) = 5t^4(\sec t+ e^t) + t^5(\sec t\tan t + e^t)</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x) = \frac{\sin x}{\cos x+3}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>f\,^{\prime }(x) = \frac{\sin ^2(x)+\cos ^2(x)+3 \cos (x)}{(\cos (x)+3)^2}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(\theta ) = \theta ^3\sin \theta + \frac{\sin \theta }{\theta ^3}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>f\,^{\prime }(\theta ) = 3\theta ^2\sin \theta +\theta ^3\cos \theta + \frac{\theta ^3\cos \theta - (\sin \theta )(3\theta ^2)}{\theta ^6}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x) = \frac{\cos x}{x} + \frac{x}{\tan x}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>f\,^{\prime }(x) = \frac{-x\sin x - \cos x}{x^2} + \frac{\tan x -x\sec ^2x}{\tan ^2x}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>g(x) = e^2\big (\sin (\pi /4) - 1\big )</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>g^{\prime }(x) = 0</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>g(t) = 4t^3e^t - \sin t\cos t</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>g^{\prime }(t) = 12t^2e^t + 4t^3e^t - \cos ^2t + \sin ^2t</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle h(t) = \frac{t^2\sin t+3}{t^2\cos t+2}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>h\,^{\prime }(t) = \frac{(t^2\cos t+2)(2t\sin t+t^2\cos t)-(t^2\sin t+3)(2t\cos t-t^2\sin t)}{(t^2\cos t+2)^2}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x) = x^2e^x\tan x</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>f\,^{\prime }(x) = 2xe^x\tan x = x^2e^x\tan x + x^2e^x\sec ^2x</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>g(x) = 2x\sin x \sec x</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>g^{\prime }(x) = 2\sin x\sec x+2x\cos x \sec x + 2x\sin x\sec x\tan x = 2\tan x+2x+2x\tan ^2x = 2\tan x+2x\sec ^2x</m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 41–44, find the equations of the tangent and normal lines to the graph of <m>g</m> at the indicated point.
+      </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>g(s) = e^s(s^2+2) </m> at <m>(0,2)</m>.</p>
+      </statement>
+      <answer>
+        <p>
+          Tangent line: <m>y = 2x+2</m>
+        </p>
+        <p>
+          Normal line: <m>y = -1/2x+2</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>g(t) = t\sin t</m> at <m>(\frac{3\pi }{2},-\frac{3\pi }{2})</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          Tangent line: <m>y = -(x-\frac{3\pi }{2}) - \frac{3\pi }{2} = -x</m>
+        </p>
+        <p>
+          Normal line: <m>y = (x-\frac{3\pi }{2}) - \frac{3\pi }{2} = x-3\pi </m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle g(x) = \frac{x^2}{x-1}</m> at <m>(2,4)</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          Tangent line: <m>y = 4</m>
+        </p>
+        <p>
+          Normal line: <m>x=2</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle g(\theta ) = \frac{\cos \theta - 8\theta }{\theta +1}</m> at <m>(0,1)</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          Tangent line: <m>y = -9x+1</m>
+        </p>
+        <p>
+          Normal line: <m>y = 1/9x+1</m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 45–48, find the <m>x</m>–values where the graph of the function has a horizontal tangent line.
+      </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x) = 6x^2-18x-24</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>x=3/2</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x) = x\sin x</m> on <m>[-1,1]</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>x=0</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x) = \frac{x}{x+1}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>f\,^{\prime }(x)</m> is never 0.</p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x) = \frac{x^2}{x+1}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>x= -2,0</m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 49–52, find the requested derivative.
+        </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x) = x\sin x</m>; find <m>f\,^{\prime \prime }(x)</m>.</p>
+      </statement>
+      <answer>
+        <p>
+          <m>f\,^{\prime \prime }(x) = 2\cos x - x\sin x</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x) = x\sin x</m>; find <m>f\,^{(4)}(x)</m>.</p>
+      </statement>
+      <answer>
+        <p>
+          <m>f^{(4)}(x) = -4\cos x+ x\sin x</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x) = \csc x</m>; find <m>f\,^{\prime \prime }(x)</m>.</p>
+      </statement>
+      <answer>
+        <p>
+          <m>f\,^{\prime \prime }(x) = \cot ^2x\csc x + \csc ^3 x</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x) = (x^3-5x+2)(x^2+x-7)</m>; find <m>f\,^{(8)}(x)</m>.</p>
+      </statement>
+      <answer>
+        <p>
+          <m>f^{(8)} = 0</m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 53–56, use the graph of <m>f(x)</m> to sketch <m>f\,^{\prime }(x)</m>.
+      </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <minipage width="427.0pt">
+            <p>
+              <sidebyside width="30%"><image source="images/fig02_04_ex_42" /></sidebyside></p>
+          </minipage>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <sidebyside width="30%"><image source="images/fig02_04_ex_42a" /></sidebyside></p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <minipage width="427.0pt">
+            <p>
+              <sidebyside width="30%"><image source="images/fig02_04_ex_43" /></sidebyside></p>
+          </minipage>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <sidebyside width="30%"><image source="images/fig02_04_ex_43a" /></sidebyside></p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <minipage width="427.0pt">
+            <p>
+              <sidebyside width="30%"><image source="images/fig02_04_ex_44" /></sidebyside></p>
+          </minipage>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <sidebyside width="30%"><image source="images/fig02_04_ex_44a" /></sidebyside></p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <minipage width="427.0pt">
+            <p>
+              <sidebyside width="30%"><image source="images/fig02_04_ex_45" /></sidebyside></p>
+          </minipage>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <sidebyside width="30%"><image source="images/fig02_04_ex_45a" /></sidebyside></p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercise>
+    <statement>
+      <p>
+        Given that <m>e^0=1</m>, approximate the value of <m>e^{0.1}</m> using the tangent line to <m>f(x) = e^x</m> at <m>x=0</m>.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        The tangent line to <m>f(x) = e^x</m> at <m>x=0</m> is <m>y=x+1</m>; thus <m>e^{0.1} \approx y(0.1) = 1.1</m>.
+      </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        Approximate the value of <m>(3.01)^4</m> using the tangent line to <m>f(x) = x^4</m> at <m>x=3</m>.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        The tangent line to <m>f(x) = x^4</m> at <m>x=3</m> is <m>y=108(x-3)+81</m>; thus <m>(3.01)^4 \approx y(3.01) = 108(.01)+81 = 82.08</m>.
+      </p>
+    </answer>
+  </exercise>
+</exercises>

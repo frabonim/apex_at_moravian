@@ -1,0 +1,713 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<exercises>
+  <exercise>
+    <statement>
+      <p>
+        Limits, derivatives and integrals of vector–valued functions are all evaluated <fillin/>–wise.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        component
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        The definite integral of a rate of change function gives <fillin/>.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        displacement
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        Why is it generally not useful to graph both <m>\vec{r}(t)</m> and <m>\vec{r}\, ^{\prime }(t)</m> on the same axes?
+      </p>
+    </statement>
+    <answer>
+      <p>
+        It is difficult to identify the points on the graphs of <m>\vec{r}(t)</m> and <m>\vec{r}\, ^{\prime }(t)</m> that correspond to each other.
+      </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        <xref ref="thm_vvf_deriv_prop">Theorem</xref> contains three product rules. What are the three different types of products used in these rules?
+      </p>
+    </statement>
+    <answer>
+      <p>
+        A scalar-vector product, a dot product and a cross product.
+        </p>
+    </answer>
+  </exercise>
+  <exercisegroup>
+    <introduction>
+      <p>
+        Evaluate the given limit.
+        </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lim _{t\rightarrow 5} \la 2t+1,3t^2-1,\sin t\ra </m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\la 11,74,\sin 5\ra </m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lim _{t\rightarrow 3} \la e^t,\frac{t^2-9}{t+3}\ra </m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\la e^3,0\ra </m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lim _{t\rightarrow 0} \la \frac{t}{\sin t}, (1+t)^{\frac{1}{t}}\ra </m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\la 1,e\ra </m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lim _{h\rightarrow 0} \frac{\vec{r}(t+h)-\vec{r}(t)}{h}</m>, where <m>\vec{r}(t) = \la t^2,t,1\ra </m>.</p>
+      </statement>
+      <answer>
+        <p>
+          <m>\la 2t,1,0\ra </m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        Identify the interval(s) on which <m>\vec{r}(t)</m> is continuous.
+      </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>\vec{r}(t) = \la t^2,1/t\ra </m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>(-\infty ,0) \bigcup (0,\infty )</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\vec{r}(t) = \la \cos t, e^t, \ln t\ra </m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>(0,\infty )</m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        Find the derivative of the given function.
+        </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>\vec{r}(t) = \la \cos t, e^t, \ln t\ra </m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\vec{r}\, ^{\prime }(t) = \la -\sin t, e^t, 1/t\ra </m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \vec{r}(t) = \la \frac{1}{t}, \frac{2t-1}{3t+1}, \tan t\ra </m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\vec{r}\, ^{\prime }(t) = \la -1/t^2, 5/(3t+1)^2, \sec ^2 t\ra </m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \vec{r}(t) = (t^2)\la \sin t, 2t+5\ra </m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\vec{r}\, ^{\prime }(t) = (2t)\la \sin t,2t+5\ra + (t^2) \la \cos t, 2\ra = \la 2t\sin t + t^2\cos t, 6t^2+10t\ra </m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle r(t) = \la t^2+1, t-1\ra \cdot \la \sin t, 2t+5\ra </m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\vec{r}\, ^{\prime }(t) = \la 2t,1\ra \cdot \la \sin t,2t+5\ra + \la t^2+1,t-1\ra \cdot \la \cos t, 2\ra =</m>
+          <m>(t^2+1)\cos t+2t\sin t + 4t+3</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \vec{r}(t) = \la t^2+1, t-1,1\ra \times \la \sin t, 2t+5,1\ra </m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\vec{r}\, ^{\prime }(t) = \la 2t,1,0\ra \times \la \sin t,2t+5,1\ra + \la t^2+1,t-1,1\ra \times \la \cos t, 2,0\ra =</m>
+          <m>\la -1, \cos t - 2t, 6t^2+10t+2+\cos t - \sin t - t\cos t \ra </m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \vec{r}(t) = \la \cosh t, \sinh t\ra </m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\vec{r}\, ^{\prime }(t) = \la \sinh t,\cosh t\ra </m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        Find <m>\vec{r}\, ^{\prime }(t)</m>. Sketch <m>\vec{r}(t)</m> and <m>\vec{r}\, ^{\prime }(1)</m>, with the initial point of <m>\vec{r}\, ^{\prime }(1)</m> at <m>\vec{r}(1)</m>.
+      </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \vec{r}(t) = \la t^2+t, t^2-t\ra </m>
+        </p>
+      </statement>
+      <answer>
+                <!-- START figures/fig_11_02_ex_15.tex -->
+                <image xml:id="img_11_02_ex_15X">
+                  <description></description>
+                  <latex-image>
+
+                  \begin{tikzpicture}
+
+                  \begin{axis}[
+                  ymin=-1.5,ymax=6.5,
+                  xmin=-1.5,xmax=6.5
+                  ]
+
+                  \addplot+ [-,domain=-2:2,samples=40] ({x^2+x},{x^2-x});
+
+                  \draw [thick,secondcolor,-&gt;,&gt;=stealth] (axis cs: 2,0) -- (axis cs:5,1) node [black,right] { $\vrp(1)$};
+
+                  \end{axis}
+
+                  \end{tikzpicture}
+
+                  </latex-image>
+                </image>
+                <!-- figures/fig_11_02_ex_15.tex END -->
+
+              <p>
+                <m>\vrp(t) = \la 2t+1,2t-1\ra</m>
+              </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \vec{r}(t) = \la t^2-2t+2,t^3-3t^2+2t\ra </m>
+        </p>
+      </statement>
+      <answer>
+                <!-- START figures/fig_11_02_ex_16.tex -->
+                <image xml:id="img_11_02_ex_16X">
+                  <description></description>
+                  <latex-image>
+
+                  \begin{tikzpicture}
+
+                  \begin{axis}[
+                  ymin=-1.5,ymax=1.5,
+                  xmin=-.5,xmax=3.5
+                  ]
+
+                  \addplot+ [-,domain=-.5:2.5,samples=60] ({x^2-2*x+2},{x^3-3*x^2+2*x});
+
+                  \draw [thick,secondcolor,-&gt;,&gt;=stealth] (axis cs: 1,0) -- (axis cs:1,-1) node [black,right] { $\vrp(1)$};
+
+                  \end{axis}
+
+                  \end{tikzpicture}
+
+                  </latex-image>
+                </image>
+                <!-- figures/fig_11_02_ex_16.tex END -->
+
+              <p>
+                <m>\vrp(t) = \la 2t-2,3t^2-6t+2\ra</m>
+              </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \vec{r}(t) = \la t^2+1,t^3-t\ra </m>
+        </p>
+      </statement>
+      <answer>
+                <!-- START figures/fig_11_02_ex_17.tex -->
+                <image xml:id="img_11_02_ex_17X">
+                  <description></description>
+                  <latex-image>
+
+                  \begin{tikzpicture}
+
+                  \begin{axis}[
+                  ymin=-2.5,ymax=2.5,
+                  xmin=-.5,xmax=4.5
+                  ]
+
+                  \addplot+[domain=-.5:2.5,samples=50] ({x^2-2*x+2},{x^3-3*x^2+2*x});
+
+                  \draw [thick,secondcolor,-&gt;,&gt;=stealth] (axis cs: 2,0) -- (axis cs:4,2) node [black,above] { $\vrp(1)$};
+
+                  \end{axis}
+
+                  \end{tikzpicture}
+
+                  </latex-image>
+                </image>
+                <!-- figures/fig_11_02_ex_17.tex END -->
+
+              <p>
+                <m>\vrp(t) = \la 2t,3t^2-1\ra</m>
+              </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \vec{r}(t) = \la t^2-4t+5,t^3-6t^2+11t-6\ra </m>
+        </p>
+      </statement>
+      <answer>
+                <!-- START figures/fig_11_02_ex_18.tex -->
+                <image xml:id="img_11_02_ex_18X">
+                  <description></description>
+                  <latex-image>
+
+                  \begin{tikzpicture}
+
+                  \begin{axis}[
+                  ymin=-2.5,ymax=2.5,
+                  xmin=-.5,xmax=4.5
+                  ]
+
+                  \addplot+ [-,domain=-.5:2.5,samples=40] ({x^2-2*x+2},{x^3-3*x^2+2*x});
+
+                  \draw [thick,secondcolor,-&gt;,&gt;=stealth] (axis cs: 2,0) -- (axis cs:0,2) node [black,right] { $\vrp(1)$};
+
+                  \end{axis}
+
+                  \end{tikzpicture}
+
+                  </latex-image>
+                </image>
+                <!-- figures/fig_11_02_ex_18.tex END -->
+
+              <p>
+                <m>\vrp(t) = \la 2t-4,3t^2-12t+11\ra</m>
+              </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        Give the equation of the line tangent to the graph of <m>\vec{r}(t)</m> at the given <m>t</m> value.
+      </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \vec{r}(t) = \la t^2+t, t^2-t\ra </m> at <m>t=1</m>.</p>
+      </statement>
+      <answer>
+        <p>
+          <m>\ell (t) = \la 2,0\ra + t\la 3,1\ra </m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \vec{r}(t) = \la 3\cos t,\sin t\ra </m> at <m>t=\pi /4</m>.</p>
+      </statement>
+      <answer>
+        <p>
+          <m>\ell (t) = \la 3\sqrt{2}/2,\sqrt{2}/2\ra + t\la -3\sqrt{2}/2,\sqrt{2}/2\ra </m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \vec{r}(t) = \la 3\cos t,3\sin t,t\ra </m> at <m>t=\pi </m>.</p>
+      </statement>
+      <answer>
+        <p>
+          <m>\ell (t) = \la -3,0,\pi \ra + t\la 0,-3,1\ra </m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \vec{r}(t) = \la e^t,\tan t,t\ra </m> at <m>t=0</m>.</p>
+      </statement>
+      <answer>
+        <p>
+          <m>\ell (t) = \la 1,0,0 \ra + t\la 1,1,1\ra </m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        Find the value(s) of <m>t</m> for which <m>\vec{r}(t)</m> is not smooth.
+      </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \vec{r}(t) = \la \cos t,\sin t - t\ra </m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>t=2n\pi </m>, where <m>n</m> is an integer; so <m>t = \ldots -4\pi ,-2\pi ,0,2\pi ,4\pi ,\ldots </m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \vec{r}(t) = \la t^2-2t+1,t^3+t^2-5t+3\ra </m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>t=1</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \vec{r}(t) = \la \cos t-\sin t, \sin t - \cos t,\cos (4t)\ra </m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\vec{r}(t)</m> is not smooth at <m>t=3\pi /4+n\pi </m>, where <m>n</m> is an integer</p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \vec{r}(t) = \la t^3-3t+2, -\cos (\pi t),\sin ^2(\pi t) \ra </m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>t=\pm 1</m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        The following exercises ask you to verify parts of <xref ref="thm_vvf_deriv_prop">Theorem</xref>. In each let <m>f(t) = t^3</m>, <m>\vec{r}(t) =\la t^2,t-1,1\ra </m> and <m>\vec{s}(t) = \la \sin t, e^t,t\ra </m>. Compute the various derivatives as indicated.
+      </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          Simplify <m>f(t)\vec{r}(t)</m>, then find its derivative; show this is the same as <m>f\,^{\prime }(t)\vec{r}(t) + f(t)\vec{r}\, ^{\prime }(t)</m>.
+        </p>
+      </statement>
+      <answer>
+        <p>
+          Both derivatives return <m>\la 5t^4,4t^3-3t^2,3t^2\ra </m>.
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Simplify <m>\vec{r}(t)\cdot \vec{s}(t)</m>, then find its derivative; show this is the same as <m>\vec{r}\, ^{\prime }(t)\cdot \vec{s}(t) + \vec{r}(t)\cdot \vec{s}\,^{\prime }(t)</m>.
+        </p>
+      </statement>
+      <answer>
+        <p>
+          Both derivatives return <m>2\sin t+t^2\cos t + te^t+1</m>.
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Simplify <m>\vec{r}(t)\times \vec{s}(t)</m>, then find its derivative; show this is the same as <m>\vec{r}\, ^{\prime }(t)\times \vec{s}(t) + \vec{r}(t)\times \vec{s}\,^{\prime }(t)</m>.
+        </p>
+      </statement>
+      <answer>
+        <p>
+          Both derivatives return <m>\la 2t-e^t-1,\cos t-3t^2,(t^2+2t)e^t-(t-1)\cos t-\sin t\ra </m>.
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Simplify <m>\displaystyle \vec{r}\big (f(t)\big )</m>, then find its derivative; show this is the same as <m>\displaystyle \vec{r}\, ^{\prime }\big (f(t)\big )f\,^{\prime }(t)</m>.
+        </p>
+      </statement>
+      <answer>
+        <p>
+          Both derivatives return <m>\la 6t^5,3t^2,0\ra </m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        Evaluate the given definite or indefinite integral.
+        </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \la t^3,\cos t, te^t\ra \ dt</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\la \frac{1}{4}t^4,\sin t,te^t-e^t\ra + \vec{C}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \la \frac{1}{1+t^2},\sec ^2 t\ra \ dt</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\la \tan ^{-1} t,\tan t\ra + \vec{C}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _0^{\pi } \la -\sin t,\cos t\ra \ dt</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\la -2,0 \ra </m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{-2}^{2} \la 2t+1,2t-1\ra \ dt</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\la 4,-4 \ra </m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        Solve the given initial value problems.
+        </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          Find <m>\vec{r}(t)</m>, given that <m>\vec{r}\, ^{\prime }(t) = \la t,\sin t\ra </m> and <m>\vec{r}(0) = \la 2,2\ra </m>.
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\vec{r}(t) = \la \frac{1}{2}t^2+2,-\cos t+3\ra </m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Find <m>\vec{r}(t)</m>, given that <m>\vec{r}\, ^{\prime }(t) = \la 1/(t+1),\tan t\ra </m> and<m>\vec{r}(0) = \la 1,2\ra </m>.
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\vec{r}(t) = \la \ln |t+1| + 1, -\ln |\cos t| + 2\ra </m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Find <m>\vec{r}(t)</m>, given that <m>\vec{r}\, ^{\prime \prime }(t) = \la t^2,t,1\ra </m>,<m>\vec{r}\, ^{\prime }(0) = \la 1,2,3\ra </m> and <m>\vec{r}(0) = \la 4,5,6\ra </m>.
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\vec{r}(t) = \la t^4/12+t+4,\ t^3/6+2t+5,\ t^2/2+3t+6\ra </m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Find <m>\vec{r}(t)</m>, given that <m>\vec{r}\, ^{\prime \prime }(t) = \la \cos t,\sin t,e^t\ra </m>,<m>\vec{r}\, ^{\prime }(0) = \la 0,0,0\ra </m> and <m>\vec{r}(0) = \la 0,0,0\ra </m>.
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\vec{r}(t) = \la -\cos t+1,t-\sin t,e^t-t-1 \ra </m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        Find the arc length of <m>\vec{r}(t)</m> on the indicated interval.
+      </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>\vec{r}(t) = \la 2\cos t, 2\sin t, 3t \ra </m> on <m>[0,2\pi ]</m>.</p>
+      </statement>
+      <answer>
+        <p>
+          <m>2\sqrt{13}\pi </m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\vec{r}(t) = \la 5\cos t, 3\sin t, 4\sin t \ra </m> on <m>[0,2\pi ]</m>.</p>
+      </statement>
+      <answer>
+        <p>
+          <m>10\pi </m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\vec{r}(t) = \la t^3,t^2,t^3 \ra </m> on <m>[0,1]</m>.</p>
+      </statement>
+      <answer>
+        <p>
+          <m>\frac{1}{54}\left((22)^{3/2}-8\right)</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\vec{r}(t) = \la e^{-t}\cos t,e^{-t}\sin t \ra </m> on <m>[0,1]</m>.</p>
+      </statement>
+      <answer>
+        <p>
+          <m>\sqrt{2}(1-e^{-1})</m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercise>
+    <statement>
+      <p>
+        Prove <xref ref="thm_vects_of_constant_length">Theorem</xref>; that is, show if <m>\vec{r}(t)</m> has constant length and is differentiable, then <m>\vec{r}(t)\cdot \vec{r}\, ^{\prime }(t)=0</m>. 
+      </p>
+    </statement>
+    <hint>
+      <p>
+        Use the Product Rule to compute <m>\frac{d}{dt}\big (\vec{r}(t)\cdot \vec{r}(t)\big )</m>.
+      </p>
+    </hint>
+    <answer>
+      <p>
+        As <m>\vec{r}(t)</m> has constant length, <m>\vec{r}(t)\cdot \vec{r}(t)=c^2</m> for some constant <m>c</m>. Thus<md>
+          <mrow> \vec{r}(t)\cdot \vec{r}(t) \amp= c^2</mrow>
+          <mrow> \frac{d}{dt}\big (\vec{r}(t)\cdot \vec{r}(t)\big ) \amp= \frac{d}{dt}\big (c^2\big )</mrow>
+          <mrow> \vec{r}\, ^{\prime }(t)\cdot \vec{r}(t)+\vec{r}(t)\cdot \vec{r}\, ^{\prime }(t) \amp= 0</mrow>
+          <mrow> 2\vec{r}(t)\cdot \vec{r}\, ^{\prime }(t) \amp=0</mrow>
+          <mrow> \vec{r}(t)\cdot \vec{r}\, ^{\prime }(t) \amp=0. </mrow>
+        </md>
+        
+      </p>
+    </answer>
+  </exercise>
+</exercises>

@@ -1,0 +1,987 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<exercises>
+  <exercise>
+    <statement>
+      <p>
+        T/F: The area between curves is always positive.
+        </p>
+    </statement>
+    <answer>
+      <p>
+        T
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        T/F: Calculus can be used to find the area of basic geometric shapes.
+        </p>
+    </statement>
+    <answer>
+      <p>
+        T
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        In your own words, describe how to find the total area enclosed by <m>y=f(x)</m> and <m>y=g(x)</m>.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        Answers will vary.
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        Describe a situation where it is advantageous to find an area enclosed by curves through integration with respect to <m>y</m> instead of <m>x</m>.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        Answers may vary; one common answer is when the region has two or more “top” or “bottom” functions when viewing the region with respect to <m>x</m>, but has only 1 “top” function and 1 “bottom” function when viewed with respect to <m>y</m>. The former area requires multiple integrals to compute, whereas the latter area requires one.
+      </p>
+    </answer>
+  </exercise>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 5–12, find the area of the shaded region in the given graph.
+        </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <minipage width="427.0pt">
+            <p>
+              <sidebyside width="30%"><image source="images/fig07_01_ex_04" /></sidebyside></p>
+          </minipage>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>4\pi +\pi ^2\approx 22.436</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <minipage width="427.0pt">
+            <p>
+              <sidebyside width="30%"><image source="images/fig07_01_ex_05" /></sidebyside></p>
+          </minipage>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>16/3</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <minipage width="427.0pt">
+            <p>
+              <sidebyside width="30%"><image source="images/fig07_01_ex_10" /></sidebyside></p>
+          </minipage>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\pi </m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <minipage width="427.0pt">
+            <p>
+              <sidebyside width="30%"><image source="images/fig07_01_ex_06" /></sidebyside></p>
+          </minipage>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\pi </m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <minipage width="427.0pt">
+            <p>
+              <sidebyside width="30%"><image source="images/fig07_01_ex_07" /></sidebyside></p>
+          </minipage>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>1/2</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <minipage width="427.0pt">
+            <p>
+              <sidebyside width="30%"><image source="images/fig07_01_ex_08" /></sidebyside></p>
+          </minipage>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>2\sqrt{2}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <minipage width="427.0pt">
+            <p>
+              <sidebyside width="30%"><image source="images/fig07_01_ex_09" /></sidebyside></p>
+          </minipage>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>1/\ln 4</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <minipage width="427.0pt">
+            <p>
+              <sidebyside width="30%"><image source="images/fig07_01_ex_31" /></sidebyside></p>
+          </minipage>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>4/3</m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 13–20, find the total area enclosed by the functions <m>f</m> and <m>g</m>.
+      </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x) = 2x^2+5x-3</m>, <m>g(x) = x^2+4x-1</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>4.5</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x) = x^2-3x+2</m>, <m>g(x) = -3x+3</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>4/3</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x) = \sin x</m>, <m>g(x) = 2x/\pi </m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>2-\pi /2</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x) = x^3-4x^2+x-1</m>, <m>g(x) = -x^2+2x-4</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>8</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x) = x</m>, <m>g(x) = \sqrt{x}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>1/6</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x) = -x^3+5x^2+2x+1</m>, <m>g(x) = 3x^2+x+3</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>37/12</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          The functions <m>f(x) = \cos (x)</m> and <m>g(x) = \sin x</m> intersect infinitely many times, forming an infinite number of repeated, enclosed regions. Find the areas of these regions.
+        </p>
+      </statement>
+      <answer>
+        <p>
+          All enclosed regions have the same area, with regions being the reflection of adjacent regions. One region is formed on <m>[\pi /4,5\pi /4]</m>, with area <m>2\sqrt{2}</m>.
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          The functions <m>f(x) = \cos (2x)</m> and <m>g(x) = \sin x</m> intersect infinitely many times, forming an infinite number of repeated, enclosed regions. Find the areas of these regions.
+        </p>
+      </statement>
+      <answer>
+        <p>
+          On regions such as <m>[\pi /6,5\pi /6]</m>, the area is <m>3\sqrt{3}/2</m>. On regions such as <m>[-\pi /2,\pi /6]</m>, the area is <m>3\sqrt{3}/4</m>.
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 21–26, find the area of the enclosed region in two ways:
+        </p>
+      <ol>
+        <li>
+          <p>
+            by treating the boundaries as functions of <m>x</m>, and
+          </p>
+        </li>
+        <li>
+          <p>
+            by treating the boundaries as functions of <m>y</m>.
+          </p>
+        </li>
+      </ol>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <minipage width="427.0pt">
+            <p>
+              <sidebyside width="30%"><image source="images/fig07_01_ex_18" /></sidebyside></p>
+          </minipage>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>1</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <minipage width="427.0pt">
+            <p>
+              <sidebyside width="30%"><image source="images/fig07_01_ex_19" /></sidebyside></p>
+          </minipage>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>5/3</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <minipage width="427.0pt">
+            <p>
+              <sidebyside width="30%"><image source="images/fig07_01_ex_20" /></sidebyside></p>
+          </minipage>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>9/2</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <minipage width="427.0pt">
+            <p>
+              <sidebyside width="30%"><image source="images/fig07_01_ex_21" /></sidebyside></p>
+          </minipage>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>9/4</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <minipage width="427.0pt">
+            <p>
+              <sidebyside width="30%"><image source="images/fig07_01_ex_22" /></sidebyside></p>
+          </minipage>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>1/12(9-2\sqrt{2})\approx 0.514</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <minipage width="427.0pt">
+            <p>
+              <sidebyside width="30%"><image source="images/fig07_01_ex_31" /></sidebyside></p>
+          </minipage>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>4/3</m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 27–30, find the area of the triangle formed by the given three points.
+        </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>(1,1)</m>,   <m>(2,3)</m>,   and    <m>(3,3)</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          1
+          </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>(-1,1)</m>,   <m>(1,3)</m>,   and    <m>(2,-1)</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          5
+          </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>(1,1)</m>,   <m>(3,3)</m>,   and    <m>(-1,3)</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          4
+          </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>(0,0)</m>,   <m>(2,5)</m>,   and    <m>(5,2)</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>21/2</m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercise>
+    <statement>
+      <p>
+        Use the Trapezoidal Rule to approximate the area of the pictured lake whose lengths, in hundreds of feet, are measured in 100-foot increments.
+        </p>
+      <p>
+        <sidebyside width="30%"><image source="images/fig07_01_ex_29" /></sidebyside></p>
+    </statement>
+    <answer>
+      <p>
+        219,000 ft<m>^2</m>
+      </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        Use Simpson's Rule to approximate the area of the pictured lake whose lengths, in hundreds of feet, are measured in 200-foot increments.
+        </p>
+      <p>
+        <sidebyside width="30%"><image source="images/fig07_01_ex_30" /></sidebyside></p>
+    </statement>
+    <answer>
+      <p>
+        623,333 ft<m>^2</m>
+      </p>
+    </answer>
+  </exercise>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 33–42, use the Direct Comparison Test or the Limit Comparison Test to determine whether the given definite integral converges or diverges. Clearly state what test is being used and what function the integrand is being compared to.
+        </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{10}^\infty \frac{3}{\sqrt{3x^2+2x-5}} \ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          diverges; Limit Comparison Test with <m>1/x</m>.
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{2}^\infty \frac{4}{\sqrt{7x^3-x}} \ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          converges; Limit Comparison Test with <m>1/x^{3/2}</m>.
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{0}^\infty \frac{\sqrt{x+3}}{\sqrt{x^3-x^2+x+1}} \ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          diverges; Limit Comparison Test with <m>1/x</m>.
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{1}^\infty e^{-x}\ln x \ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          converges; Direct Comparison Test with <m>xe^{-x}</m>.
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{5}^\infty e^{-x^2+3x+1} \ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          converges; Direct Comparison Test with <m>e^{-x}</m>.
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{0}^\infty \frac{\sqrt{x}}{e^x} \ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          converges; Direct Comparison Test with <m>xe^{-x}</m>.
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{2}^\infty \frac{1}{x^2+\sin x} \ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          converges; Direct Comparison Test with <m>1/(x^2-1)</m>.
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{0}^\infty \frac{x}{x^2+\cos x} \ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          diverges; Direct Comparison Test with <m>x/(x^2+1)</m>.
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{0}^\infty \frac{1}{x+e^x} \ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          converges; Direct Comparison Test with <m>1/e^x</m>.
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{0}^\infty \frac{1}{e^x-x} \ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          converges; Limit Comparison Test with <m>1/e^x</m>.
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 43–48, find the equation of the line tangent to the function at the given <m>x</m>-value.
+      </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x) = \sinh x</m> at <m>x=0</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>y=x</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x) = \cosh x</m> at <m>x=\ln 2</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>y=\frac{3}{4}(x-\ln 2)+\frac{5}{4}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x) = \tanh x</m> at <m>x=-\ln 3</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>y=\frac{9}{25}(x+\ln 3)-\frac{4}{5}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x) = \operatorname{sech}^2 x</m> at <m>x=\ln 3</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>y=-\frac{72}{125}(x-\ln 3)+\frac{9}{25}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x) = \sinh ^{-1} x</m> at <m>x=0</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>y=x</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x) = \cosh ^{-1} x</m> at <m>x=\sqrt{2}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>y=(x-\sqrt{2})+\cosh ^{-1}(\sqrt{2}) \approx (x-1.414)+0.881</m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 49–64, evaluate the given indefinite integral.
+        </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \tanh (2x)\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>1/2\ln (\cosh (2x))+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \cosh (3x-7)\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>1/3\sinh (3x-7)+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \sinh x\cosh x\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>1/2\sinh ^2x+C</m> or <m>1/2\cosh ^2x+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int x\cosh x\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>x \sinh (x)-\cosh (x)+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int x\sinh x\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>x \cosh (x)-\sinh (x)+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \frac{1}{\sqrt{x^2+1}}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\sinh ^{-1} x +C=\ln \big (x+\sqrt{x^2+1}\big )+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \frac{1}{\sqrt{x^2-9}}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\cosh ^{-1} x/3 +C=\ln \big (x+\sqrt{x^2-9}\big )+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \frac{1}{9-x^2}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\left\lbrace \begin{array}{ccc} \frac{1}{3}\tanh ^{-1}\left(\frac{x}{3}\right)+C &amp; &amp; x^2\lt 9 \\ \\ \frac{1}{3}\coth ^{-1}\left(\frac{x}{3}\right)+C &amp; &amp; 9\lt x^2 \end{array}\right. = \frac{1}{2}\ln |x+1| - \frac{1}{2}\ln |x-1|+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \frac{2x}{\sqrt{x^4-4}}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\cosh ^{-1} (x^2/2) + C = \ln (x^2+\sqrt{x^4-4})+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \frac{\sqrt{x}}{\sqrt{1+x^3}}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>2/3\sinh ^{-1} x^{3/2} + C = 2/3\ln (x^{3/2}+\sqrt{x^3+1})+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \frac{1}{x^4-16}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\frac{1}{16}\tan ^{-1}(x/2)+\frac{1}{32}\ln |x-2|+\frac{1}{32}\ln |x+2|+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \frac{1}{x^2+x}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\ln x- \ln |x+1|+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \frac{e^x}{e^{2x}+1}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\tan ^{-1}(e^x)+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \sinh ^{-1}x \ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>x\sinh ^{-1}x-\sqrt{x^2+1}+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \tanh ^{-1}x \ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>x\tanh ^{-1}x+1/2\ln |x^2-1|+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \operatorname{sech}x \ dx</m>    (Hint: multiply by <m>\frac{\cosh x}{\cosh x}</m>; set <m>u = \sinh x</m>.)</p>
+      </statement>
+      <answer>
+        <p>
+          <m>\tan ^{-1}(\sinh x)+C</m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 65–68, evaluate the given definite integral.
+        </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{-1}^1 \sinh x \ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>0</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{-\ln 2}^{\ln 2} \cosh x \ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>3/2</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{0}^{1} \tanh ^{-1} x \ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>2</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _0^2 \frac{1}{\sqrt{x^2+1}}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\sinh ^{-1} 2 =\ln \big (2+\sqrt{5}\big )\approx 1.444</m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 69–72, find <m>F\hspace{0.75pt}^{\prime }(x)</m>.
+      </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle F(x) = \int _2^{x^3+x} \frac{1}{t}\ dt</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>F^{\prime }(x) = (3x^2+1)\frac{1}{x^3+x}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle F(x) = \int _{x^3}^{0} t^3\ dt</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>F^{\prime }(x) = -3x^{11}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle F(x) = \int _{x}^{x^2} (t+2)\ dt</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>F^{\prime }(x) = 2x(x^2+2)-(x+2)</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle F(x) = \int _{\ln x}^{e^x} \sin t\ dt</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>F^{\prime }(x) = e^x\sin (e^x) - 1/x\sin (\ln x)</m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+</exercises>

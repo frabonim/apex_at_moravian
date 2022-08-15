@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<exercises>
+  <exercise>
+    <statement>
+      <p>
+        Why is it easy to use “mass” and “weight” interchangeably, even though they are different measures?
+        </p>
+    </statement>
+    <answer>
+      <p>
+        Because they are scalar multiples of each other.
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        Given a point <m>(x,y)</m>, the value of <m>x</m> is a measure of distance from the <fillin/>-axis.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        <m>y</m>
+      </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        We can think of <m>\iint _R\ dm</m> as meaning “sum up lots of <fillin/>”
+      </p>
+    </statement>
+    <answer>
+      <p>
+        “little masses”
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        What is a “discrete planar system?”
+        </p>
+    </statement>
+    <answer>
+      <p>
+        A collection of individual masses in the plane. Each mass is a point mass, i.e., mass located at a point, not across a region.
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        Why does <m>M_x</m> use <m>\iint _R y\delta (x,y)\ dA</m> instead of <m>\iint _R x\delta (x,y)\ dA</m>; that is, why do we use “<m>y</m>” and not “<m>x</m>”?
+      </p>
+    </statement>
+    <answer>
+      <p>
+        <m>M_x</m> measures the moment about the <m>x</m>-axis, meaning we need to measure distance from the <m>x</m>-axis. Such measurements are measures in the <m>y</m>-direction.</p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        Describe a situation where the center of mass of a lamina does not lie within the region of the lamina itself.
+        </p>
+    </statement>
+    <answer>
+      <p>
+        If the lamina is an annulus, the center of mass will likely be in the middle, outside of the region. (See <xref ref="ex_mass6" />.)
+      </p>
+    </answer>
+  </exercise>
+  <exercisegroup>
+    <introduction>
+      <p>
+        Point masses are given along a line or in the plane. Find the center of mass <m>\overline{x}</m> or <m>(\overline{x},\overline{y})</m>, as appropriate. (All masses are in grams and distances are in cm.)
+      </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>m_1=4</m> at <m>x=1</m>;    <m>m_2=3</m> at <m>x=3</m>;    <m>m_3=5</m> at <m>x=10</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\overline{x}=5.25</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>m_1=2</m> at <m>x=-3</m>;    <m>m_2=2</m> at <m>x=-1</m>;</p>
+        <p>
+          <m>m_3=3</m> at <m>x=0</m>;   <m>m_4=3</m> at <m>x=7</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\overline{x}=1.3</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>m_1=2</m> at <m>(-2,-2)</m>;    <m>m_2=2</m> at <m>(2,-2)</m>;</p>
+        <p>
+          <m>m_3=20</m> at <m>(0,4)</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>(\overline{x},\overline{y}) = (0,3)</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>m_1=1</m> at <m>(-1,-1)</m>;    <m>m_2=2</m> at <m>(-1,1)</m>;</p>
+        <p>
+          <m>m_3=2</m> at <m>(1,1)</m>;   <m>m_4=1</m> at <m>(1,-1)</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>(\overline{x},\overline{y}) = (0,1/3)</m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        Find the mass/weight of the lamina described by the region <m>R</m> in the plane and its density function <m>\delta (x,y)</m>.
+      </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>R</m> is the rectangle with corners <m>(1,-3)</m>, <m>(1,2)</m>, <m>(7,2)</m> and <m>(7,-3)</m>; <m>\delta (x,y) = 5</m>gm/cm<m>^2</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>M = 150</m>gm;</p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>R</m> is the rectangle with corners <m>(1,-3)</m>, <m>(1,2)</m>, <m>(7,2)</m> and <m>(7,-3)</m>; <m>\delta (x,y) = (x+y^2)</m>gm/cm<m>^2</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>M = 190</m>gm</p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>R</m> is the triangle with corners <m>(-1,0)</m>, <m>(1,0)</m>, and <m>(0,1)</m>; <m>\delta (x,y) = 2</m>lb/in<m>^2</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>M = 2</m>lb</p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>R</m> is the triangle with corners <m>(0,0)</m>, <m>(1,0)</m>, and <m>(0,1)</m>; <m>\delta (x,y) = (x^2+y^2+1)</m>lb/in<m>^2</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>M = 2/3</m>lb</p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>R</m> is the disk centered at the origin with radius 2; <m>\delta (x,y) = (x+y+4)</m>kg/m<m>^2</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>M = 16\pi \approx 50.27</m>kg</p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>R</m> is the circle sector bounded by <m>x^2+y^2=25</m> in the first quadrant; <m>\delta (x,y) = (\sqrt{x^2+y^2}+1)</m>kg/m<m>^2</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>M = 325\pi /12\approx 85</m>kg</p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>R</m> is the annulus in the first and second quadrants bounded by <m>x^2+y^2=9</m> and <m>x^2+y^2=36</m>; <m>\delta (x,y) = 4</m>lb/ft<m>^2</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>M = 54\pi \approx 169.65</m>lb</p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>R</m> is the annulus in the first and second quadrants bounded by <m>x^2+y^2=9</m> and <m>x^2+y^2=36</m>; <m>\delta (x,y) = \sqrt{x^2+y^2}</m>lb/ft<m>^2</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>M = 63\pi \approx 197.92</m>lb</p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        Find the center of mass of the lamina described by the region <m>R</m> in the plane and its density function <m>\delta (x,y)</m>.Note: these are the same lamina as in the Exercises above.
+      </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>R</m> is the rectangle with corners <m>(1,-3)</m>, <m>(1,2)</m>, <m>(7,2)</m> and <m>(7,-3)</m>; <m>\delta (x,y) = 5</m>gm/cm<m>^2</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>M = 150</m>gm; <m>M_y=600</m>; <m>M_x=-75</m>; <m>(\overline{x},\overline{y}) = (4,-0.5)</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>R</m> is the rectangle with corners <m>(1,-3)</m>, <m>(1,2)</m>, <m>(7,2)</m> and <m>(7,-3)</m>; <m>\delta (x,y) = (x+y^2)</m>gm/cm<m>^2</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>M = 190</m>gm; <m>M_y= 850</m>; <m>M_x = -315/2</m>; <m>(\overline{x},\overline{y}) = (4.47,-0.83)</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>R</m> is the triangle with corners <m>(-1,0)</m>, <m>(1,0)</m>, and <m>(0,1)</m>; <m>\delta (x,y) = 2</m>lb/in<m>^2</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>M = 2</m>lb; <m>M_y= 0</m>; <m>M_x = 2/3</m>; <m>(\overline{x},\overline{y}) = (0,1/3)</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>R</m> is the triangle with corners <m>(0,0)</m>, <m>(1,0)</m>, and <m>(0,1)</m>; <m>\delta (x,y) = (x^2+y^2+1)</m>lb/in<m>^2</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>M = 2/3</m>lb; <m>M_y= 7/30</m>; <m>M_x = 7/30</m>; <m>(\overline{x},\overline{y}) = (0.35,0.35)</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>R</m> is the disk centered at the origin with radius 2; <m>\delta (x,y) = (x+y+4)</m>kg/m<m>^2</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>M = 16\pi \approx 50.27</m>kg; <m>M_y= 4\pi </m>; <m>M_x = 4\pi </m>; <m>(\overline{x},\overline{y}) = (1/4,1/4)</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>R</m> is the circle sector bounded by <m>x^2+y^2=25</m> in the first quadrant; <m>\delta (x,y) = (\sqrt{x^2+y^2}+1)</m>kg/m<m>^2</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>M = 325\pi /12\approx 85</m>kg; <m>M_y= 2375/12</m>; <m>M_x = 2375/12</m>; <m>(\overline{x},\overline{y}) = (2.33,2.33)</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>R</m> is the annulus in the first and second quadrants bounded by <m>x^2+y^2=9</m> and <m>x^2+y^2=36</m>; <m>\delta (x,y) = 4</m>lb/ft<m>^2</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>M = 54\pi \approx 169.65</m>lb; <m>M_y= 0</m>; <m>M_x = 504</m>; <m>(\overline{x},\overline{y}) = (0,2.97)</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>R</m> is the annulus in the first and second quadrants bounded by <m>x^2+y^2=9</m> and <m>x^2+y^2=36</m>; <m>\delta (x,y) = \sqrt{x^2+y^2}</m>lb/ft<m>^2</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>M = 63\pi \approx 197.92</m>lb; <m>M_y= 0</m>; <m>M_x = 1215/2</m>; <m>(\overline{x},\overline{y}) = (0,3.07)</m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        The <em>moment of inertia</em> <m>I</m> is a measure of the tendency of a lamina to resist rotating about an axis or continue to rotate about an axis. <m>I_x</m> is the moment of inertia about the <m>x</m>-axis, <m>I_y</m> is the moment of inertia about the <m>x</m>-axis, and <m>I_O</m> is the moment of inertia about the origin. These are computed as follows:
+      </p>
+      <ol>
+        <li>
+          <p>
+            <m>\displaystyle I_x = \iint _R y^2\ dm</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>\displaystyle I_y = \iint _R x^2\ dm</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>\displaystyle I_O = \iint _R \big (x^2+y^2\big )\ dm</m>
+          </p>
+        </li>
+      </ol>
+      <p>
+        A lamina corresponding to a planar region <m>R</m> is given with a mass of 16 units. For each, compute <m>I_x</m>, <m>I_y</m> and <m>I_O</m>.
+      </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>R</m> is the <m>4\times 4</m> square with corners at <m>(-2,-2)</m> and <m>(2,2)</m> with density <m>\delta (x,y) = 1</m>.</p>
+      </statement>
+      <answer>
+        <p>
+          <m>I_x = 64/3</m>; <m>I_y = 64/3</m>; <m>I_O = 128/3</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>R</m> is the <m>8\times 2</m> rectangle with corners at <m>(-4,-1)</m> and <m>(4,1)</m> with density <m>\delta (x,y) = 1</m>.</p>
+      </statement>
+      <answer>
+        <p>
+          <m>I_x = 16/3</m>; <m>I_y = 256/3</m>; <m>I_O = 272/3</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>R</m> is the <m>4\times 2</m> rectangle with corners at <m>(-2,-1)</m> and <m>(2,1)</m> with density <m>\delta (x,y) = 2</m>.</p>
+      </statement>
+      <answer>
+        <p>
+          <m>I_x = 16/3</m>; <m>I_y = 64/3</m>; <m>I_O = 80/3</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>R</m> is the disk with radius 2 centered at the origin with density <m>\delta (x,y) = 4/\pi </m>.</p>
+      </statement>
+      <answer>
+        <p>
+          <m>I_x = 16</m>; <m>I_y = 16</m>; <m>I_O = 32</m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+</exercises>

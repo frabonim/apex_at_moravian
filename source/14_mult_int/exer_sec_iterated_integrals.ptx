@@ -1,0 +1,683 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<exercises>
+  <exercise>
+    <statement>
+      <p>
+        When integrating <m>f_x(x,y)</m> with respect to <m>x</m>, the constant of integration <m>C</m> is really which: <m>C(x)</m> or <m>C(y)</m>? What does this mean?
+      </p>
+    </statement>
+    <answer>
+      <p>
+        <m>C(y)</m>, meaning that instead of being just a constant, like the number 5, it is a function of <m>y</m>, which acts like a constant when taking derivatives with respect to <m>x</m>.</p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        Integrating an integral is called <fillin/> <fillin/>.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        iterated integration
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        When evaluating an iterated integral, we integrate from <fillin/> to <fillin/>, then from <fillin/> to <fillin/>.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        curve to curve, then from point to point
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        One understanding of an iterated integral is that <m>\displaystyle \int _a^b\int _{g_1(x)}^{g_2(x)} \ dy\ dx</m> gives the <fillin/> of a plane region.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        area
+        </p>
+    </answer>
+  </exercise>
+  <exercisegroup>
+    <introduction>
+      <p>
+        Evaluate the integral and subsequent iterated integral.
+        </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <ol>
+          <li>
+            <p>
+              <m>\displaystyle \int _2^{5} \big (6x^2+4xy-3y^2\big )\ dy</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\displaystyle \int _{-3}^{-2} \int _2^{5} \big (6x^2+4xy-3y^2\big )\ dy\ dx</m>
+            </p>
+          </li>
+        </ol>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              <m>18x^2+42x-117</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>-108</m>
+            </p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <ol>
+          <li>
+            <p>
+              <m>\displaystyle \int _0^{\pi } \big (2x\cos y+ \sin x\big )\ dx</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\displaystyle \int _{0}^{\pi /2} \int _0^{\pi } \big (2x\cos y+ \sin x\big )\ dx\ dy</m>
+            </p>
+          </li>
+        </ol>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              <m>2+\pi ^2\cos y</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\pi ^2+\pi </m>
+            </p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <ol>
+          <li>
+            <p>
+              <m>\displaystyle \int _1^x \big (x^2y - y+2\big )\ dy</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\displaystyle \int _0^2\int _1^x \big (x^2y - y+2\big )\ dy\ dx</m>
+            </p>
+          </li>
+        </ol>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              <m>x^4/2-x^2+2x-3/2</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>23/15</m>
+            </p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <ol>
+          <li>
+            <p>
+              <m>\displaystyle \int _y^{y^2} \big (x-y\big )\ dx</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\displaystyle \int _{-1}^1\int _y^{y^2} \big (x-y\big )\ dx\ dy</m>
+            </p>
+          </li>
+        </ol>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              <m>y^4/2-y^3+y^2/2</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>8/15</m>
+            </p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <ol>
+          <li>
+            <p>
+              <m>\displaystyle \int _0^{y} \big (\cos x\sin y\big )\ dx</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\displaystyle \int _0^\pi \int _0^{y} \big (\cos x\sin y\big )\ dx\ dy</m>
+            </p>
+          </li>
+        </ol>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              <m>\sin ^2y</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\pi /2</m>
+            </p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <ol>
+          <li>
+            <p>
+              <m>\displaystyle \int _0^{x} \left(\frac{1}{1+x^2}\right)\ dy</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\displaystyle \int _1^2 \int _0^{x} \left(\frac{1}{1+x^2}\right)\ dy\ dx</m>
+            </p>
+          </li>
+        </ol>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              <m>x/(1+x^2)</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\frac{1}{2}\ln \left(\frac{5}{2}\right)</m>
+            </p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        A graph of a planar region <m>R</m> is given. Give the iterated integrals, with both orders of integration <m>dy\ dx</m> and <m>dx\ dy</m>, that give the area of <m>R</m>. Evaluate one of the iterated integrals to find the area.
+      </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <!-- START figures/fig_13_01_ex_11.tex -->
+                <image xml:id="img_13_01_ex_11" width="30%">
+                  <description></description>
+                  <latex-image>
+
+                  \begin{tikzpicture}
+
+                  \begin{axis}[
+                  axis on top,
+                  xtick={1,2,3,4},
+                  ytick={-2,-1,1},
+                  ymin=-2.5,ymax=1.5,
+                  xmin=-.5,xmax=4.5
+                  ]
+
+                  \draw [very thick,firstcolor] (axis cs:1,-2) -- (axis cs: 4,-2) -- (axis cs: 4,1) -- (axis cs: 1,1) -- cycle;
+
+                  \draw (axis cs: 2.5,-1) node {$R$};
+
+                  \end{axis}
+
+                  \end{tikzpicture}
+
+                  </latex-image>
+                </image>
+                <!-- figures/fig_13_01_ex_11.tex END -->
+      </statement>
+      <answer>
+        <p>
+          <m>\displaystyle \int _1^4\int _{-2}^1\ dy\ dx</m> and <m>\displaystyle \int _{-2}^1\int _1^4\ dx\ dy</m>.area of <m>R = 9u^2</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+                <!-- START figures/fig_13_01_ex_12.tex -->
+                <image xml:id="img_13_01_ex_12" width="30%">
+                  <description></description>
+                  <latex-image>
+
+                  \begin{tikzpicture}
+
+                  \begin{axis}[
+                  axis on top,
+                  xtick={1,2,3,4},
+                  ytick={1,2,3},
+                  ymin=-.5,ymax=3.5,
+                  xmin=-.5,xmax=4.5
+                  ]
+
+                  \draw [very thick,firstcolor] (axis cs:1,1) -- (axis cs: 4,1) -- (axis cs: 4,3) -- cycle;
+
+                  \draw (axis cs: 3,1.75) node {$R$};
+
+                  \end{axis}
+
+                  \end{tikzpicture}
+
+                  </latex-image>
+                </image>
+                <!-- figures/fig_13_01_ex_12.tex END -->
+      </statement>
+      <answer>
+        <p>
+          <m>\displaystyle \int _1^4\int _{1}^{\frac{2}{3}x+\frac{1}{3}}\ dy\ dx</m> and <m>\displaystyle \int _{1}^3\int _{\frac{3}{2}y-\frac{1}{2}}^4\ dx\ dy</m>.area of <m>R = 3u^2</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <!-- START figures/fig_13_01_ex_13.tex -->
+                <image xml:id="img_13_01_ex_13" width="30%">
+                  <description></description>
+                  <latex-image>
+
+                  \begin{tikzpicture}
+
+                  \begin{axis}[
+                  axis on top,
+                  xtick={1,2,3,4},
+                  ytick={1,2,3,4,5},
+                  ymin=-.5,ymax=5.5,
+                  xmin=-.5,xmax=4.5%
+                  ]
+
+                  \draw [very thick,firstcolor] (axis cs:2,1) -- (axis cs: 4,3) -- (axis cs: 2,5) -- cycle;
+
+                  \draw (axis cs: 2.75,3) node {$R$};
+
+                  \end{axis}
+
+                  \end{tikzpicture}
+
+                  </latex-image>
+                </image>
+                <!-- figures/fig_13_01_ex_13.tex END -->
+      </statement>
+      <answer>
+        <p>
+          <m>\displaystyle \int _2^4\int _{x-1}^{7-x}\ dy\ dx</m>. The order <m>dx\ dy</m> needs two iterated integrals as <m>x</m> is bounded above by two different functions. This gives:<md>
+            <mrow>\int _{1}^3\int _{2}^{y+1}\ dx\ dy+\int _{3}^5\int _{2}^{7-y}\ dx\ dy.</mrow>
+          </md>area of <m>R = 4u^2</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+                <!-- START figures/fig_13_01_ex_14.tex -->
+                <image xml:id="img_13_01_ex_14" width="30%">
+                  <description></description>
+                  <latex-image>
+
+                  \begin{tikzpicture}
+
+                  \begin{axis}[
+                  axis on top,
+                  xtick={2,4,...,12},
+                  ytick={-2,-4,-6,6,4,2},
+                  ymin=-6.9,ymax=6.9,
+                  xmin=-.5,xmax=12.9
+                  ]
+
+                  \draw (axis cs: 6,2) node {$R$};
+
+                  \addplot+ [-,domain=-6:6,samples=60] ({x^2/3},{x}) node [pos=.7,sloped,above,black] { $x=y^2/3$} -- cycle;
+
+                  \end{axis}
+
+                  \end{tikzpicture}
+
+                  </latex-image>
+                </image>
+                <!-- figures/fig_13_01_ex_14.tex END -->
+      </statement>
+      <answer>
+        <p>
+          <m>\displaystyle \int _0^{12}\int _{-\sqrt{3x}}^{\sqrt{3x}}\ dy\ dx</m> and <m>\displaystyle \int _{-6}^6\int _{y^2/3}^{12}\ dx\ dy</m>area of <m>R = 96u^2</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+                <!-- START figures/fig_13_01_ex_15.tex -->
+                <image xml:id="img_13_01_ex_15" width="30%">
+                  <description></description>
+                  <latex-image>
+
+                  \begin{tikzpicture}
+
+                  \begin{axis}[
+                  axis on top,
+                  ymin=-.5,ymax=1.1,
+                  xmin=-.5,xmax=1.1
+                  ]
+
+                  \addplot [firstcurvestyle,-,domain=0:1.05] ({x^2},{x}) node [pos=.5,sloped,above,black] { $y=\sqrt{x}$};
+                  \addplot [firstcurvestyle,-,domain=-.1:1.05,samples=40] ({x},{x^4}) node [pos=.5,sloped,below,black] { $y=x^4$};
+
+                  \draw (axis cs: .5,.4) node {$R$};
+
+                  \end{axis}
+
+                  \end{tikzpicture}
+
+                  </latex-image>
+                </image>
+                <!-- figures/fig_13_01_ex_15.tex END -->
+      </statement>
+      <answer>
+        <p>
+          <m>\displaystyle \int _0^{1}\int _{x^4}^{\sqrt{x}}\ dy\ dx</m> and <m>\displaystyle \int _{0}^1\int _{y^2}^{\@root 4 \of {y}}\ dx\ dy</m>area of <m>R = 7/15u^2</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+                <!-- START figures/fig_13_01_ex_16.tex -->
+                <image xml:id="img_13_01_ex_16" width="30%">
+                  <description></description>
+                  <latex-image>
+
+                  \begin{tikzpicture}
+
+                  \begin{axis}[
+                  axis on top,
+                  ymin=-.5,ymax=8.9,
+                  xmin=-.5,xmax=2.5
+                  ]
+
+                  \addplot [firstcurvestyle,-,domain=-.1:2.1] ({x},{x^3}) node [pos=.2,sloped,below right,black] { $y=x^3$};
+                  \addplot [firstcurvestyle,-,domain=-.1:2.1] {4*x} node [pos=.4,sloped,above,black] { $y=4x$};
+
+                  \draw (axis cs: 1,2.25) node {$R$};
+
+                  \end{axis}
+
+                  \end{tikzpicture}
+
+                  </latex-image>
+                </image>
+                <!-- figures/fig_13_01_ex_16.tex END -->
+      </statement>
+      <answer>
+        <p>
+          <m>\displaystyle \int _0^{2}\int _{x^3}^{4{x}}\ dy\ dx</m> and <m>\displaystyle \int _{0}^8\int _{y/4}^{\@root 3 \of {y}}\ dx\ dy</m>area of <m>R = 4u^2</m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        Iterated integrals are given that compute the area of a region <m>R</m> in the <m>x</m>-<m>y</m> plane. Sketch the region <m>R</m>, and give the iterated integral(s) that give the area of <m>R</m> with the opposite order of integration.
+      </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{-2}^2\int _0^{4-x^2} \ dy \ dx</m>
+        </p>
+      </statement>
+      <answer>
+          <!-- START figures/fig_13_01_ex_18.tex -->
+                <image xml:id="img_13_01_ex_18X" width="30%">
+                  <description></description>
+                  <latex-image>
+
+                  \begin{tikzpicture}
+
+                  \begin{axis}[
+                  axis on top,
+                  ymin=-.5,ymax=4.5,
+                  xmin=-2.5,xmax=2.5
+                  ]
+
+                  \addplot+ [-,domain=-2:2,samples=60] ({x},{4-x^2}) node [pos=.1,right,black] { $y=4-x^2$} -- cycle;
+
+                  \draw (axis cs: 1,1) node {$R$};
+
+                  \end{axis}
+
+                  \end{tikzpicture}
+
+                  </latex-image>
+                </image>
+                <!-- figures/fig_13_01_ex_18.tex END -->
+        <p>
+          area of <m>R = \displaystyle \int _{0}^{4}\int _{-\sqrt{4-y}}^{\sqrt{4-y}}\ dx\ dy</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{0}^{1}\int _{5-5x}^{5-5x^2} \ dy \ dx</m>
+        </p>
+      </statement>
+      <answer>
+          <!-- START figures/fig_13_01_ex_20.tex -->
+                <image xml:id="img_13_01_ex_20X" width="30%">
+                  <description></description>
+                  <latex-image>
+
+                  \begin{tikzpicture}
+
+                  \begin{axis}[
+                  axis on top,
+                  ytick={1,2,3,4,5},
+                  ymin=-.5,ymax=5.9,
+                  xmin=-.1,xmax=1.1
+                  ]
+
+                  \addplot [firstcurvestyle,-,domain=0:1] ({x},{5-5*x^2}) node [pos=.05,above right,black] { $y=5-5x^2$};
+                  \addplot [firstcurvestyle,-,domain=0:1] {-5*x+5} node [pos=.5,below,sloped,black] { $y=-5x+5$};
+
+                  \draw (axis cs: .5,3.3) node {$R$};
+
+                  \end{axis}
+
+                  \end{tikzpicture}
+
+                  </latex-image>
+                </image>
+                <!-- figures/fig_13_01_ex_20.tex END -->
+        <p>
+          area of <m>R = \displaystyle \int _0^5\int _{1-y/5}^{\sqrt{1-y/5}} \ dx \ dy</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{-2}^2\int _{0}^{2\sqrt{4-y^2}} \ dx \ dy</m>
+        </p>
+      </statement>
+      <answer>
+        <!-- START figures/fig_13_01_ex_19.tex -->
+                <image xml:id="img_13_01_ex_19X" width="30%">
+                  <description></description>
+                  <latex-image>
+
+                  \begin{tikzpicture}
+
+                  \begin{axis}[
+                  axis on top,
+                  ymin=-2.5,ymax=2.5,
+                  xmin=-.5,xmax=4.5
+                  ]
+
+                  \draw (axis cs: 1,1) node {$R$};
+
+                  \addplot+ [-,domain=-90:90,samples=40] ({4*cos(x)},{2*sin(x)}) node [pos=.25,above left,black] { $x^2/16+y^2/4=1$} -- cycle;
+
+                  \end{axis}
+
+                  \end{tikzpicture}
+
+                  </latex-image>
+                </image>
+                <!-- figures/fig_13_01_ex_19.tex END -->
+        <p>
+          area of <m>R = \displaystyle \int _0^4\int _{-\sqrt{4-x^2/4}}^{\sqrt{4-x^2/4}} \ dy \ dx</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{-3}^3\int _{-\sqrt{9-x^2}}^{\sqrt{9-x^2}} \ dy \ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <!-- START figures/fig_13_01_ex_17.tex -->
+                <image xml:id="img_13_01_ex_17X" width="30%">
+                  <description></description>
+                  <latex-image>
+
+                  \begin{tikzpicture}
+
+                  \begin{axis}[
+                  axis on top,
+                  ymin=-3.1,ymax=3.1,
+                  xmin=-3.7,xmax=3.7
+                  ]
+
+                  \draw (axis cs: 1,1) node {$R$};
+
+                  \addplot+ [-,domain=0:360,samples=80] ({3*cos(x)},{3*sin(x)}) node [pos=.4,below right,black] { $x^2+y^2=9$};
+
+                  \end{axis}
+
+                  \end{tikzpicture}
+
+                  </latex-image>
+                </image>
+        <p>
+          area of <m>R = \displaystyle \int _{-3}^3\int _{-\sqrt{9-y^2}}^{\sqrt{9-y^2}} \ dx \ dy</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{0}^{1}\int _{-\sqrt{y}}^{\sqrt{y}} \ dx \ dy+\int _{1}^{4}\int _{y-2}^{\sqrt{y}} \ dx \ dy</m>
+        </p>
+      </statement>
+      <answer>
+        <!-- START figures/fig_13_01_ex_22.tex -->
+                <image xml:id="img_13_01_ex_22X" width="30%">
+                  <description></description>
+                  <latex-image>
+
+                  \begin{tikzpicture}
+
+                  \begin{axis}[
+                  axis on top,
+                  xtick={-1,1,2},
+                  ytick={1,2,3,4},
+                  ymin=-.1,ymax=4.5,
+                  xmin=-1.1,xmax=2.1
+                  ]
+
+                  \draw (axis cs: .5,1.5) node {$R$};
+
+                  \addplot [firstcurvestyle,-,domain=-1:2,] ({x},{x^2}) node [pos=.5,below right,black] { $y=x^2$};
+                  \addplot [firstcurvestyle,-,domain=-1:2] {x+2} node [pos=.5,sloped,above,black] { $y=x+2$};
+
+                  \end{axis}
+
+                  \end{tikzpicture}
+
+                  </latex-image>
+                </image>
+                <!-- figures/fig_13_01_ex_22.tex END -->
+        <p>
+          area of <m>R = \displaystyle \int _{-1}^2\int _{x^2}^{x+2} \ dy \ dx </m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{-1}^{1}\int _{(x-1)/2}^{(1-x)/2} \ dy \ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <!-- START figures/fig_13_01_ex_21.tex -->
+                <image xml:id="img_13_01_ex_21X" width="30%">
+                  <description></description>
+                  <latex-image>
+
+                  \begin{tikzpicture}
+
+                  \begin{axis}[
+                  axis on top,
+                  xtick={-1,1},
+                  ytick={-1,1},
+                  ymin=-1.1,ymax=1.1,
+                  xmin=-1.1,xmax=1.1
+                  ]
+
+                  \draw (axis cs: -.5,.25) node {$R$};
+
+                  \draw [firstcolor,very thick] (axis cs: -1,1) -- (axis cs:1,0) -- (axis cs: -1,-1) -- (axis cs: -1,1);
+
+                  \end{axis}
+
+                  \end{tikzpicture}
+
+                  </latex-image>
+                </image>
+                <!-- figures/fig_13_01_ex_21.tex END -->
+        <p>
+          area of <m>R = \displaystyle \int _{-1}^0\int _{0}^{2y+1} \ dx \ dy + \int _{0}^1\int _{0}^{1-2y} \ dx \ dy</m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+</exercises>

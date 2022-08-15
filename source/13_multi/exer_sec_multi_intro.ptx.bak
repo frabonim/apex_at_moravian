@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<exercises>
+  <exercise>
+    <statement>
+      <p>
+        Give two examples (other than those given in the text) of “real world” functions that require more than one input.
+        </p>
+    </statement>
+    <answer>
+      <p>
+        Answers will vary.
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        The graph of a function of two variables is a <fillin/>.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        surface
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        Most people are familiar with the concept of level curves in the context of <fillin/> maps.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        topographical
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        T/F: Along a level curve, the output of a function does not change.
+        </p>
+    </statement>
+    <answer>
+      <p>
+        T
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        The analogue of a level curve for functions of three variables is a level <fillin/>.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        surface
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        What does it mean when level curves are close together? Far apart?
+        </p>
+    </statement>
+    <answer>
+      <p>
+        When level curves are close together, it means the function is changing <m>z</m>-values rapidly. When far apart, it changes <m>z</m>-values slowly.
+      </p>
+    </answer>
+  </exercise>
+  <exercisegroup>
+    <introduction>
+      <p>
+        Give the domain and range of the multivariable function.
+        </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x,y) = x^2+y^2+2</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          domain: <m>\mathbb {R}^2</m>range: <m>z\ge 2</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x,y) = x+2y</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          domain: <m>\mathbb {R}^2</m>range: <m>\mathbb {R}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x,y) = x-2y</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          domain: <m>\mathbb {R}^2</m>range: <m>\mathbb {R}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x,y) = \frac{1}{x+2y}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          domain: <m>x\ne 2y</m>; in set notation, <m>\lbrace (x,y)\,|\, x\ne 2y\rbrace </m>range: <m>z\ne 0</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x,y) = \frac{1}{x^2+y^2+1}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          domain: <m>\mathbb {R}^2</m>range: <m>0\lt z\le 1</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x,y) = \sin x\cos y</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          domain: <m>\mathbb {R}^2</m>range: <m>-1\le z\le 1</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x,y) = \sqrt{9-x^2-y^2}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          domain: <m>\lbrace (x,y)\,|\, x^2+y^2\le 9\rbrace </m>, i.e., the domain is the circle and interior of a circle centered at the origin with radius 3.range: <m>0\le z\le 3</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x,y) = \frac{1}{\sqrt{x^2+y^2-9}}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          domain: <m>\lbrace (x,y)\,|\, x^2+y^2\ge 9\rbrace </m>, i.e., the domain is the exterior of the circle (not including the circle itself) centered at the origin with radius 3.range: <m>0\lt  z\lt  \infty </m>, or <m>(0,\infty )</m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        Describe in words and sketch the level curves for the function and given <m>c</m> values.
+      </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x,y) = 3x-2y</m>; <m>c = -2,0,2</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          Level curves are lines <m>y = (3/2)x-c/2</m>.
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x,y) = x^2-y^2</m>; <m>c = -1,0,1</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          Level curves are hyperbolas <m>\frac{x^2}{c}-\frac{y^2}{c}=1</m>, except for <m>c=0</m>, where the level curve is the pair of lines <m>y=x</m>, <m>y=-x</m>.
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x,y) = x-y^2</m>; <m>c = -2,0,2</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          Level curves are parabolas <m>x=y^2+c</m>.
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x,y) = \frac{1-x^2-y^2}{2y-2x}</m>; <m>c = -2,0,2</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          Level curves are hyperbolas <m>(x-c)^2-(y-c)^2=1</m>, drawn in graph in different styles to differentiate the curves.
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x,y) = \frac{2x-2y}{x^2+y^2+1}</m>; <m>c = -1,0,1</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          When <m>c\ne 0</m>, the level curves are circles, centered at <m>(1/c,-1/c)</m> with radius <m>\sqrt{2/c^2-1}</m>. When <m>c=0</m>, the level curve is the line <m>y=x</m>.
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x,y) = \frac{y-x^3-1}{x}</m>; <m>c = -3,-1,0,1,3</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          Level curves are cubics of the form <m>y=x^3+cx+1</m>. Note how each curve passes through <m>(0,1)</m> and that the function is not defined at <m>x=0</m>.
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x,y) = \sqrt{x^2+4y^2}</m>; <m>c = 1,2,3,4</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          Level curves are ellipses of the form <m>\frac{x^2}{c^2}+\frac{y^2}{c^2/4}=1</m>, i.e., <m>a=c</m> and <m>b=c/2</m>.
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x,y) = x^2+4y^2</m>; <m>c = 1,2,3,4</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          Level curves are ellipses of the form <m>\frac{x^2}{c}+\frac{y^2}{c/4}=1</m>, i.e., <m>a=\sqrt{c}</m> and <m>b=\sqrt{c}/2</m>.
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        Give the domain and range of the functions of three variables.
+        </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x,y,z) = \frac{x}{x+2y-4z}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          domain: <m>x+2y-4z\ne 0</m>; the set of points in <m>\mathbb {R}^3</m> NOT in the domain form a plane through the origin.range: <m>\mathbb {R}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x,y,z) = \frac{1}{1-x^2-y^2-z^2}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          domain: <m>x^2+y^2+z^2\ne 1</m>; the set of points in <m>\mathbb {R}^3</m> NOT in the domain form a sphere of radius 1.range: <m>(-\infty ,0)\cup [1,\infty )</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x,y,z) = \sqrt{z-x^2+y^2}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          domain: <m>z\ge x^2-y^2</m>; the set of points in <m>\mathbb {R}^3</m> above (and including) the hyperbolic paraboloid <m>z=x^2-y^2</m>.range: <m>[0,\infty )</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x,y,z) = z^2\sin x\cos y</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          domain: <m>\mathbb {R}^3</m>range: <m>\mathbb {R}</m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        Describe the level surfaces of the given functions of three variables.
+        </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x,y,z) = x^2+y^2+z^2</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          The level surfaces are spheres, centered at the origin, with radius <m>\sqrt{c}</m>.
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x,y,z) = z-x^2+y^2</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          The level surfaces are hyperbolic paraboloids of the form <m>z=x^2-y^2+c</m>; each is shifted up/down by <m>c</m>.
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x,y,z) = \frac{x^2+y^2}{z}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          The level surfaces are paraboloids of the form <m>z=\frac{x^2}{c}+\frac{y^2}{c}</m>; the larger <m>c</m>, the “wider” the paraboloid.
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x,y,z) = \frac{z}{x-y}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          The level surfaces are planes through the origin of the form <m>cx-cy-z=0</m>, that is, planes through the origin with normal vector <m>\la c,-c,-1\ra </m>.
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercise>
+    <statement>
+      <p>
+        Compare the level curves of Exercises <ref target="uid1" /> and <ref target="uid1" />. How are they similar, and how are they different? Each surface is a quadric surface; describe how the level curves are consistent with what we know about each surface.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        The level curves for each surface are similar; for <m>z=\sqrt{x^2+4y^2}</m> the level curves are ellipses of the form <m>\frac{x^2}{c^2}+\frac{y^2}{c^2/4}=1</m>, i.e., <m>a=c</m> and <m>b=c/2</m>; whereas for <m>z=x^2+4y^2</m> the level curves are ellipses of the form <m>\frac{x^2}{c}+\frac{y^2}{c/4}=1</m>, i.e., <m>a=\sqrt{c}</m> and <m>b=\sqrt{c}/2</m>. The first set of ellipses are spaced evenly apart, meaning the function grows at a constant rate; the second set of ellipses are more closely spaced together as <m>c</m> grows, meaning the function grows faster and faster as <m>c</m> increases.
+      </p>
+      <p>
+        The function <m>z=\sqrt{x^2+4y^2}</m> can be rewritten as <m>z^2=x^2+4y^2</m>, an elliptic cone; the function <m>z=x^2+4y^2</m> is a paraboloid, each matching the description above.
+      </p>
+    </answer>
+  </exercise>
+</exercises>

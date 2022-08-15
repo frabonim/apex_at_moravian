@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<exercises>
+  <exercise>
+    <statement>
+      <p>
+        Let a level curve of <m>z=f(x,y)</m> be described by <m>x=g(t)</m>, <m>y = h(t)</m>. Explain why <m>\frac{dz}{dt}=0</m>.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        Because the parametric equations describe a level curve, <m>z</m> is constant for all <m>t</m>. Therefore <m>\frac{dz}{dt}=0</m>.
+      </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        Fill in the blank: The single variable Chain Rule states <m>\displaystyle \frac{d}{dx}\Big (f\big (g(x)\big )\Big ) = f\,^{\prime }\big (g(x)\big )\cdot </m><fillin/>.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        <m>g^{\prime }(x)</m>
+      </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        Fill in the blank: The Multivariable Chain Rule states
+        </p>
+      <p spacebefore="5.0pt">
+        <m>\displaystyle \frac{df}{dt}=\frac{\partial f}{\partial x}\cdot</m><fillin/> + <fillin/><m>\cdot \frac{dy}{dt}</m>.</p>
+    </statement>
+    <answer>
+      <p>
+        <m>\frac{dx}{dt}</m>, and <m>\frac{\partial f}{\partial y}</m>
+      </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        If <m>z=f(x,y)</m>, where <m>x=g(t)</m> and <m>y=h(t)</m>, we can substitute and write <m>z</m> as an explicit function of <m>t</m>.T/F: Using the Multivariable Chain Rule to find <m>\frac{dz}{dt}</m> is sometimes easier than first substituting and then taking the derivative.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        T
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        T/F: The Multivariable Chain Rule is only useful when all the related functions are known explicitly.
+        </p>
+    </statement>
+    <answer>
+      <p>
+        F
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        The Multivariable Chain Rule allows us to compute implicit derivatives easily by just computing two <fillin/> derivatives.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        partial
+        </p>
+    </answer>
+  </exercise>
+  <exercisegroup>
+    <introduction>
+      <p>
+        Functions <m>z=f(x,y)</m>, <m>x=g(t)</m> and <m>y=h(t)</m> are given.
+      </p>
+      <ol>
+        <li>
+          <p>
+            Use the Multivariable Chain Rule to compute <m>\displaystyle \frac{dz}{dt}</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Evaluate <m>\displaystyle \frac{dz}{dt}</m> at the indicated <m>t</m>-value.
+          </p>
+        </li>
+      </ol>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>z=3x+4y</m>, <m>x=t^2</m>, <m>y=2t</m>; <m>t=1</m>
+        </p>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              <m>\frac{dz}{dt} = 3(2t)+4(2) = 6t+8</m>.</p>
+          </li>
+          <li>
+            <p>
+              At <m>t=1</m>, <m>\frac{dz}{dt} = 14</m>.
+            </p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle z=x^2-y^2</m>, <m>x=t</m>, <m>y=t^2-1</m>; <m>t=1</m>
+        </p>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              <m>\frac{dz}{dt} = 2x(1)-2y(2t) = 2x-4yt</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              At <m>t=1</m>, <m>x=1</m>, <m>y=0</m> and <m>\frac{dz}{dt} = 2</m>.
+            </p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle z=5x+2y</m>,   <m>x=2\cos t+1</m>,   <m>y=\sin t-3</m>;   <m>t=\pi /4</m>
+        </p>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              <m>\frac{dz}{dt} = 5(-2\sin t)+2(\cos t) = -10\sin t+2\cos t</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              At <m>t=\pi /4</m>, <m>\frac{dz}{dt} = -4\sqrt{2}</m>.
+            </p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle z=\frac{x}{y^2+1}</m>, <m>x=\cos t</m>, <m>y=\sin t</m>; <m>t=\pi /2</m>
+        </p>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              <m>\displaystyle \frac{dz}{dt} = \frac{1}{1+y^2}(-\sin t)-\frac{2xy}{(y^2+1)^2}(\cos t)</m>.</p>
+          </li>
+          <li>
+            <p>
+              At <m>t=\pi /2</m>, <m>x=0</m>, <m>y=1</m>, and <m>\frac{dz}{dt} = -1/2</m>.
+            </p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle z=x^2+2y^2</m>, <m>x=\sin t</m>, <m>y=3\sin t</m>; <m>t=\pi /4</m>
+        </p>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              <m>\displaystyle \frac{dz}{dt} = 2x(\cos t) + 4y(3\cos t)</m>.</p>
+          </li>
+          <li>
+            <p>
+              At <m>t=\pi /4</m>, <m>x=\sqrt{2}/2</m>, <m>y=3\sqrt{2}/2</m>, and <m>\frac{dz}{dt} = 19</m>.
+            </p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>z=\cos x\sin y</m>, <m>x=\pi t</m>, <m>y=2\pi t+\pi /2</m>; <m>t=3</m>
+        </p>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              <m>\frac{dz}{dt} = -\sin x\sin y(\pi ) + \cos x\cos y(2\pi )</m>.</p>
+          </li>
+          <li>
+            <p>
+              At <m>t=3</m>, <m>x=3\pi </m>, <m>y=13\pi /2</m>, and <m>\frac{dz}{dt} = 0</m>.
+            </p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        Functions <m>z=f(x,y)</m>, <m>x=g(t)</m> and <m>y=h(t)</m> are given. Find the values of <m>t</m> where <m>\frac{dz}{dt}=0</m>.
+      </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle z=3x+4y</m>, <m>x=t^2</m>, <m>y=2t</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>t=-4/3</m>; this corresponds to a minimum</p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle z=x^2-y^2</m>, <m>x=t</m>, <m>y=t^2-1</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>t=0, \pm \sqrt{3/2}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle z=5x+2y</m>, <m>x=2\cos t+1</m>, <m>y=\sin t-3</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>t=\tan ^{-1}(1/5) +n\pi </m>, where <m>n</m> is an integer</p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle z=\frac{x}{y^2+1}</m>, <m>x=\cos t</m>, <m>y=\sin t</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          We find that<md>
+            <mrow>\frac{dz}{dt} = -\frac{2\cos ^2t\sin t}{(1+\sin ^2t)^2}-\frac{\sin t}{1+\sin ^2t}.</mrow>
+          </md>
+          Setting this equal to 0, finding a common denominator and factoring out <m>\sin t</m>, we get<md>
+            <mrow>\sin t\left(\frac{2\cos ^2t+\sin ^2t+1}{(1+\sin ^2t)^2}\right)=0.</mrow>
+          </md>
+          We have <m>\sin t= 0</m> when <m>t = \pi n</m>, where <m>n</m> is an integer. The expression in the parenthesis above is always positive, and hence never equal 0. So all solutions are <m>t=\pi n</m>, n is an integer.
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle z=x^2+2y^2</m>, <m>x=\sin t</m>, <m>y=3\sin t</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          We find that<md>
+            <mrow>\frac{dz}{dt} = 38\cos t\sin t.</mrow>
+          </md>
+          Thus <m>\frac{dz}{dt} = 0</m> when <m>t=\pi n</m> or <m>\pi n+\pi /2</m>, where <m>n</m> is any integer.
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle z=\cos x\sin y</m>, <m>x=\pi t</m>, <m>y=2\pi t+\pi /2</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          We find that<md>
+            <mrow>\frac{dz}{dt} = -\pi \sin (\pi t)\sin (2\pi t+\pi /2)+2\pi \cos (\pi t)\cos (2\pi t+\pi /2).</mrow>
+          </md>
+          
+        </p>
+        <p>
+          One can “easily” see that when <m>t</m> is an integer, <m>\sin (\pi t) =0</m> and <m>\cos (2\pi t+\pi /2)=0</m>, hence <m>\frac{dz}{dt}=0</m> when <m>t</m> is an integer. There are other places where <m>z</m> has a relative max/min that require more work. First, verify that <m>\sin (2\pi t+\pi /2) = \cos (2\pi t)</m>, and <m>\cos (2\pi t+\pi /2) = -\sin (2\pi t)</m>. This lets us rewrite <m>\frac{dz}{dt} = 0</m> as<md>
+            <mrow>-\sin (\pi t)\cos (2\pi t)-2\cos (\pi t)\sin (2\pi t)=0.</mrow>
+          </md>
+          By bringing one term to the other side of the equality then dividing, we can get<md>
+            <mrow>2\tan (2\pi t) = -\tan (\pi t).</mrow>
+          </md>
+          Using the angle sum/difference formulas found in the back of the book, we know<md>
+            <mrow>\tan (2\pi t) = \tan (\pi t)+\tan (\pi t) = \frac{\tan (\pi t)+\tan (\pi t)}{1-\tan ^2(\pi t)}.</mrow>
+          </md>
+          Thus we write<md>
+            <mrow>2\frac{\tan (\pi t)+\tan (\pi t)}{1-\tan ^2(\pi t)} = -\tan (\pi t).</mrow>
+          </md>
+          Solving for <m>\tan ^2(\pi t)</m>, we find<md>
+            <mrow>\tan ^2(\pi t) = 5 \quad \Rightarrow \quad \tan (\pi t) = \pm \sqrt{5},</mrow>
+          </md>
+          and so<md>
+            <mrow>\pi t = \tan ^{-1}(\pm \sqrt{5}) = \pm \tan ^{-1}(\sqrt{5}).</mrow>
+          </md>
+          Since the period of tangent is <m>\pi </m>, we can adjust our answer to be<md>
+            <mrow>\pi t = \pm \tan ^{-1}(\sqrt{5})+ n\pi ,\text{ where $n$ is an integer.}</mrow>
+          </md>
+          Dividing by <m>\pi </m>, we find<md>
+            <mrow>t = \pm \frac{1}{\pi }\tan ^{-1}(\sqrt{5})+ n,\text{ where $n$ is an integer.}</mrow>
+          </md>
+          
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        Functions <m>z=f(x,y)</m>, <m>x=g(s,t)</m> and <m>y=h(s,t)</m> are given.
+      </p>
+      <ol>
+        <li>
+          <p>
+            Use the Multivariable Chain Rule to compute <m>\displaystyle \frac{\partial z}{\partial s}</m> and <m>\displaystyle \frac{\partial z}{\partial t}</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Evaluate <m>\displaystyle \frac{\partial z}{\partial s}</m> and <m>\displaystyle \frac{\partial z}{\partial t}</m> at the indicated <m>s</m> and <m>t</m> values.
+          </p>
+        </li>
+      </ol>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle z=x^2y</m>, <m>x=s-t</m>, <m>y=2s+4t</m>; <m>s=1</m>, <m>t=0</m>
+        </p>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              <m>\frac{\partial z}{\partial s} = 2xy(1) + x^2(2) = 2xy+2x^2</m>;<m>\frac{\partial z}{\partial t} = 2xy(-1) + x^2(4) = -2xy+4x^2</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              With <m>s=1</m>, <m>t=0</m>, <m>x=1</m> and <m>y=2</m>. Thus <m>\frac{\partial z}{\partial s} = 6</m> and <m>\frac{\partial z}{\partial t} = 0</m>
+            </p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle z=\cos \big (\pi x+\frac{\pi }{2}y\big )</m>,   <m>x=st^2</m>,   <m>y=s^2t</m>;   <m>s=1</m>, <m>t=1</m>
+        </p>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              <m>\frac{\partial z}{\partial s} = -\pi \sin (\pi x+\pi y/2)(t^2) -\frac{1}{2}\pi \sin (\pi x+\pi y/2)(2st) = -\pi \Big (t^2\sin (\pi x+ \pi y/2) + st\sin (\pi x+\pi y/2)\Big )</m>;<m>\frac{\partial z}{\partial t} = -\pi \sin (\pi x+\pi y/2)(2st) -\frac{1}{2}\pi \sin (\pi x+\pi y/2)(s^2)= -\pi \Big (2st\sin (\pi x+\pi y/2) + \frac{1}{2}s^2\sin (\pi x+\pi y/2)\Big )</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              With <m>s=1</m>, <m>t=1</m>, <m>x=1</m> and <m>y=1</m>. Thus <m>\frac{\partial z}{\partial s} = 2\pi </m> and <m>\frac{\partial z}{\partial t} = 5\pi /2</m>
+            </p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle z=x^2+y^2</m>,   <m>x=s\cos t</m>,   <m>y=s\sin t</m>;   <m>s=2</m>, <m>t=\pi /4</m>
+        </p>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              <m>\frac{\partial z}{\partial s} = 2x(\cos t) + 2y(\sin t) = 2x\cos t+2y\sin t</m>;<m>\frac{\partial z}{\partial t} = 2x(-s\sin t)+2y(s\cos t) = -2xs\sin t+ 2ys\cos t</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              With <m>s=2</m>, <m>t=\pi /4</m>, <m>x=\sqrt{2}</m> and <m>y=\sqrt{2}</m>. Thus <m>\frac{\partial z}{\partial s} = 4</m> and <m>\frac{\partial z}{\partial t} = 0</m>
+            </p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle z=e^{-(x^2+y^2)}</m>,   <m>x=t</m>,   <m>y=st^2</m>;   <m>s=1</m>, <m>t=1</m>
+        </p>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              <m>\frac{\partial z}{\partial s} = -2xe^{-(x^2+y^2)}(0) -2ye^{-(x^2+y^2)}(t^2) = -2yt^2e^{-(x^2+y^2)}</m>;<m>\frac{\partial z}{\partial t} = -2xe^{-(x^2+y^2)}(1)-2ye^{-(x^2+y^2)}(2st) = -2xe^{-(x^2+y^2)}-4stye^{-(x^2+y^2)}</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              With <m>s=1</m>, <m>t=1</m>, <m>x=1</m> and <m>y=1</m>. Thus <m>\frac{\partial z}{\partial s} = -2/e^2</m> and <m>\frac{\partial z}{\partial t} = -6/e^2</m>
+            </p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        Find <m>\displaystyle \frac{dy}{dx}</m> using Implicit Differentiation and <xref ref="thm_implicit_deriv_chain" />.
+      </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>x^2\tan y = 50</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>f_x = 2x\tan y</m>, <m>f_y = x^2\sec ^2y</m>;<m>\displaystyle \frac{dy}{dx} = -\frac{2\tan y}{x\sec ^2y}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>(3x^2+2y^3)^4=2</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>f_x = 4(3x^2+2y^3)^3(6x)</m>, <m>f_y = 4(3x^2+2y^3)^3(6y^2)</m>;<m>\displaystyle \frac{dy}{dx} = -\frac{x}{y^2}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \frac{x^2+y}{x+y^2}=17</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\displaystyle f_x = \frac{(x+y^2)(2x)-(x^2+y)(1)}{(x+y^2)^2}</m>, <m>\displaystyle f_y = \frac{(x+y^2)(1)-(x^2+y)(2y)}{(x+y^2)^2}</m>;<m>\displaystyle \frac{dy}{dx} = -\frac{2x(x+y^2)-(x^2+y)}{x+y^2-2y(x^2+y)}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \ln (x^2+xy+y^2)=1</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\displaystyle f_x = \frac{2x+y}{x^2+xy+y^2}</m>, <m>\displaystyle f_y = \frac{x+2y}{x^2+xy+y^2}</m>;<m>\displaystyle \frac{dy}{dx} = -\frac{2x+y}{2y+x}</m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        Find <m>\displaystyle \frac{dz}{dt}</m>, or <m>\displaystyle \frac{\partial z}{\partial s}</m> and <m>\displaystyle \frac{\partial z}{\partial t}</m>, using the supplied information.
+      </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \frac{\partial z}{\partial x} = 2</m>,   <m>\displaystyle \frac{\partial z}{\partial y} = 1</m>,   <m>\displaystyle \frac{dx}{dt} = 4</m>,   <m>\displaystyle \frac{dy}{dt} = -5</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\frac{dz}{dt} = 2(4)+1(-5) = 3</m>.</p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \frac{\partial z}{\partial x} = 1</m>,   <m>\displaystyle \frac{\partial z}{\partial y} = -3</m>,   <m>\displaystyle \frac{dx}{dt} = 6</m>,   <m>\displaystyle \frac{dy}{dt} = 2</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\frac{dz}{dt} = 1(6)+(-3)(2) = 0</m>.</p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \frac{\partial z}{\partial x} = -4</m>,   <m>\displaystyle \frac{\partial z}{\partial y} = 9</m>,</p>
+        <p>
+          <m>\displaystyle \frac{\partial x}{\partial s} = 5</m>,   <m>\displaystyle \frac{\partial x}{\partial t} = 7</m>,   <m>\displaystyle \frac{\partial y}{\partial s} = -2</m>,   <m>\displaystyle \frac{\partial y}{\partial t} = 6</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\frac{\partial z}{\partial s} = -4(5)+9(-2) = -38</m>,</p>
+        <p>
+          <m>\frac{\partial z}{\partial t} = -4(7)+9(6) = 26</m>.</p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \frac{\partial z}{\partial x} = 2</m>,   <m>\displaystyle \frac{\partial z}{\partial y} = 1</m>,</p>
+        <p>
+          <m>\displaystyle \frac{\partial x}{\partial s} = -2</m>,   <m>\displaystyle \frac{\partial x}{\partial t} = 3</m>,   <m>\displaystyle \frac{\partial y}{\partial s} = 2</m>,   <m>\displaystyle \frac{\partial y}{\partial t} = -1</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\frac{\partial z}{\partial s} = 2(-2)+1(2) = -2</m>,</p>
+        <p>
+          <m>\frac{\partial z}{\partial t} = 2(3)+1(-1) = 5</m>.</p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+</exercises>

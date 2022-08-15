@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<exercises>
+  <exercise>
+    <statement>
+      <p>
+        T/F: Every function has an inverse.
+        </p>
+    </statement>
+    <answer>
+      <p>
+        F
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        In your own words explain what it means for a function to be “one to one.”
+        </p>
+    </statement>
+    <answer>
+      <p>
+        Answers will vary.
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        If <m>(1,10)</m> lies on the graph of <m>y=f(x)</m>, what can be said about the graph of <m>y=f^{-1}(x)</m>?
+      </p>
+    </statement>
+    <answer>
+      <p>
+        The point <m>(10,1)</m> lies on the graph of <m>y=f^{-1}(x)</m> (assuming <m>f</m> is invertible).
+      </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        If <m>(1,10)</m> lies on the graph of <m>y=f(x)</m> and <m>f\,^{\prime }(1) = 5</m>, what can be said about <m>y=f^{-1}(x)</m>?
+      </p>
+    </statement>
+    <answer>
+      <p>
+        The point <m>(10,1)</m> lies on the graph of <m>y=f^{-1}(x)</m> (assuming <m>f</m> is invertible) and <m>(f^{-1})^{\prime }(10) = 1/5</m>.
+      </p>
+    </answer>
+  </exercise>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 5–8, verify that the given functions are inverses.
+        </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x) = 2x+6</m> and <m>g(x) = \frac{1}{2}x-3</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          Compose <m>f(g(x))</m> and <m>g(f(x))</m> to confirm that each equals <m>x</m>.
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x) = x^2+6x+11</m>, <m>x\ge 3</m> and</p>
+        <p>
+          <m>g(x) = \sqrt{x-2}-3</m>, <m>x\ge 2</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          Compose <m>f(g(x))</m> and <m>g(f(x))</m> to confirm that each equals <m>x</m>.
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x) = \frac{3}{x-5}</m>, <m>x\ne 5</m> and</p>
+        <p>
+          <m>\displaystyle g(x) = \frac{3+5x}{x}</m>, <m>x\ne 0</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          Compose <m>f(g(x))</m> and <m>g(f(x))</m> to confirm that each equals <m>x</m>.
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x) = \frac{x+1}{x-1}</m>, <m>x\ne 1</m> and <m>g(x) = f(x)</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          Compose <m>f(g(x))</m> and <m>g(f(x))</m> to confirm that each equals <m>x</m>.
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 9–14, an invertible function <m>f(x)</m> is given along with a point that lies on its graph. Using <xref ref="thm_deriv_inverse_functions">Theorem</xref>, evaluate <m>\left(f^{-1}\right)^{\prime }(x)</m> at the indicated value.
+      </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x) = 5x+10</m>
+        </p>
+        <p>
+          Point<m>=(2,20)</m>
+        </p>
+        <p>
+          Evaluate <m>\left(f^{-1}\right)^{\prime }(20)</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\left(f^{-1}\right)^{\prime }(20) = \frac{1}{f\,^{\prime }(2)} = 1/5</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x) = x^2-2x+4</m>, <m>x\ge 1</m>
+        </p>
+        <p>
+          Point<m>=(3,7)</m>
+        </p>
+        <p>
+          Evaluate <m>\left(f^{-1}\right)^{\prime }(7)</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\left(f^{-1}\right)^{\prime }(7) = \frac{1}{f\,^{\prime }(3)} = 1/4</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x) = \sin 2x</m>, <m>-\pi /4\le x\le \pi /4</m>
+        </p>
+        <p>
+          Point<m>=(\pi /6,\sqrt{3}/2)</m>
+        </p>
+        <p>
+          Evaluate <m>\left(f^{-1}\right)^{\prime }(\sqrt{3}/2)</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\left(f^{-1}\right)^{\prime }(\sqrt{3}/2) = \frac{1}{f\,^{\prime }(\pi /6)} = 1</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x) = x^3-6x^2+15x-2</m>
+        </p>
+        <p>
+          Point<m>=(1,8)</m>
+        </p>
+        <p>
+          Evaluate <m>\left(f^{-1}\right)^{\prime }(8)</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\left(f^{-1}\right)^{\prime }(8) = \frac{1}{f\,^{\prime }(1)} = 1/6</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x) = \frac{1}{1+x^2}</m>, <m>x\ge 0</m>
+        </p>
+        <p>
+          Point<m>=(1,1/2)</m>
+        </p>
+        <p>
+          Evaluate <m>\left(f^{-1}\right)^{\prime }(1/2)</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\left(f^{-1}\right)^{\prime }(1/2) = \frac{1}{f\,^{\prime }(1)} = -2</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m> f(x) = 6e^{3x}</m>
+        </p>
+        <p>
+          Point<m>=(0,6)</m>
+        </p>
+        <p>
+          Evaluate <m>\left(f^{-1}\right)^{\prime }(6)</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\left(f^{-1}\right)^{\prime }(6) = \frac{1}{f\,^{\prime }(0)} = 1/6</m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 15–24, compute the derivative of the given function.
+        </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>h(t) = \sin ^{-1} (2t)</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>h^{\prime }(t) = \frac{2}{\sqrt{1-4t^2}}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(t) = \sec ^{-1} (2t)</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>f\,^{\prime }(t) = \frac{1}{|t|\sqrt{4t^2+1}}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>g(x)=\tan ^{-1} (2x)</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>g^{\prime }(x) = \frac{2}{1+4x^2}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(\theta)=\cos ^{-1} (t^5)</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>f\,^{\prime }(t) = \frac{-5t^4}{\sqrt{1-t^10}}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x) =x\sin ^{-1}x</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>f\,^{\prime }(x) = \frac{x}{\sqrt{1-x^2}}+\sin ^{-1}(x)</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>g(t) = \sin t\cos ^{-1}t</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>g^{\prime }(t) = \cos ^{-1}(t) \cos (t)-\frac{\sin (t)}{\sqrt{1-t^2}}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(t) = \ln te^t</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>f\,^{\prime }(t) = \frac{e^t}{t} + \ln te^t</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle h(x) = \frac{\sin ^{-1}x}{\cos ^{-1}x}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>h^{\prime }(x)=\frac{\sin ^{-1}(x)+\cos ^{-1}(x)}{\sqrt{1-x^2} \cos ^{-1}(x)^2}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>g(x) = \tan ^{-1}(\sqrt{x})</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>g^{\prime }(x) = \frac{1}{\sqrt{x} (2 x+2)}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x) =\sec ^{-1}(1/x)</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>f\,^{\prime }(x) = -\frac{1}{\sqrt{1-x^2}}</m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 25-27, compute the derivative of the given function in two ways:
+        </p>
+      <ol>
+        <li>
+          <p>
+            By simplifying first, then taking the derivative, and
+            </p>
+        </li>
+        <li>
+          <p>
+            by using the Chain Rule first then simplifying.
+            </p>
+        </li>
+      </ol>
+      <p>
+        Verify that the two answers are the same.
+        </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x) =\sin (\sin ^{-1}x)</m>
+        </p>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              <m>f(x) = x</m>, so <m>f\,^{\prime }(x) = 1</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>f\,^{\prime }(x) = \cos (\sin ^{-1}x)\frac{1}{\sqrt{1-x^2}} = 1</m>.</p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <m>g(x)=\sin(\cos^{-1}(x))</m>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              <m>f(x) = \sqrt{1-x^2}</m>, so <m>f\,^{\prime }(x) = \frac{-x}{\sqrt{1-x^2}}</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>f\,^{\prime }(x) = \cos (\cos ^{-1}x)(\frac{1}{\sqrt{1-x^2}}) =\frac{-x}{\sqrt{1-x^2}}</m>
+            </p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x) =\tan ^{-1}(\tan x)</m>
+        </p>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              <m>f(x) = x</m>, so <m>f\,^{\prime }(x) = 1</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>f\,^{\prime }(x) = \frac{1}{1+\tan ^2x}\sec ^2 x = 1</m>
+            </p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 28–29, find the equation of the line tangent to the graph of <m>f</m> at the indicated <m>x</m> value.
+      </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x) =\sin ^{-1}x</m>    at   <m>x=\frac{\sqrt{2}}{2}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>y = \sqrt{2}(x-\sqrt{2}/2)+\pi /4</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x) =\cos ^{-1}(2x)</m>    at   <m>x=\frac{\sqrt{3}}{4}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>y = -4(x-\sqrt{3}/4)+\pi /6</m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 30–33, find the requested derivative.
+        </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x) = x\sin x</m>; find <m>f\,^{\prime \prime }(x)</m>.</p>
+      </statement>
+      <answer>
+        <p>
+          <m>f\,^{\prime \prime }(x) = 2\cos x - x\sin x</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x) = x\sin x</m>; find <m>f\,^{(4)}(x)</m>.</p>
+      </statement>
+      <answer>
+        <p>
+          <m>f^{(4)}(x) = -4\cos x+ x\sin x</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x) = \csc x</m>; find <m>f\,^{\prime \prime }(x)</m>.</p>
+      </statement>
+      <answer>
+        <p>
+          <m>f\,^{\prime \prime }(x) = \cot ^2x\csc x + \csc ^3 x</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x) = (x^3-5x+2)(x^2+x-7)</m>; find <m>f\,^{(8)}(x)</m>.</p>
+      </statement>
+      <answer>
+        <p>
+          <m>f^{(8)} = 0</m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 34–37, use the graph of <m>f(x)</m> to sketch <m>f\,^{\prime }(x)</m>.
+      </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <minipage width="427.0pt">
+            <p>
+              <sidebyside width="30%"><image source="fig02_04_ex_42" /></sidebyside></p>
+          </minipage>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <sidebyside width="30%"><image source="fig02_04_ex_42a" /></sidebyside></p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <minipage width="427.0pt">
+            <p>
+              <sidebyside width="30%"><image source="fig02_04_ex_43" /></sidebyside></p>
+          </minipage>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <sidebyside width="30%"><image source="fig02_04_ex_43a" /></sidebyside></p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <minipage width="427.0pt">
+            <p>
+              <sidebyside width="30%"><image source="fig02_04_ex_44" /></sidebyside></p>
+          </minipage>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <sidebyside width="30%"><image source="fig02_04_ex_44a" /></sidebyside></p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <minipage width="427.0pt">
+            <p>
+              <sidebyside width="30%"><image source="fig02_04_ex_45" /></sidebyside></p>
+          </minipage>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <sidebyside width="30%"><image source="fig02_04_ex_45a" /></sidebyside></p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercise>
+    <statement>
+      <p>
+        Find <m>\frac{dy}{dx}</m>, where <m>x^2y-y^2x = 1</m>.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        <m>\frac{dy}{dx} = \frac{y (y-2 x)}{x (x-2 y)}</m>
+      </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        Find the equation of the line tangent to the graph of <m>x^2+y^2+xy=7</m> at the point <m>(1,2)</m>.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        <m>y=-4/5(x-1)+2</m>
+      </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        Let <m>f(x) = x^3+x</m>.
+      </p>
+      <p>
+        Evaluate <m>\displaystyle \lim _{s\rightarrow 0} \frac{f(x+s)-f(x)}{s}</m>.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        <m>3x^2+1</m>
+      </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        Approximate the value of <m>(3.01)^4</m> using the tangent line to <m>f(x) = x^4</m> at <m>x=3</m>.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        The tangent line to <m>f(x) = x^4</m> at <m>x=3</m> is <m>y=108(x-3)+81</m>; thus <m>(3.01)^4 \approx y(3.01) = 108(.01)+81 = 82.08</m>.
+      </p>
+    </answer>
+  </exercise>
+</exercises>

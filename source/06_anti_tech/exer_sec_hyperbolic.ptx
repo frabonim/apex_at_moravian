@@ -1,0 +1,685 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<exercises>
+  <exercise>
+    <statement>
+      <p>
+        In <xref ref="idea_hyperbolic_inverse_integrals" />, the equation <m>\displaystyle \int \tanh x\ dx = \ln (\cosh x)+C</m> is given. Why is “<m>\ln |\cosh x|</m>” not used – i.e., why are absolute values not necessary?
+      </p>
+    </statement>
+    <answer>
+      <p>
+        Because <m>\cosh x</m> is always positive.
+      </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        The hyperbolic functions are used to define points on the right hand portion of the hyperbola <m>x^2-y^2=1</m>, as shown in <xref ref="fig_hfcircle" />. How can we use the hyperbolic functions to define points on the left hand portion of the hyperbola?
+      </p>
+    </statement>
+    <answer>
+      <p>
+        The points on the left hand side can be defined as <m>(-\cosh x, \sinh x)</m>.
+      </p>
+    </answer>
+  </exercise>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 3–10, verify the given identity using <xref ref="def_hyperbolic_functions" />, as done in <xref ref="ex_hf1" />.
+      </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>\coth ^2 x-\operatorname{csch}^2x=1</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <hfill />
+          <m>\begin{aligned} \coth ^2x-\operatorname{csch}^2x &amp;= \left(\frac{e^x+e^{-x}}{e^x-e^{-x}}\right)^2 - \left(\frac{2}{e^x-e^{-x}}\right)^2 \\ &amp;= \frac{(e^{2x} + 2 + e^{-2x}) - (4)}{e^{2x} - 2 + e^{-2x}}\\ &amp;= \frac{e^{2x} - 2 + e^{-2x}}{e^{2x} - 2 + e^{-2x}}\\ &amp;= 1 \end{aligned}</m>
+          <hfill />
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\cosh 2x = \cosh ^2x+\sinh ^2x</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <hfill />
+          <m>\begin{aligned} \cosh ^2x+\sinh ^2x &amp;= \left(\frac{e^x+e^{-x}}{2}\right)^2 + \left(\frac{e^x-e^{-x}}{2}\right)^2 \\ &amp;= \frac{e^{2x} + 2 + e^{-2x}}{4} + \frac{e^{2x} - 2 + e^{-2x}}{4}\\ &amp;= \frac{2e^{2x} + 2e^{-2x}}{4}\\ &amp;= \frac{e^{2x} + e^{-2x}}{2} \\ &amp;= \cosh 2x. \end{aligned}</m>
+          <hfill />
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \cosh ^2x = \frac{\cosh 2x+1}{2}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <hfill />
+          <m>\begin{aligned} \cosh ^2x &amp;= \left(\frac{e^x+e^{-x}}{2}\right)^2 \\ &amp;= \frac{e^{2x} + 2 + e^{-2x}}{4} \\ &amp;= \frac{1}{2}\frac{(e^{2x} + e^{-2x})+2}{2}\\ &amp;= \frac{1}{2}\left(\frac{e^{2x} + e^{-2x}}{2}+1\right)\\ &amp;= \frac{\cosh 2x+1}{2}. \end{aligned}</m>
+          <hfill />
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \sinh ^2x = \frac{\cosh 2x-1}{2}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <hfill />
+          <m>\begin{aligned} \sinh ^2x &amp;= \left(\frac{e^x-e^{-x}}{2}\right)^2 \\ &amp;= \frac{e^{2x} - 2 + e^{-2x}}{4} \\ &amp;= \frac{1}{2}\frac{(e^{2x} + e^{-2x})-2}{2}\\ &amp;= \frac{1}{2}\left(\frac{e^{2x} + e^{-2x}}{2}-1\right)\\ &amp;= \frac{\cosh 2x-1}{2}. \end{aligned}</m>
+          <hfill />
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \frac{d}{dx}\left[\operatorname{sech}x\right] = -\operatorname{sech}x\tanh x</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <hfill />
+          <m>\begin{aligned} \frac{d}{dx}\left[\operatorname{sech}x\right] &amp;= \frac{d}{dx}\left[\frac{2}{e^x+e^{-x}}\right] \\ &amp;= \frac{-2(e^x-e^{-x})}{(e^x+e^{-x})^2} \\ &amp;= -\frac{2(e^x-e^{-x})}{(e^x+e^{-x})(e^x+e^{-x})} \\ &amp;= -\frac{2}{e^x+e^{-x}}\cdot \frac{e^x-e^{-x}}{e^x+e^{-x}}\\ &amp;= -\operatorname{sech}x\tanh x \end{aligned}</m>
+          <hfill />
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \frac{d}{dx}\left[\coth x\right] = -\operatorname{csch}^2x</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <hfill />
+          <m>\begin{aligned} \frac{d}{dx}\left[\coth x\right] &amp;= \frac{d}{dx}\left[\frac{e^x+e^{-x}}{e^x-e^{-x}}\right] \\ &amp;= \frac{(e^x-e^{-x})(e^x-e^{-x})-(e^x+e^{-x})(e^x+e^{-x})}{(e^x-e^{-x})^2}\\ &amp;= \frac{e^{2x}+e^{-2x} - 2 - (e^{2x}+e^{-2x}+2)}{(e^x-e^{-x})^2}\\ &amp;= -\frac{4}{(e^x-e^{-x})^2}\\ &amp;=-\operatorname{csch}^2x \end{aligned}</m>
+          <hfill />
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \tanh x\ dx = \ln (\cosh x) + C</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\displaystyle \int \tanh x\ dx = \int \frac{\sinh x}{\cosh x}\ dx</m>Let <m>u = \cosh x</m>; <m>du = (\sinh x) dx</m>
+          <hfill />
+          <m>\begin{aligned} &amp;= \int \frac{1}{u}\ du \\ &amp;= \ln |u| + C \\ &amp;= \ln (\cosh x) + C. \end{aligned}</m>
+          <hfill />
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \coth x\ dx = \ln |\sinh x| + C</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <hfill />
+          <m>\begin{aligned} \int \coth x\ dx &amp;= \int \frac{\cosh x}{\sinh x}\ dx\\ \text{Let $u = \sinh x$; $du = (\cosh x) dx$} \\ &amp;= \int \frac{1}{u}\ du \\ &amp;= \ln |u| + C \\ &amp;= \ln |\sinh x| + C. \end{aligned}</m>
+          <hfill />
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 11–22, find the derivative of the given function.
+        </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x) = \sinh 2x</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>2\cosh 2x</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x) = \cosh ^2x</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          Taking the derivative of <m>(\cosh x)^2</m> directly, one gets <m>2\cosh x\sinh x</m>; using the identity <m>\cosh ^2x=\frac{1}{2}(\cosh 2x+1)</m> first, one gets <m>\sinh 2x</m>; by <xref ref="idea_hyperbolic_identities"/>, these are equal.
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x) = \tanh (x^2)</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>2x\operatorname{sech}^2(x^2)</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x) = \ln (\sinh x)</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\coth x</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x) = \sinh x\cosh x</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\sinh ^2x+\cosh ^2x</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x) = x\sinh x-\cosh x</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>x\cosh x</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x) = \operatorname{sech}^{-1} (x^2)</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\frac{-2x}{(x^2)\sqrt{1-x^4}}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x) = \sinh ^{-1} (3x)</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\frac{3}{\sqrt{9x^2+1}}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x) = \cosh ^{-1} (2x^2)</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\frac{4x}{\sqrt{4x^4-1}}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x) = \tanh ^{-1} (x+5)</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\frac{1}{1-(x+5)^2}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x) = \tanh ^{-1} (\cos x)</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>-\csc x</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x) = \cosh ^{-1} (\sec x)</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\sec x</m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 23–28, find the equation of the line tangent to the function at the given <m>x</m>-value.
+      </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x) = \sinh x</m> at <m>x=0</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>y=x</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x) = \cosh x</m> at <m>x=\ln 2</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>y=\frac{3}{4}(x-\ln 2)+\frac{5}{4}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x) = \tanh x</m> at <m>x=-\ln 3</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>y=\frac{9}{25}(x+\ln 3)-\frac{4}{5}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x) = \operatorname{sech}^2 x</m> at <m>x=\ln 3</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>y=-\frac{72}{125}(x-\ln 3)+\frac{9}{25}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x) = \sinh ^{-1} x</m> at <m>x=0</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>y=x</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x) = \cosh ^{-1} x</m> at <m>x=\sqrt{2}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>y=(x-\sqrt{2})+\cosh ^{-1}(\sqrt{2}) \approx (x-1.414)+0.881</m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 29–44, evaluate the given indefinite integral.
+        </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \tanh (2x)\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>1/2\ln (\cosh (2x))+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \cosh (3x-7)\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>1/3\sinh (3x-7)+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \sinh x\cosh x\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>1/2\sinh ^2x+C</m> or <m>1/2\cosh ^2x+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int x\cosh x\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>x \sinh (x)-\cosh (x)+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int x\sinh x\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>x \cosh (x)-\sinh (x)+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \frac{1}{\sqrt{x^2+1}}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\sinh ^{-1} x +C=\ln \big (x+\sqrt{x^2+1}\big )+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \frac{1}{\sqrt{x^2-9}}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\cosh ^{-1} x/3 +C=\ln \big (x+\sqrt{x^2-9}\big )+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \frac{1}{9-x^2}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\left\lbrace \begin{array}{ccc} \frac{1}{3}\tanh ^{-1}\left(\frac{x}{3}\right)+C &amp; &amp; x^2\lt 9 \\ \\ \frac{1}{3}\coth ^{-1}\left(\frac{x}{3}\right)+C &amp; &amp; 9\lt x^2 \end{array}\right. = \frac{1}{2}\ln |x+1| - \frac{1}{2}\ln |x-1|+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \frac{2x}{\sqrt{x^4-4}}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\cosh ^{-1} (x^2/2) + C = \ln (x^2+\sqrt{x^4-4})+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \frac{\sqrt{x}}{\sqrt{1+x^3}}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>2/3\sinh ^{-1} x^{3/2} + C = 2/3\ln (x^{3/2}+\sqrt{x^3+1})+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \frac{1}{x^4-16}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\frac{1}{16}\tan ^{-1}(x/2)+\frac{1}{32}\ln |x-2|+\frac{1}{32}\ln |x+2|+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \frac{1}{x^2+x}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\ln x- \ln |x+1|+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \frac{e^x}{e^{2x}+1}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\tan ^{-1}(e^x)+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \sinh ^{-1}x \ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>x\sinh ^{-1}x-\sqrt{x^2+1}+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \tanh ^{-1}x \ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>x\tanh ^{-1}x+1/2\ln |x^2-1|+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \operatorname{sech}x \ dx</m>    (Hint: multiply by <m>\frac{\cosh x}{\cosh x}</m>; set <m>u = \sinh x</m>.)</p>
+      </statement>
+      <answer>
+        <p>
+          <m>\tan ^{-1}(\sinh x)+C</m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 45–48, evaluate the given definite integral.
+        </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{-1}^1 \sinh x \ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>0</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{-\ln 2}^{\ln 2} \cosh x \ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>3/2</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{0}^{1} \tanh ^{-1} x \ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>2</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _0^2 \frac{1}{\sqrt{x^2+1}}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\sinh ^{-1} 2 =\ln \big (2+\sqrt{5}\big )\approx 1.444</m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 49–52, find <m>F\hspace{0.75pt}^{\prime }(x)</m>.
+      </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle F(x) = \int _2^{x^3+x} \frac{1}{t}\ dt</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>F^{\prime }(x) = (3x^2+1)\frac{1}{x^3+x}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle F(x) = \int _{x^3}^{0} t^3\ dt</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>F^{\prime }(x) = -3x^{11}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle F(x) = \int _{x}^{x^2} (t+2)\ dt</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>F^{\prime }(x) = 2x(x^2+2)-(x+2)</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle F(x) = \int _{\ln x}^{e^x} \sin t\ dt</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>F^{\prime }(x) = e^x\sin (e^x) - 1/x\sin (\ln x)</m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+</exercises>

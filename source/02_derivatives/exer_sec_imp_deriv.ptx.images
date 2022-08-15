@@ -1,0 +1,950 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<exercises>
+  <exercise>
+    <statement>
+      <p>
+        In your own words, explain the difference between implicit functions and explicit functions.
+        </p>
+    </statement>
+    <answer>
+      <p>
+        Answers will vary.
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        Implicit differentiation is based on what other differentiation rule?
+        </p>
+    </statement>
+    <answer>
+      <p>
+        The Chain Rule.
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        T/F: Implicit differentiation can be used to find the derivative of <m>y=\sqrt{x}</m>.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        T
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        T/F: Implicit differentiation can be used to find the derivative of <m>y=x^{3/4}</m>.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        T
+        </p>
+    </answer>
+  </exercise>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 5–12, compute the derivative of the given function.
+        </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x) = \sqrt{x} + \frac{1}{\sqrt{x}}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>f\,^{\prime }(x) = \frac{1}{2}x^{-1/2} - \frac{1}{2}x^{-3/2} = \frac{1}{2\sqrt{x}}-\frac{1}{2\sqrt{x^3}}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x) = \sqrt[3]{x} + x^{2/3}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>f\,^{\prime }(x) = \frac{1}{3}x^{-2/3}+\frac{2}{3}x^{-1/3} = \frac{1}{3\sqrt[3]{x^2}}+\frac{2}{3\sqrt[3]{x}}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(t) = \sqrt{1-t^2}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>f\,^{\prime }(t) = \frac{-t}{\sqrt{1-t^2}}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>g(t) = \sqrt{t}\sin t</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>g^{\prime }(t) = \sqrt{t}\cos t + \frac{\sin t}{2\sqrt{t}}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>h(x) = x^{1.5}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>h^{\prime }(x) = 1.5x^{0.5} = 1.5\sqrt{x}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x) = x^\pi +x^{1.9} + \pi ^{1.9}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>f\,^{\prime }(x) = \pi x^{\pi -1}+1.9x^{0.9}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle g(x) = \frac{x+7}{\sqrt{x}}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>g^{\prime }(x) = \frac{\sqrt{x}(1)-(x+7)(1/2x^{-1/2})}{x} = \frac{1}{2\sqrt{x}}-\frac{7}{2\sqrt{x^3}}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m> f(t) = \sqrt[5]{t}(\sec t + e^t)</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>f\,^{\prime }(t) = \frac{1}{5}x^{-4/5}(\sec t+ e^t) + \sqrt[5]{t}(\sec t\tan t + e^t)</m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 13–24, find <m>\displaystyle \frac{dy}{dx}</m> using implicit differentiation.
+      </p>
+    </introduction>
+    <exercise xml:id="exer_find_imp1">
+      <statement>
+        <p>
+          <m>x^4+y^2+y=7</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\frac{dy}{dx} = \frac{-4x^3}{2y+1}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>x^{2/5}+y^{2/5}=1</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\frac{dy}{dx}=-\frac{y^{3/5}}{x^{3/5}}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\cos (x)+\sin (y)=1</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\frac{dy}{dx}=\sin (x) \sec (y)</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise xml:id="exer_find_imp2">
+      <statement>
+        <p>
+          <m>\displaystyle \frac{y}{x}=10</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\frac{dy}{dx}=\frac{y}{x}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>x^2e^2+2^y=5</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\frac{dy}{dx}=-\frac{e^x x (x+2) 2^{-y}}{\ln |2|}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>x^2\tan y=50</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\frac{dy}{dx}=-\frac{2 \sin (y) \cos (y)}{x}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>(3 x^2+2 y^3)^4=2</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\frac{dy}{dx}=-\frac{x}{y^2}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>(y^2+2y-x)^2=200</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\frac{dy}{dx}=\frac{1}{2y+2}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \frac{x^2+y}{x+y^2}=17</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          If one takes the derivative of the equation, as shown, using the Quotient Rule, one finds <m>\frac{dy}{dx}=\frac{x^2+2 x y^2-y}{2 x^2 y-x+y^2}</m>.
+        </p>
+        <p>
+          If one first clears the denominator and writes <m>x^2+y=17(x+y^2)</m> then takes the derivative of both sides, one finds <m>\frac{dy}{dx}= \frac{2x-17}{34y-1}</m>.
+        </p>
+        <p>
+          These expressions, by themselves, are not equal. However, for values of <m>x</m> and <m>y</m> that satisfy the original equation (i.e, for <m>x</m> and <m>y</m> such that <m>\frac{x^2+y}{x+y^2}=17</m>), these expressions are equal.
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \frac{\sin (x)+y}{\cos (y)+x}=1</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          If one takes the derivative of the equation, as shown, using the Quotient Rule, one finds <m>\frac{dy}{dx} = \frac{-\cos (x) (x+\cos (y))+\sin (x)+y}{\sin (y) (\sin (x)+y)+x+\cos (y)}</m>.
+        </p>
+        <p>
+          If one first clears the denominator and writes <m>\sin (x)+y = \cos (y)+x</m> then takes the derivative of both sides, one finds <m>\frac{dy}{dx} = \frac{1-\cos (x)}{1+\sin (y)}</m>.
+        </p>
+        <p>
+          These expressions, by themselves, are not equal. However, for values of <m>x</m> and <m>y</m> that satisfy the original equation (i.e, for <m>x</m> and <m>y</m> such that <m>\frac{\sin (x)+y)}{\cos (y)+x)}=1</m>), these expressions are equal.
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\ln (x^2+y^2) = e</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\frac{dy}{dx}=-\frac{x}{y}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\ln (x^2+xy+y^2) = 1</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\frac{dy}{dx}=-\frac{2x+y}{2y+x}</m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercise>
+    <statement>
+      <p>
+        Show that <m>\displaystyle \frac{dy}{dx}</m> is the same for each of the following implicitly defined functions.
+      </p>
+      <ol>
+        <li>
+          <p>
+            <m>xy=1</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>x^2y^2=1</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>\sin (xy) = 1</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>\ln (xy) =1</m>
+          </p>
+        </li>
+      </ol>
+    </statement>
+    <answer>
+      <p>
+        In each, <m>\frac{dy}{dx} = -\frac{y}{x}</m>.
+      </p>
+    </answer>
+  </exercise>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 26–31, find the equation of the tangent line to the graph of the implicitly defined function at the indicated points. As a visual aid, each function is graphed.
+        </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>x^{2/5}+y^{2/5} = 1</m>
+        </p>
+        <ol>
+          <li>
+            <p>
+              At <m>(1,0)</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              At <m>(0.1,0.281)</m> (which does not <em>exactly</em> lie on the curve, but is very close).
+            </p>
+          </li>
+        </ol>
+        <p>
+          <sidebyside width="30%"><image source="images/fig02_06_ex_23" /></sidebyside></p>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              <m>y=0</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>y = -1.859(x-0.1)+0.281</m>
+            </p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>x^{4}+y^{4} = 1</m>
+        </p>
+        <ol>
+          <li>
+            <p>
+              At <m>(1,0)</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              At <m>(\sqrt{0.6},\sqrt{0.8})</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              At <m>(0,1)</m>.
+            </p>
+          </li>
+        </ol>
+        <p>
+          <sidebyside width="30%"><image source="images/fig02_06_ex_24" /></sidebyside></p>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              <m>x=1</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>y = -\frac{3\sqrt{3}}{8}(x-\sqrt{.6})+\sqrt{.8} \approx -0.65(x-0.775)+0.894</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>y=1</m>
+            </p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>(x^2+y^2-4)^3 = 108y^2</m>
+        </p>
+        <ol>
+          <li>
+            <p>
+              At <m>(0,4)</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              At <m>(2,-\sqrt[4]{108})</m>.
+            </p>
+          </li>
+        </ol>
+        <p>
+          <sidebyside width="30%"><image source="images/fig02_06_ex_25" /></sidebyside></p>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              <m>y=4</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>y = 0.93(x-2)-\sqrt[4]{108}</m>
+            </p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>(x^2+y^2+x)^2 = x^2+y^2</m>
+        </p>
+        <ol>
+          <li>
+            <p>
+              At <m>(0,1)</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              At <m>\displaystyle \left(-\frac{3}{4}, \frac{3 \sqrt{3}}{4}\right)</m>.
+            </p>
+          </li>
+        </ol>
+        <p>
+          <sidebyside width="30%"><image source="images/fig02_06_ex_26" /></sidebyside></p>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              <m>y=-1/3x+1</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>y = 3\sqrt{3}/4</m>
+            </p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>(x-2)^2+(y-3)^2=9</m>
+        </p>
+        <ol>
+          <li>
+            <p>
+              At <m>\displaystyle \left(\frac{7}{2},\frac{6+3\sqrt{3}}{2}\right)</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              At <m>\displaystyle \left(\frac{4+3\sqrt{3}}{2}, \frac{3}{2}\right)</m>.
+            </p>
+          </li>
+        </ol>
+        <p>
+          <sidebyside width="30%"><image source="images/fig02_06_ex_27" /></sidebyside></p>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              <m>y=-\frac{1}{\sqrt{3}}(x-\frac{7}{2})+\frac{6+3\sqrt{3}}{2}</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>y = \sqrt{3}(x-\frac{4+3\sqrt{3}}{2})+\frac{3}{2}</m>
+            </p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>x^2+y^3+2xy=0</m>
+        </p>
+        <ol>
+          <li>
+            <p>
+              At <m>\displaystyle \left(-1,1\right)</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              At <m>\displaystyle \left(-1,\frac{1}{2}(-1+\sqrt{5})\right)</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              At <m>\displaystyle \left(-1,\frac{1}{2}(-1-\sqrt{5})\right)</m>.
+            </p>
+          </li>
+        </ol>
+        <p>
+          <sidebyside width="30%"><image source="images/fig02_06_ex_38" /></sidebyside></p>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              <m>y=1</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>y =-\frac{2}{\sqrt{5}}(x+1)+\frac{1}{2}(-1+\sqrt{5})</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>y =\frac{2}{\sqrt{5}}(x+1)+\frac{1}{2}(-1-\sqrt{5})</m>
+            </p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 32–35, an implicitly defined function is given. Find <m>\displaystyle \frac{d^2y}{dx^2}</m>. Note: these are the same problems used in Exercises <xref text="local" ref="exer_find_imp1" /> through <xref text="local" ref="exer_find_imp2" />.
+      </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>x^4+y^2+y=7</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\frac{d^2y}{dx^2} = \frac{(2y+1)(-12x^2) + 4x^3\left(2\frac{-4x^3}{2y+1}\right)}{(2y+1)^2}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>x^{2/5}+y^{2/5}=1</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\frac{d^2y}{dx^2} = \frac{3}{5}\frac{y^{3/5}}{x^{8/5}} +\frac{3}{5}\frac{1}{yx^{6/5}}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\cos x+\sin y=1</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\frac{d^2y}{dx^2} = \frac{\cos x\cos y+\sin ^2x\tan y}{\cos ^2y}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \frac{x}{y}=10</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\frac{d^2y}{dx^2} = 0</m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 36–41, use logarithmic differentiation to find <m>\displaystyle \frac{dy}{dx}</m>, then find the equation of the tangent line at the indicated <m>x</m>–value.
+      </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle y=(1+x)^{1/x}</m>,   <m>x=1</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>y^{\prime }= (1+x)^{1/x}\big (\frac{1}{x(x+1)}-\frac{\ln (1+x)}{x^2}\big )</m>
+        </p>
+        <p>
+          Tangent line: <m>y = (1-2\ln 2)(x-1)+ 2</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle y=(2x)^{x^2}</m>,   <m>x=1</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>y^{\prime }= (2x)^{x^2}\big (2x\ln (2x)+x\big )</m>
+        </p>
+        <p>
+          Tangent line: <m>y = (2+4\ln 2)(x-1)+ 2</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle y=\frac{x^{x}}{x+1}</m>,   <m>x=1</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>y^{\prime }= \frac{x^x}{x+1}\big (\ln x+1-\frac{1}{x+1}\big )</m>
+        </p>
+        <p>
+          Tangent line: <m>y = (1/4)(x-1)+ 1/2</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle y=x^{\sin (x)+2}</m>,   <m>x=\pi /2</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>y^{\prime }= x^{\sin (x)+2}\big (\cos x\ln x+\frac{\sin x+2}{x}\big )</m>
+        </p>
+        <p>
+          Tangent line: <m>y = (3\pi ^2/4)(x-\pi /2)+(\pi /2)^3</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle y=\frac{x+1}{x+2}</m>,   <m>x=1</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>y^{\prime }= \frac{x+1}{x+2}\big (\frac{1}{x+1}-\frac{1}{x+2}\big )</m>
+        </p>
+        <p>
+          Tangent line: <m>y = 1/9(x-1)+2/3</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle y=\frac{(x+1)(x+2)}{(x+3)(x+4)}</m>,   <m>x=0</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>y^{\prime }= \frac{(x+1)(x+2)}{(x+3)(x+4)}\big (\frac{1}{x+1}+\frac{1}{x+2}-\frac{1}{x+3}-\frac{1}{x+4}\big )</m>
+        </p>
+        <p>
+          Tangent line: <m>y = 11/72x+1/6</m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercise>
+    <statement>
+      <p>
+        Compute <m>\displaystyle \frac{d}{dx}\big (\ln (kx)\big ) </m> two ways:
+      </p>
+      <ol>
+        <li>
+          <p>
+            Using the Chain Rule, and
+            </p>
+        </li>
+        <li>
+          <p>
+            by first using the logarithm rule <m>\ln (ab) = \ln a + \ln b</m>, then taking the derivative.
+          </p>
+        </li>
+      </ol>
+    </statement>
+    <answer>
+      <p>
+        In both cases the derivative is the same: <m>1/x</m>.
+      </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        Compute <m>\displaystyle \frac{d}{dx}\big (\ln (x^k)\big ) </m> two ways:
+      </p>
+      <ol>
+        <li>
+          <p>
+            Using the Chain Rule, and
+            </p>
+        </li>
+        <li>
+          <p>
+            by first using the logarithm rule <m>\ln (a^p) = p\ln a</m>, then taking the derivative.
+          </p>
+        </li>
+      </ol>
+    </statement>
+    <answer>
+      <p>
+        In both cases the derivative is the same: <m>k/x</m>.
+      </p>
+    </answer>
+  </exercise>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 44–49, find the equations of the tangent and normal lines to the graph of the function at the given point.
+        </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x)=x^3-x</m> at <m>x=1</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          Tangent line: <m>y = 2(x-1)</m>
+        </p>
+        <p>
+          Normal line: <m>y=-1/2(x-1)</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(t)=e^t+3</m> at <m>t=0</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          Tangent line: <m>y = t+4</m>
+        </p>
+        <p>
+          Normal line: <m>y=-t+4</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>g(x)=\ln x</m> at <m>x=1</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          Tangent line: <m>y = x-1</m>
+        </p>
+        <p>
+          Normal line: <m>y=-x+1</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x)=4\sin x</m> at <m>x=\pi /2</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          Tangent line: <m>y = 4</m>
+        </p>
+        <p>
+          Normal line: <m>x=\pi /2</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x)=-2\cos x</m> at <m>x=\pi /4</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          Tangent line: <m>y = \sqrt{2}(x-\frac{\pi }{4})-\sqrt{2}</m>
+        </p>
+        <p>
+          Normal line: <m>y = \frac{-1}{\sqrt{2}}(x-\frac{\pi }{4})-\sqrt{2}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x)=2x+3</m> at <m>x=5</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          Tangent line: <m>y = 2x+3</m>
+        </p>
+        <p>
+          Normal line: <m>y=-1/2(x-5)+13</m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercise>
+    <statement>
+      <p>
+        The “wind chill factor” is a measurement of how cold it “feels” during cold, windy weather. Let <m>W(w)</m> be the wind chill factor, in degrees Fahrenheit, when it is <m>25^\circ </m>F outside with a wind of <m>w</m> mph.
+      </p>
+      <ol>
+        <li>
+          <p>
+            What are the units of <m>W\hspace{0.75pt}^{\prime }(w)</m>?
+          </p>
+        </li>
+        <li>
+          <p>
+            What would you expect the sign of <m>W\hspace{0.75pt}^{\prime }(10)</m> to be?
+          </p>
+        </li>
+      </ol>
+    </statement>
+    <answer>
+      <ol>
+        <li>
+          <p>
+            <m>^\circ </m> F/mph</p>
+        </li>
+        <li>
+          <p>
+            The sign would be negative; when the wind is blowing at 10 mph, any increase in wind speed will make it feel colder, i.e., a lower number on the Fahrenheit scale.
+            </p>
+        </li>
+      </ol>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        Find the derivatives of the following functions.
+        </p>
+      <ol>
+        <li>
+          <p>
+            <m>f(x) = x^2e^x\cot x</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>g(x) = 2^x3^x4^x</m>
+          </p>
+        </li>
+      </ol>
+    </statement>
+    <answer>
+      <ol>
+        <li>
+          <p>
+            <m>2xe^x\cot x + x^2e^x\cot x - x^2e^x\csc ^2 x</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>\ln (48)48^x</m>
+          </p>
+        </li>
+      </ol>
+    </answer>
+  </exercise>
+</exercises>

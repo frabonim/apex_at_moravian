@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="chapter_anti_tech">
+  <title>Techniques of Antidifferentiation</title>
+  <introduction>
+    <p>The previous chapter introduced the antiderivative and connected it to signed areas under a curve through the Fundamental Theorem of Calculus. The next chapter explores more applications of definite integrals than just area. As evaluating definite integrals will become important, we will want to find antiderivatives of a variety of functions.</p>
+
+    <p>This chapter is devoted to exploring techniques of antidifferentiation. While not every function has an antiderivative in terms of elementary functions (a concept introduced in the section on Numerical Integration), we can still find antiderivatives of a wide variety of functions.</p>
+  </introduction>
+
+  <xi:include  href="06_anti_tech/sec_substitution.ptx" />
+  <xi:include  href="06_anti_tech/sec_IBP.ptx" />
+  <xi:include  href="06_anti_tech/sec_trigint.ptx" />
+  <xi:include  href="06_anti_tech/sec_trig_sub.ptx" />
+  <xi:include  href="06_anti_tech/sec_partial_fraction.ptx" />
+  <xi:include  href="06_anti_tech/sec_hyperbolic.ptx" />
+  <xi:include  href="06_anti_tech/sec_improper_integration.ptx" />
+  <xi:include  href="06_anti_tech/sec_intsummary.ptx" />
+
+
+  <conclusion>
+     <p>
+      This chapter has explored many integration techniques. We learned Substitution, which <q>undoes</q> the Chain Rule of differentiation, as well as Integration by Parts, which <q>undoes</q> the Product Rule. We learned specialized techniques for handling trigonometric functions and introduced the hyperbolic functions, which are closely related to the trigonometric functions. All techniques effectively have this goal in common: rewrite the integrand in a new way so that the integration step is easier to see and implement.
+    </p>
+    <p>
+      As stated before, integration is, in general, hard. It is easy to write a function whose antiderivative is impossible to write in terms of elementary functions, and even when a function does have an antiderivative expressible by elementary functions, it may be really hard to discover what it is. The powerful computer algebra system <em>Mathematica</em><trademark /> has approximately 1,000 pages of code dedicated to integration.
+    </p>
+    <p>
+      Do not let this difficulty discourage you. There is great value in learning integration techniques, as they allow one to manipulate an integral in ways that can illuminate a concept for greater understanding. There is also great value in understanding the need for good numerical techniques: the Trapezoidal and Simpson's Rules are just the beginning of powerful techniques for approximating the value of integration.
+      </p>
+    <p>
+      The next chapter stresses the uses of integration. We generally do not find antiderivatives for antiderivative's sake, but rather because they provide the solution to some type of problem. The following chapter introduces us to a number of different problems whose solution is provided by integration.
+      </p>
+  </conclusion>
+
+</chapter>

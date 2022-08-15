@@ -1,0 +1,624 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<exercises>
+  <exercise>
+    <statement>
+      <p>
+        Use your own words to define a <em>sequence.</em>
+      </p>
+    </statement>
+    <answer>
+      <p>
+        Answers will vary.
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        The domain of a sequence is the <fillin/> numbers.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        natural
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        Use your own words to describe the <em>range</em> of a sequence.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        Answers will vary.
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        Describe what it means for a sequence to be <em>bounded</em>.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        Answers will vary.
+        </p>
+    </answer>
+  </exercise>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 5–8, give the first five terms of the given sequence.
+        </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lbrace a_n\rbrace  = \left\lbrace \frac{4^n}{(n+1)!}\right\rbrace </m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>2,\frac{8}{3},\frac{8}{3},\frac{32}{15},\frac{64}{45}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lbrace b_n\rbrace  = \left\lbrace \left(-\frac{3}{2}\right)^n\right\rbrace </m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>-\frac{3}{2},\frac{9}{4},-\frac{27}{8},\frac{81}{16}, -\frac{243}{32}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lbrace c_n\rbrace  = \left\lbrace -\frac{n^{n+1}}{n+2}\right\rbrace </m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>-\frac{1}{3},-2,-\frac{81}{5},-\frac{512}{3},-\frac{15625}{7}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lbrace d_n\rbrace  = \left\lbrace \frac{1}{\sqrt{5}}\left(\left(\frac{1+\sqrt{5}}{2}\right)^n-\left(\frac{1-\sqrt{5}}{2}\right)^n\right)\right\rbrace </m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>1, 1, 2, 3, 5</m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 9–12, determine the <m>n^\text{th}</m> term of the given sequence.
+      </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          4, 7, 10, 13, 16, <m>\ldots </m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>a_n = 3n+1</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle 3,\ -\frac{3}{2},\ \frac{3}{4},\ -\frac{3}{8},\ \ldots </m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>a_n = (-1)^{n+1}\frac{3}{2^{n-1}}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>10,\ 20,\ 40,\ 80,\ 160,\ \ldots </m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>a_n = 10\cdot 2^{n-1}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle 1, 1,\ \frac{1}{2},\ \frac{1}{6},\ \frac{1}{24},\ \frac{1}{120},\ \ldots </m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>a_n = 1/(n-1)!</m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 13–16, use the following information to determine the limit of the given sequences.
+        </p>
+      <ol>
+        <li>
+          <p>
+            <m>\displaystyle \lbrace a_n\rbrace  = \left\lbrace \frac{2^n-20}{2^n}\right\rbrace </m>;   <m>\displaystyle \lim _{n\rightarrow \infty } a_n = 1</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>\displaystyle \lbrace b_n\rbrace  = \left\lbrace \left(1+\frac{2}{n}\right)^n\right\rbrace </m>;   <m>\displaystyle \lim _{n\rightarrow \infty } b_n = e^2</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>\displaystyle \lbrace c_n\rbrace  = \left\lbrace \sin (3/n)\right\rbrace </m>;   <m>\displaystyle \lim _{n\rightarrow \infty } c_n = 0</m>
+          </p>
+        </li>
+      </ol>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lbrace d_n\rbrace  = \left\lbrace  \frac{2^n-20}{7\cdot 2^n} \right\rbrace </m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>1/7</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lbrace d_n\rbrace  = \left\lbrace  3b_n-a_n \right\rbrace </m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>3e^2-1</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lbrace d_n\rbrace  = \left\lbrace  \sin (3/n)\left(1+\frac{2}{n}\right)^n \right\rbrace </m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>0</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lbrace d_n\rbrace  = \left\lbrace  \left(1+\frac{2}{n}\right)^{2n} \right\rbrace </m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>e^4</m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 17–28, determine whether the sequence converges or diverges. If convergent, give the limit of the sequence.
+        </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lbrace a_n\rbrace  = \left\lbrace (-1)^n\frac{n}{n+1}\right\rbrace </m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          diverges
+          </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lbrace a_n\rbrace  = \left\lbrace \frac{4n^2-n+5}{3n^2+1}\right\rbrace </m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          converges to <m>4/3</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lbrace a_n\rbrace  = \left\lbrace \frac{4^n}{5^n}\right\rbrace </m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          converges to <m>0</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lbrace a_n\rbrace  = \left\lbrace \frac{n-1}{n}-\frac{n}{n-1}\right\rbrace </m>, <m>n\ge 2</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          converges to <m>0</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lbrace a_n\rbrace  = \left\lbrace \ln (n)\right\rbrace </m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          diverges
+          </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lbrace a_n\rbrace  = \left\lbrace \frac{3n}{\sqrt{n^2+1}}\right\rbrace </m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          converges to 3
+          </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lbrace a_n\rbrace  = \left\lbrace \left(1+\frac{1}{n}\right)^n\right\rbrace </m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          converges to <m>e</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lbrace a_n\rbrace  = \left\lbrace 5-\frac{1}{n}\right\rbrace </m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          converges to 5
+          </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lbrace a_n\rbrace  = \left\lbrace \frac{(-1)^{n+1}}{n}\right\rbrace </m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          converges to 0
+          </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lbrace a_n\rbrace  = \left\lbrace \frac{1.1^n}{n}\right\rbrace </m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          diverges
+          </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lbrace a_n\rbrace  = \left\lbrace \frac{2n}{n+1}\right\rbrace </m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          converges to 2
+          </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lbrace a_n\rbrace  = \left\lbrace (-1)^n\frac{n^2}{2^n-1}\right\rbrace </m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          converges to 0
+          </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 29–34, determine whether the sequence is bounded, bounded above, bounded below, or none of the above.
+        </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lbrace a_n\rbrace  = \left\lbrace \sin n\right\rbrace </m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          bounded
+          </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lbrace a_n\rbrace  = \left\lbrace \tan n\right\rbrace </m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          neither bounded above or below
+          </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lbrace a_n\rbrace  = \left\lbrace (-1)^n\frac{3n-1}{n}\right\rbrace </m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          bounded
+          </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lbrace a_n\rbrace  = \left\lbrace \frac{3n^2-1}{n}\right\rbrace </m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          bounded below
+          </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lbrace a_n\rbrace  = \left\lbrace n\cos n\right\rbrace </m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          neither bounded above or below
+          </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lbrace a_n\rbrace  = \left\lbrace 2^n-n!\right\rbrace </m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          bounded above
+          </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 35–38, determine whether the sequence is monotonically increasing or decreasing. If it is not, determine if there is an <m>m</m> such that it is monotonic for all <m>n\ge m</m>.
+      </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lbrace a_n\rbrace  = \left\lbrace \frac{n}{n+2}\right\rbrace </m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          monotonically increasing
+          </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lbrace a_n\rbrace  = \left\lbrace \frac{n^2-6n+9}{n}\right\rbrace </m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          monotonically increasing for <m>n\ge 3</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lbrace a_n\rbrace  = \left\lbrace (-1)^n\frac{1}{n^3}\right\rbrace </m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          never monotonic
+          </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lbrace a_n\rbrace  = \left\lbrace \frac{n^2}{2^n}\right\rbrace </m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          monotonically decreasing for <m>n\ge 3</m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        Exercises 39–42 explore further the theory of sequences.
+        </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          Prove <xref ref="thm_abs_val_seq" />; that is, use the definition of the limit of a sequence to show that if <m>\displaystyle \lim _{n\rightarrow \infty } |a_n| = 0</m>, then <m>\displaystyle \lim _{n\rightarrow \infty } a_n = 0</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Let <m>\lbrace a_n\rbrace </m> be given such that <m>\displaystyle \lim _{n\rightarrow \infty } |a_n| = 0</m>. By the definition of the limit of a sequence, given any <m>\epsilon \gt0</m>, there is a <m>m</m> such that for all <m>n\gt m, \big |\ |a_n| - 0\big | \lt \epsilon </m>. Since <m>\big |\ |a_n|-0\big | = |a_n - 0|</m>, this directly implies that for all <m>n\gt m</m>, <m>|a_n - 0| \lt  \epsilon </m>, meaning that <m>\displaystyle \lim _{n\rightarrow \infty } a_n = 0</m>.
+        </p>
+      </solution>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Let <m>\lbrace a_n\rbrace </m> and <m>\lbrace b_n\rbrace </m> be sequences such that <m>\displaystyle \lim _{n\rightarrow \infty } a_n = L</m> and <m>\displaystyle \lim _{n\rightarrow \infty } b_n = K</m>.
+        </p>
+        <ol>
+          <li>
+            <p>
+              Show that if <m>a_n\lt b_n</m> for all <m>n</m>, then <m>L\le K</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Give an example where <m>L = K</m>.
+            </p>
+          </li>
+        </ol>
+      </statement>
+      <solution>
+        <ol>
+          <li>
+            <p>
+              A sketch of one proof method:
+              </p>
+            <p>
+              By <xref ref="thm_seq_properties">Theorem</xref> we know that the limit of the sequence <m>\lbrace b_n-a_n\rbrace  = K-L</m>. One can show that since <m>b_n-a_n \ge 0</m> for all <m>n</m>, then <m>K-L\ge 0</m>, concluding that <m>L\le K</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>a_n = 1/3^n</m> and <m>b_n = 1/2^n</m>
+            </p>
+          </li>
+        </ol>
+      </solution>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Prove the Squeeze Theorem for sequences: Let <m>\lbrace a_n\rbrace </m> and <m>\lbrace b_n\rbrace </m> be such that <m>\displaystyle \lim _{n\rightarrow \infty } a_n = L</m> and <m>\displaystyle \lim _{n\rightarrow \infty } b_n = L</m>, and let <m>\lbrace c_n\rbrace </m> be such that <m>a_n\le c_n\le b_n</m> for all <m>n</m>. Then <m>\displaystyle \lim _{n\rightarrow \infty } c_n = L</m>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          A sketch of one proof method:
+          </p>
+        <p>
+          Let any <m>\epsilon \gt0</m> be given. Since <m>\lbrace a_n\rbrace </m> and <m>\lbrace b_n\rbrace </m> converge, there exists an <m>N\gt0</m> such that for all <m>n\ge N</m>, both <m>a_n</m> and <m>b_n</m> are within <m>\epsilon /2</m> of <m>L</m>; we can conclude that they are at most <m>\epsilon </m> apart from each other. Since <m>a_n\le c_n \le b_n</m>, one can show that <m>c_n</m> is within <m>\epsilon </m> of <m>L</m>, showing that <m>\lbrace c_n\rbrace </m> also converges to <m>L</m>.
+        </p>
+      </solution>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Prove the statement “Let <m>\lbrace a_n\rbrace </m> be a bounded, monotonic sequence. Then <m>\lbrace a_n\rbrace </m> converges; i.e., <m>\displaystyle \lim _{n \rightarrow \infty }a_n</m> exists.” is equivalent to <xref ref="thm_monotonic_converge">Theorem</xref>. That is,
+        </p>
+        <ol>
+          <li>
+            <p>
+              Show that if <xref ref="thm_monotonic_converge">Theorem</xref> is true, then above statement is true, and
+            </p>
+          </li>
+          <li>
+            <p>
+              Show that if the above statement is true, then <xref ref="thm_monotonic_converge">Theorem</xref> is true.
+            </p>
+          </li>
+        </ol>
+      </statement>
+      <solution>
+        <p>
+          A sketch of one proof method:
+          </p>
+        <ol>
+          <li>
+            <p>
+              Assume that <xref ref="thm_monotonic_converge">Theorem</xref> is true, and let <m>\lbrace a_n\rbrace </m> be bounded and monotonic. Since <m>\lbrace a_n\rbrace </m> is bounded, it is bounded both above and below. If it is increasing, it is bounded above and we apply <xref ref="thm_monotonic_converge">Theorem</xref>; if it is decreasing, it is bounded below and we apply the theorem. Either way, <m>\lbrace a_n\rbrace </m> converges and the statement is true.
+            </p>
+          </li>
+          <li>
+            <p>
+              Assume the statement is true, and let <m>\lbrace a_n\rbrace </m> be a monotonically increasing sequence that is bounded above. Since <m>\lbrace a_n\rbrace </m> is monotonically increasing, <m>a_1\le a_2\le \ldots </m>; that is, <m>a_1</m> bounds <m>\lbrace a_n\rbrace </m> from below. Therefore <m>\lbrace a_n\rbrace </m> is bounded and monotonic; by the statement, <m>\lbrace a_n\rbrace </m> converges. A similar statement can be made for when <m>\lbrace a_n\rbrace </m> is monotonically decreasing and bounded below. Therefore <xref ref="thm_monotonic_converge">Theorem</xref> is true.
+            </p>
+          </li>
+        </ol>
+      </solution>
+    </exercise>
+  </exercisegroup>
+</exercises>

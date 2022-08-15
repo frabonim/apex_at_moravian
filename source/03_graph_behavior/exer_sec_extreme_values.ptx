@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<exercises>
+  <exercise>
+    <statement>
+      <p>
+        Describe what an “extreme value” of a function is in your own words.
+        </p>
+    </statement>
+    <answer>
+      <p>
+        Answers will vary.
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        Sketch the graph of a function <m>f</m> on <m>(-1,1)</m> that has both a maximum and minimum value.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        Answers will vary.
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        Describe the difference between absolute and relative maxima in your own words.
+        </p>
+    </statement>
+    <answer>
+      <p>
+        Answers will vary.
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        Sketch the graph of a function <m>f</m> where <m>f</m> has a relative maximum at <m>x=1</m> and <m>f'(1)</m> is undefined.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        Answers will vary.
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        T/F: If <m>c</m> is a critical value of a function <m>f</m>, then <m>f</m> has either a relative maximum or relative minimum at <m>x=c</m>.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        F
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        Fill in the blanks: The critical points of a function <m>f</m> are found where <m>f'(x)</m> is equal to <fillin/> or where <m>f'(x)</m> is <fillin/>.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        Where <m>f'(x)</m> is equal to <em>0</em> or where <m>f'(x)</m> is <em>undefined</em>.
+      </p>
+    </answer>
+  </exercise>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 7–8, identify each of the marked points as being an absolute maximum or minimum, a relative maximum or minimum, or none of the above.
+        </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <minipage width="427.0pt">
+            <p>
+              <sidebyside width="30%"><image source="fig03_01_ex_06" /></sidebyside></p>
+          </minipage>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>A</m>: none; the function isn't defined here. <m>B</m>: abs. max and rel. max <m>C</m>: rel. min <m>D</m>: none; the function isn't defined here. <m>E</m>: none <m>F</m>: rel. min <m>G</m>: rel. max</p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <minipage width="427.0pt">
+            <p>
+              <sidebyside width="30%"><image source="fig03_01_ex_07" /></sidebyside></p>
+          </minipage>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>A</m>: abs. min &amp; rel. min <m>B</m>: none <m>C</m>: abs. max &amp; rel. max <m>D</m>: none <m>E</m>: rel. min</p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 9–16, evaluate <m>f'(x)</m> at the points indicated in the graph.
+      </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x) = \frac{2}{x^2+1}</m>
+        </p>
+        <p>
+          <sidebyside width="30%"><image source="fig03_01_ex_08" /></sidebyside></p>
+      </statement>
+      <answer>
+        <p>
+          <m>f'(0) = 0</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x) = x^2\sqrt{6-x^2}</m>
+        </p>
+        <p>
+          <sidebyside width="30%"><image source="fig03_01_ex_09" /></sidebyside></p>
+      </statement>
+      <answer>
+        <p>
+          <m>f'(0) = 0</m>
+          <m>f'(2) = 0</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x) = \sin x</m>
+        </p>
+        <p>
+          <sidebyside width="30%"><image source="fig03_01_ex_10" /></sidebyside></p>
+      </statement>
+      <answer>
+        <p>
+          <m>f'(\pi /2) = 0</m>
+          <m>f'(3\pi /2) = 0</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x) = x^2\sqrt{4-x}</m>
+        </p>
+        <p>
+          <sidebyside width="30%"><image source="fig03_01_ex_11" /></sidebyside></p>
+      </statement>
+      <answer>
+        <p>
+          <m>f'(0) = 0</m>
+          <m>f'(3.2) = 0</m>
+          <m>f'(4)</m> is undefined</p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x) = 1+\frac{(x-2)^{2/3}}{x}</m>
+        </p>
+        <p>
+          <sidebyside width="30%"><image source="fig03_01_ex_14" /></sidebyside></p>
+      </statement>
+      <answer>
+        <p>
+          <m>f'(2)</m> is not defined <m>f'(6) = 0</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x) = \sqrt[3]{x^4-2x^2+1}</m>
+        </p>
+        <p>
+          <sidebyside width="30%"><image source="fig03_01_ex_25" /></sidebyside></p>
+      </statement>
+      <answer>
+        <p>
+          Both <m>f'(-1)</m> and <m>f'(1)</m> are undefined.
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x) = \left\lbrace \begin{array}{cc} x^2 &amp; x\le 0 \\ x^5 &amp; x\gt 0 \end{array} \right.</m>
+        </p>
+        <p>
+          <sidebyside width="30%"><image source="fig03_01_ex_12" /></sidebyside></p>
+      </statement>
+      <answer>
+        <p>
+          <m>f'(0) = 0</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x) = \left\lbrace \begin{array}{cc} x^2 &amp; x\le 0 \\ x &amp; x\gt 0 \end{array} \right.</m>
+        </p>
+        <p>
+          <sidebyside width="30%"><image source="fig03_01_ex_13" /></sidebyside></p>
+      </statement>
+      <answer>
+        <p>
+          <m>f'(0)</m> is not defined</p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 17–26, find the extreme values of the function on the given interval.
+        </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x) = x^2+x+4</m>   on    <m>[-1,2]</m>.</p>
+      </statement>
+      <answer>
+        <p>
+          min: <m>(-0.5,3.75)</m>
+        </p>
+        <p>
+          max: <m>(2,10)</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x) = x^3-\frac{9}{2}x^2-30x+3</m>   on    <m>[0,6]</m>.</p>
+      </statement>
+      <answer>
+        <p>
+          min: <m>(5,-134.5)</m>
+        </p>
+        <p>
+          max: <m>(0,3)</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x) = 3\sin x</m>   on    <m>[\pi /4,2\pi /3]</m>.</p>
+      </statement>
+      <answer>
+        <p>
+          min: <m>(\pi /4,3\sqrt{2}/2)</m>
+        </p>
+        <p>
+          max: <m>(\pi /2,3)</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x) = x^2\sqrt{4-x^2}</m>   on    <m>[-2,2]</m>.</p>
+      </statement>
+      <answer>
+        <p>
+          min: <m>(0,0)</m> and <m>(\pm 2,0)</m>
+        </p>
+        <p>
+          max: <m>(\pm 2\sqrt{2/3},16\sqrt{3}/9)</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x) = x+\frac{3}{x}</m>   on    <m>[1,5]</m>.</p>
+      </statement>
+      <answer>
+        <p>
+          min: <m>(\sqrt{3},2\sqrt{3})</m>
+        </p>
+        <p>
+          max: <m>(5,28/5)</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x) = \frac{x^2}{x^2+5}</m>   on    <m>[-3,5]</m>.</p>
+      </statement>
+      <answer>
+        <p>
+          min: <m>(0,0)</m>
+        </p>
+        <p>
+          max: <m>(5,5/6)</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x) = e^x\cos x</m>   on    <m>[0,\pi ]</m>.</p>
+      </statement>
+      <answer>
+        <p>
+          min: <m>(\pi ,-e^\pi )</m>
+        </p>
+        <p>
+          max: <m>(\pi /4,\frac{\sqrt{2}e^{\pi /4}}{2})</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x) = e^x\sin x</m>   on    <m>[0,\pi ]</m>.</p>
+      </statement>
+      <answer>
+        <p>
+          min: <m>(0,0)</m> and <m>(\pi ,0)</m>
+        </p>
+        <p>
+          max: <m>(3\pi /4,\frac{\sqrt{2}e^{3\pi /4}}{2})</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x) = \frac{\ln x}{x}</m>   on    <m>[1,4]</m>.</p>
+      </statement>
+      <answer>
+        <p>
+          min: <m>(1,0)</m>
+        </p>
+        <p>
+          max: <m>(e,1/e)</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x) = x^{2/3}-x</m>   on    <m>[0,2]</m>.</p>
+      </statement>
+      <answer>
+        <p>
+          min: <m>(2,2^{2/3}-2)</m>
+        </p>
+        <p>
+          max: <m>(8/27,4/27)</m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercise>
+    <statement>
+      <p>
+        Find <m>\frac{dy}{dx}</m>, where <m>x^2y-y^2x = 1</m>.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        <m>\frac{dy}{dx} = \frac{y (y-2 x)}{x (x-2 y)}</m>
+      </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        Find the equation of the line tangent to the graph of <m>x^2+y^2+xy=7</m> at the point <m>(1,2)</m>.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        <m>y=-4/5(x-1)+2</m>
+      </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        Let <m>f(x) = x^3+x</m>.
+      </p>
+      <p>
+        Evaluate <m>\displaystyle \lim _{s\rightarrow 0} \frac{f(x+s)-f(x)}{s}</m>.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        <m>3x^2+1</m>
+      </p>
+    </answer>
+  </exercise>
+</exercises>

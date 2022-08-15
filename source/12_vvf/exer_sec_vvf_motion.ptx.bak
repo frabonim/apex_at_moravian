@@ -1,0 +1,715 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<exercises>
+  <exercise>
+    <statement>
+      <p>
+        How is <em>velocity</em> different from <em>speed</em>?
+      </p>
+    </statement>
+    <answer>
+      <p>
+        Velocity is a vector, indicating an objects direction of travel and its rate of distance change (i.e., its speed). Speed is a scalar.
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        What is the difference between <em>displacement</em> and <em>distance traveled</em>?
+      </p>
+    </statement>
+    <answer>
+      <p>
+        Displacement is a vector, indicating the difference between the starting and ending positions of an object. Distance traveled is a scalar, indicating the arc length of the path followed.
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        What is the difference between <em>average velocity</em> and <em>average speed</em>?
+      </p>
+    </statement>
+    <answer>
+      <p>
+        The average velocity is found by dividing the displacement by the time traveled – it is a vector. The average speed is found by dividing the distance traveled by the time traveled – it is a scalar.
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        <em>Distance traveled</em> is the same as <fillin/>
+        <fillin/>, just viewed in a different context.</p>
+    </statement>
+    <answer>
+      <p>
+        arc length
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        Describe a scenario where an object's average speed is a large number, but the magnitude of the average velocity is not a large number.
+        </p>
+    </statement>
+    <answer>
+      <p>
+        One example is traveling at a constant speed <m>s</m> in a circle, ending at the starting position. Since the displacement is <m>\vec{0}</m>, the average velocity is <m>\vec{0}</m>, hence <m>||\ \vec{0}\ ||=0</m>. But traveling at constant speed <m>s</m> means the average speed is also <m>s \gt0</m>.
+      </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        Explain why it is not possible to have an average velocity with a large magnitude but a small average speed.
+        </p>
+    </statement>
+    <answer>
+      <p>
+        Distance traveled is always greater than or equal to the magnitude of displacement, therefore average speed will always be at least as large as the magnitude of the average velocity.
+        </p>
+    </answer>
+  </exercise>
+  <exercisegroup>
+    <introduction>
+      <p>
+        A position function <m>\vec{r}(t)</m> is given. Find <m>\vec{v}(t)</m> and <m>\vec{a}(t)</m>.
+      </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>\vec{r}(t)= \la 2t+1, 5t-2, 7\ra </m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\vec{v}(t)= \la 2,5,0\ra </m>, <m>\vec{a}(t)= \la 0,0,0\ra </m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\vec{r}(t)= \la 3t^2-2t+1, -t^2+t+14\ra </m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\vec{v}(t)= \la 6t-2,-2t+1\ra </m>, <m>\vec{a}(t)= \la 6,-2 \ra </m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\vec{r}(t)= \la \cos t,\sin t\ra </m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\vec{v}(t)= \la -\sin t, \cos t\ra </m>, <m>\vec{a}(t)= \la -\cos t, -\sin t \ra </m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\vec{r}(t)= \la t/10,-\cos t,\sin t\ra </m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\vec{v}(t)= \la 1/10, \sin t, \cos t\ra </m>, <m>\vec{a}(t)= \la 0,\cos t, -\sin t \ra </m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        A position function <m>\vec{r}(t)</m> is given. Find <m>\vec{v}(t)</m> and <m>\vec{a}(t)</m>.
+      </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \vec{r}(t)= \la t,\sin t \ra </m> on <m>[0,\pi /2]</m>; <m>t_0= \pi /4</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\vec{v}(t)= \la 1,\cos t\ra </m>, <m>\vec{a}(t)= \la 0,-\sin t\ra </m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \vec{r}(t)= \la t^2,\sin t^2 \ra </m> on <m>[0,\pi /2]</m>; <m>t_0=\sqrt{\pi /4}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\vec{v}(t)= \la 2 t,2 t \cos \left(t^2\right)\ra </m>, <m>\vec{a}(t)= \la 2,2 \left(\cos \left(t^2\right)-2 t^2 \sin \left(t^2\right)\right)\ra </m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \vec{r}(t)= \la t^2+t,-t^2+2t \ra </m> on <m>[-2,2]</m>; <m>t_0=1</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\vec{v}(t)= \la 2t+1,-2t+2\ra </m>, <m>\vec{a}(t)= \la 2,-2\ra </m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \vec{r}(t)= \la \frac{2t+3}{t^2+1},t^2\ra </m> on <m>[-1,1]</m>; <m>t_0= 0</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\vec{v}(t)= \la -\frac{2 \left(t^2+3 \ t-1\right)}{\left(t^2+1\right)^2},2 t\ra </m>, <m>\vec{a}(t)= \la \frac{2 \left(2 t^3+9 t^2-6 t-3\right)}{\left(t^2+1\right)^3},2\ra </m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        A position function <m>\vec{r}(t)</m> of an object is given. Find the speed of the object in terms of <m>t</m>, and find where the speed is minimized/maximized on the indicated interval.
+      </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \vec{r}(t)= \la t^2,t \ra </m> on <m>[-1,1]</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>||\ \vec{v}(t)\ || = \sqrt{4t^2+1}</m>.Min at <m>t=0</m>; Max at <m>t=\pm 1</m>.</p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \vec{r}(t)= \la t^2,t^2-t^3 \ra </m> on <m>[-1,1]</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>||\ \vec{v}(t)\ || = |t|\sqrt{9t^2-12t+8}</m>.min: <m>t=0</m>; max: <m>t=-1</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \vec{r}(t)= \la 5\cos t,5\sin t \ra </m> on <m>[0,2\pi ]</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>||\ \vec{v}(t)\ || = 5</m>.Speed is constant, so there is no difference between min/max</p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \vec{r}(t)= \la 2\cos t,5\sin t \ra </m> on <m>[0,2\pi ]</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>||\ \vec{v}(t)\ || = \sqrt{4\sin ^2t+25\cos ^2t}</m>.min: <m>t=\pi /2,\ 3\pi /2</m>; max: <m>t=0,\ 2\pi </m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \vec{r}(t)= \la \sec t,\tan t \ra </m> on <m>[0,\pi /4]</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>||\ \vec{v}(t)\ || = |\sec t|\sqrt{\tan ^2t+\sec ^2t}</m>.min: <m>t=0</m>; max: <m>t=\pi /4</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \vec{r}(t)= \la t+\cos t,1-\sin t \ra </m> on <m>[0,2\pi ]</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>||\ \vec{v}(t)\ || = \sqrt{2-2\sin t}</m>.min: <m>t=\pi /2</m>; max: <m>t=3\pi /2</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \vec{r}(t)= \la 12t,5\cos t,5\sin t \ra </m> on <m>[0,4\pi ]</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>||\ \vec{v}(t)\ || = 13</m>.speed is constant, so there is no difference between min/max</p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \vec{r}(t)= \la t^2-t,t^2+t,t \ra </m> on <m>[0,1]</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>||\ \vec{v}(t)\ || = \sqrt{8t^2+3}</m>.min: <m>t=0</m>; max: <m>t=1</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \vec{r}(t)= \la t,t^2,\sqrt{1-t^2}\ra </m> on <m>[-1,1]</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>||\ \vec{v}(t)\ || = \sqrt{4t^2+1+t^2/(1-t^2)}</m>.min: <m>t=0</m>; max: there is no max; speed approaches <m>\infty </m> as <m>t\rightarrow \pm 1</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <em>Projectile Motion:</em>
+          <m>\displaystyle \vec{r}(t)= \la (v_0\cos \theta )t,-\frac{1}{2}gt^2+(v_0\sin \theta )t \ra </m> on <m>\displaystyle \left[0,\frac{2v_0\sin \theta }{g}\right]</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>||\ \vec{v}(t)\ || = \sqrt{g^2t^2-(2gv_0\sin \theta )t+v_0^2}</m>.min: <m>t=(v_0\sin \theta )/g</m>; max: <m>t=0</m>, <m>t=(2v_0\sin \theta )/g</m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        Position functions <m>\vec{r}_1(t)</m> and <m>\vec{r}_2(s)</m> for two objects are given that follow the same path on the respective intervals.
+      </p>
+      <ol>
+        <li>
+          <p>
+            Show that the positions are the same at the indicated <m>t_0</m> and <m>s_0</m> values; i.e., show <m>\vec{r}_1(t_0) = \vec{r}_2(s_0).</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            Find the velocity, speed and acceleration of the two objects at <m>t_0</m> and <m>s_0</m>, respectively.
+          </p>
+        </li>
+      </ol>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>\vec{r}_1(t) = \la t,t^2\ra </m> on <m>[0,1]</m>; <m>t_0 = 1</m>
+          <m>\vec{r}_2(s) = \la s^2,s^4\ra </m> on <m>[0,1]</m>; <m>s_0 = 1</m>
+        </p>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              <m>\vec{r}_1(1) = \la 1,1\ra </m>; <m>\vec{r}_2(1) = \la 1,1\ra </m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\vec{v}_1(1) = \la 1,2\ra </m>; <m>||\ \vec{v}_1(1)\ || = \sqrt{5}</m>; <m>\vec{a}_1(1) = \la 0,2\ra </m>
+              <m>\vec{v}_2(1) = \la 2,4\ra </m>; <m>||\ \vec{v}_2(1)\ || = 2\sqrt{5}</m>; <m>\vec{a}_2(1) = \la 2,12\ra </m>
+            </p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\vec{r}_1(t) = \la 3\cos t,3\sin t\ra </m> on <m>[0,2\pi ]</m>; <m>t_0 = \pi /2</m>
+          <m>\vec{r}_2(s) = \la 3\cos (4s),3\sin (4s)\ra </m> on <m>[0,\pi /2]</m>; <m>s_0 = \pi /8</m>
+        </p>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              <m>\vec{r}_1(\pi /2) = \la 0,3\ra </m>; <m>\vec{r}_2(\pi /8) = \la 0,3\ra </m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\vec{v}_1(\pi /2) = \la -3,0\ra </m>; <m>||\ \vec{v}_1(\pi /2)\ || = 3</m>; <m>\vec{a}_1(\pi /2) = \la 0,-3\ra </m>
+              <m>\vec{v}_2(\pi /8) = \la -12,0\ra </m>; <m>||\ \vec{v}_2(\pi /8)\ || = 12</m>; <m>\vec{a}_2(\pi /8) = \la 0,-48\ra </m>
+            </p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\vec{r}_1(t) = \la 3t,2t\ra </m> on <m>[0,2]</m>; <m>t_0 = 2</m>
+          <m>\vec{r}_2(s) = \la 6s-6,4s-4\ra </m> on <m>[1,2]</m>; <m>s_0 = 2</m>
+        </p>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              <m>\vec{r}_1(2) = \la 6,4\ra </m>; <m>\vec{r}_2(2) = \la 6,4\ra </m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\vec{v}_1(2) = \la 3,2\ra </m>; <m>||\ \vec{v}_1(2)\ || = \sqrt{13}</m>; <m>\vec{a}_1(2) = \la 0,0\ra </m>
+              <m>\vec{v}_2(2) = \la 6,4\ra </m>; <m>||\ \vec{v}_2(2)\ || = 2\sqrt{13}</m>; <m>\vec{a}_2(2) = \la 0,0\ra </m>
+            </p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\vec{r}_1(t) = \la t,\sqrt{t}\ra </m> on <m>[0,1]</m>; <m>t_0 = 1</m>
+          <m>\vec{r}_2(s) = \la \sin t,\sqrt{\sin t}\ra </m> on <m>[0,\pi /2]</m>; <m>s_0 = \pi /2</m>
+        </p>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              <m>\vec{r}_1(1) = \la 1,1\ra </m>; <m>\vec{r}_2(\pi /2) = \la 1,1\ra </m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\vec{v}_1(1) = \la 1,1/2\ra </m>; <m>||\ \vec{v}_1(1)\ || = \sqrt{5}/2</m>; <m>\vec{a}_1(1) = \la 0,-1/4\ra </m>
+              <m>\vec{v}_2(\pi /2) = \la 0,0\ra </m>; <m>||\ \vec{v}_2(\pi /2)\ || = 0</m>; <m>\vec{a}_2(\pi /2) = \la -1,-1/2\ra </m>
+            </p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        Find the position function of an object given its acceleration and initial velocity and position.
+        </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>\vec{a}(t)= \la 2,3\ra </m>;   <m>\vec{v}(0) = \la 1,2\ra </m>,   <m>\vec{r}(0) = \la 5,-2\ra </m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\vec{v}(t)= \la 2t+1,3t+2\ra </m>, <m>\vec{r}(t)= \la t^2+t+5,3t^2/2+2t-2\ra </m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\vec{a}(t)= \la 2,3\ra </m>;   <m>\vec{v}(1) = \la 1,2\ra </m>,   <m>\vec{r}(1) = \la 5,-2\ra </m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\vec{v}(t)= \la 2t-1,3t-1\ra </m>, <m>\vec{r}(t)= \la t^2-t+5,3t^2/2-t-5/2\ra </m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\vec{a}(t)= \la \cos t,-\sin t\ra </m>;   <m>\vec{v}(0) = \la 0,1\ra </m>,   <m>\vec{r}(0) = \la 0,0\ra </m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\vec{v}(t)= \la \sin t,\cos t\ra </m>, <m>\vec{r}(t)= \la 1-\cos t,\sin t\ra </m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\vec{a}(t)= \la 0,-32\ra </m>;   <m>\vec{v}(0) = \la 10,50\ra </m>,   <m>\vec{r}(0) = \la 0,0\ra </m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\vec{v}(t)= \la 10,-32t+50\ra </m>, <m>\vec{r}(t)= \la 10t,-16t^2+50t\ra </m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        Find the displacement, distance traveled, average velocity and average speed of the described object on the given interval.
+        </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          An object with position function <m>\vec{r}(t)= \la 2\cos t,2\sin t, 3t\ra </m>, where distances are measured in feet and time is in seconds, on <m>[0,2\pi ]</m>.
+        </p>
+      </statement>
+      <answer>
+        <p>
+          Displacement: <m>\la 0,0,6\pi \ra </m>; distance traveled: <m>2\sqrt{13}\pi \approx 22.65</m>ft; average velocity: <m>\la 0,0,3\ra </m>; average speed: <m>\sqrt{13} \approx 3.61</m>ft/s
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          An object with position function <m>\vec{r}(t)= \la 5\cos t,-5\sin t\ra </m>, where distances are measured in feet and time is in seconds, on <m>[0,\pi ]</m>.
+        </p>
+      </statement>
+      <answer>
+        <p>
+          Displacement: <m>\la -10,0\ra </m>; distance traveled: <m>5\pi \approx 15.71</m>ft; average velocity: <m>\la -10/\pi ,0\ra \approx \la -3.18,0\ra </m>; average speed: <m>5</m>ft/s
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          An object with velocity function <m>\vec{v}(t)= \la \cos t,\sin t\ra </m>, where distances are measured in feet and time is in seconds, on <m>[0,2\pi ]</m>.
+        </p>
+      </statement>
+      <answer>
+        <p>
+          Displacement: <m>\la 0,0\ra </m>; distance traveled: <m>2\pi \approx 6.28</m>ft; average velocity: <m>\la 0,0\ra </m>; average speed: <m>1</m>ft/s
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          An object with velocity function <m>\vec{v}(t)= \la 1,2,-1\ra </m>, where distances are measured in feet and time is in seconds, on <m>[0,10]</m>.
+        </p>
+      </statement>
+      <answer>
+        <p>
+          Displacement: <m>\la 10,20,-20\ra </m>; distance traveled: <m>30</m>ft; average velocity: <m>\la 1,2,-2\ra </m>; average speed: <m>3</m>ft/s
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        Exercises 37–42 ask you to solve a variety of problems based on the principles of projectile motion.
+        </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          A boy whirls a ball, attached to a 3ft string, above his head in a counter–clockwise circle. The ball makes 2 revolutions per second.
+          </p>
+        <p>
+          At what <m>t</m>-values should the boy release the string so that the ball heads directly for a tree standing 10ft in front of him?
+        </p>
+      </statement>
+      <answer>
+        <p>
+          At <m>t</m>-values of <m>\sin ^{-1}(9/30)/(4\pi ) + n/2 \approx 0.024 + n/2</m> seconds, where <m>n</m> is an integer.
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          David faces Goliath with only a stone in a 3ft sling, which he whirls above his head at 4 revolutions per second. They stand 20ft apart.
+          </p>
+        <ol>
+          <li>
+            <p>
+              At what <m>t</m>-values must David release the stone in his sling in order to hit Goliath?
+            </p>
+          </li>
+          <li>
+            <p>
+              What is the speed at which the stone is traveling when released?
+              </p>
+          </li>
+          <li>
+            <p>
+              Assume David releases the stone from a height of 6ft and Goliath's forehead is 9ft above the ground. What angle of elevation must David apply to the stone to hit Goliath's head?
+              </p>
+          </li>
+        </ol>
+      </statement>
+      <answer>
+        <p>
+          The stone, while whirling, can be modeled by <m>\vec{r}(t)= \la 3\cos (8\pi t),3\sin (8\pi t)\ra </m>.
+        </p>
+        <ol>
+          <li>
+            <p>
+              For <m>t</m>-values <m>t=\sin ^{-1}(3/20)/(8\pi ) + n/4 \approx 0.006 + n/4</m>, where <m>n</m> is an integer.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>||\ \vec{r}\, ^{\prime }(t)\ || = 24\pi \approx 51.4</m>ft/s</p>
+          </li>
+          <li>
+            <p>
+              At <m>t=0.006</m>, the stone is approximately <m>19.77</m>ft from Goliath. Using the formula for projectile motion, we want the angle of elevation that lets a projectile starting at <m>\la 0,6\ra </m> with a initial velocity of <m>51.4</m>ft/s arrive at <m>\la 19.77,9\ra </m>. The desired angle is <m>0.27</m> radians, or <m>15.69^\circ </m>.
+            </p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          A hunter aims at a deer which is 40 yards away. Her crossbow is at a height of 5ft, and she aims for a spot on the deer 4ft above the ground. The crossbow fires her arrows at 300ft/s.
+          </p>
+        <ol>
+          <li>
+            <p>
+              At what angle of elevation should she hold the crossbow to hit her target?
+              </p>
+          </li>
+          <li>
+            <p>
+              If the deer is moving perpendicularly to her line of sight at a rate of 20mph, by approximately how much should she lead the deer in order to hit it in the desired location?
+              </p>
+          </li>
+        </ol>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              Holding the crossbow at an angle of <m>0.013</m> radians, <m>\approx 0.745^\circ </m> will hit the target <m>0.4</m>s later. (Another solution exists, with an angle of <m>89^\circ </m>, landing <m>18.75</m>s later, but this is impractical.)
+            </p>
+          </li>
+          <li>
+            <p>
+              In the .4 seconds the arrow travels, a deer, traveling at 20mph or 29.33ft/s, can travel 11.7ft. So she needs to lead the deer by 11.7ft.
+              </p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          A baseball player hits a ball at 100mph, with an initial height of 3ft and an angle of elevation of <m>20^\circ </m>, at Boston's Fenway Park. The ball flies towards the famed “Green Monster,” a wall 37ft high located 310ft from home plate.
+        </p>
+        <ol>
+          <li>
+            <p>
+              Show that as hit, the ball hits the wall.
+              </p>
+          </li>
+          <li>
+            <p>
+              Show that if the angle of elevation is <m>21^\circ </m>, the ball clears the Green Monster.
+            </p>
+          </li>
+        </ol>
+      </statement>
+      <answer>
+        <p>
+          The position function of the ball is <m>\vec{r}(t)= \la (146.67\cos \theta )t,-16t^2+(146.67\sin \theta )t+3\ra </m>, where <m>\theta </m> is the angle of elevation.
+        </p>
+        <ol>
+          <li>
+            <p>
+              With <m>\theta =20^\circ </m>, the ball reaches 310ft from home plate in 2.25 seconds; at this time, the height of the ball is 34.9ft, not enough to clear the Green Monster.
+            </p>
+          </li>
+          <li>
+            <p>
+              With <m>\theta =21^\circ </m>, the ball reaches 310ft from home plate in 2.26s, with a height of 40ft, clearing the wall.
+            </p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          A Cessna flies at 1000ft at 150mph and drops a box of supplies to the professor (and his wife) on an island. Ignoring wind resistance, how far horizontally will the supplies travel before they land?
+          </p>
+      </statement>
+      <answer>
+        <p>
+          The position function is <m>\vec{r}(t)= \la 220t,-16t^2+1000\ra </m>. The <m>y</m>-component is 0 when <m>t=7.9</m>; <m>\vec{r}(7.9) = \la 1739.25,0\ra </m>, meaning the box will travel about 1740ft horizontally before it lands.
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          A football quarterback throws a pass from a height of 6ft, intending to hit his receiver 20yds away at a height of 5ft.
+          </p>
+        <ol>
+          <li>
+            <p>
+              If the ball is thrown at a rate of 50mph, what angle of elevation is needed to hit his intended target?
+              </p>
+          </li>
+          <li>
+            <p>
+              If the ball is thrown at with an angle of elevation of <m>8^\circ </m>, what initial ball speed is needed to hit his target?
+            </p>
+          </li>
+        </ol>
+      </statement>
+      <answer>
+        <p>
+          The position function of the ball is <m>\vec{r}(t)= \la (v_0\cos \theta )t,-16t^2+(v_0\sin \theta )t+6\ra </m>, where <m>\theta </m> is the angle of elevation and <m>v_0</m> is the initial ball speed.
+        </p>
+        <ol>
+          <li>
+            <p>
+              With <m>v_0 = 73.33</m>ft/s, there are two angles of elevation possible. An angle of <m>\theta = 9.47^\circ </m> delivers the ball in 0.83s, while an angle of <m>79.57^\circ </m> delivers the ball in <m>4.5</m>s.
+            </p>
+          </li>
+          <li>
+            <p>
+              With <m>\theta =8^\circ </m>, the initial speed must be 53.8mph<m>\approx 78.9</m>ft/s.
+            </p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+  </exercisegroup>
+</exercises>

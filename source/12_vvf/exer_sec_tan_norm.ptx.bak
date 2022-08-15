@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<exercises>
+  <exercise>
+    <statement>
+      <p>
+        If <m>\vec{T}(t)</m> is a unit tangent vector, what is <m>||\ \vec{T}(t)\ ||</m>?
+      </p>
+    </statement>
+    <answer>
+      <p>
+        1
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        If <m>\vec{N}(t)</m> is a unit normal vector, what is <m>\vec{N}(t)\cdot \vec{r}\, ^{\prime }(t)</m>?
+      </p>
+    </statement>
+    <answer>
+      <p>
+        0
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        The acceleration vector <m>\vec{a}(t)</m> lies in the plane defined by what two vectors?
+      </p>
+    </statement>
+    <answer>
+      <p>
+        <m>\vec{T}(t)</m> and <m>\vec{N}(t)</m>.</p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        <m>a_\text{T}</m> measures how much the acceleration is affecting the <fillin/> of an object.</p>
+    </statement>
+    <answer>
+      <p>
+        the speed
+        </p>
+    </answer>
+  </exercise>
+  <exercisegroup>
+    <introduction>
+      <p>
+        Given <m>\vec{r}(t)</m>, find <m>\vec{T}(t)</m> and evaluate it at the indicated value of <m>t</m>.
+      </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>\vec{r}(t)= \la 2t^2,t^2-t\ra </m>, <m>t=1</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\vec{T}(t) = \la \frac{4 t}{\sqrt{20 t^2-4t+1}},\frac{2 t-1}{\sqrt{20 t^2-4t+1}}\ra </m>; <m>\vec{T}(1) = \la 4/\sqrt{17},1/\sqrt{17}\ra </m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\vec{r}(t)= \la t,\cos t\ra </m>, <m>t=\pi /4</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\vec{T}(t) = \la \frac{1}{\sqrt{1+\sin ^2t}},-\frac{\sin t}{\sqrt{1+\sin ^2t}} \ra </m>; <m>\vec{T}(\pi /4) = \la \sqrt{2/3}, -1/\sqrt{3}\ra </m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\vec{r}(t)= \la \cos ^3t,\sin ^3 t\ra </m>, <m>t=\pi /4</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\vec{T}(t) = \frac{\cos t\sin t}{\sqrt{\cos ^2t\sin ^2t}}\la -\cos t,\sin t\ra </m>. (Be careful; this cannot be simplified as just <m>\la -\cos t,\sin t\ra </m> as <m>\sqrt{\cos ^2t\sin ^2t}\ne \cos t\sin t</m>, but rather <m>|\cos t\sin t|</m>.) <m>\vec{T}(\pi /4) = \la -\sqrt{2}/2,\sqrt{2}/2\ra </m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\vec{r}(t)= \la \cos t, \sin t \ra </m>, <m>t=\pi </m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\vec{T}(t) = \la -\sin t,\cos t\ra </m>; <m>\vec{T}(\pi ) = \la 0,-1\ra </m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        Find the equation of the line tangent to the curve at the indicated <m>t</m>-value using the unit tangent vector. 
+      </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>\vec{r}(t)= \la 2t^2,t^2-t \ra </m>, <m>t=1</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\ell (t) = \la 2,0\ra + t\la 4/\sqrt{17},1/\sqrt{17}\ra </m>; in parametric form,</p>
+        <p>
+          <m>\ell (t) = \left\lbrace \begin{array}{ccc} x&amp;=&amp;2+4t/\sqrt{17} \\ y &amp;=&amp; t/\sqrt{17}\end{array}\right.</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\vec{r}(t)= \la t,\cos t \ra </m>, <m>t=\pi /4</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\ell (t) = \la \pi /4,\sqrt{2}/{2}\ra + t\la \sqrt{2/3},-1/\sqrt{3}\ra </m>; in parametric form,</p>
+        <p>
+          <m>\ell (t) = \left\lbrace \begin{array}{ccc} x&amp;=&amp;\pi /4+\sqrt{2/3}t \\ y &amp;=&amp; \sqrt{2}/2-t/\sqrt{3}\end{array}\right.</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\vec{r}(t)= \la \cos ^3 t,\sin ^3t \ra </m>, <m>t=\pi /4</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\ell (t) = \la \sqrt{2}/4,\sqrt{2}/4\ra + t\la -\sqrt{2}/2,\sqrt{2}/2\ra </m>; in parametric form,</p>
+        <p>
+          <m>\ell (t) = \left\lbrace \begin{array}{ccc} x&amp;=&amp;\sqrt{2}/4-\sqrt{2}t/2 \\ y &amp;=&amp; \sqrt{2}/4+\sqrt{2}t/2\end{array}\right.</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\vec{r}(t)= \la \cos t,\sin t \ra </m>, <m>t=\pi </m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\ell (t) = \la -1,0\ra + t\la 0,-1\ra </m>; in parametric form,</p>
+        <p>
+          <m>\ell (t) = \left\lbrace \begin{array}{ccc} x&amp;=&amp;-1 \\ y &amp;=&amp; -t\end{array}\right.</m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        Find <m>\vec{N}(t)</m> using <xref ref="def_unit_normal">Definition</xref>. Confirm the result using <xref ref="thm_concave">Theorem</xref>.
+      </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>\vec{r}(t)= \la 3\cos t, 3\sin t \ra </m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\vec{T}(t) = \la -\sin t,\cos t\ra </m>; <m>\vec{N}(t) = \la -\cos t,-\sin t\ra </m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\vec{r}(t)= \la t, t^2 \ra </m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\vec{T}(t) = \la \frac{1}{\sqrt{1+4t^2}},\frac{2t}{\sqrt{1+4t^2}}\ra </m>; <m>\vec{N}(t) = \la -\frac{2t}{\sqrt{1+4t^2}},\frac{1}{\sqrt{1+4t^2}}\ra </m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\vec{r}(t)= \la \cos t,2\sin t \ra </m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\vec{T}(t) = \la -\frac{\sin t}{\sqrt{4\cos ^2t+\sin ^2t}},\frac{2\cos t}{\sqrt{4\cos ^2t+\sin ^2t}}\ra </m>; <m>\vec{N}(t) = \la -\frac{2\cos t}{\sqrt{4\cos ^2t+\sin ^2t}},-\frac{\sin t}{\sqrt{4\cos ^2t+\sin ^2t}}\ra </m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\vec{r}(t)= \la e^t,e^{-t} \ra </m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\vec{T}(t) = \la \frac{e^t}{\sqrt{e^{2t}+e^{-2t}}},-\frac{e^{-t}}{\sqrt{e^{2t}+e^{-2t}}}\ra </m>; <m>\vec{N}(t) = \la \frac{e^{-t}}{\sqrt{e^{2t}+e^{-2t}}},\frac{e^{t}}{\sqrt{e^{2t}+e^{-2t}}}\ra </m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        A position function <m>\vec{r}(t)</m> is given along with its unit tangent vector <m>\vec{T}(t)</m> evaluated at <m>t=a</m>, for some value of <m>a</m>.
+      </p>
+      <ol>
+        <li>
+          <p>
+            Confirm that <m>\vec{T}(a)</m> is as stated.
+          </p>
+        </li>
+        <li>
+          <p>
+            Using a graph of <m>\vec{r}(t)</m> and <xref ref="thm_concave">Theorem</xref>, find <m>\vec{N}(a)</m>.
+          </p>
+        </li>
+      </ol>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>\vec{r}(t)= \la 3\cos t,5\sin t\ra </m>; <m>\displaystyle \vec{T}(\pi /4) = \la -\frac{3}{\sqrt{34}}, \frac{5}{\sqrt{34}}\ra </m>.</p>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              Be sure to show work
+              </p>
+          </li>
+          <li>
+            <p>
+              <m>\vec{N}(\pi /4) = \la -5/\sqrt{34}, -3/\sqrt{34}\ra </m>
+            </p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \vec{r}(t)= \la t,\frac{1}{t^2+1}\ra </m>; <m>\displaystyle \vec{T}(1) = \la \frac{2}{\sqrt{5}}, -\frac{1}{\sqrt{5}}\ra </m>.</p>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              Be sure to show work
+              </p>
+          </li>
+          <li>
+            <p>
+              <m>\vec{N}(1) = \la \frac{1}{\sqrt{5}}, \frac{2}{\sqrt{5}}\ra </m>
+            </p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \vec{r}(t)= (1+2\sin t)\la \cos t,\sin t\ra </m>; <m>\displaystyle \vec{T}(0) = \la \frac{2}{\sqrt{5}}, \frac{1}{\sqrt{5}}\ra </m>.</p>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              Be sure to show work
+              </p>
+          </li>
+          <li>
+            <p>
+              <m>\vec{N}(0) = \la -\frac{1}{\sqrt{5}}, \frac{2}{\sqrt{5}}\ra </m>
+            </p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \vec{r}(t)= \la \cos ^3 t,\sin ^3 t\ra </m>; <m>\displaystyle \vec{T}(\pi /4) = \la -\frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}}\ra </m>.</p>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              Be sure to show work
+              </p>
+          </li>
+          <li>
+            <p>
+              <m>\vec{N}(\pi /4) = \la \frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}}\ra </m>
+            </p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        Find <m>\vec{N}(t)</m>.
+      </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>\vec{r}(t)= \la 4t,2\sin t,2\cos t \ra </m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\vec{T}(t) = \frac{1}{\sqrt{5}}\la 2,\cos t,-\sin t\ra </m>; <m>\vec{N}(t) = \la 0,-\sin t,-\cos t\ra </m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\vec{r}(t)= \la 5\cos t,3\sin t,4\sin t \ra </m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\vec{T}(t) = \la -\sin t, 3/5\cos t, 4/5\cos t\ra </m>; <m>\vec{N}(t) = \la -\cos t,-3/5\sin t,-4/5\sin t\ra </m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\vec{r}(t)= \la a\cos t,a\sin t,b t \ra </m>;  <m>a\gt0</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\vec{T}(t) = \frac{1}{\sqrt{a^2+b^2}}\la -a\sin t,a\cos t,b \ra </m>; <m>\vec{N}(t) = \la -\cos t,-\sin t,0\ra </m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\vec{r}(t)= \la \cos (at),\sin (at),t \ra </m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\vec{T}(t) = \frac{1}{\sqrt{a^2+1}}\la -a\sin (at),a\cos (at),1 \ra </m>; <m>\vec{N}(t) = \la -\cos t,-\sin t,0\ra </m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        Find <m>a_{\text{T}}</m> and <m>a_{\text{N}}</m> given <m>\vec{r}(t)</m>. Sketch <m>\vec{r}(t)</m> on the indicated interval, and comment on the relative sizes of <m>a_{\text{T}}</m> and <m>a_{\text{N}}</m> at the indicated <m>t</m> values.
+      </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>\vec{r}(t)= \la t,t^2 \ra </m> on <m>[-1,1]</m>; consider <m>t=0</m> and <m>t=1</m>.</p>
+      </statement>
+      <answer>
+        <p>
+          <m>a_{\text{T}} = \frac{4t}{\sqrt{1+4t^2}}</m> and <m>a_{\text{N}} = \sqrt{4-\frac{16t^2}{1+4t^2}}</m>At <m>t=0</m>, <m>a_{\text{T}} = 0</m> and <m>a_{\text{N}} = 2</m>;At <m>t=1</m>, <m>a_{\text{T}} = 4/\sqrt{5}</m> and <m>a_{\text{N}} = 2/\sqrt{5}</m>.At <m>t=0</m>, all acceleration comes in the form of changing the direction of velocity and not the speed; at <m>t=1</m>, more acceleration comes in changing the speed than in changing direction.</p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\vec{r}(t)= \la t,1/t \ra </m> on <m>(0,4]</m>; consider <m>t=1</m> and <m>t=2</m>.</p>
+      </statement>
+      <answer>
+        <p>
+          <m>a_{\text{T}} = \frac{-2/t^5}{\sqrt{1+1/t^4}}</m> and <m>a_{\text{N}} = \sqrt{\frac{4}{t^6}-\frac{4/t^{10}}{1+1/t^4}}</m>At <m>t=1</m>, <m>a_{\text{T}} = \sqrt{2}</m> and <m>a_{\text{N}} = -\sqrt{2}</m>;At <m>t=2</m>, <m>a_{\text{T}} = -\frac{1}{4\sqrt{17}}</m> and <m>a_{\text{N}} = \frac{1}{\sqrt{17}}</m>.At <m>t=1</m>, acceleration comes from changing speed and changing direction in “equal measure;” at <m>t=2</m>, acceleration is nearly <m>\vec{0}</m> as it is; the low value of <m>a_{\text{T}}</m> shows that the speed is nearly constant and the low value of <m>a_{\text{N}}</m> shows the direction is not changing quickly.</p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\vec{r}(t)= \la 2\cos t,2\sin t \ra </m> on <m>[0,2\pi ]</m>; consider <m>t=0</m> and <m>t=\pi /2</m>.</p>
+      </statement>
+      <answer>
+        <p>
+          <m>a_{\text{T}} = 0</m> and <m>a_{\text{N}} = 2</m>At <m>t=0</m>, <m>a_{\text{T}} = 0</m> and <m>a_{\text{N}} = 2</m>;At <m>t=\pi /2</m>, <m>a_{\text{T}} = 0</m> and <m>a_{\text{N}} = 2</m>.The object moves at constant speed, so all acceleration comes from changing direction, hence <m>a_{\text{T}}=0</m>. <m>\vec{a}(t)</m> is always parallel to <m>\vec{N}(t)</m>, but twice as long, hence <m>a_{\text{N}}=2</m>.</p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\vec{r}(t)= \la \cos (t^2),\sin (t^2) \ra </m> on <m>(0,2\pi ]</m>; consider <m>t=\sqrt{\pi /2}</m> and <m>t=\sqrt{\pi }</m>.</p>
+      </statement>
+      <answer>
+        <p>
+          <m>a_{\text{T}} = 2</m> and <m>a_{\text{N}} = 4t^2</m>At <m>t=\sqrt{\pi /2}</m>, <m>a_{\text{T}} = 2</m> and <m>a_{\text{N}} = 2\pi </m>;At <m>t=\sqrt{\pi }</m>, <m>a_{\text{T}} = 2</m> and <m>a_{\text{N}} = 4\pi </m>.The object moves at increasing speed (increasing at a constant rate of acceleration), hence <m>a_{\text{T}}=2</m>. Since the object is increasing speed yet always traveling in a circle of radius 1, the direction must change more quickly; the amount of acceleration that changes direction increases over time.</p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\vec{r}(t)= \la a\cos t,a\sin t, bt \ra </m> on <m>[0,2\pi ]</m>, where <m>a,b\gt0</m>; consider <m>t=0</m> and <m>t=\pi /2</m>.</p>
+      </statement>
+      <answer>
+        <p>
+          <m>a_{\text{T}} = 0</m> and <m>a_{\text{N}} = a</m>At <m>t=0</m>, <m>a_{\text{T}} = 0</m> and <m>a_{\text{N}} = a</m>;At <m>t=\pi /2</m>, <m>a_{\text{T}} = 0</m> and <m>a_{\text{N}} = a</m>.The object moves at constant speed, meaning that <m>a_{\text{T}}</m> is always 0. The object “rises” along the <m>z</m>-axis at a constant rate, so all acceleration comes in the form of changing direction circling the <m>z</m>-axis. The greater the radius of this circle the greater the acceleration, hence <m>a_{\text{N}}=a</m>.</p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\vec{r}(t)= \la 5\cos t,4\sin t, 3\sin t \ra </m> on <m>[0,2\pi ]</m>; consider <m>t=0</m> and <m>t=\pi /2</m>.</p>
+      </statement>
+      <answer>
+        <p>
+          <m>a_{\text{T}} = 0</m> and <m>a_{\text{N}} = 5</m>At <m>t=0</m>, <m>a_{\text{T}} = 0</m> and <m>a_{\text{N}} = 5</m>;At <m>t=\pi /2</m>, <m>a_{\text{T}} = 0</m> and <m>a_{\text{N}} = 5</m>.The object moves at constant speed, meaning that <m>a_{\text{T}}</m> is always 0. Acceleration is thus always perpendicular to the direction of travel; in this particular case, it is always 5 times the unit vector pointing orthogonal to the direction of travel.</p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+</exercises>

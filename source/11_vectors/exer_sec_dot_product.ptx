@@ -1,0 +1,599 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<exercises>
+  <subexercises>
+    <title>Terms and Concepts</title>
+    <exercise>
+          <statement>
+            <p>
+              The dot product of two vectors is a <fillin/>, not a vector.
+            </p>
+          </statement>
+          <answer>
+            <p>
+              Scalar
+            </p>
+          </answer>
+    </exercise>
+
+    <exercise>
+          <statement>
+            <p>
+              How are the concepts of the dot product and vector magnitude related?
+            </p>
+          </statement>
+          <answer>
+            <p>
+              The magnitude of a vectors is the square root of the dot product of a vector with itself; that is,
+              <m>\norm{\vec v} = \sqrt{\vec v\cdot \vec v}</m>.
+            </p>
+          </answer>
+    </exercise>
+
+    <exercise>
+          <statement>
+            <p>
+              How can one quickly tell if the angle between two vectors is acute or obtuse?
+            </p>
+          </statement>
+          <answer>
+            <p>
+              By considering the sign of the dot product of the two vectors.
+              If the dot product is positive, the angle is acute;
+              if the dot product is negative, the angle is obtuse.
+            </p>
+          </answer>
+    </exercise>
+
+    <exercise>
+          <statement>
+            <p>
+              Give a synonym for <q>orthogonal.</q>
+            </p>
+          </statement>
+          <answer>
+            <p>
+              <q>Perpendicular</q> is one answer.
+            </p>
+          </answer>
+    </exercise>
+
+  </subexercises>
+  <subexercises>
+    <title>Problems</title>
+    <exercisegroup cols="2">
+
+      <introduction>
+        <p>
+          In the following exercises, find the dot product of the given vectors.
+        </p>
+      </introduction>
+
+      <exercise>
+            <statement>
+              <p>
+                <m>\vec u = \la 2,-4\ra</m>, <m>\vec v = \la 3,7\ra</m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                <m>-22</m>
+              </p>
+            </answer>
+      </exercise>
+
+      <exercise>
+            <statement>
+              <p>
+                <m>\vec u = \la 5,3\ra</m>, <m>\vec v = \la 6,1\ra</m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                <m>33</m>
+              </p>
+            </answer>
+      </exercise>
+
+      <exercise>
+            <statement>
+              <p>
+                <m>\vec u = \la 1,-1,2\ra</m>,
+                <m>\vec v = \la 2,5,3\ra</m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                <m>3</m>
+              </p>
+            </answer>
+      </exercise>
+
+      <exercise>
+            <statement>
+              <p>
+                <m>\vec u = \la 3,5,-1\ra</m>,
+                <m>\vec v = \la 4,-1,7\ra</m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                <m>0</m>
+              </p>
+            </answer>
+      </exercise>
+
+      <exercise>
+            <statement>
+              <p>
+                <m>\vec u = \la 1,1\ra</m>, <m>\vec v = \la 1,2,3\ra</m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                not defined
+              </p>
+            </answer>
+      </exercise>
+
+      <exercise>
+            <statement>
+              <p>
+                <m>\vec u = \la 1,2,3\ra</m>,
+                <m>\vec v = \la 0,0,0\ra</m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                <m>0</m>
+              </p>
+            </answer>
+      </exercise>
+
+    </exercisegroup>
+
+    <exercise>
+          <statement>
+            <p>
+              Create your own vectors <m>\vec u</m>,
+              <m>\vec v</m> and <m>\vec w</m> in
+              <m>\mathbb{R}^2</m> and show that <m>\vec u\cdot (\vec v+\vec w) = \vec u\cdot \vec v + \vec u\cdot \vec w</m>.
+            </p>
+          </statement>
+          <answer>
+            <p>
+              Answers will vary.
+            </p>
+          </answer>
+    </exercise>
+
+    <exercise>
+          <statement>
+            <p>
+              Create your own vectors <m>\vec u</m> and <m>\vec v</m> in
+              <m>\mathbb{R}^3</m> and scalar <m>c</m> and show that <m>c(\vec u\cdot \vec v) = \vec u\cdot (c\vec v)</m>.
+            </p>
+          </statement>
+          <answer>
+            <p>
+              Answers will vary.
+            </p>
+          </answer>
+    </exercise>
+
+    <exercisegroup cols="2">
+
+      <introduction>
+        <p>
+          In the following exercises, find the measure of the angle between the two vectors in radians.
+        </p>
+      </introduction>
+
+      <exercise>
+            <statement>
+              <p>
+                <m>\vec u = \la 1,1\ra</m> and
+                <m>\vec v = \la 1,2\ra</m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                <m>\arccos(3/\sqrt{10})</m>
+              </p>
+            </answer>
+      </exercise>
+
+      <exercise>
+            <statement>
+              <p>
+                <m>\vec u = \la -2,1\ra</m> and
+                <m>\vec v = \la 3,5\ra</m> 
+              </p>
+            </statement>
+            <answer>
+              <p>
+                <m>\arccos(-1/\sqrt{170})</m>
+              </p>
+            </answer>
+      </exercise>
+
+      <exercise>
+            <statement>
+              <p>
+                 <m>\vec u = \la 8,1,-4\ra</m> and
+                <m>\vec v = \la 2,2,0\ra</m> 
+              </p>
+            </statement>
+            <answer>
+              <p>
+                <m>\frac{\pi}{4}</m>
+              </p>
+            </answer>
+      </exercise>
+
+      <exercise>
+            <statement>
+              <p>
+                <m>\vec u = \la 1,7,2\ra</m> and
+                <m>\vec v = \la 4,-2,5\ra</m> 
+              </p>
+            </statement>
+            <answer>
+              <p>
+                <m>\frac{\pi}{2}</m>
+              </p>
+            </answer>
+      </exercise>
+
+    </exercisegroup>
+    <exercisegroup cols="2">
+
+      <introduction>
+        <p>
+          In the following exercises, a vector <m>\vec v</m> is given.
+          Give two vectors that are orthogonal to <m>\vec v</m>.
+        </p>
+      </introduction>
+
+      <exercise>
+            <statement>
+              <p>
+                <m>\vec v = \la 4,7\ra</m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                Answers will vary; two possible answers are
+                <m>\la -7,4\ra</m> and <m>\la 14,-8\ra</m>.
+              </p>
+            </answer>
+      </exercise>
+
+      <exercise>
+            <statement>
+              <p>
+                <m>\vec v = \la -3,5\ra</m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                Answers will vary; two possible answers are
+                <m>\la 5,3\ra</m> and <m>\la -15,-9\ra</m>.
+              </p>
+            </answer>
+      </exercise>
+
+      <exercise>
+            <statement>
+              <p>
+                <m>\vec v = \la 1,1,1\ra</m>.
+              </p>
+            </statement>
+            <answer>
+              <p>
+                Answers will vary; two possible answers are
+                <m>\la 1,0,-1\ra</m> and <m>\la 4,5,-9\ra</m>.
+              </p>
+            </answer>
+      </exercise>
+
+      <exercise>
+            <statement>
+              <p>
+                <m>\vec v = \la 1,-2,3\ra</m>.
+              </p>
+
+              <p>
+                <var name="$multians" width="10"/> and <var name="$multians" width="10"/>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                Answers will vary; two possible answers are
+                <m>\la 2,1,0\ra</m> and <m>\la 1,1,1/3\ra</m>.
+              </p>
+            </answer>
+      </exercise>
+
+    </exercisegroup>
+    <exercisegroup cols="2">
+
+      <introduction>
+        <p>
+          In the following exercises, vectors <m>\vec u</m> and <m>\vec v</m> are given.
+          Find <m>\proj uv</m>,
+          the orthogonal projection of <m>\vec u</m> onto <m>\vec v</m>,
+          and sketch all three vectors with the same initial point.
+        </p>
+      </introduction>
+
+      <exercise xml:id="ex_10_03_ex_21">
+            <statement>
+              <p>
+                <m>\vec u = \la 1,2\ra</m> and <m>\vec v = \la -1,3\ra</m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                <m>\la -1/2, 3/2 \ra</m>
+              </p>
+            </answer>
+      </exercise>
+
+      <exercise>
+            <statement>
+              <p>
+                <m>\vec u = \la 5,5\ra</m> and <m>\vec v = \la 1,3\ra</m>,
+              </p>
+            </statement>
+            <answer>
+              <p>
+                <m>\la 2,6 \ra</m>
+              </p>
+            </answer>
+      </exercise>
+
+      <exercise>
+            <statement>
+              <p>
+                <m>\vec u = \la -3,2\ra</m> and <m>\vec v = \la 1,1\ra</m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                <m>\la -\frac12, \frac12 \ra</m>
+              </p>
+            </answer>
+      </exercise>
+
+      <exercise>
+            <statement>
+              <p>
+                <m>\vec u = \la -3,2\ra</m> and <m>\vec v = \la 2,3\ra</m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                <m>\la 0, 0 \ra</m>
+              </p>
+            </answer>
+      </exercise>
+
+      <exercise>
+            <statement>
+              <p>
+                <m>\vec u = \la 1,5,1\ra</m> and <m>\vec v = \la 1,2,3\ra</m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                <m>\la 1, 2, 3 \ra</m>
+              </p>
+            </answer>
+      </exercise>
+
+      <exercise xml:id="ex_10_03_ex_24">
+            <statement>
+              <p>
+                <m>\vec u = \la 3,-1,2\ra</m> and <m>\vec v = \la 2,2,1\ra</m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                <m>\frac43, \frac43, \frac23</m>
+              </p>
+            </answer>
+      </exercise>
+
+    </exercisegroup>
+    <exercisegroup cols="2">
+
+      <introduction>
+        <p>
+          In the following exercises, vectors <m>\vec u</m> and <m>\vec v</m> are given.
+          Write <m>\vec u</m> as the sum of two vectors,
+          one of which is parallel to <m>\vec v</m>
+          (or is zero)
+          and one of which is orthogonal to <m>\vec v</m>.
+          Note: these are the same pairs of vectors as found in <xref ref="ex_10_03_ex_21">Exercises</xref>
+          <mdash/> <xref ref="ex_10_03_ex_24"/>.
+        </p>
+      </introduction>
+
+      <exercise>
+            <statement>
+              <p>
+                <m>\vec u = \la 1,2\ra</m> and <m>\vec v = \la -1,3\ra</m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                Answers may vary. One possiblity: <m>\la \frac32, \frac12 \ra</m>; <m>\la -\frac12, \frac32 \ra</m>
+              </p>
+            </answer>
+      </exercise>
+
+      <exercise>
+        <statement>
+              <p>
+                <m>\vec u = \la 5,5\ra</m>  and <m>\vec v = \la 1,3\ra</m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                <m>\la 2, 6 \ra</m>; <m>\la 3,-1 \ra</m>
+              </p>
+            </answer>
+      </exercise>
+
+      <exercise>
+        <statement>
+              <p>
+                <m>\vec u = \la -3,2\ra</m> and <m>\vec v = \la 1,1\ra</m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                <m>\la -\frac12,-\frac12 \ra</m>; <m>\la -\frac52, \frac52 \ra</m>
+              </p>
+            </answer>
+      </exercise>
+
+      <exercise>
+            <statement>
+              <p>
+                <m>\vec u = \la -3,2\ra</m> and <m>\vec v = \la 2,3\ra</m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                <m>\la 0, 0 \ra</m>; <m>\la -3, 2 \ra</m>
+              </p>
+            </answer>
+      </exercise>
+
+      <exercise>
+            <statement>
+              <p>
+                <m>\vec u = \la 1,5,1\ra</m> and <m>\vec v = \la 1,2,3\ra</m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                <m>\la 1, 2, 3 \ra</m>; <m>\la 0, 3, -2 \ra</m>
+              </p>
+            </answer>
+      </exercise>
+
+      <exercise>
+            <statement>
+              <p>
+                <m>\vec u = \la 3,-1,2\ra</m> and <m>\vec v = \la 2,2,1\ra</m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                <m>\la \frac43, \frac43, \frac23 \ra</m>; <m>\la \frac53, -\frac73, \frac43 \ra</m>
+              </p>
+            </answer>
+      </exercise>
+
+    </exercisegroup>
+
+    <exercise>
+          <statement>
+            <p>
+              A 10lb box sits on a ramp that rises 4ft over a distance of 20ft.
+              How much force is required to keep the box from sliding down the ramp?
+            </p>
+          </statement>
+          <answer>
+            <p>
+              1.96lb
+            </p>
+          </answer>
+    </exercise>
+
+    <exercise>
+          <statement>
+            <p>
+              A 10lb box sits on a 15ft ramp that makes a
+              <m>30^\circ</m> angle with the horizontal.
+              How much force is required to keep the box from sliding down the ramp?
+            </p>
+          </statement>
+          <answer>
+            <p>
+              5lb
+            </p>
+          </answer>
+    </exercise>
+
+    <exercise>
+          <statement>
+            <p>
+              How much work is performed in moving a box horizontally 10ft with a force of 20lb applied at an angle of <m>45^\circ</m> to the horizontal?
+            </p>
+          </statement>
+          <answer>
+            <p>
+              <m>141.42</m>ft<ndash/>lb
+            </p>
+          </answer>
+    </exercise>
+
+    <exercise>
+          <statement>
+            <p>
+              How much work is performed in moving a box horizontally 10ft with a force of 20lb applied at an angle of <m>10^\circ</m> to the horizontal?
+            </p>
+          </statement>
+          <answer>
+            <p>
+              <m>196.96</m>ft<ndash/>lb
+            </p>
+          </answer>
+    </exercise>
+
+    <exercise>
+          <statement>
+            <p>
+              How much work is performed in moving a box up the length of a ramp that rises 2ft over a distance of 10ft,
+              with a force of 50lb applied horizontally?
+            </p>
+          </statement>
+          <answer>
+            <p>
+              <m>500</m>ft<ndash/>lb
+            </p>
+          </answer>
+    </exercise>
+
+    <exercise>
+          <statement>
+            <p>
+              How much work is performed in moving a box up the length of a ramp that rises 2ft over a distance of 10ft,
+              with a force of 50lb applied at an angle of <m>45^\circ</m> to the horizontal?
+            </p>
+          </statement>
+          <answer>
+            <p>
+              <m>424.26</m>ft<ndash/>lb
+            </p>
+          </answer>
+    </exercise>
+
+    <exercise>
+          <statement>
+            <p>
+              How much work is performed in moving a box up the length of a 10ft ramp that makes a <m>5^\circ</m> angle with the horizontal,
+              with 50lb of force applied in the direction of the ramp?
+            </p>
+          </statement>
+          <answer>
+            <p>
+              <m>500</m>ft<ndash/>lb
+            </p>
+          </answer>
+    </exercise>
+  </subexercises>
+</exercises>

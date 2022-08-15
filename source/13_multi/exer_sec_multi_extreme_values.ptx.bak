@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<exercises>
+  <exercise>
+    <statement>
+      <p>
+        T/F: <xref ref="thm_multi_critical_point" />  states that if <m>f</m> has a critical point at <m>P</m>, then <m>f</m> has a relative extrema at <m>P</m>.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        F; it is the “other way around.”
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        T/F: A point <m>P</m> is a critical point of <m>f</m> if <m>f_x</m> and <m>f_y</m> are both 0 at <m>P</m>.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        T
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        T/F: A point <m>P</m> is a critical point of <m>f</m> if <m>f_x</m> or <m>f_y</m> are undefined at <m>P</m>.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        T
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        Explain what it means to “solve a constrained optimization” problem.
+        </p>
+    </statement>
+    <answer>
+      <p>
+        Answers will vary. A good answer will state that we are optimizing a function subject to a constraint, or limit, on the domain of the function. We are looking to maximize/minimize the function while “looking” at only a certain part of the domain.
+        </p>
+    </answer>
+  </exercise>
+  <exercisegroup>
+    <introduction>
+      <p>
+        Find the critical points of the given function. Use the Second Derivative Test to determine if each critical point corresponds to a relative maximum, minimum, or saddle point.
+        </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x,y) = \frac{1}{2}x^2+2y^2-8y+4x</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          One critical point at <m>(-4,2)</m>; <m>f_{xx} = 1</m> and <m>D = 4</m>, so this point corresponds to a relative minimum.
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x,y) = x^2+4x+y^2-9y+3xy</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          One critical point at <m>(7,-6)</m>; <m>D = -5</m>, so this point corresponds to a saddle point.
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x,y) = x^2+3y^2-6y+4xy</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          One critical point at <m>(6,-3)</m>; <m>D = -4</m>, so this point corresponds to a saddle point.
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x,y) = \frac{1}{x^2+y^2+1}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          One critical point at <m>(0,0)</m>; <m>f_{xx} = -2</m> and <m>D = 4</m>, so this point corresponds to a relative maximum.
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x,y) = x^2+y^3-3y+1</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          Two critical points: at <m>(0,-1)</m>; <m>f_{xx} = 2</m> and <m>D = -12</m>, so this point corresponds to a saddle point;at <m>(0,1)</m>, <m>f_{xx} = 2</m> and <m>D = 12</m>, so this corresponds to a relative minimum.
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x,y) = \frac{1}{3}x^3-x+\frac{1}{3}y^3-4y</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          There are 4 critical points:<m>(-1,-2)</m>, rel. max; <m>(1,-2)</m>, saddle point;<m>(-1,2)</m>, saddle point; <m>(1,2)</m>, rel. min.,where <m>f_{xx} = 2x</m> and <m>D = 4xy</m>.
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x,y) = x^2y^2</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          There are infinite critical points, whenever <m>x=0</m> or <m>y=0</m>. With <m>D = -12x^2y^2</m>, at each critical point <m>D = 0</m> and the test is inconclusive. (Some elementary thought shows that each is an absolute minimum.)
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x,y) = x^4-2x^2+y^3-27y-15</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          Six critical points: <m>f_x = 0</m> when <m>x=-1,0</m> and 1; <m>f_y = 0</m> when <m>y = -3,3</m>. Together, we get the points:<m>(-1,-3)</m> saddle point; <m>(-1,3)</m> rel. min<m>(0,-3)</m> rel. max; <m>(0,3)</m> saddle point<m>(1,-3)</m> saddle point; <m>(1,3)</m> relative minwhere <m>f_{xx} = 12x^2-4</m> and <m>D = 24y(3x^2-1)</m>.
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x,y) = \sqrt{16-(x-3)^2-y^2}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          One critical point: <m>f_x = 0</m> when <m>x=3</m>; <m>f_y = 0</m> when <m>y = 0</m>, so one critical point at <m>(3,0)</m>, which is a relative maximum, where <m>f_{xx} = \frac{y^2-16}{(16-(x-3)^2-y^2)^{3/2}}</m> and <m>D = \frac{16}{(16-(x-3)^2-y^2)^{2}}</m>.Both <m>f_x</m> and <m>f_y</m> are undefined along the circle <m>(x-3)^2+y^2=16</m>; at any point along this curve, <m>f(x,y)=0</m>, the absolute minimum of the function.
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x,y) = \sqrt{x^2+y^2}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          One critical point: <m>f_x = 0</m> when <m>x=0</m>; <m>f_y = 0</m> when <m>y = 0</m>, so one critical point at <m>(0,0)</m> (although it should be noted that at <m>(0,0)</m>, both <m>f_x</m> and <m>f_y</m> are undefined.) The Second Derivative Test fails at <m>(0,0)</m>, with <m>D=0</m>. A graph, or simple calculation, shows that <m>(0,0)</m> is the absolute minimum of <m>f</m>.
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        Find the absolute maximum and minimum of the function subject to the given constraint.
+        </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x,y) = x^2+y^2+y+1</m>, constrained to the triangle with vertices <m>(0,1)</m>, <m>(-1,-1)</m> and <m>(1,-1)</m>.</p>
+      </statement>
+      <answer>
+        <p>
+          The triangle is bound by the lines <m>y=-1</m>, <m>y=2x+1</m> and <m>y=-2x+1</m>.Along <m>y=-1</m>, there is a critical point at <m>(0,-1)</m>.Along <m>y=2x+1</m>, there is a critical point at <m>(-3/5,-1/5)</m>.Along <m>y=-2x+1</m>, there is a critical point at <m>(3/5,-1/5)</m>.The function <m>f</m> has one critical point, irrespective of the constraint, at <m>(0,-1/2)</m>.Checking the value of <m>f</m> at these four points, along with the three vertices of the triangle, we find the absolute maximum is at <m>(0,1,3)</m> and the absolute minimum is at <m>(0,-1/2,3/4)</m>.
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x,y) = 5x-7y</m>, constrained to the region bounded by <m>y=x^2</m> and <m>y=1</m>.</p>
+      </statement>
+      <answer>
+        <p>
+          The region has two “corners” at <m>(1,1)</m> and <m>(-1,1)</m>.Along <m>y=1</m>, there is no critical point.Along <m>y=x^2</m>, there is a critical point at <m>(5/14,25/196)\approx (0.357,0.128) </m>.The function <m>f</m> itself has no critical points. Checking the value of <m>f</m> at the corners <m>(1,1)</m>, <m>(-1,1)</m> and the critical point <m>(5/14,25/196)</m>, we find the absolute maximum is at <m>(5/14,25/196,25/28) \approx (0.357,0.128,0.893)</m> and the absolute minimum is at <m>(-1,1,-12)</m>.
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x,y) = x^2+2x+y^2+2y</m>, constrained to the region bounded by the circle <m>x^2+y^2=4</m>.</p>
+      </statement>
+      <answer>
+        <p>
+          The region has no “corners” or “vertices,” just a smooth edge.To find critical points along the circle <m>x^2+y^2=4</m>, we solve for <m>y^2</m>: <m>y^2=4-x^2</m>. We can go further and state <m>y=\pm \sqrt{4-x^2}</m>.
+        </p>
+        <p>
+          We can rewrite <m>f</m> as <m>f(x)=x^2+2x + (4-x^2) + 2\sqrt{4-x^2} = 2x+4+2\sqrt{4-x^2}</m>. (We will return and use <m>-\sqrt{4-x^2}</m> later.) Solving <m>f\,^{\prime }(x)=0</m>, we get <m>x=\sqrt{2} \Rightarrow y=\sqrt{2}</m>. <m>f\,^{\prime }(x)</m> is also undefined at <m>x=\pm 2</m>, where <m>y=0</m>.
+        </p>
+        <p>
+          Using <m>y=-\sqrt{4-x^2}</m>, we rewrite <m>f(x,y)</m> as <m>f(x) = 2x+4-2\sqrt{4-x^2}</m>. Solving <m>f\,^{\prime }(x) =0</m>, we get <m>x=-\sqrt{2},\ y=-\sqrt{2}</m>. Again, <m>f\,^{\prime }(x)</m> is undefined at <m>x=\pm 2</m>.
+        </p>
+        <p>
+          The function <m>z=f(x,y)</m> itself has a critical point at <m>(-1,-1)</m>.Checking the value of <m>f</m> at <m>(-1,-1)</m>, <m>(\sqrt{2},\sqrt{2})</m>, <m>(-\sqrt{2},-\sqrt{2})</m>, <m>(2,0)</m> and <m>(-2,0)</m>, we find the absolute maximum is at <m>(\sqrt{2},\sqrt{2},4+4\sqrt{2})</m> and the absolute minimum is at <m>(-1,-1,-2)</m>.
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x,y) = 3y-2x^2</m>, constrained to the region bounded by the parabola <m>y=x^2+x-1</m> and the line <m>y=x</m>.</p>
+      </statement>
+      <answer>
+        <p>
+          The region has two “corners” at <m>(-1,-1)</m> and <m>(1,1)</m>.Along the line <m>y=x</m>, <m>f(x,y)</m> becomes <m>f(x) = 3x-2x^2</m>. Along this line, we have a critical point at <m>(3/4,3/4)</m>.Along the curve <m>y=x^2+x-1</m>, <m>f(x,y)</m> becomes <m>f(x) =x^2+3x-3</m>. There is a critical point along this curve at <m>(-3/2, -1/4)</m>. Since <m>x=-3/2</m> lies outside our bounded region, we ignore this critical point.The function <m>f</m> itself has no critical points.Checking the value of <m>f</m> at <m>(-1,-1)</m>, <m>(1,1)</m>, <m>(3/4,3/4)</m>, we find the absolute maximum is at <m>(3/4,3/4,9/8)</m> and the absolute minimum is at <m>(-1,-1,-5)</m>.
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+</exercises>

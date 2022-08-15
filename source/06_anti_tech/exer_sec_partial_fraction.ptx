@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<exercises>
+  <exercise>
+    <statement>
+      <p>
+        Fill in the blank: Partial Fraction Decomposition is a method of rewriting <fillin/> functions.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        rational
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        T/F: It is sometimes necessary to use polynomial division before using Partial Fraction Decomposition.
+        </p>
+    </statement>
+    <answer>
+      <p>
+        T
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        Decompose <m>\displaystyle \frac{1}{x^2-3x}</m> without solving for the coefficients, as done in <xref ref="ex_pf1" />.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        <m>\frac{A}{x} + \frac{B}{x-3}</m>
+      </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        Decompose <m>\displaystyle \frac{7-x}{x^2-9}</m> without solving for the coefficients, as done in <xref ref="ex_pf1" />.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        <m>\frac{A}{x-3} + \frac{B}{x+3}</m>
+      </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        Decompose <m>\displaystyle \frac{x-3}{x^2-7}</m> without solving for the coefficients, as done in <xref ref="ex_pf1" />.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        <m>\frac{A}{x-\sqrt{7}} + \frac{B}{x+\sqrt{7}}</m>
+      </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        Decompose <m>\displaystyle \frac{2x+5}{x^3+7x}</m> without solving for the coefficients, as done in <xref ref="ex_pf1" />.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        <m>\frac{A}{x} + \frac{Bx+C}{x^2+7}</m>
+      </p>
+    </answer>
+  </exercise>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 7–26, evaluate the indefinite integral.
+        </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \frac{7x+7}{x^2+3x-10}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>3 \ln |x-2|+4 \ln |x+5|+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \frac{7x-2}{x^2+x}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>9 \ln |x+1|-2 \ln |x|+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \frac{-4}{3x^2-12}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\frac{1}{3} (\ln |x+2|-\ln |x-2|)+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \frac{6x+4}{3x^2+4x+1}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\ln |x+1| + \ln |3x+1|+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \frac{x+7}{(x+5)^2}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\ln |x+5|-\frac{2}{x+5}+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \frac{-3x-20}{(x+8)^2}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>-\frac{4}{x+8}-3 \ln |x+8|+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \frac{9x^2+11x+7}{x(x+1)^2}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\frac{5}{x+1}+7 \ln |x|+2 \ln |x+1|+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \frac{-12x^2-x+33}{(x-1)(x+3)(3-2x)}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>-\ln |2x-3|+5 \ln |x-1|+2 \ln |x+3|+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \frac{94x^2-10x}{(7x+3)(5x-1)(3x-1)}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>-\frac{1}{5} \ln |5x-1|+\frac{2}{3} \ln |3 x-1|+\frac{3}{7} \ln |7 \ x+3|+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \frac{x^2+x+1}{x^2+x-2}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>x+\ln |x-1|-\ln |x+2|+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \frac{x^3}{x^2-x-20}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>x+\frac{x^2}{2}+\frac{125}{9} \ln |x-5|+\frac{64}{9} \ln |x+4|+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \frac{2x^2-4x+6}{x^2-2x+3}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>2x+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \frac{1}{x^3+2x^2+3x}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\frac{1}{6} \left(-\ln \left|x^2+2 x+3\right|+2 \ln |x|-\sqrt{2} \tan ^{-1}\left(\frac{x+1}{\sqrt{2}}\right)\right)+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \frac{x^2+x+5}{x^2+4x+10}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>-\frac{3}{2} \ln \left|x^2+4 x+10\right|+x+\frac{\tan \ ^{-1}\left(\frac{x+2}{\sqrt{6}}\right)}{\sqrt{6}}+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \frac{12x^2+21x+3}{(x+1)(3x^2+5x-1)}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\ln \left|3 x^2+5 x-1\right|+2 \ln |x+1|+C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \frac{6x^2+8x-4}{(x-3)(x^2+6x+10)}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>2\ln |x-3| +2\ln |x^2+6x+10| -4\tan ^{-1}(x+3) +C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \frac{2x^2+x+1}{(x+1)(x^2+9)}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\frac{9}{10} \ln \left|x^2+9\right|+\frac{1}{5} \ln |x+1|-\frac{4}{15} \tan ^{-1}\left(\frac{x}{3}\right) +C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \frac{x^2-20x-69}{(x-7)(x^2+2x+17)}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\frac{1}{2} \left(3 \ln \left|x^2+2 x+17\right|-4 \ln |x-7|+\tan \ ^{-1}\left(\frac{x+1}{4}\right)\right) +C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \frac{9x^2-60x+33}{(x-9)(x^2-2x+11)}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>3 \left(\ln \left|x^2-2 x+11\right|+\ln |x-9|\right)+3 \ \sqrt{\frac{2}{5}} \tan ^{-1}\left(\frac{x-1}{\sqrt{10}}\right) +C</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int \frac{6x^2+45x+121}{(x+2)(x^2+10x+27)}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\frac{1}{2} \ln \left|x^2+10 x+27\right|+5 \ln |x+2|-6 \sqrt{2} \tan \ ^{-1}\left(\frac{x+5}{\sqrt{2}}\right) +C</m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 27–30, evaluate the definite integral.
+        </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _1^2 \frac{8x+21}{(x+2)(x+3)}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\ln (2000/243) \approx 2.108</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _0^5 \frac{14x+6}{(3x+2)(x+4)}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>5\ln (9/4)-\frac{1}{3}\ln (17/2) \approx 3.3413</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{-1}^1 \frac{x^2+5x-5}{(x-10)(x^2+4x+5)}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>-\pi /4+\tan ^{-1} 3 - \ln (11/9) \approx 0.263</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{0}^1 \frac{x}{(x+1)(x^2+2x+1)}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>1/8</m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+</exercises>

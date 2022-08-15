@@ -1,0 +1,929 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec_diffeq_graph_numer">
+  <title>Graphical and Numerical Solutions to Differential Equations</title>
+  <introduction>
+    <p>
+      In Section <xref ref="sec_antider"/>, we were introduced to the idea of a differential equation. Given a function <m>y = f(x),</m> we defined a differential equation as an equation involving <m>y, x,</m> and derivatives of <m>y</m>. We explored the simple differential equation <m>y'= 2x,</m> and saw that a solution to a differential equation is simply a function that satisfies the differential equation.
+    </p>
+    <p>
+      In this section we will explore other ways to find solutions to differential equations.  But first, we start with some more formal definitions.
+    </p>
+  <definition xml:id="def_diffeq_ODE">
+    <title>
+        Differential Equation
+    </title>
+    <statement>
+      <p>
+        Given a function <m>y=f(x)</m>, a <term>differential equation</term><idx>differential equation</idx> is an equation relating <m>x</m>, <m>y</m>, and derivatives of <m>y</m>.
+      </p>
+      <ol>
+        <li>
+          <p>
+            The variable <m>x</m> is called the <term>independent variable</term><idx>independent variable</idx>.
+          </p>
+        </li>
+        <li>
+          <p>
+            The variable <m>y</m> is called the <term>dependent variable</term><idx>
+              dependent variable</idx>.
+          </p>
+        </li>
+        <li>
+          <p>
+            The <term>order</term><idx>order</idx> of the differential equation is the order of the highest derivative of <m>y</m> that appears in the equation.
+          </p>
+        </li>
+      </ol>
+    </statement>
+  </definition>
+  <p>
+    Let us return to the simple differential equation
+    <md>
+      <mrow> y'= 2x. </mrow>
+    </md>
+    To find a solution, we must find a function whose derivative is <m>2x</m>. In other words, we seek an antiderivative of <m>2x.</m> The function
+    <md>
+      <mrow>y = x^2</mrow>
+    </md>
+    is an antiderivative of <m>2x</m>, and solves the differential equation. So do the functions
+    <md>
+      <mrow>y = x^2 + 1</mrow>
+    </md>
+    and
+    <md>
+      <mrow>y = x^2 - 2346.</mrow>
+    </md>    
+  </p>
+  <p>
+    We call the function
+    <md>
+      <mrow>y = x^2 + C,</mrow>
+    </md>
+    with <m>C</m> an arbitrary constant of integration, the <term>general solution</term> to the differential equation.
+  </p>
+  <definition xml:id="def_diffeq_gen_soln">
+    <title>General Solution</title>
+    <p>
+      The family of solutions which satisfy a differential equation is called the <term>general solution</term><idx>general solution</idx> to the differential equation.
+    </p>
+  </definition>
+  <p>
+    In order to specify the value of the integration constant <m>C</m> and obtain a single solution, we require additional information. For example, if we know that <m>y(1) = 3</m> in our above differential equation, it follows that <m>C=2</m>. This additional information is called an initial condition.
+  </p>
+  <definition xml:id="def_diffeq_IVP">
+    <title>
+        Initial Value Problem
+    </title>
+    <statement>
+      <p>
+        An <term>initial condition</term><idx>initial condition</idx> is a specific value given for the solution of a differential equation.
+        A differential equation paired with an initial condition (or initial conditions) is called an <term>initial value problem</term><idx>initial value problem</idx>. The solution to an initial value problem is called a <term>particular solution</term><idx>particular solution</idx>. A particular solution does not include arbitrary constants.
+      </p>
+    </statement>
+  </definition>
+  <aside>
+    <p>
+      A general solution typically includes one or more arbitrary constants. Different values of the constant(s) specify different members in the family of solutions. The particular solution to an initial value problem is the specific member in the family of solutions that corresponds to the given initial condition(s).
+    </p>
+  </aside>
+  <example xml:id="ex_simple_de">
+    <title>
+        A simple first-order differential equation
+    </title>
+    <statement>
+      <p>
+        Solve the differential equation <m>y'= 2y</m>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        The solution is a function <m>y</m> such that differentiation yields twice the original function. Unlike our starting example, finding the solution here does not involve computing an antiderivative. Notice that <q>integrating both sides</q> would yield the result <m>y = \int 2y\,dx,</m> which is not useful. Without knowledge of the function <m>y</m>, we can't compute the indefinite integral. 
+      </p>
+      <p>
+        Later sections will explore systematic ways to find analytic solutions to simple differential equations. For now, a bit of thought might let us guess the solution
+        <md>
+          <mrow>y = e^{2x}.</mrow>
+        </md>
+        Notice that application of the chain rule yields <m>y'= 2e^{2x} = 2y.</m> Another solution is given by
+        <md>
+          <mrow>y = -3e^{2x}.</mrow>
+        </md>        
+      </p>
+      <p>
+        In fact, the function of the form
+        <md>
+          <mrow>y = Ce^{2x},</mrow>
+        </md>
+        where <m>C</m> is any constant, is the general solution to the differential equation because <m>y'= 2Ce^{2x} = 2y</m>.
+      </p>
+      <p>
+        If we are provided with a single initial condition, say <m>y(0) = 3/2,</m> we can identify <m>C=3/2</m> so that
+        <md>
+          <mrow>y = \frac{3}{2}e^{2x}</mrow>
+        </md>
+        is the particular solution to the initial value problem
+        <md>
+          <mrow>y'= 2y, \text{ with } y(0) = \frac{3}{2}.</mrow>
+        </md>
+      </p>
+      <p>
+        <xref ref="fig_general_particular"/> shows various members of the general solution to the differential equation <m>\displaystyle y'= 2y</m>. Each <m>C</m> value yields a different member of the family, and a different function. We emphasize the particular solution corresponding to the initial condition <m>y(0)=3/2.</m>
+      </p>
+    </solution>
+  </example>
+  <sidebyside width="47%">
+    <figure xml:id="fig_general_particular">
+      <caption>
+          A representation of some of the members of the general solution to the differential equation <m>y'= 2y</m>, including the particular solution to the initial value problem with <m>y(0)=\displaystyle 3/2,</m> from <xref ref="ex_simple_de"/>
+      </caption>
+      <image xml:id="img_general_particular">
+        <description />
+        <latex-image>          
+            \begin{tikzpicture}
+              \begin{axis}[width=\marginparwidth+25pt,
+              tick label style={font=\scriptsize},
+              %axis y line=middle,axis x line=middle,
+              axis lines = middle,
+              name=myplot,%
+              %     xtick={0,1,2,3,4},%
+              %     xticklabels={-2,-1,..,2},
+              %     ytick={0,0.05,.1},
+              %     yticklabels = {0,0.05,0.1},
+              %     minor x tick num=1,
+              %     extra x ticks={.25,.75},%
+                    ymin=-10.5,ymax=10.75,
+                    xmin=-2,xmax=2.15%
+              ]
+              \foreach \n in {-6,...,6}
+                {
+                \addplot[{\colortwo},domain = -2:2, samples=50] {\n/2*exp(2*x)};
+                }
+              \addplot[{\colorone},domain=-2:2,thick,samples=50]{3/2*exp(2*x)};
+              \end{axis}
+              \node [right] at (myplot.right of origin) {\scriptsize $x$};
+              \node [above] at (myplot.above origin) {\scriptsize $y$};
+            \end{tikzpicture}   
+          </latex-image>
+      </image>
+    </figure>
+  </sidebyside>
+  <example xml:id="ex_simple_de2">
+    <title>
+      A second-order differential equation
+    </title>
+    <statement>
+      <p>
+        Solve the differential equation <m>y'' + 9y = 0.</m>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        We seek a function whose second derivative is negative 9 multiplied by the original function. Both <m>\sin (3x)</m> and <m>\cos (3x)</m> have this feature. The general solution to the differential equation is given by
+        <md>
+          <mrow>y = C_1\sin (3x) + C_2\cos (3x),</mrow>
+        </md>
+        where <m>C_1</m> and <m>C_2</m> are arbitrary constants. To fully specify a particular solution, we require two additional conditions. For example, the initial conditions <m>y(0)=1</m> and <m>y'(0)=3</m> yield <m>C_1 = C_2 = 1.</m>
+      </p>
+    </solution>
+  </example>
+  <p>
+    The differential equation in <xref ref="ex_simple_de2"/> is second order because the equation involves a second derivative. In general, the number of initial conditions required to specify a particular solution depends on the order of the differential equation. For the remainder of the chapter, we restrict our attention to first order differential equations and first order initial value problems.
+  </p>
+
+  <example xml:id="ex_verify_solutions">
+    <title>
+        Verifying a solution to a differential equation
+    </title>
+    <statement>
+      <p>
+        Consider the differential equation
+        <md>
+          <mrow> y'+ \frac{y}{x} - \sqrt{y} = 0.</mrow>
+        </md>
+        Which of the following is a solution?
+        <ol>
+          <li xml:id="ex_verify_solutionsa"> <m>\displaystyle y = C \left( 1 + \ln x \right)^2</m></li>
+          <li xml:id="ex_verify_solutionsb"> <m>\displaystyle y = \left( \frac{1}{3}x + \frac{C}{\sqrt{x}} \right)^2</m></li>
+          <li xml:id="ex_verify_solutionsc"> <m>\displaystyle y = C e^{-3x} + \sqrt{\sin x}</m></li>
+        </ol>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Verifying a solution to a differential equation is simply an exercise in differentiation and simplification. We substitute each potential solution into the differential equation to see if it satisfies the equation. 
+      </p>
+      <p>
+        <xref ref="ex_verify_solutionsa" text="local">Part</xref> Testing the potential solution <m>\displaystyle y = C \left( 1 + \ln x \right)^2</m>:
+      </p>
+      <p>
+        Differentiating, we have <m>\displaystyle y'= \frac{2C(1 + \ln x)}{x}</m>. Substituting into the differential equation,
+        <md>
+          <mrow> \amp\ \frac{2C(1+\ln x)}{x} + \frac{C(1+\ln x)^2}{x} -\sqrt{C}(1+\ln x)</mrow>
+          <mrow> =\amp\ (1+\ln x)\left( \frac{2C}{x} + \frac{C(1+\ln x)}{x} - \sqrt{C}\right)</mrow>
+          <mrow> \ne \amp\ 0. </mrow>
+        </md>
+        Since it doesn't satisfy the differential equation, <m>y = C(1 + \ln x)^2</m> is <em>not</em> a solution.
+      </p>  
+      <p>
+        <xref ref="ex_verify_solutionsb" text="local">Part</xref> Testing the potential solution <m>\displaystyle y = \left( \frac{1}{3}x + \frac{C}{\sqrt{x}} \right)^2</m>:
+      </p>
+      <p>
+        Differentiating, we have <m>y'= 2\left( \frac{1}{3}x + \frac{C}{\sqrt{x}} \right)\left( \frac{1}{3} - \frac{C}{2x^{3/2}}\right).</m> Substituting into the differential equation,
+        <md>
+          <mrow> \amp\ 2\left( \frac{1}{3}x + \frac{C}{\sqrt{x}} \right)\left( \frac{1}{3} - \frac{C}{2x^{3/2}}\right) + \frac{1}{x}\left( \frac{1}{3}x + \frac{C}{\sqrt{x}} \right)^2 - \left(\frac{1}{3}x + \frac{C}{\sqrt{x}}\right) </mrow>
+          <mrow> =\amp\ \left( \frac{1}{3}x + \frac{C}{\sqrt{x}} \right) \left( \frac{2}{3} - \frac{C}{x^{3/2}} + \frac{1}{3} + \frac{C}{x^{3/2}} - 1 \right)</mrow>
+          <mrow> =\amp\ 0.\quad \text{(Note how the second parenthetical grouping above reduces to 0.)} </mrow>
+        </md>
+        Thus <m>y = \left( \frac{1}{3}x + \frac{C}{\sqrt{x}} \right)^2</m> <em>is</em> a solution to the differential equation.
+      </p> 
+      <p>
+        <xref ref="ex_verify_solutionsc" text="local">Part</xref> Testing the potential solution <m>\displaystyle y = C e^{-3x} + \sqrt{\sin x}</m>:
+      </p>
+      <p>
+        Differentiating, <m>\displaystyle y'= -3Ce^{-3x} + \frac{\cos x}{2\sqrt{\sin x}}.</m> Substituting into the differential equation,
+        <md>
+          <mrow> \amp\ -3Ce^{-3x} + \frac{\cos x}{2\sqrt{\sin x}} + \frac{C e^{-3x} + \sqrt{\sin x}}{x} - \sqrt{C e^{-3x} + \sqrt{\sin x}} \ne 0. </mrow>
+        </md>   
+      </p>
+      <p>
+        The function <m>\displaystyle y = C e^{-3x} + \sqrt{\sin x}</m> is <em>not</em> a solution to the differential equation.
+      </p>
+    </solution>
+  </example>
+
+  <p>
+    Not every solution to a differential equation may be solved explicitly for the dependent variable.  Recall we talked about implicitly defined functions in <xref ref="sec_imp_deriv"/>.
+  </p>
+  <definition>
+    <title>Implicit Solutions</title>
+    <statement>
+      <p>
+        A solution to a differential equation which defines the independent variable implicitly as a function of the dependent variable is an <term>implicit solution</term><idx>implicit solution</idx>.
+      </p>
+    </statement>
+  </definition>
+
+  <example xml:id="ex_verify_solutions2">
+    <title>
+        Verifying a solution to a differential equation
+    </title>
+    <statement>
+      <p>
+        Verify that <m>x^2+y^2 = Cy</m> is a solution to <m>\displaystyle y'= \frac{2xy}{x^2-y^2}.</m>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        The solution in this example is an implicit solution. Verifying the solution still involves differentiation, but we must take the derivatives implicitly. Differentiating, we have
+        <md>
+          <mrow>2x + 2yy'= Cy'.</mrow>
+        </md>
+      </p>
+      <p>
+        Solving for <m>y',</m> we have
+        <md>
+          <mrow>y'= \frac{2x}{C-2y}.</mrow>
+        </md>        
+        From the solution, we know that <m>\displaystyle C = \frac{x^2+y^2}{y}.</m> Then
+        <md>
+          <mrow> y'\amp= \frac{2x}{\displaystyle \frac{x^2+y^2}{y} - 2y}</mrow>
+          <mrow> \amp=\frac{2xy}{x^2+y^2-2y^2}</mrow>
+          <mrow> \amp= \frac{2xy}{x^2-y^2}. </mrow>
+        </md>
+      </p>
+      <p>
+        We have verified that <m>x^2+y^2 = Cy</m> is a solution to <m>\displaystyle y'= \frac{2xy}{x^2-y^2}.</m>
+      </p>
+    </solution>
+  </example>
+
+</introduction>
+
+
+
+<!--       ******** Subsection Graphical. ********* -->
+
+  <subsection>
+    <title>Graphical Solutions to Differential Equations</title>
+    <p>
+      In the examples we have explored so far, we have found exact forms for the functions that solve the differential equations. Solutions of this type are called <term>analytic solutions.</term><idx>analytic solution</idx> Many times a differential equation has a solution, but it is difficult or impossible to find the solution analytically. This is analogous to algebraic equations. The algebraic equation <m>x^2 + 3x - 1 = 0</m> has two real solutions that can be found analytically by using the quadratic formula. The equation <m>\cos x = x</m> has one real solution, but we can't find it analytically. As shown in Figure <xref ref="fig_diffeq_intersection"/>, we can find an approximate solution graphically by plotting <m>\cos x</m> and <m>x</m> and observing the <m>x</m>-value of the intersection. We can similarly use graphical tools to understand the qualitative behavior of solutions to a first order-differential equation.
+    </p>
+    <sidebyside width="47%">
+      <figure xml:id="fig_diffeq_intersection">
+        <caption>
+            Graphically finding an approximate solution to <m>\cos x = x.</m>
+        </caption>
+        <image xml:id="img_diffeq_intersection">
+          <description />
+          <latex-image>
+            \begin{tikzpicture}
+            \begin{axis}[width=\marginparwidth+25pt,tick label style={font=\scriptsize},axis y line=middle,axis x line=middle,name=myplot,%
+            %     xtick={-2,-1,1,2,3},% 
+            %     ytick={-6,-4,-2,0,2,4,6},
+                  minor x tick num=1,
+                  extra x ticks={.25,.75},%
+                  ymin=-.1,ymax=1.1,%
+                  xmin=-.1,xmax=1.1%
+            ]
+            \addplot [thick,{\colorone},domain=0:1] {cos(deg(x))};
+            \addplot [{\colortwo},thick] coordinates {(0,0) (1,1)};
+            \end{axis}
+            \node [right] at (myplot.right of origin) {\scriptsize $x$};
+            \node [above] at (myplot.above origin) {\scriptsize $y$};
+            \end{tikzpicture}
+          </latex-image>
+        </image>
+      </figure>
+    </sidebyside>
+
+    <p>
+      Consider the first-order differential equation
+      <md>
+        <mrow>y'= f(x,y).</mrow>
+      </md>     
+      The function <m>f</m> could be any function of the two variables <m>x</m> and <m>y</m>. Written in this way, we can think of the function <m>f</m> as providing a formula to find the slope of a solution at a given point in the <m>xy</m>-plane. In other words, suppose a solution to the differential equation passes through the point <m>(x_0,y_0)</m>. At the point <m>(x_0,y_0)</m>, the slope of the solution curve will be <m>f(x_0,y_0).</m> Since this calculation of the slope is possible at any point <m>(x,y)</m> where the function <m>f(x,y)</m> is defined, we can produce a plot called a <term>slope field</term><idx>slope field</idx> (or <term>direction field</term><idx>direction field</idx>) that shows the slope of a solution at any point in the <m>xy</m>-plane where the solution is defined. Further, this process can be done purely by working with the differential equation itself. In other words, we can draw a slope field and use it to determine the qualitative behavior of solutions to a differential equation without having to solve the differential equation.
+    </p>
+    <definition xml:id="def_diffeq_slope_field">
+      <title>
+          Slope Field
+      </title>
+      <statement>
+        <p>
+          A <term>slope field</term><idx>slope field</idx> for a first-order differential equation <m>y'= f(x,y)</m> is a plot in the <m>xy</m>-plane made up of short line segments or arrows. At each point <m>(x_0,y_0)</m> where <m>f(x,y)</m> is defined, the slope of the line segment is given by <m>f(x_0,y_0)</m>. Plots of solutions to a differential equation are tangent to the line segments in the slope field.
+        </p>
+      </statement>
+    </definition>
+
+    <example xml:id="ex_slope_field">
+      <title>
+          Sketching a slope field
+      </title>
+      <statement>
+        <p>
+          Find a slope field for the differential equation <m>y'= x+y</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Because the function <m>f(x,y) = x+y</m> is defined for all points <m>(x,y)</m>, every point in the <m>xy</m>-plane has an associated line segment. It is not practical to draw an entire slope field by hand, but many tools exist for drawing slope fields on a computer. Here, we explicitly calculate a few of the line segments in the slope field.
+        </p>
+        <ol>
+          <li>
+              The slope of the line segment at <m>(0,0)</m> is <m>f(0,0) = 0 + 0 = 0.</m>
+          </li>
+          <li>
+              The slope of the line segment at <m>(1,1)</m> is <m>f(1,1) = 1 + 1 = 2.</m>
+          </li>
+          <li>
+              The slope of the line segment at <m>(1,-1)</m> is <m>f(1,-1) = 1 - 1 = 0.</m>
+          </li>
+          <li>
+              The slope of the line segment at <m>(-2,3)</m> is <m>f(-2,-1) = -2 - 1 = -3.</m>
+          </li>
+        </ol>
+        <p>
+          <!-- todo something interactive here - geogebra or sage? -->
+          Though it is possible to continue this process to sketch a slope field, we usually use a computer to make the drawing. Most popular computer algebra systems can draw slope fields. There are also various online tools that can make the drawings. The slope field for <m>y'= x+y</m> is shown in <xref ref="fig_diffeq_slopefield1" />.
+        </p>
+        <sidebyside width="47%">
+          <figure xml:id="fig_diffeq_slopefield1">
+            <caption>
+                Slope field for <m>y'= x+y</m> from <xref ref="ex_slope_field" />.
+            </caption>
+            <image xml:id="img_diffeq_slopefield1">
+              <description />
+              <latex-image>
+                \begin{tikzpicture}
+                \begin{axis}[width=\marginparwidth+25pt,
+                tick label style={font=\scriptsize},
+                axis lines = center,
+                name=myplot,%
+                view={0}{90},
+                domain = -2:2,
+                      ytick={-2,-1,0,1,2},
+                ]
+                \addplot3 [{\colortwo},quiver = {u = {1/(sqrt(1+(x+y)^2))}, v = {(x+y)/(sqrt(1+(x+y)^2))},scale arrows=.25},samples=9]{0};
+                \end{axis}
+                \node [right] at (myplot.right of origin) {\scriptsize $x$};
+                \node [above] at (myplot.above origin) {\scriptsize $y$};
+                \end{tikzpicture}
+              </latex-image>
+            </image>
+          </figure>
+        </sidebyside>
+      </solution>
+    </example>
+    
+
+    <example xml:id="ex_IVP_graphical">
+      <title>
+          Sketch a graphical solution to an initial value problem
+      </title>
+      <statement>
+        <p>
+          Approximate, with a sketch, the solution to the initial value problem <m>y'= x+y</m>, with <m>y(1)=-1</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          The solution to the initial value problem should be a continuous smooth curve. Using the slope field, we can draw of a sketch of the solution using the following two criteria:
+        <ol>
+          <li>
+              The solution must pass through the point <m>(1,-1)</m>.
+          </li>
+          <li>
+              When the solution passes through a point <m>(x_0,y_0)</m> it must be tangent to the line segment at <m>(x_0,y_0)</m>.
+          </li>
+        </ol>
+          Essentially, we sketch a solution to the initial value problem by starting at the point <m>(1,-1)</m> and “following the lines" in either direction. A sketch of the solution is shown in Figure <xref ref="fig_diffeq_slopefield1solution"/>.
+        </p>
+        <sidebyside width="47%">
+          <figure xml:id="fig_diffeq_slopefield1solution">
+            <caption>
+                Solution to the initial value problem <m>y'= x+y</m>, with <m>y(1)=-1</m> from <xref ref="ex_IVP_graphical" />
+            </caption>
+            <image xml:id="img_diffeq_slopefield1solution"> 
+              <description />
+              <latex-image>
+                \def\length{sqrt(1+(x+y)^2)}
+                \begin{tikzpicture}
+                \begin{axis}[width=\marginparwidth+25pt,
+                tick label style={font=\scriptsize},
+                %axis y line=middle,axis x line=middle,
+                axis lines = center,
+                name=myplot,%
+                view={0}{90},
+                domain = -2:2,
+                      xtick={-2,-1,0,1,2},%
+                %     xticklabels={-2,-1,..,2},
+                      ytick={-2,-1,0,1,2},
+                %     yticklabels = {-2,-1,0,1,2},
+                %     minor x tick num=1,
+                %     extra x ticks={.25,.75},%
+                %     ymin=-.1,ymax=1.1,%
+                      xmin=-2,xmax=2.3%
+                ]
+                \addplot3 [{\colortwo},quiver = {u = {1/(\length)}, v = {(x+y)/(\length)},scale arrows=.25},samples=9]{0};
+                \addplot [{\colorone},thick,domain=-2.5:2.2,samples = 51] {-(x+1)+exp(x-1)};
+                \fill[black,draw=black] (axis cs:1,-1) circle (1.5pt);
+
+                \end{axis}
+                \node [right] at (myplot.right of origin) {\scriptsize $x$};
+                \node [above] at (myplot.above origin) {\scriptsize $y$};
+                \end{tikzpicture}
+              </latex-image>
+            </image>
+          </figure>
+        </sidebyside>
+      </solution>
+    </example>
+    
+
+    <sidebyside width="47%">
+      <figure xml:id="fig_diffeq_slopefield2">
+        <caption>
+            Slope field for the logistic differential equation <m>y'= y(1-y)</m> from <xref ref="ex_logisticslopefield"/>.
+        </caption>
+        <image xml:id="img_diffeq_slopefield2"> 
+          <latex-image>
+            \def\length{sqrt(1+(y*(1-y))^2)}
+            \begin{tikzpicture}
+            \begin{axis}[width=\marginparwidth+25pt,
+            tick label style={font=\scriptsize},
+            %axis y line=middle,axis x line=middle,
+            axis lines = middle,
+            name=myplot,%
+            view={0}{90},
+            domain = -1:3,
+            y domain=-.5:1.5,
+                  xtick={-1,0,1,2,3},%
+            %     xticklabels={-2,-1,..,2},
+                  ytick={-.5,0,.5,1},
+            %     yticklabels = {-2,-1,0,1,2},
+            %     minor x tick num=1,
+            %     extra x ticks={.25,.75},%
+                  ymin=-0.5,ymax=1.5,%
+                  xmin=-1,xmax=3%
+            ]
+            \addplot3 [{\colortwo},quiver = {u = {1/(\length)}, v = {(y*(1-y))/(\length)},scale arrows=.1},samples=20]{0};
+            %\fill[black,draw=black] (axis cs:1,-1) circle (1.5pt);
+
+            \end{axis}
+            \node [right] at (myplot.right of origin) {\scriptsize $t$};
+            \node [above] at (myplot.above origin) {\scriptsize $y$};
+            \end{tikzpicture}
+          </latex-image>
+        </image>
+      </figure>
+    </sidebyside>
+
+
+    <example xml:id="ex_logisticslopefield">
+      <title>
+          Using a slope field to predict long term behavior
+      </title>
+      <statement>
+        <p>
+          Use the slope field for the differential equation <m>y'= y(1-y)</m>, shown in <xref ref="fig_diffeq_slopefield2" />, to predict long term behavior of solutions to the equation.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          This differential equation, called the <term>logistic differential equation</term><idx>logistic differential equation</idx>, often appears in population biology to describe the size of a population. For that reason, we use <m>t</m> (time) as the independent variable instead of <m>x</m>. We also often restrict attention to non-negative <m>y</m>-values because negative values correspond to a negative population.Looking at the slope field in <xref ref="fig_diffeq_slopefield2" />, we can predict long term behavior for a given initial condition.
+        </p>
+        <ol>
+          <li>
+              If the initial <m>y</m>-value is negative (<m>y(0)\lt 0</m>), the solution curve must pass though the point <m>(0,y(0))</m> and follow the slope field. We expect the solution <m>y</m> to become more and more negative as time increases. Note that this result is not physically relevant when considering a population.
+          </li>
+          <li>
+              If the initial <m>y</m>-value is greater than 0 but less than 1, we expect the solution <m>y</m> to increase and level off at <m>y=1</m>.
+          </li>
+          <li>
+              If the initial <m>y</m>-value is greater than 1, we expect the solution <m>y</m> to decrease and level off at <m>y=1</m>.
+          </li>
+        </ol>
+        <p>
+          The slope field for the logistic differential equation, along with representative solution curves, is shown in <xref ref="fig_diffeq_slopefield2solution"/>. Notice that any solution curve with positive initial value will tend towards the value <m>y=1.</m> We call this the <term>carrying capacity</term><idx>carrying capacity</idx>.
+        </p>
+        <sidebyside width="47%">
+          <figure xml:id="fig_diffeq_slopefield2solution">
+            <caption>
+                Slope field for the logistic differential equation <m>y'= y(1-y)</m> from <xref ref="ex_logisticslopefield"/> with a few representative solution curves.
+            </caption>
+            <image xml:id="img_diffeq_slopefield2solution"> 
+              <latex-image>
+                \def\length{sqrt(1+(y*(1-y))^2)}
+                \begin{tikzpicture}
+                \begin{axis}[width=\marginparwidth+25pt,
+                tick label style={font=\scriptsize},
+                %axis y line=middle,axis x line=middle,
+                axis lines = middle,
+                name=myplot,%
+                view={0}{90},
+                domain = -1:3,
+                y domain=-.5:1.5,
+                      xtick={-1,0,1,2,3},%
+                %     xticklabels={-2,-1,..,2},
+                      ytick={-.5,0,.5,1},
+                %     yticklabels = {-2,-1,0,1,2},
+                %     minor x tick num=1,
+                %     extra x ticks={.25,.75},%
+                      ymin=-0.5,ymax=1.5,%
+                      xmin=-1,xmax=3%
+                ]
+                \addplot3 [{\colortwo},quiver = {u = {1/(\length)}, v = {(y*(1-y))/(\length)},scale arrows=.1},samples=20]{0};
+                \addplot [{\colorone},thick,domain = -1:2, samples=50] {1/(1-10*exp(-x)};
+                \addplot [{\colorone},thick,domain = -1:3, samples=50] {1/(1+1*exp(-x)};
+                \addplot [{\colorone},thick,domain = -1:3, samples=50] {1/(1-.3*exp(-x)};
+
+                \end{axis}
+                \node [right] at (myplot.right of origin) {\scriptsize $t$};
+                \node [above] at (myplot.above origin) {\scriptsize $y$};
+                \end{tikzpicture}
+              </latex-image>
+            </image>
+          </figure>
+        </sidebyside>
+
+      </solution>
+    </example>
+  </subsection>
+
+
+
+
+
+
+  <subsection>
+    <title>Numerical Solutions to Differential Equations: Euler's Method</title>
+    <p>
+      While the slope field is an effective way to understand the qualitative behavior of solutions to a differential equation, it is difficult to use a slope field to make quantitative predictions. For example, if we have the slope field for the differential equation <m>y'= x+y</m> from <xref ref="ex_slope_field"/> along with the initial condition <m>y(0)=1</m>, we can understand the qualitative behavior of the solution to the initial value problem, but will struggle to predict a specific value, <m>y(2)</m> for example, with any degree of confidence. The most straight forward way to predict <m>y(2)</m> is to find the analytic solution to the the initial value problem and evaluate it at <m>x=2</m>. Unfortunately, we have already mentioned that it is impossible to find analytic solutions to many differential equations. In the absence of an analytic solution, a <term>numerical solution</term><idx>numerical solution to a differential equation</idx> can serve as an effective tool to make quantitative predictions about the solution to an initial value problem.
+    </p>
+    <p>
+      There are many techniques for computing numerical solutions to initial value problems. A course in numerical analysis will discuss various techniques along with their strengths and weaknesses. The simplest technique is called <term>Euler's Method</term>.
+    </p>
+    <aside>
+      Euler's Method is named for Leonhard Euler, a prolific Swiss mathematician during the 1700's. His last name is properly pronounced <q>oil-er,</q> not <q>you-ler.</q>
+    </aside>
+    <p>
+      Consider the first-order initial value problem
+      <md>
+        <mrow>y'= f(x,y), \text{ with } y(x_0) = y_0.</mrow>
+      </md>
+      Using the definition of the derivative,
+      <md>
+        <mrow>y'(x) = \lim _{h \rightarrow 0} \frac{y(x+h) - y(x)}{h}.</mrow>
+      </md>
+      This notation can be confusing at first, but <q><m>y(x)</m></q> simply means <q>the <m>y</m>-value of the solution when the <m>x</m>-value is <m>x</m></q>, and <q><m>y(x+h)</m></q> means <q>the <m>y</m>-value of the solution when the <m>x</m>-value is <m>x+h</m></q>.
+    </p>
+    <p>
+      If we remove the limit but restrict <m>h</m> to be <q>small,</q> we have
+      <md>
+        <mrow>y'(x) \approx \frac{y(x+h) - y(x)}{h},</mrow>
+      </md>
+      so that
+      <md>
+        <mrow>f(x,y) \approx \frac{y(x+h)-y(x)}{h},</mrow>
+      </md>
+      because <m>y'= f(x,y)</m> according to the differential equation. Rearranging terms,
+      <md>
+        <mrow>y(x + h) \approx y(x) + h\,f(x,y).</mrow>
+      </md>      
+    </p>
+    <p>
+      This statement says that if we know the solution (<m>y</m>-value) to the initial value problem for some given <m>x</m>-value, we can find an approximation for the solution at the value <m>x+h</m> by taking our <m>y</m>-value and adding <m>h</m> times the function <m>f</m> evaluated at the <m>x</m> and <m>y</m> values. Euler's method uses the initial condition of an initial value problem as the starting point, and then uses the above idea to find approximate values for the solution <m>y</m> at later <m>x</m>-values. The algorithm is summarized in <xref ref="def_diffeq_eulermethod"/>.
+    </p>
+    <definition xml:id="def_diffeq_eulermethod">
+      <title>Euler's Method</title>
+      <statement>
+        <p>
+          Consider the initial value problem <anchor id="uid21" id-text="lid9" />
+          <md>
+            <mrow> y'= f(x,y) \text{ with } y(x_0)=y_0. </mrow>
+          </md>
+          Let <m>h</m> be a small positive number and <m>N</m> be an integer.
+        </p>
+        <ol>
+          <li>
+              For <m>i = 0, 1, 2, \ldots , N,</m> define
+              <md>
+                <mrow>x_i = x_0 + ih.</mrow>
+              </md>
+          </li>
+          <li>
+              The value <m>y_0</m> is given by the initial condition.For <m>i = 0, 1, 2, \ldots , N-1,</m> define
+              <md>
+                <mrow>y_{i+1} = y_i + hf(x_i,y_i).</mrow>
+              </md>
+          </li>
+        </ol>
+        <p>
+          This process yields a sequence of <m>N+1</m> points <m>(x_i,y_i)</m> for <m>i= 0,1,2,\ldots ,N</m>, where <m>(x_i, y_i)</m> is an approximation for <m>(x_i,y(x_i))</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      Let's practice Euler's Method using a few concrete examples.
+    </p>
+    <example xml:id="ex_diffeq_euler1">
+      <title>
+        Using Euler's Method 1
+      </title>
+      <statement>
+        <p>
+          Find an approximation at <m>x=2</m> for the solution to <m>y'= x + y</m> with <m>y(1)=-1</m> using Euler's Method with <m>h=0.5</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Our initial condition yields the starting values <m>x_0 = 1</m> and <m>y_0 = -1</m>. With <m>h = 0.5,</m> it takes <m>N=2</m> steps to get to <m>x=2.</m> Using steps 1 and 2 from the Euler's Method algorithm,
+          <md>
+            <mrow> \begin{array}{rl | rl} x_0 \amp= 1 \amp y_0 \amp= -1</mrow>
+            <mrow> \hline x_1 \amp= x_0 + h \amp y_1 \amp= y_0 + hf(x_0,y_0)</mrow>
+            <mrow> \amp= 1 + 0.5 \amp \amp= -1 + 0.5(1 - 1)</mrow>
+            <mrow> \amp= 1.5 \amp \amp= -1</mrow>
+            <mrow> \hline x_2 \amp= x_0 + 2h \amp y_2 \amp= y_1 + hf(x_1,y_1)</mrow>
+            <mrow> \amp= 1 + 2(0.5) \amp \amp= -1 + 0.5(1.5 -1)</mrow>
+            <mrow> \amp= 2 \amp \amp= -0.75 \end{array} </mrow>
+          </md>          
+        </p>
+        <p>
+          Using Euler's method, we find the approximate <m>y(2) \approx -0.75.</m>
+        </p>
+        <p>
+          To help visualize the Euler's method approximation, these three points (connected by line segments) are plotted along with the analytical solution to the initial value problem in Figure <xref ref="fig_diffeq_euler1" />.
+        </p>
+        <sidebyside width="47%">
+          <figure xml:id="fig_diffeq_euler1">
+            <caption>
+                Euler's Method approximation to <m>y'= x + y</m> with <m>y(1) = -1</m> from <xref ref="ex_diffeq_euler1"/>, along with the analytical solution to the initial value problem.
+            </caption>
+            <image xml:id="img_diffeq_euler1"> 
+              <latex-image>
+                \def\length{sqrt(1+(y*(1-y))^2)}
+                \begin{tikzpicture}
+                \begin{axis}[width=\marginparwidth+25pt,
+                tick label style={font=\scriptsize},
+                %axis y line=middle,axis x line=middle,
+                axis lines = middle,
+                name=myplot,%
+                      xtick={1,1.5,2},%
+                %     xticklabels={-2,-1,..,2},
+                      ytick={-1,-.5,0},
+                %     yticklabels = {-2,-1,0,1,2},
+                %     minor x tick num=1,
+                %     extra x ticks={.25,.75},%
+                      ymin=-1.25,ymax=0.1,%
+                      xmin=.9,xmax=2.1%
+                ]
+                \addplot [{\colortwo},thick,domain=1:2,samples = 51] {-(x+1)+exp(x-1)};
+                \addplot [{\colorone}, mark = *] coordinates{ (1,-1) (1.5,-1) (2,-0.75)};
+                %\legend{True Solution, Euler's Method}
+                \end{axis}
+                \node [right] at (myplot.right of origin) {\scriptsize $x$};
+                \node [above] at (myplot.above origin) {\scriptsize $y$};
+                \end{tikzpicture}
+              </latex-image>
+            </image>
+          </figure>
+        </sidebyside>
+      </solution>
+    </example>
+
+
+
+
+    <p>
+      This approximation doesn't appear terrific, though it is better than merely guessing. Let's repeat the previous example using a smaller <m>h</m>-value.
+    </p>
+    <example xml:id="ex_diffeq_euler2">
+      <title>
+          Using Euler's Method 2
+      </title>
+      <statement>
+        <p>
+          Find an approximation on the interval <m>[1,2]</m> for the solution to <m>y'= x + y</m> with <m>y(1)=-1</m> using Euler's Method with <m>h=0.25</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Our initial condition yields the starting values <m>x_0 = 1</m> and <m>y_0 = -1</m>. With <m>h = 0.25,</m> we need <m>N=4</m> steps on the interval <m>[1,2]</m> Using steps 1 and 2 from the Euler's Method algorithm (and rounding to 4 decimal points), we have
+          <md>
+            <mrow> \begin{array}{rl | rl} x_0 \amp= 1 \amp y_0 \amp= -1</mrow>
+            <mrow> \hline x_1 \amp= 1.25 \amp y_1 \amp= -1 + 0.25(1 - 1)</mrow>
+            <mrow> \amp \amp \amp= -1</mrow>
+            <mrow> \hline x_2 \amp= 1.5 \amp y_2 \amp= -1 + 0.25(1.25-1)</mrow>
+            <mrow> \amp \amp \amp= -0.9375</mrow>
+            <mrow> \hline x_3 \amp= 1.75 \amp y_3 \amp= -0.9375 + 0.25(1.5-0.9375)</mrow>
+            <mrow> \amp \amp \amp= -0.7969</mrow>
+            <mrow> \hline x_4 \amp= 2 \amp y_4 \amp= -0.7969 + 0.25(1.75 - 0.7969)</mrow>
+            <mrow> \amp \amp \amp= -0.5586</mrow>
+            <mrow> \hline \end{array} </mrow>
+          </md>
+          Using Euler's method, we find <m>y(2) \approx -0.5586.</m>
+        </p>
+        <p>
+          These five points, along with the points from <xref ref="ex_diffeq_euler1"/> and the analytic solution, are plotted in Figure <xref ref="fig_diffeq_euler2"/>.
+        </p>
+        <sidebyside width="47%">
+          <figure xml:id="fig_diffeq_euler2">
+            <caption>
+                Euler's Method approximations to <m>y'= x + y</m> with <m>y(1) = -1</m> from Examples <xref ref="ex_diffeq_euler1"/> and <xref ref="ex_diffeq_euler2"/>, along with the analytical solution.
+            </caption>
+            <image xml:id="img_diffeq_euler2"> 
+              <latex-image>
+                \def\length{sqrt(1+(y*(1-y))^2)}
+                \begin{tikzpicture}
+                \begin{axis}[width=\marginparwidth+25pt,
+                tick label style={font=\scriptsize},
+                %axis y line=middle,axis x line=middle,
+                axis lines = middle,
+                name=myplot,%
+                      xtick={1,1.5,2},%
+                %     xticklabels={-2,-1,..,2},
+                      ytick={-1,-.5,0},
+                %     yticklabels = {-2,-1,0,1,2},
+                %     minor x tick num=1,
+                %     extra x ticks={.25,.75},%
+                      ymin=-1.25,ymax=0.1,%
+                      xmin=.9,xmax=2.35%
+                ]
+                \addplot [{\colortwo},thick,domain=1:2,samples = 51] {-(x+1)+exp(x-1)};
+                \addplot [{\colorone}, mark = *] coordinates{ (1,-1) (1.5,-1) (2,-0.75)};
+                \addplot [{\colorone}, mark = *,dashed] coordinates{ (1,-1) (1.25,-1) (1.5,-.9375) (1.75,-.7969) (2,-.5586)};
+                \node [right] at (axis cs:2,-0.75) {\scriptsize $h = 0.5$};
+                \node [right] at (axis cs:2,-0.5586) {\scriptsize $h = 0.25$};
+                \end{axis}
+                \node [right] at (myplot.right of origin) {\scriptsize $x$};
+                \node [above] at (myplot.above origin) {\scriptsize $y$};
+                \end{tikzpicture}
+              </latex-image>
+            </image>
+          </figure>
+        </sidebyside>
+
+
+      </solution>
+    </example>
+
+
+
+
+
+
+    <p>
+      Using the results from Examples <xref ref="ex_diffeq_euler1"/> and <xref ref="ex_diffeq_euler2"/>, we can make a few observations about Euler's method. First, the Euler approximation generally gets worse as we get farther from the initial condition. This is because Euler's method involves two sources of error. The first comes from the fact that we're using a positive <m>h</m>-value in the derivative approximation instead of using a limit as <m>h</m> approaches zero. Essentially, we're using a linear approximation to the solution <m>y</m> (similar to the process described in Section <xref ref="sec_differentials" /> on Differentials.) This error is often called the <term>local truncation error.</term> The second source of error comes from the fact that every step in Euler's method uses the result of the previous step. That means we're using an approximate <m>y</m>-value to approximate the next <m>y</m>-value. Doing this repeatedly causes the errors to build on each other. This second type of error is often called the <term>propagated</term> or <term>accumulated error.</term>
+    </p>
+    <p>
+      A second observation is that the Euler approximation is more accurate for smaller <m>h</m>-values. This accuracy comes at a cost, though. <xref ref="ex_diffeq_euler2"/> is more accurate than <xref ref="ex_diffeq_euler1"/>, but takes twice as many computations. In general, numerical algorithms (even when performed by a computer program) require striking a balance between a desired level of accuracy and the amount of computational effort we are willing to undertake.
+    </p>
+    <p>
+      Let's do one final example of Euler's Method.
+      </p>
+    <example xml:id="ex_diffeq_euler3">
+      <title>
+        Using Euler's Method 3
+      </title>
+      <statement>
+        <p>
+          Find an approximation for the solution to the logistic differential equation<m>y'= y(1-y)</m> with <m>y(0) = 0.25</m>, for <m>0 \le y \le 4.</m> Use <m>N = 10</m> steps.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          The logistic differential equation is what is called an <term>autonomous equation</term>. An autonomous differential equation has no explicit dependence on the independent variable (<m>t</m> in this case). This has no real effect on the application of Euler's method other than the fact that the function <m>f(t,y)</m> is really just a function of <m>y</m>. To take steps in the <m>y</m> variable, we use
+          <md>
+            <mrow>y_{i+1} = y_i + hf(t_i,y_i) = y_i + hy_i(1-y_i).</mrow>
+          </md>         
+        </p>
+        <p>
+          Using <m>N=10</m> steps requires <m>\displaystyle h = \frac{4-0}{10} = 0.4.</m> Implementing Euler's Method, we have
+          <md>
+            <mrow> \begin{array}{rl | rl} x_0 \amp= 0 \amp y_0 \amp= 0.25</mrow>
+            <mrow> \hline x_1 \amp= 0.4 \amp y_1 \amp= 0.25 + 0.4(0.25)(1-0.25)</mrow>
+            <mrow> \amp \amp \amp= 0.325</mrow>
+            <mrow> \hline x_2 \amp= 0.8 \amp y_2 \amp= 0.325 + 0.4(0.325)(1-0.325)</mrow>
+            <mrow> \amp \amp \amp= 0.41275</mrow>
+            <mrow> \hline x_3 \amp= 1.2 \amp y_3 \amp= 0.41275 + 0.4(0.41275)(1-0.41275)</mrow>
+            <mrow> \amp \amp \amp= 0.50970</mrow>
+          <mrow>  x_4 \amp= 1.6 \amp y_4 \amp= 0.50970 + 0.4(0.50970)(1 - 0.50970)</mrow>
+          <mrow> \amp \amp \amp= 0.60966</mrow>
+          <mrow> \hline x_5 \amp= 2.0 \amp y_5 \amp= 0.60966 + 0.4(0.60966)(1-0.60966)</mrow>
+          <mrow> \amp \amp \amp= 0.70485</mrow>
+          <mrow> \hline x_6 \amp= 2.4 \amp y_6 \amp= 0.70485 + 0.4(0.70485)(1 - 0.70485)</mrow>
+          <mrow> \amp \amp \amp= 0.78806</mrow>
+          <mrow> \hline x_7 \amp= 2.8 \amp y_7 \amp= 0.78806 + 0.4(0.78806)(1-0.78806)</mrow>
+          <mrow> \amp \amp \amp= 0.85487</mrow>
+          <mrow> \hline x_8 \amp= 3.2 \amp y_8 \amp= 0.85487 + 0.4(0.85487)(1-0.85487)</mrow>
+          <mrow> \amp \amp \amp= 0.90450</mrow>
+          <mrow> \hline x_9 \amp= 3.6 \amp y_9 \amp= 0.90450 + 0.4(0.90450)(1 - 0.90450)</mrow>
+          <mrow> \amp \amp \amp= 0.93905</mrow>
+          <mrow> \hline x_{10}\amp= 4.0 \amp y_{10}\amp= 0.93905 + 0.4(0.93905)(1 - 0.93905)</mrow>
+          <mrow> \amp \amp \amp= 0.96194</mrow>
+          <mrow> \hline \end{array} </mrow>
+        </md>
+      </p>
+        <p>
+          These 11 points, along with the the analytic solution, are plotted in Figure <xref ref="fig_diffeq_euler3" />. Notice how well they seem to match the true solution.
+        </p>
+        <sidebyside width="47%">
+          <figure xml:id="fig_diffeq_euler3">
+            <caption>
+                Euler's Method approximation to <m>y'= y(1-y)</m> with <m>y(0) = 0.25</m> from <xref ref="ex_diffeq_euler3" />, along with the analytical solution.
+            </caption>
+            <image xml:id="img_diffeq_euler3"> 
+              <latex-image>
+                \def\length{sqrt(1+(y*(1-y))^2)}
+                \begin{tikzpicture}
+                \begin{axis}[width=\marginparwidth+25pt,
+                tick label style={font=\scriptsize},
+                %axis y line=middle,axis x line=middle,
+                axis lines = middle,
+                name=myplot,%
+                      xtick={0,1,2,3,4},%
+                %     xticklabels={-2,-1,..,2},
+                      ytick={0,0.5,1},
+                %     yticklabels = {-2,-1,0,1,2},
+                %     minor x tick num=1,
+                %     extra x ticks={.25,.75},%
+                      ymin=-.1,ymax=1.1,%
+                      xmin=-.1,xmax=4.1%
+                ]
+                \addplot [{\colortwo},thick,domain = 0:4, samples=50] {1/(1+3*exp(-x)};
+                \addplot [{\colorone}, mark = *] coordinates{   (0,.25)
+                                  (0.4,.325)
+                                  (0.8,.41275) 
+                                  (1.2,.50970) 
+                                  (1.6,.60966) 
+                                  (2.0,.70485) 
+                                  (2.4,.78806) 
+                                  (2.8,.85487) 
+                                  (3.2,.90450) 
+                                  (3.6,.93905) 
+                                  (4.0,.96194) };
+                %\addplot [{\colorone}, mark = *,dashed] coordinates{ (1,-1) (1.25,-1) (1.5,-.9375) (1.75,-.7969) (2,-.5586)};
+                \end{axis}
+                \node [right] at (myplot.right of origin) {\scriptsize $t$};
+                \node [above] at (myplot.above origin) {\scriptsize $y$};
+                \end{tikzpicture}
+              </latex-image>
+            </image>
+          </figure>
+        </sidebyside>
+      </solution>
+    </example>
+    
+  
+  </subsection>
+
+  <conclusion>
+    <p>
+      The study of differential equations is a natural extension of the study of derivatives and integrals. The equations themselves involve derivatives, and methods to find analytic solutions often involve finding antiderivatives. In this section, we focus on graphical and numerical techniques to understand solutions to differential equations. We restrict our examples to relatively simple initial value problems that permit analytic solutions to the equations, but we should remember that this is only for comparison purposes. In reality, many differential equations, even some that appear straightforward, do not have solutions we can find analytically. Even so, we can use the techniques presented in this section to understand the behavior of solutions. In the next two sections, we explore two techniques to find analytic solutions to two different classes of differential equations.
+    </p>
+  </conclusion>
+
+
+  <xi:include href="exer_diffeq_graph_numer.ptx" />
+
+</section>

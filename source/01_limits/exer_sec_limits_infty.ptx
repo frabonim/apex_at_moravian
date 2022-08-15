@@ -1,0 +1,1007 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<exercises>
+  <exercise>
+    <statement>
+      <p>
+        T/F: If <m>\displaystyle \lim _{x\rightarrow 5} f(x) = \infty </m>, then we are implicitly stating that the limit exists.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        F
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        T/F: If <m>\displaystyle \lim _{x\rightarrow \infty } f(x) = 5</m>, then we are implicitly stating that the limit exists.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        T
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        T/F: If <m>\displaystyle \lim _{x\rightarrow 1^-} f(x) = -\infty </m>, then <m>\displaystyle \lim _{x\rightarrow 1^+} f(x) = \infty </m>
+      </p>
+    </statement>
+    <answer>
+      <p>
+        F
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        T/F: If <m>\displaystyle \lim _{x\rightarrow 5} f(x) = \infty </m>, then <m>f</m> has a vertical asymptote at <m>x=5</m>.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        T
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        T/F: <m>\infty /0</m> is not an indeterminate form.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        T
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        List 5 indeterminate forms.
+        </p>
+    </statement>
+    <answer>
+      <p>
+        Answers will vary.
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        Construct a function with a vertical asymptote at <m>x=5</m> and a horizontal asymptote at <m>y=5</m>.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        Answers will vary.
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        Let <m>\displaystyle \lim _{x\rightarrow 7} f(x) = \infty </m>. Explain how we know that <m>f</m> is/is not continuous at <m>x=7</m>.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        The limit of <m>f</m> as <m>x</m> approaches 7 does not exist, hence <m>f</m> is not continuous. (Note: <m>f</m> could be defined at 7!)
+      </p>
+    </answer>
+  </exercise>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 9–14, evaluate the given limits using the graph of the function.
+        </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x) = \frac{1}{(x+1)^2}</m>
+        </p>
+        <ol>
+          <li>
+            <p>
+              <m>\displaystyle \lim _{x\rightarrow -1^-} f(x)</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\displaystyle \lim _{x\rightarrow -1^+} f(x)</m>
+            </p>
+          </li>
+        </ol>
+        <p>
+          <sidebyside width="30%"><image source="fig01_06_ex_09" /></sidebyside></p>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              <m>\infty </m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\infty </m>
+            </p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x) = \frac{1}{(x-3)(x-5)^2}</m>.</p>
+        <p>
+          <minipage pos="t" width="213.5pt">
+            <ol>
+              <li>
+                <p>
+                  <m>\displaystyle \lim _{x\rightarrow 3^-} f(x)</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>\displaystyle \lim _{x\rightarrow 3^+} f(x)</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>\displaystyle \lim _{x\rightarrow 3} f(x)</m>
+                </p>
+              </li>
+            </ol>
+          </minipage>
+          <minipage pos="t" width="213.5pt">
+            <ol>
+              <li>
+                <p>
+                  <m>\displaystyle \lim _{x\rightarrow 5^-} f(x)</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>\displaystyle \lim _{x\rightarrow 5^+} f(x)</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>\displaystyle \lim _{x\rightarrow 5} f(x)</m>
+                </p>
+              </li>
+            </ol>
+          </minipage>
+        </p>
+        <p>
+          <sidebyside width="30%"><image source="fig01_06_ex_10" /></sidebyside></p>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              <m>-\infty </m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\infty </m>
+            </p>
+          </li>
+          <li>
+            <p>
+              Limit does not exist
+              </p>
+          </li>
+          <li>
+            <p>
+              <m>\infty </m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\infty </m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\infty </m>
+            </p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x) = \frac{1}{e^x+1}</m>
+        </p>
+        <p>
+          <minipage pos="t" width="213.5pt">
+            <ol>
+              <li>
+                <p>
+                  <m>\displaystyle \lim _{x\rightarrow -\infty } f(x)</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>\displaystyle \lim _{x\rightarrow \infty } f(x)</m>
+                </p>
+              </li>
+            </ol>
+          </minipage>
+          <minipage pos="t" width="213.5pt">
+            <ol>
+              <li>
+                <p>
+                  <m>\displaystyle \lim _{x\rightarrow 0^-} f(x)</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>\displaystyle \lim _{x\rightarrow 0^+} f(x)</m>
+                </p>
+              </li>
+            </ol>
+          </minipage>
+        </p>
+        <p>
+          <sidebyside width="30%"><image source="fig01_06_ex_11" /></sidebyside></p>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              <m>1</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>0</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>1/2</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>1/2</m>
+            </p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x) = x^2\sin (\pi x)</m>
+        </p>
+        <ol>
+          <li>
+            <p>
+              <m>\displaystyle \lim _{x\rightarrow -\infty } f(x)</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\displaystyle \lim _{x\rightarrow \infty } f(x)</m>
+            </p>
+          </li>
+        </ol>
+        <p>
+          <sidebyside width="30%"><image source="fig01_06_ex_12" /></sidebyside></p>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              Limit does not exist
+              </p>
+          </li>
+          <li>
+            <p>
+              Limit does not exist
+              </p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x) = \cos (x)</m>
+        </p>
+        <ol>
+          <li>
+            <p>
+              <m>\displaystyle \lim _{x\rightarrow -\infty } f(x)</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\displaystyle \lim _{x\rightarrow \infty } f(x)</m>
+            </p>
+          </li>
+        </ol>
+        <p>
+          <sidebyside width="30%"><image source="fig01_06_ex_13" /></sidebyside></p>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              Limit does not exist
+              </p>
+          </li>
+          <li>
+            <p>
+              Limit does not exist
+              </p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x) = 2^x+10</m>
+        </p>
+        <ol>
+          <li>
+            <p>
+              <m>\displaystyle \lim _{x\rightarrow -\infty } f(x)</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\displaystyle \lim _{x\rightarrow \infty } f(x)</m>
+            </p>
+          </li>
+        </ol>
+        <p>
+          <sidebyside width="30%"><image source="fig01_06_ex_40" /></sidebyside></p>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              <m>10</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\infty </m>
+            </p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 15–18, numerically approximate the following limits:
+        </p>
+      <ol>
+        <li>
+          <p>
+            <m>\displaystyle \lim _{x\rightarrow 3^-} f(x)</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>\displaystyle \lim _{x\rightarrow 3^+} f(x)</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>\displaystyle \lim _{x\rightarrow 3} f(x)</m>
+          </p>
+        </li>
+      </ol>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x)=\frac{x^2-1}{x^2-x-6}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          Tables will vary.
+          </p>
+        <ol>
+          <li>
+            <tabular>
+              <row bottom="medium">
+                <cell halign="center">
+                  <m>x</m>
+                </cell>
+                <cell halign="center">
+                  <m>f(x)</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="center">
+                  <m>2.9</m>
+                </cell>
+                <cell halign="center">
+                  <m>-15.1224</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="center">
+                  <m>2.99</m>
+                </cell>
+                <cell halign="center">
+                  <m>-159.12</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="center">
+                  <m>2.999</m>
+                </cell>
+                <cell halign="center">
+                  <m>-1599.12</m>
+                </cell>
+              </row>
+            </tabular>
+            <p>
+               It seems <m>\lim _{x\rightarrow 3^-}f(x) =-\infty </m>.
+            </p>
+          </li>
+          <li>
+            <tabular>
+              <row bottom="medium">
+                <cell halign="center">
+                  <m>x</m>
+                </cell>
+                <cell halign="center">
+                  <m>f(x)</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="center">
+                  <m> 3.1</m>
+                </cell>
+                <cell halign="center">
+                  <m>16.8824</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="center">
+                  <m>3.01</m>
+                </cell>
+                <cell halign="center">
+                  <m>160.88</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="center">
+                  <m>3.001</m>
+                </cell>
+                <cell halign="center">
+                  <m>1600.88</m>
+                </cell>
+              </row>
+            </tabular>
+            <p>
+               It seems <m>\lim _{x\rightarrow 3^+}f(x) =\infty </m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              It seems <m>\lim _{x\rightarrow 3}f(x)</m> does not exist.
+            </p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x)= \frac{x^2+5 x-36}{x^3-5 x^2+3 x+9}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          Tables will vary.
+          </p>
+        <ol>
+          <li>
+            <tabular>
+              <row bottom="medium">
+                <cell halign="center">
+                  <m>x</m>
+                </cell>
+                <cell halign="center">
+                  <m>f(x)</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="center">
+                  <m>2.9</m>
+                </cell>
+                <cell halign="center">
+                  <m>-335.64</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="center">
+                  <m>2.99</m>
+                </cell>
+                <cell halign="center">
+                  <m>-30350.6</m>
+                </cell>
+              </row>
+            </tabular>
+            <p>
+               It seems <m>\lim _{x\rightarrow 3^-}f(x) =-\infty </m>.
+            </p>
+          </li>
+          <li>
+            <tabular>
+              <row bottom="medium">
+                <cell halign="center">
+                  <m>x</m>
+                </cell>
+                <cell halign="center">
+                  <m>f(x)</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="center">
+                  <m> 3.1</m>
+                </cell>
+                <cell halign="center">
+                  <m>-265.61</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="center">
+                  <m>3.01</m>
+                </cell>
+                <cell halign="center">
+                  <m>-29650.6</m>
+                </cell>
+              </row>
+            </tabular>
+            <p>
+               It seems <m>\lim _{x\rightarrow 3^+}f(x) =-\infty </m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              It seems <m>\lim _{x\rightarrow 3}f(x) =-\infty </m>.
+            </p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x)=\frac{x^2-11 x+30}{x^3-4 x^2-3 x+18}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          Tables will vary.
+          </p>
+        <ol>
+          <li>
+            <tabular>
+              <row bottom="medium">
+                <cell halign="center">
+                  <m>x</m>
+                </cell>
+                <cell halign="center">
+                  <m>f(x)</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="center">
+                  <m>2.9</m>
+                </cell>
+                <cell halign="center">
+                  <m>132.857</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="center">
+                  <m>2.99</m>
+                </cell>
+                <cell halign="center">
+                  <m>12124.4</m>
+                </cell>
+              </row>
+            </tabular>
+            <p>
+               It seems <m>\lim _{x\rightarrow 3^-}f(x) =\infty </m>.
+            </p>
+          </li>
+          <li>
+            <tabular>
+              <row bottom="medium">
+                <cell halign="center">
+                  <m>x</m>
+                </cell>
+                <cell halign="center">
+                  <m>f(x)</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="center">
+                  <m> 3.1</m>
+                </cell>
+                <cell halign="center">
+                  <m>108.039</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="center">
+                  <m>3.01</m>
+                </cell>
+                <cell halign="center">
+                  <m>11876.4</m>
+                </cell>
+              </row>
+            </tabular>
+            <p>
+               It seems <m>\lim _{x\rightarrow 3^+}f(x) =\infty </m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              It seems <m>\lim _{x\rightarrow 3}f(x) =\infty </m>.
+            </p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x)=\frac{x^2-9 x+18}{x^2-x-6}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          Tables will vary.
+          </p>
+        <ol>
+          <li>
+            <tabular>
+              <row bottom="medium">
+                <cell halign="center">
+                  <m>x</m>
+                </cell>
+                <cell halign="center">
+                  <m>f(x)</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="center">
+                  <m>2.9</m>
+                </cell>
+                <cell halign="center">
+                  <m>-0.632</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="center">
+                  <m>2.99</m>
+                </cell>
+                <cell halign="center">
+                  <m>-0.6032</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="center">
+                  <m>2.999</m>
+                </cell>
+                <cell halign="center">
+                  <m>-0.60032</m>
+                </cell>
+              </row>
+            </tabular>
+            <p>
+               It seems <m>\lim _{x\rightarrow 3^-}f(x) =-0.6</m>.
+            </p>
+          </li>
+          <li>
+            <tabular>
+              <row bottom="medium">
+                <cell halign="center">
+                  <m>x</m>
+                </cell>
+                <cell halign="center">
+                  <m>f(x)</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="center">
+                  <m> 3.1</m>
+                </cell>
+                <cell halign="center">
+                  <m>-0.5686</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="center">
+                  <m>3.01</m>
+                </cell>
+                <cell halign="center">
+                  <m>-0.5968</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="center">
+                  <m>3.001</m>
+                </cell>
+                <cell halign="center">
+                  <m>-0.59968</m>
+                </cell>
+              </row>
+            </tabular>
+            <p>
+               It seems <m>\lim _{x\rightarrow 3^+}f(x) =-0.6</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              It seems <m>\lim _{x\rightarrow 3}f(x) =-0.6</m>.
+            </p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 19–24, identify the horizontal and vertical asymptotes, if any, of the given function.
+        </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x)=\frac{2 x^2-2 x-4}{x^2+x-20}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          Horizontal asymptote at <m>y=2</m>; vertical asymptotes at <m>x=-5,4</m>.
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x)=\frac{-3 x^2-9 x-6}{5 x^2-10 x-15}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          Horizontal asymptote at <m>y=-3/5</m>; vertical asymptote at <m>x=3</m>.
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x)=\frac{x^2+x-12}{7 x^3-14 x^2-21 x}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          Horizontal asymptote at <m>y=0</m>; vertical asymptotes at <m>x=-1,0</m>.
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x)=\frac{x^2-9}{9 x-9}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          No horizontal asymptote; vertical asymptote at <m>x=1</m>.
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x)=\frac{x^2-9}{9 x+27}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          No horizontal or vertical asymptotes.
+          </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x) = \frac{x^2-1}{-x^2-1}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          Horizontal asymptote at <m>y=-1</m>; no vertical asymptotes
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 25–28, evaluate the given limit.
+        </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lim _{x\rightarrow \infty } \frac{x^3+2x^2+1}{x-5}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\infty </m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lim _{x\rightarrow \infty } \frac{x^3+2x^2+1}{5-x}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>-\infty </m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lim _{x\rightarrow -\infty } \frac{x^3+2x^2+1}{x^2-5}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>-\infty </m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lim _{x\rightarrow -\infty } \frac{x^3+2x^2+1}{5-x^2}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\infty </m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercise>
+    <statement>
+      <p>
+        Use an <m>\epsilon -\delta </m> proof to show that
+      </p>
+      <p>
+        <m>\displaystyle \lim _{x\rightarrow 1} 5x-2=3</m>.</p>
+    </statement>
+    <answer>
+      <p>
+        answer omitted.
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        Let <m>\displaystyle \lim _{x\rightarrow 2} f(x) = 3</m> and <m>\displaystyle \lim _{x\rightarrow 2} g(x) = -1</m>. Evaluate the following limits.
+      </p>
+      <p>
+        <minipage pos="t" width="213.5pt">
+          <ol>
+            <li>
+              <p>
+                <m>\displaystyle \lim _{x\rightarrow 2}(f+g)(x)</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\displaystyle \lim _{x\rightarrow 2}(fg)(x)</m>
+              </p>
+            </li>
+          </ol>
+        </minipage>
+        <minipage pos="t" width="213.5pt">
+          <ol>
+            <li>
+              <p>
+                <m>\displaystyle \lim _{x\rightarrow 2}(f/g)(x)</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\displaystyle \lim _{x\rightarrow 2}f(x)^{g(x)}</m>
+              </p>
+            </li>
+          </ol>
+        </minipage>
+      </p>
+    </statement>
+    <answer>
+      <ol>
+        <li>
+          <p>
+            2
+            </p>
+        </li>
+        <li>
+          <p>
+            <m>-3</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>-3</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>1/3</m>
+          </p>
+        </li>
+      </ol>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        Let <m>\displaystyle f(x) = \left\lbrace  \begin{array}{ccc} x^2-1 &amp; &amp; x \lt  3 \\ x+5 &amp; &amp; x\ge 3 \end{array}\right.</m>.
+      </p>
+      <p>
+        Is <m>f</m> continuous everywhere?
+      </p>
+    </statement>
+    <answer>
+      <p>
+        Yes. The only “questionable” place is at <m>x=3</m>, but the left and right limits agree.
+      </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        Evaluate the limit: <m>\displaystyle \lim _{x\rightarrow e} \ln x</m>.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        1
+        </p>
+    </answer>
+  </exercise>
+</exercises>

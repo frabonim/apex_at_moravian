@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<exercises>
+  <introduction>
+    <p>
+      Exercises in this section are from the <url href="https://openstax.org/books/calculus-volume-3/pages/4-8-lagrange-multipliers">OpenStax Calculus text</url>, used under a Creative Commons license.
+    </p>
+  </introduction>
+  <exercisegroup>
+    <introduction>
+      <p>
+        For the following exercises, use the method of Lagrange multipliers to find the maximum and minimum values of the function subject to the given constraints.
+      </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x,y,z)=xyz</m>; <m>x^2+2y^2+3z^2=6</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          maximum <m>2\frac{\sqrt{3}}{3}</m>, minimum <m>-2\frac{\sqrt{3}}{3}</m>
+        </p>
+      </answer>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x,y)=4x^3+y^2</m>; <m>2x^2+y^2=1</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          maximum <m>\sqrt{2}</m>, minimum <m>-\sqrt{2}</m>
+        </p>
+      </answer>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x,y,z)=yz+xy</m>; <m>xy=1</m>, <m>y^2+z^2=1</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          maximum <m>3/2</m>, minimum <m>1/2</m>
+        </p>
+      </answer>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          <m></m>; <m></m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          maximum <m></m>, minimum <m></m>
+        </p>
+      </answer>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          <m></m>; <m></m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          maximum <m></m>, minimum <m></m>
+        </p>
+      </answer>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          <m></m>; <m></m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          maximum <m></m>, minimum <m></m>
+        </p>
+      </answer>
+    </exercise>
+
+  </exercisegroup>
+
+</exercises>

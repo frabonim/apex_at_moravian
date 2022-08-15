@@ -1,0 +1,652 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<exercises>
+  <exercise>
+    <statement>
+      <p>
+        In your own words, what does it mean to “find the limit of <m>f(x)</m> as <m>x</m> approaches 3”?
+      </p>
+    </statement>
+    <answer>
+      <p>
+        Answers will vary.
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        An expression of the form <m>\frac{0}{0}</m> is called <em>    </em>.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        An indeterminate form.
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        T/F: The limit of <m>f(x)</m> as <m>x</m> approaches <m>5</m> is <m>f(5)</m>.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        F
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        Describe three situations where <m>\displaystyle \lim _{x\rightarrow c}f(x)</m> does not exist.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        The function may approach different values from the left and right, the function may grow without bound, or the function might oscillate.
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        In your own words, what is a difference quotient?
+        </p>
+    </statement>
+    <answer>
+      <p>
+        Answers will vary.
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        When <m>x</m> is near <m>0</m>, <m>\displaystyle \frac{\sin x}{x}</m> is near what value?
+      </p>
+    </statement>
+    <answer>
+      <p>
+        1
+        </p>
+    </answer>
+  </exercise>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 7–16, approximate the given limits both numerically and graphically.
+        </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lim _{x\rightarrow 1} x^2+3x-5</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>-1</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lim _{x\rightarrow 0} x^3-3x^2+x-5</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>-5</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lim _{x\rightarrow 0} \frac{x+1}{x^2+3x}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          Limit does not exist
+          </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lim _{x\rightarrow 3} \frac{x^2-2x-3}{x^2-4x+3}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>2</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lim _{x\rightarrow -1} \frac{x^2+8x+7}{x^2+6x+5}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>1.5</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lim _{x\rightarrow 2} \frac{x^2+7x+10}{x^2-4x+4}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          Limit does not exist.
+          </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lim _{x\rightarrow 2} f(x)</m>, where</p>
+        <p>
+          <m>f(x) = \left\lbrace \begin{array}{cl} x+2 &amp; x\le 2 \\ 3x-5 &amp; x\gt2 \end{array}\right.</m>.</p>
+      </statement>
+      <answer>
+        <p>
+          Limit does not exist.
+          </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lim _{x\rightarrow 3} f(x)</m>, where</p>
+        <p>
+          <m>f(x) = \left\lbrace \begin{array}{cl} x^2-x+1 &amp; x\le 3 \\ 2x+1 &amp; x\gt3 \end{array}\right.</m>.</p>
+      </statement>
+      <answer>
+        <p>
+          <m>7</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lim _{x\rightarrow 0} f(x)</m>, where</p>
+        <p>
+          <m>f(x) = \left\lbrace \begin{array}{cl} \cos x &amp; x\le 0 \\ x^2+3x+1 &amp; x\gt0 \end{array}\right.</m>.</p>
+      </statement>
+      <answer>
+        <p>
+          <m>1</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lim _{x\rightarrow \pi /2} f(x)</m>, where</p>
+        <p>
+          <m>f(x) = \left\lbrace \begin{array}{cl} \sin x &amp; x\le \pi /2 \\ \cos x &amp; x\gt\pi /2 \end{array}\right.</m>.</p>
+      </statement>
+      <answer>
+        <p>
+          Limit does not exist.
+          </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 17–24, a function <m>f</m> and a value <m>a</m> are given. Approximate the limit of the difference quotient, <m>\displaystyle \lim _{h\rightarrow 0}\frac{f(a+h)-f(a)}{h}</m>, using <m>h = \pm 0.1, \pm 0.01</m>.
+      </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x) = -7x+2</m>,   <m>a=3</m>
+        </p>
+      </statement>
+      <answer>
+        <tabular>
+          <row bottom-border="true">
+            <cell halign="center">
+              <m>h</m>
+            </cell>
+            <cell halign="center">
+              <m>\frac{f(a+h)-f(a)}{h}</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="center">
+              <m>-0.1</m>
+            </cell>
+            <cell halign="center">
+              <m>-7</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="center">
+              <m>-0.01</m>
+            </cell>
+            <cell halign="center">
+              <m>-7</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="center">
+              <m>0.01</m>
+            </cell>
+            <cell halign="center">
+              <m>-7</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="center">
+              <m>0.1</m>
+            </cell>
+            <cell halign="center">
+              <m>-7</m>
+            </cell>
+          </row>
+        </tabular>
+        <p>
+           The limit seems to be exactly <m>-7</m>.
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x) = 9x+0.06</m>,   <m>a=-1</m>
+        </p>
+      </statement>
+      <answer>
+        <tabular>
+    
+          <row bottom-border="true">
+            <cell halign="center">
+              <m>h</m>
+            </cell>
+            <cell halign="center">
+              <m>\frac{f(a+h)-f(a)}{h}</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="center">
+              <m>-0.1</m>
+            </cell>
+            <cell halign="center">
+              <m>9</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="center">
+              <m>-0.01</m>
+            </cell>
+            <cell halign="center">
+              <m>9</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="center">
+              <m>0.01</m>
+            </cell>
+            <cell halign="center">
+              <m>9</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="center">
+              <m>0.1</m>
+            </cell>
+            <cell halign="center">
+              <m>9</m>
+            </cell>
+          </row>
+        </tabular>
+        <p>
+           The limit seems to be exactly 9.
+          </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x) = x^2+3x-7</m>,   <m>a=1</m>
+        </p>
+      </statement>
+      <answer>
+        <tabular>
+          <caption/>
+          <row bottom-border="true">
+            <cell halign="center">
+              <m>h</m>
+            </cell>
+            <cell halign="center">
+              <m>\frac{f(a+h)-f(a)}{h}</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="center">
+              <m>-0.1</m>
+            </cell>
+            <cell halign="center">
+              <m>4.9</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="center">
+              <m>-0.01</m>
+            </cell>
+            <cell halign="center">
+              <m>4.99</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="center">
+              <m>0.01</m>
+            </cell>
+            <cell halign="center">
+              <m>5.01</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="center">
+              <m>0.1</m>
+            </cell>
+            <cell halign="center">
+              <m>5.1</m>
+            </cell>
+          </row>
+        </tabular>
+        <p>
+           The limit is approx. 5.
+          </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x) = \frac{1}{x+1}</m>,   <m>a=2</m>
+        </p>
+      </statement>
+      <answer>
+        <tabular>
+    
+          <row bottom-border="true">
+            <cell halign="center">
+              <m>h</m>
+            </cell>
+            <cell halign="center">
+              <m>\frac{f(a+h)-f(a)}{h}</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="center">
+              <m>-0.1</m>
+            </cell>
+            <cell halign="center">
+              <m>-0.114943</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="center">
+              <m>-0.01</m>
+            </cell>
+            <cell halign="center">
+              <m>-0.111483</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="center">
+              <m>0.01</m>
+            </cell>
+            <cell halign="center">
+              <m>-0.110742</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="center">
+              <m>0.1</m>
+            </cell>
+            <cell halign="center">
+              <m>-0.107527</m>
+            </cell>
+          </row>
+        </tabular>
+        <p>
+           The limit is approx. <m>-0.11</m>.
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x) = -4x^2+5x-1</m>,   <m>a=-3</m>
+        </p>
+      </statement>
+      <answer>
+        <tabular>
+    
+          <row bottom-border="true">
+            <cell halign="center">
+              <m>h</m>
+            </cell>
+            <cell halign="center">
+              <m>\frac{f(a+h)-f(a)}{h}</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="center">
+              <m>-0.1</m>
+            </cell>
+            <cell halign="center">
+              <m>29.4</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="center">
+              <m>-0.01</m>
+            </cell>
+            <cell halign="center">
+              <m>29.04</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="center">
+              <m>0.01</m>
+            </cell>
+            <cell halign="center">
+              <m>28.96</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="center">
+              <m>0.1</m>
+            </cell>
+            <cell halign="center">
+              <m>28.6</m>
+            </cell>
+          </row>
+        </tabular>
+        <p>
+           The limit is approx. <m>29</m>.
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x) =\ln x</m>,   <m>a=5</m>
+        </p>
+      </statement>
+      <answer>
+        <tabular>
+    
+          <row bottom-border="true">
+            <cell halign="center">
+              <m>h</m>
+            </cell>
+            <cell halign="center">
+              <m>\frac{f(a+h)-f(a)}{h}</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="center">
+              <m> -0.1</m>
+            </cell>
+            <cell halign="center">
+              <m>0.202027</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="center">
+              <m>-0.01</m>
+            </cell>
+            <cell halign="center">
+              <m>0.2002</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="center">
+              <m>0.01</m>
+            </cell>
+            <cell halign="center">
+              <m>0.1998</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="center">
+              <m>0.1</m>
+            </cell>
+            <cell halign="center">
+              <m>0.198026</m>
+            </cell>
+          </row>
+        </tabular>
+        <p>
+           The limit is approx. <m>0.2</m>.
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x) =\sin x</m>,   <m>a=\pi </m>
+        </p>
+      </statement>
+      <answer>
+        <tabular>
+    
+          <row bottom-border="true">
+            <cell halign="center">
+              <m>h</m>
+            </cell>
+            <cell halign="center">
+              <m>\frac{f(a+h)-f(a)}{h}</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="center">
+              <m> -0.1</m>
+            </cell>
+            <cell halign="center">
+              <m>-0.998334</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="center">
+              <m>-0.01</m>
+            </cell>
+            <cell halign="center">
+              <m>-0.999983</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="center">
+              <m>0.01</m>
+            </cell>
+            <cell halign="center">
+              <m>-0.999983</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="center">
+              <m>0.1</m>
+            </cell>
+            <cell halign="center">
+              <m>-0.998334</m>
+            </cell>
+          </row>
+        </tabular>
+        <p>
+           The limit is approx. <m>-1</m>.
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x) =\cos x</m>,   <m>a=\pi </m>
+        </p>
+      </statement>
+      <answer>
+        <tabular>
+    
+          <row bottom-border="true">
+            <cell halign="center">
+              <m>h</m>
+            </cell>
+            <cell halign="center">
+              <m>\frac{f(a+h)-f(a)}{h}</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="center">
+              <m>-0.1</m>
+            </cell>
+            <cell halign="center">
+              <m>-0.0499583</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="center">
+              <m>-0.01</m>
+            </cell>
+            <cell halign="center">
+              <m>-0.00499996</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="center">
+              <m>0.01</m>
+            </cell>
+            <cell halign="center">
+              <m>0.00499996</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="center">
+              <m>0.1</m>
+            </cell>
+            <cell halign="center">
+              <m>0.0499583</m>
+            </cell>
+          </row>
+        </tabular>
+        <p>
+           The limit is approx. <m>0.005</m>.
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+</exercises>

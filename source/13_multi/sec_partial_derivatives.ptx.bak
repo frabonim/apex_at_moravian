@@ -1,0 +1,1316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec_partial_derivatives">
+  <title>Partial Derivatives</title>
+  <introduction>
+    <p>
+      Let <m>y</m> be a function of <m>x</m>.
+      We have studied in great detail the derivative of <m>y</m> with respect to <m>x</m>,
+      that is, <m>\frac{dy}{dx}</m>,
+      which measures the rate at which <m>y</m> changes with respect to <m>x</m>.
+      Consider now <m>z=f(x,y)</m>.
+      It makes sense to want to know how <m>z</m> changes with respect to <m>x</m> and/or <m>y</m>.
+      This section begins our investigation into these rates of change.
+    </p>
+
+    <figure xml:id="vid-multi-partial-intro">
+      <caption>Motivating the concept of the partial derivative</caption>
+      <video youtube="uApAQNSb5TQ"/>
+    </figure>
+  </introduction>
+
+  <subsection xml:id="subsec-first-partial">
+    <title>First-order partial derivatives</title>
+    <p>
+      Consider the function <m>f(x,y) = x^2+2y^2</m>,
+      as graphed in <xref ref="fig_partialintroa_3D">Figure</xref>.
+      By fixing <m>y=2</m>,
+      we focus our attention to all points on the surface where the <m>y</m>-value is 2, shown in both <xref ref="fig_partialintroa_3D">Figure</xref> and <xref ref="fig_partialintrob_3D">Figure</xref>.
+      These points form a curve in the plane <m>y=2</m>:
+      <m>z = f(x,2) = x^2+8</m> which defines <m>z</m> as a function of just one variable.
+      We can take the derivative of <m>z</m> with respect to <m>x</m> along this curve and find equations of tangent lines, etc.
+    </p>
+
+    <figure xml:id="fig_partialintro">
+      <caption>By fixing <m>y=2</m>, the surface <m>f(x,y) = x^2+2y^2</m> is a curve in space</caption>
+      <sidebyside widths="47% 47%" margins="0%">
+        <figure xml:id="fig_partialintroa_3D">
+          <caption/>
+
+          <!-- START figures/figpartialintro_3D.asy -->
+          <image xml:id="img_partialintroa_3D">
+            <description></description>
+            <asymptote>
+
+
+
+              //ASY file for figpartialintro3D.asy in Chapter 12
+
+              size(282,282,IgnoreAspect);
+              //size(282,282,Aspect);
+              //currentprojection=perspective(7,2,1);
+              currentprojection=orthographic(16,16,36);
+              defaultrender.merge=true;
+
+              // setup and draw the axes
+              real[] myxchoice={-4,-2,2,4};
+              real[] myychoice={-4,-2,2,4};
+              real[] myzchoice={10,20};
+              defaultpen(0.5mm);
+              pair xbounds=(-5,5);
+              pair ybounds=(-5,5);
+              pair zbounds=(-1,22);
+
+              xaxis3("",xbounds.x,xbounds.y,black,OutTicks(myxchoice),Arrow3(size=3mm));
+              yaxis3("",ybounds.x,ybounds.y,black,OutTicks(myychoice),Arrow3(size=3mm));
+              zaxis3("",zbounds.x,zbounds.y,black,OutTicks(myzchoice),Arrow3(size=3mm));
+
+              label("$x$",(xbounds.y+0.05*(xbounds.y-xbounds.x),0,0));
+              label("$y$",(0,ybounds.y+0.05*(ybounds.y-ybounds.x),0));
+              label("$z$",(0,0,zbounds.y+0.05*(zbounds.y-zbounds.x)));
+
+              //Draw surface z=x^2+2*y^2
+              triple f(pair t) {
+                return (t.x,t.y,t.x^2+2*t.y^2);
+              }
+              surface s=surface(f,(-3,-3),(3,3),16,16,usplinetype=new splinetype[] {notaknot,notaknot,monotonic},
+                        vsplinetype=new splinetype[] {notaknot,notaknot,monotonic});
+              pen p=apexmeshpen;
+              draw(s,surfacepen,meshpen=p);
+
+              //Draw the trace for y=2
+              triple g(real t) {return (t,2,t^2+8);}
+              path3 mypath=graph(g,-3,3,operator ..); draw(mypath,bluepen);
+
+            </asymptote>
+          </image>
+          <!-- figures/figpartialintro_3D.asy END -->
+        </figure>
+
+        <figure xml:id="fig_partialintrob_3D">
+          <caption/>
+
+          <!-- START figures/figpartialintrob_3D.asy -->
+          <image xml:id="img_partialintrob_3D">
+            <description></description>
+            <asymptote>
+
+
+
+              //ASY file for figpartialintrob3D.asy in Chapter 12
+
+              size(282,282,IgnoreAspect);
+              //size(282,282,Aspect);
+              //currentprojection=perspective(7,2,1);
+              currentprojection=orthographic(16,16,36);
+              defaultrender.merge=true;
+
+              // setup and draw the axes
+              real[] myxchoice={-4,-2,2,4};
+              real[] myychoice={-4,-2,2,4};
+              real[] myzchoice={10,20};
+              defaultpen(0.5mm);
+              pair xbounds=(-5,5);
+              pair ybounds=(-5,5);
+              pair zbounds=(-1,22);
+
+              xaxis3("",xbounds.x,xbounds.y,black,OutTicks(myxchoice),Arrow3(size=3mm));
+              yaxis3("",ybounds.x,ybounds.y,black,OutTicks(myychoice),Arrow3(size=3mm));
+              zaxis3("",zbounds.x,zbounds.y,black,OutTicks(myzchoice),Arrow3(size=3mm));
+
+              label("$x$",(xbounds.y+0.05*(xbounds.y-xbounds.x),0,0));
+              label("$y$",(0,ybounds.y+0.05*(ybounds.y-ybounds.x),0));
+              label("$z$",(0,0,zbounds.y+0.05*(zbounds.y-zbounds.x)));
+
+              //Draw the trace for y=2
+              triple g(real t) {return (t,2,t^2+8);}
+              path3 mypath=graph(g,-3,3,operator ..); draw(mypath,bluepen);
+
+            </asymptote>
+          </image>
+          <!-- figures/figpartialintrob_3D.asy END -->
+        </figure>
+      </sidebyside>
+    </figure>
+
+    <p>
+      The key notion to extract from this example is:
+      by treating <m>y</m> as constant
+      (it does not vary)
+      we can consider how <m>z</m> changes with respect to <m>x</m>.
+      In a similar fashion,
+      we can hold <m>x</m> constant and consider how <m>z</m> changes with respect to <m>y</m>.
+      This is the underlying principle of
+      <em>partial derivatives</em>.
+      We state the formal, limit-based definition first,
+      then show how to compute these partial derivatives without directly taking limits.
+    </p>
+
+    <definition xml:id="def_partial_derivative">
+      <title>Partial Derivative</title>
+      <statement>
+        <p>
+          Let <m>z=f(x,y)</m> be a continuous function on a set <m>S</m> in <m>\mathbb{R}^2</m>.
+        </p>
+
+        <p>
+          <ol>
+            <li>
+              <p>
+                The <em>partial derivative of <m>f</m> with respect to <m>x</m></em> is:
+                <me>
+                  f_x(x,y) = \lim_{h\to 0} \frac{f(x+h,y) - f(x,y)}h
+                </me>.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                The <em>partial derivative of <m>f</m> with respect to <m>y</m></em> is:
+                <me>
+                  f_y(x,y) = \lim_{h\to 0} \frac{f(x,y+h) - f(x,y)}h
+                </me>.
+              </p>
+            </li>
+          </ol>
+        </p>
+
+        <p>
+              <idx><h>partial derivative</h></idx>
+              <idx><h>derivative</h><h>partial</h></idx>
+        </p>
+      </statement>
+    </definition>
+
+    <aside>
+      <p>
+        Alternate notations for <m>f_x(x,y)</m> include:
+        <me>
+          \frac{\partial}{\partial x}f(x,y),\,\,\frac{\pf}{\px},\,\,\frac{\pz}{\px},\,\,\text{ and } \,z_x
+        </me>,
+        with similar notations for <m>f_y(x,y)</m>.
+        For ease of notation, <m>f_x(x,y)</m> is often abbreviated <m>f_x</m>.
+      </p>
+    </aside>
+
+    <example xml:id="ex_partial1">
+      <title>Computing partial derivatives with the limit definition</title>
+      <statement>
+        <p>
+          Let <m>f(x,y) = x^2y + 2x+y^3</m>.
+          Find <m>f_x(x,y)</m> using the limit definition.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Using <xref ref="def_partial_derivative">Definition</xref>, we have:
+          <md>
+            <mrow>f_x(x,y) \amp = \lim_{h\to 0} \frac{f(x+h,y) - f(x,y)}{h}</mrow>
+            <mrow>\amp = \lim_{h\to 0} \frac{(x+h)^2y+2(x+h)+y^3 - (x^2y+2x+y^3)}{h}</mrow>
+            <mrow>\amp = \lim_{h\to 0} \frac{x^2y+2xhy+h^2y+2x+2h+y^3-(x^2y+2x+y^3)}{h}</mrow>
+            <mrow>\amp = \lim_{h\to 0} \frac{2xhy+h^2y+2h}{h}</mrow>
+            <mrow>\amp =\lim_{h\to 0} 2xy+hy+2</mrow>
+            <mrow>\amp = 2xy+2</mrow>
+          </md>.
+        </p>
+
+        <p>
+          We have found <m>f_x(x,y) = 2xy+2</m>.
+        </p>
+      </solution>
+    </example>
+
+    <p>
+      <xref ref="ex_partial1">Example</xref>
+      found a partial derivative using the formal,
+      limit-based definition.
+      Using limits is not necessary, though,
+      as we can rely on our previous knowledge of derivatives to compute partial derivatives easily.
+      When computing <m>f_x(x,y)</m>,
+      we hold <m>y</m> fixed <mdash/> it does not vary.
+      Therefore we can compute the derivative with respect to <m>x</m> by treating <m>y</m> as a constant or coefficient.
+    </p>
+
+    <p>
+      Just as <m>\frac{d}{dx}\big(5x^2\big) = 10x</m>,
+      we compute <m>\frac{\partial}{\px}\big(x^2y\big) = 2xy</m>.
+      Here we are treating <m>y</m> as a coefficient.
+    </p>
+
+    <p>
+      Just as <m>\frac{d}{dx}\big(5^3\big) = 0</m>,
+      we compute <m>\frac{\partial}{\px}\big(y^3\big) = 0</m>.
+      Here we are treating <m>y</m> as a constant.
+      More examples will help make this clear.
+    </p>
+
+    <example xml:id="ex_partial2">
+      <title>Finding partial derivatives</title>
+      <statement>
+        <p>
+          Find <m>f_x(x,y)</m> and <m>f_y(x,y)</m> in each of the following.
+        </p>
+
+        <p>
+          <ol>
+            <li><m>f(x,y) = x^3y^2+ 5y^2-x+7</m></li>
+            <li><m>f(x,y) = \cos(xy^2)+\sin(x)</m></li>
+            <li><m>f(x,y) = e^{x^2y^3}\sqrt{x^2+1}</m></li>
+          </ol>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <ol>
+            <li>
+              <p>
+                We have <m>f(x,y) = x^3y^2+ 5y^2-x+7</m>.
+                Begin with <m>f_x(x,y)</m>.
+                Keep <m>y</m> fixed,
+                treating it as a constant or coefficient, as appropriate:
+                <me>
+                  f_x(x,y) = 3x^2y^2-1
+                </me>.
+                Note how the <m>5y^2</m> and <m>7</m> terms go to zero.
+                To compute <m>f_y(x,y)</m>, we hold <m>x</m> fixed:
+                <me>
+                  f_y(x,y) = 2x^3y+10y
+                </me>.
+                Note how the <m>-x</m> and <m>7</m> terms go to zero.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                We have <m>f(x,y) = \cos(xy^2)+\sin(x)</m>.
+
+                Begin with <m>f_x(x,y)</m>. We need to apply the Chain Rule with the cosine term; <m>y^2</m> is the coefficient of the <m>x</m>-term inside the cosine function.
+                <me>
+                  f_x(x,y) = -\sin(xy^2)(y^2)+\cos(x) = -y^2\sin(xy^2)+\cos(x)
+                </me>.
+                To find <m>f_y(x,y)</m>,
+                note that <m>x</m> is the coefficient of the <m>y^2</m> term inside of the cosine term;
+                also note that since <m>x</m> is fixed,
+                <m>\sin(x)</m> is also fixed,
+                and we treat it as a constant.
+                <me>
+                  f_y(x,y) = -\sin(xy^2)(2xy) = -2xy\sin(xy^2)
+                </me>.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                We have <m>f(x,y) = e^{x^2y^3}\sqrt{x^2+1}</m>.
+                Beginning with <m>f_x(x,y)</m>,
+                note how we need to apply the Product Rule.
+                <md>
+                  <mrow>f_x(x,y) \amp = e^{x^2y^3}(2xy^3)\sqrt{x^2+1} + e^{x^2y^3}\frac12\big(x^2+1\big)^{-1/2}(2x)</mrow>
+                  <mrow>\amp = 2xy^3e^{x^2y^3}\sqrt{x^2+1}+\frac{xe^{x^2y^3}}{\sqrt{x^2+1}}</mrow>
+                </md>.
+                Note that when finding <m>f_y(x,y)</m> we do not have to apply the Product Rule;
+                since <m>\sqrt{x^2+1}</m> does not contain <m>y</m>,
+                we treat it as fixed and hence becomes a coefficient of the <m>e^{x^2y^3}</m> term.
+                <me>
+                  f_y(x,y) = e^{x^2y^3}(3x^2y^2)\sqrt{x^2+1} = 3x^2y^2e^{x^2y^3}\sqrt{x^2+1}
+                </me>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </solution>
+    </example>
+
+    <figure xml:id="vid-multi-partial-examples">
+      <caption>Additional partial derivative computation examples</caption>
+      <video youtube="R3PXGwjOmtw"/>
+    </figure>
+
+    <p>
+      We have shown <em>how</em> to compute a partial derivative,
+      but it may still not be clear what a partial derivative <em>means</em>.
+      Given <m>z=f(x,y)</m>,
+      <m>f_x(x,y)</m> measures the rate at which <m>z</m> changes as only <m>x</m> varies:
+      <m>y</m> is held constant.
+          <idx><h>partial derivative</h><h>meaning</h></idx>
+    </p>
+
+    <p>
+      Imagine standing in a rolling meadow,
+      then beginning to walk due east.
+      Depending on your location, you might walk up,
+      sharply down, or perhaps not change elevation at all.
+      This is similar to measuring <m>z_x</m>:
+      you are moving only east
+      (in the <q><m>x</m></q>-direction)
+      and not north/south at all.
+      Going back to your original location,
+      imagine now walking due north
+      (in the <q><m>y</m></q>-direction).
+      Perhaps walking due north does not change your elevation at all.
+      This is analogous to <m>z_y=0</m>:
+      <m>z</m> does not change with respect to <m>y</m>.
+      We can see that <m>z_x</m> and <m>z_y</m> do not have to be the same,
+      or even similar,
+      as it is easy to imagine circumstances where walking east means you walk downhill,
+      though walking north makes you walk uphill.
+    </p>
+
+    <figure xml:id="vid-multi-partial-interpret">
+      <caption>Interpreting partial derivatives</caption>
+      <video youtube="jvnTNe4hHL8"/>
+    </figure>
+
+    <p>
+      The following example helps us visualize this more.
+    </p>
+
+    <example xml:id="ex_partial3">
+      <title>Evaluating partial derivatives</title>
+      <statement>
+        <p>
+          Let <m>z=f(x,y)=-x^2-\frac12y^2+xy+10</m>.
+          Find <m>f_x(2,1)</m> and <m>f_y(2,1)</m> and interpret their meaning.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We begin by computing <m>f_x(x,y) = -2x+y</m> and <m>f_y(x,y) = -y+x</m>.
+          Thus
+          <me>
+            f_x(2,1) = -3  \text{ and }  f_y(2,1) = 1
+          </me>.
+        </p>
+
+        <p>
+          It is also useful to note that <m>f(2,1) = 7.5</m>.
+          What does each of these numbers mean?
+        </p>
+
+        <p>
+          Consider <m>f_x(2,1)=-3</m>,
+          along with <xref ref="fig_partial3a_3D">Figure</xref>.
+          If one <q>stands</q> on the surface at the point
+          <m>(2,1,7.5)</m> and moves parallel to the <m>x</m>-axis (<ie/>, only the <m>x</m>-value changes,
+          not the <m>y</m>-value),
+          then the instantaneous rate of change is <m>-3</m>.
+          Increasing the <m>x</m>-value will decrease the <m>z</m>-value;
+          decreasing the <m>x</m>-value will increase the <m>z</m>-value.
+        </p>
+
+        <figure xml:id="fig_partial3">
+          <caption>Illustrating the meaning of partial derivatives</caption>
+          <sidebyside widths="47% 47%" margins="0%">
+            <figure xml:id="fig_partial3a_3D">
+              <caption/>
+
+              <!-- START figures/figpartial3a_3D.asy -->
+              <image xml:id="img_partial3a_3D">
+                <description></description>
+                <asymptote>
+
+
+
+                  //ASY file for figpartial3a3D.asy in Chapter 12
+
+                  size(282,282,IgnoreAspect);
+                  //size(282,282,Aspect);
+                  //currentprojection=perspective(7,2,1);
+                  currentprojection=orthographic(8,8,10);
+                  defaultrender.merge=true;
+
+                  // setup and draw the axes
+                  real[] myxchoice={2};
+                  real[] myychoice={2};
+                  real[] myzchoice={5,10};
+                  defaultpen(0.5mm);
+                  pair xbounds=(-1,3);
+                  pair ybounds=(-1,3);
+                  pair zbounds=(-1,12);
+
+                  xaxis3("",xbounds.x,xbounds.y,black,OutTicks(myxchoice),Arrow3(size=3mm));
+                  yaxis3("",ybounds.x,ybounds.y,black,OutTicks(myychoice),Arrow3(size=3mm));
+                  zaxis3("",zbounds.x,zbounds.y,black,OutTicks(myzchoice),Arrow3(size=3mm));
+
+                  label("$x$",(xbounds.y+0.05*(xbounds.y-xbounds.x),0,0));
+                  label("$y$",(0,ybounds.y+0.05*(ybounds.y-ybounds.x),0));
+                  label("$z$",(0,0,zbounds.y+0.05*(zbounds.y-zbounds.x)));
+
+                  //Draw surface z=-x^2-(1/2)*y^2+xy+10
+                  triple f(pair t) {
+                    return (t.x,t.y,-t.x^2-(1/2)*t.y^2+t.x*t.y+10);
+                  }
+                  surface s=surface(f,(0,0),(3,3),16,16,Spline);
+                  pen p=apexmeshpen;
+                  draw(s,surfacepen,meshpen=p);
+
+                  //Draw the point (2,1,7.5) trace for y=1
+                  dotfactor=3;dot((2,1,7.5));
+                  triple g(real t) {return (t,1,-t^2-(1/2)+t+10);}
+                  path3 mypath=graph(g,0,3,operator ..); draw(mypath,bluepen);
+
+                  //Draw the tan line (y=1) L=(2,1,7.5)+t(1,0,-3) for t=-1.5,1
+                  draw((0.5,1,12)--(3,1,4.5),redpen);
+
+                </asymptote>
+              </image>
+            <!-- figures/figpartial3a_3D.asy END -->
+            </figure>
+
+            <figure xml:id="fig_partial3b_3D">
+              <caption/>
+
+              <!-- START figures/figpartial3b_3D.asy -->
+              <image xml:id="img_partial3b_3D">
+                <description></description>
+                <asymptote>
+
+
+
+                  //ASY file for figpartial3a3D.asy in Chapter 12
+
+                  size(282,282,IgnoreAspect);
+                  //size(282,282,Aspect);
+                  //currentprojection=perspective(7,2,1);
+                  currentprojection=orthographic(8,8,10);
+                  defaultrender.merge=true;
+
+                  // setup and draw the axes
+                  real[] myxchoice={2};
+                  real[] myychoice={2};
+                  real[] myzchoice={5,10};
+                  defaultpen(0.5mm);
+                  pair xbounds=(-1,3);
+                  pair ybounds=(-1,3);
+                  pair zbounds=(-1,12);
+
+                  xaxis3("",xbounds.x,xbounds.y,black,OutTicks(myxchoice),Arrow3(size=3mm));
+                  yaxis3("",ybounds.x,ybounds.y,black,OutTicks(myychoice),Arrow3(size=3mm));
+                  zaxis3("",zbounds.x,zbounds.y,black,OutTicks(myzchoice),Arrow3(size=3mm));
+
+                  label("$x$",(xbounds.y+0.05*(xbounds.y-xbounds.x),0,0));
+                  label("$y$",(0,ybounds.y+0.05*(ybounds.y-ybounds.x),0));
+                  label("$z$",(0,0,zbounds.y+0.05*(zbounds.y-zbounds.x)));
+
+                  //Draw surface z=-x^2-(1/2)*y^2+xy+10
+                  triple f(pair t) {
+                    return (t.x,t.y,-t.x^2-(1/2)*t.y^2+t.x*t.y+10);
+                  }
+                  surface s=surface(f,(0,0),(3,3),16,16,Spline);
+                  pen p=apexmeshpen;
+                  draw(s,surfacepen,meshpen=p);
+
+                  //Draw the point (2,1,7.5) trace for x=2
+                  dotfactor=3;dot((2,1,7.5));
+                  triple g(real t) {return (2,t,-4-(1/2)*t^2+2*t+10);}
+                  path3 mypath=graph(g,0,3,operator ..); draw(mypath,bluepen);
+
+                  //Draw the tan line (x=2) L=(2,1,7.5)+t(0,1,1) for t=-1,2
+                  draw((2,0,6.5)--(2,3,9.5),redpen);
+
+                </asymptote>
+              </image>
+            <!-- figures/figpartial3b_3D.asy END -->
+            </figure>
+          </sidebyside>
+        </figure>
+
+        <p>
+          Now consider <m>f_y(2,1)=1</m>,
+          illustrated in <xref ref="fig_partial3b_3D">Figure</xref>.
+          Moving along the curve drawn on the surface,
+          <ie/>, parallel to the <m>y</m>-axis and not changing the <m>x</m>-values,
+          increases the <m>z</m>-value instantaneously at a rate of 1.
+          Increasing the <m>y</m>-value by 1 would increase the <m>z</m>-value by approximately 1.
+        </p>
+
+        <p>
+          Since the magnitude of <m>f_x</m> is greater than the magnitude of <m>f_y</m> at <m>(2,1)</m>,
+          it is <q>steeper</q> in the <m>x</m>-direction than in the <m>y</m>-direction.
+        </p>
+      </solution>
+    </example>
+  </subsection>
+
+  <subsection xml:id="subsec-tangent-plane">
+    <title>Tangent Planes</title>
+    <p>
+      Another way to interpret partial derivatives is in terms of the <em>tangent plane</em>.
+      Consider the graph of a function <m>f(x,y)</m>, such as the one in <xref ref="fig_partialintro">Figure</xref>.
+      Setting <m>x=a</m>, <m>y=b</m> defines a point <m>(a,b,f(a,b))</m> on the graph.
+      Through the point <m>(a,b)</m>, we have the lines <m>x=a+s, y=b</m>, and <m>x=a, y=b+t</m>,
+      parallel to the <m>x</m> and <m>y</m> axes, respectively (where <m>s,t</m> are parameters).
+    </p>
+
+    <p>
+      Using the function <m>f(x,y)</m> we define two vector-valued functions:
+      <md>
+        <mrow>\vec{r}_1(s) \amp = \la a+s, b, f(a+s,b)\ra</mrow>
+        <mrow>\vec{r}_2(t) \amp = \la a, b+t, f(a,b+t)\ra</mrow>
+      </md>.
+      Both vector-valued functions define space curves that lie on the surface <m>z=f(x,y)</m>,
+      and these curves intersect at the point <m>(a,b,f(a,b))</m>, when <m>s=t=0</m>.
+    </p>
+
+    <p>
+      Now consider computing <m>\vec{r}_1'(s)</m>.
+      The first two components of this derivative are found in a straightforward manner:
+      they are <m>1</m> and <m>0</m>, respectively.
+      To find the third component of the derivative,
+      notice that in <m>\vec{r}_1(s)</m> we vary the <m>x</m>-component of <m>f</m> while holding the <m>y</m>-component constant.
+      Using the Chain Rule and <xref ref="def_partial_derivative">Definition</xref>,
+      we find that the third component is <m>f_x(a+s,b)</m>. Altogether, we have
+			<me>
+			\vec{r}_1'(s) = \la 1,0,f_x(a+s,b)\ra
+			</me>.
+			Evaluating this at <m>s=0</m> gives
+      <me>
+        \vec{v}=\vec{r}_1'(0) = \la 1,0,f_x(a,b)\ra
+      </me>.
+      We can perform a similar process with <m>\vec{r}_2(t)</m>, ultimately leading to
+      <me>
+        \vec{w}=\vec{r}_2'(0) = \la 0,1,f_y(a,b)\ra
+      </me>.
+      From <xref ref="sec_vvf_calc">Section</xref>,
+      we know that <m>\vec{r}_1'(0)</m> defines a tangent vector to the curve <m>\vec{r}_1(s)</m> when <m>s=0</m>,
+      and similarly, <m>\vec{r}_2'(0)</m> defines a tangent vector to the curve <m>\vec{r}_2(t)</m> when <m>t=0</m>.
+    </p>
+
+    <p>
+      It seems reasonable that any vector that is tangent to these curves,
+      which lie on our surface, should also be considered tangent to that surface.
+      The vectors <m>\vec{v}</m> and <m>\vec{w}</m> are therefore tangent to <m>z=f(x,y)</m> at <m>(a,b,f(a,b))</m>,
+      and they are definitely not parallel.
+      From <xref ref="sec_planes">Section</xref> we know that any two non-parallel vectors at a point define a plane through that point.
+      We also know that taking the cross product of these two vectors gives us a normal vector:
+      the cross product gives us
+      <me>
+        \vec{n}=\vec{v}\times\vec{w}=\la -f_x(a,b), -f_y(a,b), 1\ra
+      </me>.
+    </p>
+
+    <p>
+      The equation of the plane through <m>(a,b,f(a,b))</m> with normal vector <m>\vec{n}=\la -f_x(a,b),-f_y(a,b),1\ra</m> is
+      <me>
+        -f_x(a,b)(x-a)-f_y(a,b)(y-b)+(z-f(a,b))=0
+      </me>.
+      It is customary to solve for <m>z</m> in this equation and make the following definition.
+    </p>
+
+    <definition xml:id="def-tangent-plane">
+      <statement>
+        <p>
+          Let <m>f(x,y)</m> be a function whose first-order partial derivatives exist at <m>(a,b)</m>.
+          The <term>tangent plane</term> to the surface <m>z=f(x,y)</m> at the point <m>(a,b,f(a,b))</m> is the plane defined by the equation
+          <me>
+            z = f(a,b)+f_x(a,b)(x-a)+f_y(a,b)(y-b)
+          </me>.
+          <idx><h>tangent plane</h></idx>
+          <idx><h>tangent plane</h><h>to a graph</h></idx>
+        </p>
+      </statement>
+    </definition>
+
+    <example>
+      <title>Finding a tangent plane equation</title>
+      <statement>
+        <p>
+          Find the equation of tangent plane to the surface <m>z=x^2+3y^2</m> at <m>(x,y)=(1,-1)</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Our function is <m>f(x,y)=x^2+3y^2</m>, and we have <m>f(1,-1)=4</m>,
+          so the point on the surface is <m>(1,-1,4)</m>.
+          The partial derivatives are <m>f_x(x,y)=2x</m> and <m>f_y(x,y)=6y</m>,
+          so <m>f_x(1,-1)=2</m>, <m>f_y(1,-1)=-6</m>.
+          Using <xref ref="def-tangent-plane"/>, our plane is given by
+          <me>
+            z = 4+2(x-1)-6(y+1)
+          </me>.
+        </p>
+      </solution>
+    </example>
+
+    <p>
+      Notice the similarity between the tangent plane equation in <xref ref="def-tangent-plane"/>
+      and the single variable tangent line equation <m>y = f(c)+f'(c)(x-c)</m>.
+      As with functions of one variable, this suggests a connection between derivatives and linear approximation.
+      We explore this connection in <xref ref="sec_total_differential"/>,
+      where we'll see that <xref ref="def-tangent-plane"/> should be strengthed to require that the partial derivatives of <m>f</m> be <em>continuous</em>.
+    </p>
+  </subsection>
+
+  <subsection xml:id="subsec-second-partial">
+    <title>Second-order partial derivatives</title>
+    <p>
+      Let <m>z=f(x,y)</m>.
+      We have learned to find the partial derivatives <m>f_x(x,y)</m> and <m>f_y(x,y)</m>,
+      which are each functions of <m>x</m> and <m>y</m>.
+      Therefore we can take partial derivatives of them,
+      each with respect to <m>x</m> and <m>y</m>.
+      We define these <q>second partials</q> along with the notation,
+      give examples, then discuss their meaning.
+    </p>
+
+    <definition xml:id="def_second_partial">
+      <title>Second Partial Derivative, Mixed Partial Derivative</title>
+      <statement>
+        <p>
+          Let <m>z=f(x,y)</m> be continuous on a set <m>S</m>.
+        </p>
+
+        <p>
+          <ol>
+            <li>
+              <p>
+                The <em>second partial derivative of <m>f</m> with respect to <m>x</m> then <m>x</m></em> is
+                <me>
+                  \frac{\partial}{\partial x}\left(\frac{\partial f}{\px}\right) = \frac{\partial^2 f}{\px^2} = \big(\,f_x\,\big)_x = f_{xx}
+                </me>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                The <em>second partial derivative of <m>f</m> with respect to <m>x</m> then <m>y</m></em> is
+                <me>
+                  \frac{\partial}{\partial y}\left(\frac{\partial f}{\px}\right) = \frac{\partial^2f}{\py\px} = \big(\,f_x\,\big)_y = f_{xy}
+                </me>
+              </p>
+            </li>
+          </ol>
+        </p>
+
+        <p>
+          Similar definitions hold for
+          <m>\frac{\partial^2f}{\py^2} = f_{yy}</m> and <m>\frac{\partial^2f}{\px\py} = f_{yx}</m>.
+        </p>
+
+        <p>
+          The second partial derivatives <m>f_{xy}</m> and <m>f_{yx}</m> are
+          <term>mixed partial derivatives</term>.
+              <idx><h>partial derivative</h><h>mixed</h></idx>
+              <idx><h>partial derivative</h><h>second derivative</h></idx>
+              <idx><h>derivative</h><h>mixed partial</h></idx>
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      The notation of second partial derivatives gives some insight into the notation of the second derivative of a function of a single variable.
+      If <m>y=f(x)</m>, then <m>\fp'(x) = \frac{d^2 y}{dx^2}</m>.
+      The <q><m>d^2y</m></q> portion means
+      <q>take the derivative of <m>y</m> twice,</q> while <q><m>dx^2</m></q>
+      means <q>with respect to <m>x</m> both times.</q>
+      When we only know of functions of a single variable,
+      this latter phrase seems silly:
+      there is only one variable to take the derivative with respect to.
+      Now that we understand functions of multiple variables,
+      we see the importance of specifying which variables we are referring to.
+    </p>
+    <aside>
+      <p>
+        The terms in <xref ref="def_second_partial">Definition</xref> all depend on limits,
+        so each definition comes with the caveat
+        <q>where the limit exists.</q>
+      </p>
+    </aside>
+
+    <example xml:id="ex_partial6">
+      <title>Second partial derivatives</title>
+      <statement>
+        <p>
+          For each of the following, find all six first and second partial derivatives.
+          That is, find
+          <me>
+            f_x, f_y, f_{xx}, f_{yy}, f_{xy} \text{ and }  f_{yx}\,
+          </me>.
+        </p>
+
+        <p>
+          <ol>
+            <li><m>f(x,y) = x^3y^2 + 2xy^3+\cos(x)</m></li>
+
+            <li><m>f(x,y) = \frac{x^3}{y^2}</m></li>
+
+            <li><m>f(x,y)=e^{x}\sin(x^2y)</m></li>
+          </ol>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          In each, we give <m>f_x</m> and <m>f_y</m> immediately and then spend time deriving the second partial derivatives.
+        </p>
+
+        <p>
+          <ol>
+            <li>
+              <p>
+                <md>
+                  <mrow>f(x,y) \amp = x^3y^2+2xy^3+\cos(x)</mrow>
+                  <mrow>f_x(x,y) \amp = 3x^2y^2+2y^3-\sin(x)</mrow>
+                  <mrow>f_y(x,y) \amp = 2x^3y+6xy^2</mrow>
+                  <mrow>f_{xx}(x,y) \amp = \frac{\partial}{\px}\big(f_x\big) = \frac{\partial}{\px}\big(3x^2y^2+2y^3-\sin(x) \big)</mrow>
+                  <mrow> \amp = 6xy^2-\cos(x)</mrow>
+                  <mrow>f_{yy}(x,y) \amp = \frac{\partial}{\py}\big(f_y\big) = \frac{\partial}{\py}\big(2x^3y+6xy^2\big)</mrow>
+                  <mrow> \amp = 2x^3+12xy</mrow>
+                  <mrow>f_{xy}(x,y) \amp = \frac{\partial}{\py}\big(f_x\big) = \frac{\partial}{\py}\big(3x^2y^2+2y^3-\sin(x) \big)</mrow>
+                  <mrow> \amp = 6x^2y+6y^2</mrow>
+                  <mrow>f_{yx}(x,y) \amp = \frac{\partial}{\px}\big(f_x\big) = \frac{\partial}{\px}\big(2x^3y+6xy^2\big)</mrow>
+                  <mrow> \amp = 6x^2y+6y^2</mrow>
+                </md>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <md>
+                  <mrow>f(x,y) \amp = \frac{x^3}{y^2} = x^3y^{-2}</mrow>
+                  <mrow>f_x(x,y) \amp = \frac{3x^2}{y^2}</mrow>
+                  <mrow>f_y(x,y) \amp = -\frac{2x^3}{y^3}</mrow>
+                  <mrow>f_{xx}(x,y) \amp = \frac{\partial}{\px}\big(f_x\big) = \frac{\partial}{\px}\big(\frac{3x^2}{y^2}\big)</mrow>
+                  <mrow> \amp = \frac{6x}{y^2}</mrow>
+                  <mrow>f_{yy}(x,y) \amp = \frac{\partial}{\py}\big(f_y\big) = \frac{\partial}{\py}\big(-\frac{2x^3}{y^3}\big)</mrow>
+                  <mrow> \amp = \frac{6x^3}{y^4}</mrow>
+                  <mrow>f_{xy}(x,y) \amp = \frac{\partial}{\py}\big(f_x\big) = \frac{\partial}{\py}\big(\frac{3x^2}{y^2}\big)</mrow>
+                  <mrow> \amp = -\frac{6x^2}{y^3}</mrow>
+                  <mrow>f_{yx}(x,y) \amp = \frac{\partial}{\px}\big(f_x\big) = \frac{\partial}{\px}\big(-\frac{2x^3}{y^3}\big)</mrow>
+                  <mrow> \amp = -\frac{6x^2}{y^3}</mrow>
+                </md>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>f(x,y) = e^x\sin(x^2y)</m> Because the following partial derivatives get rather long,
+                we omit the extra notation and just give the results.
+                In several cases,
+                multiple applications of the Product and Chain Rules will be necessary,
+                followed by some basic combination of like terms.
+                <md>
+                  <mrow>f_x(x,y) \amp = e^x\sin(x^2y) + 2xye^x\cos(x^2y)</mrow>
+                  <mrow>f_y(x,y) \amp = x^2e^x\cos(x^2y)</mrow>
+                  <mrow>f_{xx}(x,y) \amp = e^x\sin(x^2y)+4xye^x\cos(x^2y)+2ye^x\cos(x^2y)-4x^2y^2e^x\sin(x^2y)</mrow>
+                  <mrow>f_{yy}(x,y) \amp = -x^4e^x\sin(x^2y)</mrow>
+                  <mrow>f_{xy}(x,y) \amp = x^2e^x\cos(x^2y)+2xe^x\cos(x^2y)-2x^3ye^x\sin(x^2y)</mrow>
+                  <mrow>f_{yx}(x,y) \amp = x^2e^x\cos(x^2y)+2xe^x\cos(x^2y)-2x^3ye^x\sin(x^2y)</mrow>
+                </md>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </solution>
+    </example>
+
+    <figure xml:id="vid-multi-partial-second-order">
+      <caption>Second order partial derivatives and differentiability classes</caption>
+      <video youtube="H81s72zLfI8"/>
+    </figure>
+
+    <p>
+      Notice how in each of the three functions in <xref ref="ex_partial6">Example</xref>,
+      <m>f_{xy} = f_{yx}</m>.
+      Due to the complexity of the examples,
+      this likely is not a coincidence.
+      The following theorem states that it is not.
+    </p>
+
+    <theorem xml:id="thm_mixed_partial">
+      <title>Mixed Partial Derivatives</title>
+      <statement>
+        <p>
+          Let <m>f</m> be defined such that <m>f_{xy}</m> and <m>f_{yx}</m> are continuous on a set <m>S</m>.
+          Then for each point <m>(x,y)</m> in <m>S</m>,
+          <m>f_{xy}(x,y) = f_{yx}(x,y)</m>.
+        </p>
+      </statement>
+    </theorem>
+
+    <p>
+      Finding <m>f_{xy}</m> and <m>f_{yx}</m> independently and comparing the results provides a convenient way of checking our work.
+    </p>
+  </subsection>
+
+  <subsection>
+    <title>Understanding Second Partial Derivatives</title>
+    <p>
+      Now that we know <em>how</em> to find second partials,
+      we investigate <em>what</em> they tell us.
+    </p>
+
+    <p>
+      Again we refer back to a function <m>y=f(x)</m> of a single variable.
+      The second derivative of <m>f</m> is
+      <q>the derivative of the derivative,</q>
+      or <q>the rate of change of the rate of change.</q>
+      The second derivative measures how much the derivative is changing.
+      If <m>\fp'(x)\lt 0</m>,
+      then the derivative is getting smaller (so the graph of <m>f</m> is concave down);
+      if <m>\fp'(x) \gt 0</m>, then the derivative is growing,
+      making the graph of <m>f</m> concave up.
+    </p>
+
+    <p>
+      Now consider <m>z=f(x,y)</m>.
+      Similar statements can be made about <m>f_{xx}</m> and <m>f_{yy}</m> as could be made about <m>\fp'(x)</m> above.
+      When taking derivatives with respect to <m>x</m> twice,
+      we measure how much <m>f_x</m> changes with respect to <m>x</m>.
+      If <m>f_{xx}(x,y)\lt 0</m>,
+      it means that as <m>x</m> increases, <m>f_x</m> decreases,
+      and the graph of <m>f</m> will be concave down
+      <em>in the <m>x</m>-direction</em>.
+      Using the analogy of standing in the rolling meadow used earlier in this section,
+      <m>f_{xx}</m> measures whether one's path is concave up/down when walking due east.
+    </p>
+
+    <p>
+      Similarly, <m>f_{yy}</m> measures the concavity in the <m>y</m>-direction.
+      If <m>f_{yy}(x,y) \gt 0</m>,
+      then <m>f_y</m> is increasing with respect to <m>y</m> and the graph of <m>f</m> will be concave up in the <m>y</m>-direction.
+      Appealing to the rolling meadow analogy again,
+      <m>f_{yy}</m> measures whether one's path is concave up/down when walking due north.
+    </p>
+
+    <p>
+      We now consider the mixed partials <m>f_{xy}</m> and <m>f_{yx}</m>.
+      The mixed partial <m>f_{xy}</m> measures how much <m>f_x</m> changes with respect to <m>y</m>.
+      Once again using the rolling meadow analogy,
+      <m>f_{x}</m> measures the slope if one walks due east.
+      Looking east, begin walking <em>north</em>
+      (side-stepping).
+      Is the path towards the east getting steeper?
+      If so, <m>f_{xy} \gt 0</m>.
+      Is the path towards the east not changing in steepness?
+      If so, then <m>f_{xy}=0</m>.
+      A similar thing can be said about <m>f_{yx}</m>:
+      consider the steepness of paths heading north while side-stepping to the east.
+    </p>
+
+    <p>
+      The following example examines these ideas with concrete numbers and graphs.
+    </p>
+
+    <example xml:id="ex_partial7">
+      <title>Understanding second partial derivatives</title>
+      <statement>
+        <p>
+          Let <m>z=x^2-y^2+xy</m>.
+          Evaluate the 6 first and second partial derivatives at
+          <m>(-1/2,1/2)</m> and interpret what each of these numbers mean.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We find that:
+        </p>
+
+        <p>
+          <m>f_x(x,y) = 2x+y</m>,<m>f_y(x,y) = -2y+x</m>,<m>f_{xx}(x,y) = 2</m>,
+          <m>f_{yy}(x,y) = -2</m> and <m>f_{xy}(x,y) = f_{yx}(x,y) = 1</m>.
+          Thus at <m>(-1/2,1/2)</m> we have
+          <me>
+            f_x(-1/2,1/2) = -1/2,\qquad f_y(-1/2,1/2) = -3/2
+          </me>.
+        </p>
+
+        <p>
+          The slope of the tangent line at
+          <m>(-1/2, 1/2, -1/4)</m> in the direction of <m>x</m> is <m>-1/2</m>:
+          if one moves from that point parallel to the <m>x</m>-axis,
+          the instantaneous rate of change will be <m>-1/2</m>.
+          The slope of the tangent line
+          at this point in the direction of <m>y</m> is <m>-3/2</m>:
+          if one moves from this point parallel to the <m>y</m>-axis,
+          the instantaneous rate of change will be <m>-3/2</m>.
+          These tangents lines are graphed in <xref ref="fig_partial7a_3D">Figure</xref> and <xref ref="fig_partial7b_3D">Figure</xref>,
+          respectively, where the tangent lines are drawn in a solid line.
+        </p>
+
+        <figure xml:id="fig_partial7">
+          <caption>Understanding the second partial derivatives in <xref ref="ex_partial7">Example</xref></caption>
+          <sidebyside widths="47% 47%" margins="0%">
+            <figure xml:id="fig_partial7a_3D">
+              <caption/>
+
+              <!-- START figures/figpartial6_3D.asy -->
+              <image xml:id="img_partial7a_3D">
+                <description></description>
+                <asymptote>
+
+
+
+                  //ASY file for figpartial63D.asy in Chapter 12
+
+                  size(282,282,IgnoreAspect);
+                  //size(282,282,Aspect);
+                  //currentprojection=perspective(7,2,1);
+                  currentprojection=orthographic(2.5,8.4,3.4);
+                  defaultrender.merge=true;
+
+                  // setup and draw the axes
+                  real[] myxchoice={-1,1};
+                  real[] myychoice={-1,1};
+                  real[] myzchoice={-1,1};
+                  defaultpen(0.5mm);
+                  pair xbounds=(-1.5,1.5);
+                  pair ybounds=(-1.5,1.5);
+                  pair zbounds=(-2,2);
+
+                  xaxis3("",xbounds.x,xbounds.y,black,OutTicks(myxchoice),Arrow3(size=3mm));
+                  yaxis3("",ybounds.x,ybounds.y,black,OutTicks(myychoice),Arrow3(size=3mm));
+                  zaxis3("",zbounds.x,zbounds.y,black,OutTicks(myzchoice),Arrow3(size=3mm));
+
+                  label("$x$",(xbounds.y+0.05*(xbounds.y-xbounds.x),0,0));
+                  label("$y$",(0,ybounds.y+0.05*(ybounds.y-ybounds.x),0));
+                  label("$z$",(0,0,zbounds.y+0.05*(zbounds.y-zbounds.x)));
+
+                  //Draw surface z=x^2-y^2+xy
+                  triple f(pair t) {
+                    return (t.x,t.y,t.x^2-t.y^2+t.x*t.y);
+                  }
+                  surface s=surface(f,(-1,-1),(1,1),16,16,Spline);
+                  pen p=apexmeshpen;
+                  draw(s,surfacepen,meshpen=p);
+
+                  //Draw the point (-0.5,0.5,-0.25) trace for x=-0.5
+                  dotfactor=3;dot((-0.5,0.5,-0.25));
+                  triple g(real t) {return (-0.5,t,0.25-t^2-0.5*t);}
+                  path3 mypath=graph(g,-1,1,operator ..); draw(mypath,redpen);
+
+                  //Draw the tangent lines in x direction, slope -0.5
+                  //  L=(-0.5,0.5,-0.25)+t(1,0,-0.5) for t=-1,1
+                  draw((-1.5,0.5,0.25)--(0.5,0.5,-0.75),bluepen);
+
+                  //Draw the tangent lines in x direction, slope -0.75 and dot
+                  //  L=(-0.5,0.25,0.065)+t(1,0,-0.75) for t=-1,1
+                  dot((-0.5,0.25,0.065));
+                  draw((-1.5,0.25,0.815)--(0.5,0.25,-0.685),dashed+bluepen);
+
+                  //Draw the tangent lines in x direction, slope -0.25 and dot
+                  //  L=(-0.5,0.75,-0.6875)+t(1,0,-0.25) for t=-1,1
+                  dot((-0.5,0.75,-0.6875));
+                  draw((-1.5,0.75,-0.4375)--(0.5,0.75,-0.9375),dashed+bluepen);
+
+                </asymptote>
+              </image>
+            <!-- figures/figpartial6_3D.asy END -->
+            </figure>
+
+            <figure xml:id="fig_partial7b_3D">
+              <caption/>
+
+              <!-- START figures/figpartial6b_3D.asy -->
+              <image xml:id="img_partial7b_3D">
+                <description></description>
+                <asymptote>
+
+
+
+                  //ASY file for figpartial6b3D.asy in Chapter 12
+
+                  size(282,282,IgnoreAspect);
+                  //size(282,282,Aspect);
+                  //currentprojection=perspective(7,2,1);
+                  currentprojection=orthographic(2.5,8.4,3.);
+                  defaultrender.merge=true;
+
+                  // setup and draw the axes
+                  real[] myxchoice={-1,1};
+                  real[] myychoice={-1,1};
+                  real[] myzchoice={-1,1};
+                  defaultpen(0.5mm);
+                  pair xbounds=(-1.5,1.5);
+                  pair ybounds=(-1.5,1.5);
+                  pair zbounds=(-2,2);
+
+                  xaxis3("",xbounds.x,xbounds.y,black,OutTicks(myxchoice),Arrow3(size=3mm));
+                  yaxis3("",ybounds.x,ybounds.y,black,OutTicks(myychoice),Arrow3(size=3mm));
+                  zaxis3("",zbounds.x,zbounds.y,black,OutTicks(myzchoice),Arrow3(size=3mm));
+
+                  label("$x$",(xbounds.y+0.05*(xbounds.y-xbounds.x),0,0));
+                  label("$y$",(0,ybounds.y+0.05*(ybounds.y-ybounds.x),0));
+                  label("$z$",(0,0,zbounds.y+0.05*(zbounds.y-zbounds.x)));
+
+                  //Draw surface z=x^2-y^2+xy
+                  triple f(pair t) {
+                    return (t.x,t.y,t.x^2-t.y^2+t.x*t.y);
+                  }
+                  surface s=surface(f,(-1,-1),(1,1),16,16,Spline);
+                  pen p=apexmeshpen;
+                  draw(s,surfacepen,meshpen=p);
+
+                  //Draw the point (-0.5,0.5,-0.25) and trace for y=0.5
+                  dotfactor=3;dot((-0.5,0.5,-0.25));
+                  triple g(real t) {return (t,0.5,t^2-0.25+0.5*t);}
+                  path3 mypath=graph(g,-1,1,operator ..); draw(mypath,redpen);
+
+                  //Draw the tangent lines in y direction, slope -1.5
+                  //  L=(-0.5,0.5,-0.25)+t(0,1,-1.5) for t=-1,1
+                  draw((-0.5,-0.3,.95)--(-0.5,1.3,-1.45),bluepen);
+
+                  //Draw the tangent lines in y direction, slope -1.75 and dot
+                  //  L=(-0.75,0.5,-0.0625)+t(0,1,-1.75) for t=-1,1
+                  dot((-0.75,0.5,-0.0625));
+                  draw((-0.75, -0.3, 1.3375)--(-0.75, 1.3, -1.4625),dashed+bluepen);
+
+                  //Draw the tangent lines in y direction, slope -1.25 and dot
+                  //  L=(-0.25,0.5,-0.3125)+t(0,1,-1.25) for t=-1,1
+                  dot((-0.25,0.5,-0.3125));
+                  draw((-0.25, -0.3, 0.6875)--(-0.25, 1.3, -1.3125),dashed+bluepen);
+
+                </asymptote>
+              </image>
+            <!-- figures/figpartial6b_3D.asy END -->
+            </figure>
+          </sidebyside>
+        </figure>
+
+        <p>
+          Now consider only <xref ref="fig_partial7a_3D">Figure</xref>.
+          Three directed tangent lines are drawn
+          (two are dashed),
+          each in the direction of <m>x</m>;
+          that is, each has a slope determined by <m>f_x</m>.
+          Note how as <m>y</m> increases,
+          the slope of these lines get closer to <m>0</m>.
+          Since the slopes are all negative,
+          getting closer to 0 means the <em>slopes are increasing.</em>
+          The slopes given by <m>f_x</m> are increasing as <m>y</m> increases,
+          meaning <m>f_{xy}</m> must be positive.
+        </p>
+
+        <p>
+          Since <m>f_{xy}=f_{yx}</m>,
+          we also expect <m>f_y</m> to increase as <m>x</m> increases.
+          Consider <xref ref="fig_partial7b_3D">Figure</xref> where again three directed tangent lines are drawn,
+          this time each in the direction of <m>y</m> with slopes determined by <m>f_y</m>.
+          As <m>x</m> increases, the slopes become less steep
+          (closer to 0).
+          Since these are negative slopes,
+          this means the slopes are increasing.
+        </p>
+
+        <p>
+          Thus far we have a visual understanding of <m>f_x</m>,
+          <m>f_y</m>, and <m>f_{xy}=f_{yx}</m>.
+          We now interpret <m>f_{xx}</m> and <m>f_{yy}</m>.
+          In <xref ref="fig_partial7a_3D">Figure</xref>,
+          we see a curve drawn where <m>x</m> is held constant at <m>x=-1/2</m>:
+          only <m>y</m> varies.
+          This curve is clearly concave down,
+          corresponding to the fact that <m>f_{yy}\lt 0</m>.
+          In part <xref ref="fig_partial7b_3D">Figure</xref> of the figure,
+          we see a similar curve where <m>y</m> is constant and only <m>x</m> varies.
+          This curve is concave up, corresponding to the fact that <m>f_{xx} \gt 0</m>.
+        </p>
+      </solution>
+    </example>
+  </subsection>
+
+  <subsection>
+    <title>Partial Derivatives and Functions of Three Variables</title>
+    <p>
+      The concepts underlying partial derivatives can be easily extend to more than two variables.
+      We give some definitions and examples in the case of three variables and trust the reader can extend these definitions to more variables if needed.
+    </p>
+
+    <definition xml:id="def_partial_multiple">
+      <title>Partial Derivatives with Three Variables</title>
+      <statement>
+        <p>
+          Let <m>w=f(x,y,z)</m> be a continuous function on a set <m>D</m> in <m>\mathbb{R}^3</m>.
+        </p>
+
+        <p>
+          The <term>partial derivative of <m>f</m> with respect to <m>x</m></term> is:
+          <me>
+            f_x(x,y,z) = \lim_{h\to 0} \frac{f(x+h,y,z)-f(x,y,z)}{h}
+          </me>.
+        </p>
+
+        <p>
+          Similar definitions hold for
+          <m>f_y(x,y,z)</m> and <m>f_z(x,y,z)</m>.
+              <idx><h>derivative</h><h>partial</h></idx>
+              <idx><h>partial derivative</h></idx>
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      By taking partial derivatives of partial derivatives,
+      we can find second partial derivatives of <m>f</m> with respect to <m>z</m> then <m>y</m>,
+      for instance, just as before.
+    </p>
+
+    <example xml:id="ex_partial8">
+      <title>Partial derivatives of functions of three variables</title>
+      <statement>
+        <p>
+          For each of the following,
+          find <m>f_x</m>,<nbsp/> <m>f_y</m>,<nbsp/> <m>f_z</m>,<nbsp/> <m>f_{xz}</m>,<nbsp/> <m>f_{yz}</m>,
+          and <m>f_{zz}</m>.
+        </p>
+
+        <p>
+          <ol>
+            <li><m>f(x,y,z) = x^2y^3z^4+x^2y^2+x^3z^3+y^4z^4</m></li>
+
+            <li><m>f(x,y,z) = x\sin(yz)</m></li>
+          </ol>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <ol>
+            <li>
+              <p>
+                <md>
+                  <mrow>f_x(x,y,z) \amp = 2xy^3z^4+2xy^2+3x^2z^3</mrow>
+                  <mrow>f_y(x,y,z) \amp = 3x^2y^2z^4+2x^2y+4y^3z^4</mrow>
+                  <mrow>f_z(x,y,z) \amp = 4x^2y^3z^3+3x^3z^2+4y^4z^3</mrow>
+                  <mrow>f_{xz}(x,y,z) \amp = 8xy^3z^3+9x^2z^2</mrow>
+                  <mrow>f_{yz}(x,y,z) \amp = 12x^2y^2z^3+16y^3z^3</mrow>
+                  <mrow>f_{zz}(x,y,z) \amp = 12x^2y^3z^2+6x^3z+12y^4z^2</mrow>
+                </md>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>f_x = \sin(yz)</m>; <m>f_y = xz\cos(yz)</m>; <m>f_z = xy\cos(yz)</m>, and
+                <md>
+                  <mrow>f_{xz}(x,y,z) \amp = y\cos(yz)</mrow>
+                  <mrow>f_{yz}(x,y,z) \amp = x\cos(yz) - xyz\sin(yz)</mrow>
+                  <mrow>f_{zz}(x,y,z) \amp = -xy^2\sin(xy)</mrow>
+                </md>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </solution>
+    </example>
+  </subsection>
+
+  <subsection>
+    <title>Higher Order Partial Derivatives</title>
+    <p>
+      We can continue taking partial derivatives of partial derivatives of partial derivatives of <ellipsis/>;
+      we do not have to stop with second partial derivatives.
+      These higher order partial derivatives do not have a tidy graphical interpretation;
+      nevertheless they are not hard to compute and worthy of some practice.
+          <idx><h>partial derivative</h><h>high order</h></idx>
+    </p>
+
+    <p>
+      We do not formally define each higher order derivative,
+      but rather give just a few examples of the notation.
+      <md>
+        <mrow>f_{xyx}(x,y) \amp = \frac{\partial}{\px}\left(\frac{\partial}{\py}\left(\frac{\pf}{\px}\right)\right)  \text{ and }</mrow>
+        <mrow>f_{xyz}(x,y,z) \amp =\frac{\partial}{\partial z}\left(\frac{\partial}{\py}\left(\frac{\pf}{\px}\right)\right)</mrow>
+      </md>.
+    </p>
+
+    <example xml:id="ex_partial9">
+      <title>Higher order partial derivatives</title>
+      <statement>
+        <p>
+          <ol>
+            <li>
+              <p>
+                Let <m>f(x,y) = x^2y^2+\sin(xy)</m>.
+                Find <m>f_{xxy}</m> and <m>f_{yxx}</m>.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Let <m>f(x,y,z) = x^3e^{xy}+\cos(z)</m>.
+                Find <m>f_{xyz}</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <ol>
+            <li>
+              <p>
+                To find <m>f_{xxy}</m>, we first find <m>f_x</m>,
+                then <m>f_{xx}</m>, then <m>f_{xxy}</m>:
+                <md>
+                  <mrow>f_x(x,y) \amp = 2xy^2+y\cos(xy)</mrow>
+                  <mrow>f_{xx}(x,y) \amp = 2y^2-y^2\sin(xy)</mrow>
+                  <mrow>f_{xxy}(x,y) \amp = 4y-2y\sin(xy) - xy^2\cos(xy)</mrow>
+                </md>.
+                To find <m>f_{yxx}</m>, we first find <m>f_y</m>,
+                then <m>f_{yx}</m>, then <m>f_{yxx}</m>:
+                <md>
+                  <mrow>f_y(x,y) \amp = 2x^2y+x\cos(xy)</mrow>
+                  <mrow>f_{yx}(x,y) \amp = 4xy + \cos(xy) - xy\sin(xy)</mrow>
+                  <mrow>f_{yxx}(x,y) \amp = 4y-y\sin(xy) - \big(y\sin(xy) + xy^2\cos(xy)\big)</mrow>
+                  <mrow>\amp = 4y-2y\sin(xy)-xy^2\cos(xy)</mrow>
+                </md>.
+                Note how <m>f_{xxy} = f_{yxx}</m>.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                To find <m>f_{xyz}</m>, we find <m>f_x</m>,
+                then <m>f_{xy}</m>, then <m>f_{xyz}</m>:
+                <md>
+                  <mrow>f_x(x,y,z) \amp = 3x^2e^{xy}+ x^3ye^{xy}</mrow>
+                  <mrow>f_{xy}(x,y,z) \amp= 3x^3e^{xy}+x^3e^{xy}+x^4ye^{xy}</mrow>
+                  <mrow> \amp = 4x^3e^{xy}+x^4ye^{xy}</mrow>
+                  <mrow>f_{xyz}(x,y,z) \amp = 0</mrow>
+                </md>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </solution>
+    </example>
+
+    <p>
+      In the previous example we saw that <m>f_{xxy} = f_{yxx}</m>;
+      this is not a coincidence.
+      While we do not state this as a formal theorem,
+      as long as each partial derivative is continuous,
+      it does not matter the order in which the partial derivatives are taken.
+      For instance, <m>f_{xxy} = f_{xyx} = f_{yxx}</m>.
+    </p>
+
+    <p>
+      This can be useful at times.
+      Had we known this,
+      the second part of <xref ref="ex_partial9">Example</xref>
+      would have been much simpler to compute.
+      Instead of computing <m>f_{xyz}</m> in the <m>x</m>,
+      <m>y</m> then <m>z</m> orders,
+      we could have applied the <m>z</m>,
+      then <m>x</m> then <m>y</m> order
+      (as <m>f_{xyz} = f_{zxy}</m>).
+      It is easy to see that <m>f_z = -\sin(z)</m>;
+      then <m>f_{zx}</m> and <m>f_{zxy}</m> are clearly 0 as <m>f_z</m> does not contain an <m>x</m> or <m>y</m>.
+    </p>
+
+    <p>
+      A brief review of this section:
+      partial derivatives measure the instantaneous rate of change of a multivariable function with respect to one variable.
+      With <m>z=f(x,y)</m>,
+      the partial derivatives <m>f_x</m> and <m>f_y</m> measure the instantaneous rate of change of <m>z</m> when moving parallel to the <m>x</m>- and <m>y</m>-axes,
+      respectively.
+      How do we measure the rate of change at a point when we do not move parallel to one of these axes?
+      What if we move in the direction given by the vector <m>\la 2,1\ra</m>?
+      Can we measure that rate of change?
+      The answer is, of course, yes, we can.
+      This is the topic of <xref ref="sec_directional_derivative">Section</xref>.
+      First, we need to define what it means for a function of two variables to be
+      <em>differentiable.</em>
+    </p>
+  </subsection>
+
+  <xi:include href="exer_sec_partial_derivatives.ptx" />
+</section>

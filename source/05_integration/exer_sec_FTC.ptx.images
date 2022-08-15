@@ -1,0 +1,797 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<exercises>
+  <exercise>
+    <statement>
+      <p>
+        How are definite and indefinite integrals related?
+        </p>
+    </statement>
+    <answer>
+      <p>
+        Answers will vary.
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        What constant of integration is most commonly used when evaluating definite integrals?
+        </p>
+    </statement>
+    <answer>
+      <p>
+        0
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        T/F: If <m>f</m> is a continuous function, then <m>\displaystyle F(x) = \int _a^x f(t)\ dt</m> is also a continuous function.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        T
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        The definite integral can be used to find “the area under a curve.” Give two other uses for definite integrals.
+        </p>
+    </statement>
+    <answer>
+      <p>
+        Answers will vary.
+        </p>
+    </answer>
+  </exercise>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 5–28, evaluate the definite integral.
+        </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _1^3 (3x^2-2x+1)\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          20
+          </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _0^4 (x-1)^2\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>28/3</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{-1}^1 (x^3-x^5)\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>0</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{\pi /2}^\pi \cos x\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>1</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{0}^{\pi /4} \sec ^2 x\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>1</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{1}^{e} \frac{1}{x} \ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>1</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{-1}^{1} 5^x \ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>(5-1/5)/\ln 5</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{-2}^{-1} (4-2x^3) \ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>23/2</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{0}^{\pi } (2\cos x - 2\sin x) \ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>-4</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{1}^{3} e^x \ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>e^3-e</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{0}^{4} \sqrt{t} \ dt</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>16/3</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{9}^{25} \frac{1}{\sqrt{t}} \ dt</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>4</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{1}^{8} \sqrt[3]{x} \ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>45/4</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{1}^{2} \frac{1}{x} \ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\ln 2</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{1}^{2} \frac{1}{x^2} \ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>1/ 2</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{1}^{2} \frac{1}{x^3} \ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>3/8</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{0}^{1} x \ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>1/2</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{0}^{1} x^2 \ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>1/3</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{0}^{1} x^3 \ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>1/4</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{0}^{1} x^{100} \ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>1/101</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{-4}^{4} \ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>8</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{-10}^{-5} 3\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>15</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{-2}^{2} 0\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>0</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{\pi /6}^{\pi /3} \csc x\cot x\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>2-2/\sqrt{3}</m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercise>
+    <statement>
+      <p>
+        Explain why:
+        </p>
+      <ol>
+        <li>
+          <p>
+            <m>\displaystyle \int _{-1}^1 x^n\ dx=0</m>, when <m>n</m> is a positive, odd integer, and</p>
+        </li>
+        <li>
+          <p>
+            <m>\displaystyle \int _{-1}^1 x^n\ dx = 2\int _{0}^1 x^n\ dx</m> when <m>n</m> is a positive, even integer.</p>
+        </li>
+      </ol>
+    </statement>
+    <answer>
+      <p>
+        Explanations will vary. A sketch will help.
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        Explain why <m>\displaystyle \int _{a}^{a+2\pi } \sin t\ dt = 0</m> for all values of <m>a</m>.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        <m>\int _{a}^{a+2\pi } \sin t\ dt = \cos (a+2\pi )-\cos (a)</m>. Since cosine is periodic with period <m>2\pi </m>, <m>\cos (a+2\pi ) = \cos (a)</m>, and hence the integral is 0.</p>
+    </answer>
+  </exercise>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 31–34, find a value <m>c</m> guaranteed by the Mean Value Theorem.
+      </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _0^2 x^2\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>c=2/\sqrt{3}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{-2}^2 x^2\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>c=\pm 2/\sqrt{3}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{0}^1 e^x\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>c=\ln (e-1)\approx 0.54</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{0}^{16} \sqrt{x}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>c=64/9\approx 7.1</m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 35–40, find the average value of the function on the given interval.
+        </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x)=\sin x</m> on <m>[0,\pi /2]</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>2/\pi </m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>y=\sin x</m> on <m>[0,\pi ]</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>2/pi</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>y=x</m> on <m>[0,4]</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>2</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>y=x^2</m> on <m>[0,4]</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>16/3</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>y=x^3</m> on <m>[0,4]</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>16</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>g(t) = 1/t</m> on <m>[1,e]</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>1/(e-1)</m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 41–46, a velocity function of an object moving along a straight line is given. Find the displacement of the object over the given time interval.
+        </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>v(t) = -32t+20</m>ft/s on <m>[0,5]</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>-300</m>ft</p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>v(t) = -32t+200</m>ft/s on <m>[0,10]</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>400</m>ft</p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>v(t) = 10</m>ft/s on <m>[0,3]</m>.</p>
+      </statement>
+      <answer>
+        <p>
+          <m>30</m>ft</p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>v(t) = 2^t</m>mph on <m>[-1,1]</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>1.5/\ln (2) \approx 2.164</m>miles</p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>v(t) = \cos t</m> ft/s on <m>[0,3\pi /2]</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>-1</m>ft</p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>v(t) = \sqrt[4]{t}</m> ft/s on <m>[0,16]</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>128/5</m>ft</p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 47–50, an acceleration function of an object moving along a straight line is given. Find the change of the object's velocity over the given time interval.
+        </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>a(t) = -32</m>ft/s<m>^2</m> on <m>[0,2]</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>-64</m>ft/s</p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>a(t) = 10</m>ft/s<m>^2</m> on <m>[0,5]</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>50</m>ft/s</p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>a(t) = t</m> ft/s<m>^2</m> on <m>[0,2]</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>2</m>ft/s</p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>a(t) = \cos t</m> ft/s<m>^2</m> on <m>[0,\pi ]</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>0</m>ft/s</p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 51–54, sketch the given functions and find the area of the enclosed region.
+        </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>y=2x</m>, <m>y=5x</m>, and <m>x= 3</m>.</p>
+      </statement>
+      <answer>
+        <p>
+          <m>27/2</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>y=-x+1</m>, <m>y=3x+6</m>, <m>x=2</m> and <m>x= -1</m>.</p>
+      </statement>
+      <answer>
+        <p>
+          <m>21</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>y=x^2-2x+5</m>, <m>y=5x-5</m>.</p>
+      </statement>
+      <answer>
+        <p>
+          <m>9/2</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>y=2x^2+2x-5</m>, <m>y=x^2+3x+7</m>.</p>
+      </statement>
+      <answer>
+        <p>
+          <m>343/6</m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 55–58, find <m>F\hspace{0.75pt}^{\prime }(x)</m>.
+      </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle F(x) = \int _2^{x^3+x} \frac{1}{t}\ dt</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>F^{\prime }(x) = (3x^2+1)\frac{1}{x^3+x}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle F(x) = \int _{x^3}^{0} t^3\ dt</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>F^{\prime }(x) = -3x^{11}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle F(x) = \int _{x}^{x^2} (t+2)\ dt</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>F^{\prime }(x) = 2x(x^2+2)-(x+2)</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle F(x) = \int _{\ln x}^{e^x} \sin t\ dt</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>F^{\prime }(x) = e^x\sin (e^x) - 1/x\sin (\ln x)</m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 59–62, find <m>F\hspace{0.75pt}^{\prime }(x)</m>.
+      </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle F(x) = \int _2^{x^3+x} \frac{1}{t}\ dt</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>F^{\prime }(x) = (3x^2+1)\frac{1}{x^3+x}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle F(x) = \int _{x^3}^{0} t^3\ dt</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>F^{\prime }(x) = -3x^{11}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle F(x) = \int _{x}^{x^2} (t+2)\ dt</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>F^{\prime }(x) = 2x(x^2+2)-(x+2)</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle F(x) = \int _{\ln x}^{e^x} \sin t\ dt</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>F^{\prime }(x) = e^x\sin (e^x) - 1/x\sin (\ln x)</m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+</exercises>

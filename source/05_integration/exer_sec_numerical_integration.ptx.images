@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<exercises>
+  <exercise>
+    <statement>
+      <p>
+        T/F: Simpson's Rule is a method of approximating antiderivatives.
+        </p>
+    </statement>
+    <answer>
+      <p>
+        F
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        What are the two basic situations where approximating the value of a definite integral is necessary?
+        </p>
+    </statement>
+    <answer>
+      <p>
+        When the antiderivative cannot be computed and when the integrand is unknown.
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        Why are the Left and Right Hand Rules rarely used?
+        </p>
+    </statement>
+    <answer>
+      <p>
+        They are superseded by the Trapezoidal Rule; it takes an equal amount of work and is generally more accurate.
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        Simpson's Rule is based on approximating portions of a function with what type of function?
+        </p>
+    </statement>
+    <answer>
+      <p>
+        A quadratic function (i.e., parabola)
+        </p>
+    </answer>
+  </exercise>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 5–12, a definite integral is given.
+        </p>
+      <ol>
+        <li>
+          <p>
+            Approximate the definite integral with the Trapezoidal Rule and <m>n=4</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Approximate the definite integral with Simpson's Rule and <m>n=4</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Find the exact value of the integral.
+            </p>
+        </li>
+      </ol>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{-1}^1 x^2\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              <m>3/4</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>2/3</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>2/3</m>
+            </p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{0}^{10} 5x\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              <m>250</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>250</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>250</m>
+            </p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{0}^{\pi } \sin x\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              <m>\frac{1}{4}(1+\sqrt{2})\pi \approx 1.896</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\frac{1}{6}(1+2\sqrt{2})\pi \approx 2.005</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>2</m>
+            </p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{0}^{4} \sqrt{x}\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              <m>2+\sqrt{2}+\sqrt{3}\approx 5.15</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>2/3(3+\sqrt{2}+2\sqrt{3})\approx 5.25</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>16/3\approx 5.33</m>
+            </p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{0}^{3} (x^3+2x^2-5x+7)\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              <m>38.5781</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>147/4\approx 36.75</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>147/4\approx 36.75</m>
+            </p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{0}^{1} x^4\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              <m>0.2207</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>0.2005</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>1/5</m>
+            </p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{0}^{2\pi } \cos x\ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              <m>0</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>0</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>0</m>
+            </p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{-3}^{3} \sqrt{9-x^2} \ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              <m>9/2(1+\sqrt{3})\approx 12.294</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>3+6\sqrt{3}\approx 13.392</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>9\pi /2\approx 14.137</m>
+            </p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 13–20, approximate the definite integral with the Trapezoidal Rule and Simpson's Rule, with <m>n=6</m>.
+      </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{0}^{1} \cos \big (x^2\big ) \ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          Trapezoidal Rule: <m>0.9006</m>
+        </p>
+        <p>
+          Simpson's Rule: <m>0.90452</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{-1}^{1} e^{x^2} \ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          Trapezoidal Rule: <m>3.0241</m>
+        </p>
+        <p>
+          Simpson's Rule: <m>2.9315</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{0}^{5} \sqrt{x^2+1} \ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          Trapezoidal Rule: <m>13.9604</m>
+        </p>
+        <p>
+          Simpson's Rule: <m>13.9066</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{0}^{\pi } x\sin x \ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          Trapezoidal Rule: <m>3.0695</m>
+        </p>
+        <p>
+          Simpson's Rule: <m>3.14295</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{0}^{\pi /2} \sqrt{\cos x} \ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          Trapezoidal Rule: <m>1.1703</m>
+        </p>
+        <p>
+          Simpson's Rule: <m>1.1873</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{1}^{4} \ln x \ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          Trapezoidal Rule: <m>2.52971</m>
+        </p>
+        <p>
+          Simpson's Rule: <m>2.5447</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{-1}^{1} \frac{1}{\sin x+2} \ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          Trapezoidal Rule: <m>1.0803</m>
+        </p>
+        <p>
+          Simpson's Rule: <m>1.077</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{0}^{6} \frac{1}{\sin x+2} \ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          Trapezoidal Rule: <m>3.5472</m>
+        </p>
+        <p>
+          Simpson's Rule: <m>3.6133</m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 21–24, find <m>n</m> such that the error in approximating the given definite integral is less than <m>0.0001</m> when using:
+      </p>
+      <ol>
+        <li>
+          <p>
+            the Trapezoidal Rule
+            </p>
+        </li>
+        <li>
+          <p>
+            Simpson's Rule
+            </p>
+        </li>
+      </ol>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{0}^{\pi } \sin x \ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              <m>n=161</m> (using <m>\max \big (f\,^{\prime \prime }(x)\big )=1</m>)</p>
+          </li>
+          <li>
+            <p>
+              <m>n=12</m> (using <m>\max \big (f\,^{(4)}(x)\big )=1</m>)</p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{1}^{4} \frac{1}{\sqrt{x}} \ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              <m>n=150</m> (using <m>\max \big (f\,^{\prime \prime }(x)\big )=1</m>)</p>
+          </li>
+          <li>
+            <p>
+              <m>n=18</m> (using <m>\max \big (f\,^{(4)}(x)\big )=7</m>)</p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{0}^{\pi } \cos \big (x^2\big ) \ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              <m>n=1004</m> (using <m>\max \big (f\,^{\prime \prime }(x)\big )=39</m>)</p>
+          </li>
+          <li>
+            <p>
+              <m>n=62</m> (using <m>\max \big (f\,^{(4)}(x)\big )=800</m>)</p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{0}^{5} x^4 \ dx</m>
+        </p>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              <m>n=5591</m> (using <m>\max \big (f\,^{\prime \prime }(x)\big )=300</m>)</p>
+          </li>
+          <li>
+            <p>
+              <m>n=46</m> (using <m>\max \big (f\,^{(4)}(x)\big )=24</m>)</p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 25–26, a region is given. Find the area of the region using Simpson's Rule:
+        </p>
+      <ol>
+        <li>
+          <p>
+            where the measurements are in centimeters, taken in 1 cm increments, and
+            </p>
+        </li>
+        <li>
+          <p>
+            where the measurements are in hundreds of yards, taken in 100 yd increments.
+            </p>
+        </li>
+      </ol>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <minipage width="427.0pt">
+            <p>
+              <sidebyside width="30%"><image source="images/fig05_05_ex_01" /></sidebyside></p>
+          </minipage>
+        </p>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              Area is <m>30.8667</m> cm<m>^2</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Area is <m>308,667</m> yd<m>^2</m>.
+            </p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <minipage width="427.0pt">
+            <p>
+              <sidebyside width="30%"><image source="images/fig05_05_ex_02" /></sidebyside></p>
+          </minipage>
+        </p>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              Area is 25.0667 cm<m>^2</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              Area is 250,667 yd<m>^2</m>
+            </p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+  </exercisegroup>
+</exercises>

@@ -1,0 +1,1380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+adapted from from https://github.com/ULeth-Math-CS/CalculusTexts/tree/master/text
+retrieved on 7/1/2020
+
+licensed as CC-By-NC
+-->
+
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="chapter_app_of_int">
+
+
+<section>
+  <title>Differentiation Rules</title>
+        <ol cols="2">
+          <li>
+            <p>
+              
+                <m>\displaystyle \frac{d}{dx}\left(cx\right)=c</m>
+              
+            </p>
+          </li>
+          <li>
+            <p>
+              
+                <m>\displaystyle \frac{d}{dx}\left(u\pm v\right)=u^{\prime }\pm v^{\prime }</m>
+              
+            </p>
+          </li>
+          <li>
+            <p>
+              
+                <m>\displaystyle \frac{d}{dx}\left(u\cdot v\right)=uv^{\prime }+ u^{\prime }v</m>
+              
+            </p>
+          </li>
+          <li>
+            <p>
+              
+                <m>\displaystyle \frac{d}{dx}\left(\frac{u}{v}\right)=\frac{vu^{\prime }-uv^{\prime }}{v^2}</m>
+              
+            </p>
+          </li>
+          <li>
+            <p>
+              
+                <m>\displaystyle \frac{d}{dx}\left(u(v)\right)=u^{\prime }(v)v^{\prime }</m>
+              
+            </p>
+          </li>
+          <li>
+            <p>
+              
+                <m>\displaystyle \frac{d}{dx}\left(c\right)=0</m>
+              
+            </p>
+          </li>
+          <li>
+            <p>
+              
+                <m>\displaystyle \frac{d}{dx}\left(x\right)=1</m>
+              
+            </p>
+          </li>
+          <li>
+            <p>
+              
+                <m>\displaystyle \frac{d}{dx}\left(x^n\right)=nx^{n-1}</m>
+              
+            </p>
+          </li>
+          <li>
+            <p>
+              
+                <m>\displaystyle \frac{d}{dx}\left(e^x\right)=e^x</m>
+              
+            </p>
+          </li>
+        </ol>
+      
+      
+        <ol>
+          <li>
+            <p>
+                <m>\displaystyle \frac{d}{dx}\left(a^x\right)=\ln a\cdot a^x</m>
+              
+            </p>
+          </li>
+          <li>
+            <p>
+              
+                <m>\displaystyle \frac{d}{dx}\left(\ln x\right)=\frac{1}{x}</m>
+              
+            </p>
+          </li>
+          <li>
+            <p>
+              
+                <m>\displaystyle \frac{d}{dx}\left(\log _a x\right)=\frac{1}{\ln a}\cdot \frac{1}{x}</m>
+              
+            </p>
+          </li>
+          <li>
+            <p>
+              
+                <m>\displaystyle \frac{d}{dx}\left(\sin x\right)=\cos x</m>
+              
+            </p>
+          </li>
+          <li>
+            <p>
+              
+                <m>\displaystyle \frac{d}{dx}\left(\cos x\right)=-\sin x</m>
+              
+            </p>
+          </li>
+          <li>
+            <p>
+              
+                <m>\displaystyle \frac{d}{dx}\left(\csc x\right)=-\csc x\cot x</m>
+              
+            </p>
+          </li>
+          <li>
+            <p>
+              
+                <m>\displaystyle \frac{d}{dx}\left(\sec x\right)=\sec x\tan x</m>
+              
+            </p>
+          </li>
+          <li>
+            <p>
+              
+                <m>\displaystyle \frac{d}{dx}\left(\tan x\right)=\sec ^2 x</m>
+              
+            </p>
+          </li>
+          <li>
+            <p>
+              
+                <m>\displaystyle \frac{d}{dx}\left(\cot x\right)=-\csc ^2 x</m>
+              
+            </p>
+          </li>
+        </ol>
+      
+      
+        <ol>
+          <li>
+            <p>
+              
+                <m>\displaystyle \frac{d}{dx}\left(\sin ^{-1}x\right)=\frac{1}{\sqrt{1-x^2}}</m>
+              
+            </p>
+          </li>
+          <li>
+            <p>
+              
+                <m>\displaystyle \frac{d}{dx}\left(\cos ^{-1}x\right)=\frac{-1}{\sqrt{1-x^2}}</m>
+              
+            </p>
+          </li>
+          <li>
+            <p>
+              
+                <m>\displaystyle \frac{d}{dx}\left(\csc ^{-1}x\right)=\frac{-1}{x\sqrt{x^2-1}}</m>
+              
+            </p>
+          </li>
+          <li>
+            <p>
+              
+                <m>\displaystyle \frac{d}{dx}\left(\sec ^{-1}x\right)=\frac{1}{x\sqrt{x^2-1}}</m>
+              
+            </p>
+          </li>
+          <li>
+            <p>
+              
+                <m>\displaystyle \frac{d}{dx}\left(\tan ^{-1}x\right)=\frac{1}{1+x^2}</m>
+              
+            </p>
+          </li>
+          <li>
+            <p>
+              
+                <m>\displaystyle \frac{d}{dx}\left(\cot ^{-1}x\right)=\frac{-1}{1+x^2}</m>
+              
+            </p>
+          </li>
+          <li>
+            <p>
+              
+                <m>\displaystyle \frac{d}{dx}\left(\cosh x\right)=\sinh x</m>
+              
+            </p>
+          </li>
+          <li>
+            <p>
+              
+                <m>\displaystyle \frac{d}{dx}\left(\sinh x\right)=\cosh x</m>
+              
+            </p>
+          </li>
+          <li>
+            <p>
+              
+                <m>\displaystyle \frac{d}{dx}\left(\tanh x\right)=\operatorname{sech}^2 x</m>
+              
+            </p>
+          </li>
+        </ol>
+      
+      
+        <ol>
+          <li>
+            <p>
+              
+                <m>\displaystyle \frac{d}{dx}\left(\operatorname{sech}x\right)=-\operatorname{sech}x\tanh x</m>
+              
+            </p>
+          </li>
+          <li>
+            <p>
+              
+                <m>\displaystyle \frac{d}{dx}\left(\operatorname{csch}x\right)=-\operatorname{csch}x\coth x</m>
+              
+            </p>
+          </li>
+          <li>
+            <p>
+              
+                <m>\displaystyle \frac{d}{dx}\left(\coth x\right)=-\operatorname{csch}^2 x</m>
+              
+            </p>
+          </li>
+          <li>
+            <p>
+              
+                <m>\displaystyle \frac{d}{dx}\left(\cosh ^{-1}x\right)=\frac{1}{\sqrt{x^2-1}}</m>
+              
+            </p>
+          </li>
+          <li>
+            <p>
+              
+                <m>\displaystyle \frac{d}{dx}\left(\sinh ^{-1}x\right)=\frac{1}{\sqrt{x^2+1}}</m>
+              
+            </p>
+          </li>
+          <li>
+            <p>
+              
+                <m>\displaystyle \frac{d}{dx}\left(\operatorname{sech}^{-1}x\right)=\frac{-1}{x\sqrt{1-x^2}}</m>
+              
+            </p>
+          </li>
+          <li>
+            <p>
+              
+                <m>\displaystyle \frac{d}{dx}\left(\operatorname{csch}^{-1}x\right)=\frac{-1}{|x|\sqrt{1+x^2}}</m>
+              
+            </p>
+          </li>
+          <li>
+            <p>
+              
+                <m>\displaystyle \frac{d}{dx}\left(\tanh ^{-1}x\right)=\frac{1}{1-x^2}</m>
+              
+            </p>
+          </li>
+          <li>
+            <p>
+              
+                <m>\displaystyle \frac{d}{dx}\left(\coth ^{-1}x\right)=\frac{1}{1-x^2}</m>
+              
+            </p>
+          </li>
+        </ol>      
+</section>
+<section>
+  <title>Integration Rules</title>
+      
+        <ol>
+          <li>
+            <p>
+              
+                <m>\displaystyle \int c\cdot f(x)\ dx=</m>
+                <m>\displaystyle c\int f(x)\ dx</m>
+              
+            </p>
+          </li>
+          <li>
+            <p>
+              
+                <m>\displaystyle \int f(x)\pm g(x)\ dx=</m>
+                <m>\displaystyle </m>
+              
+              
+                <m>\displaystyle \int f(x)\ dx \pm \int g(x)\ dx</m>
+              
+            </p>
+          </li>
+          <li>
+            <p>
+              
+                <m>\displaystyle \int 0\ dx=</m>
+                <m>\displaystyle C</m>
+              
+            </p>
+          </li>
+          <li>
+            <p>
+              
+                <m>\displaystyle \int 1\ dx=</m>
+                <m>\displaystyle x+C</m>
+              
+            </p>
+          </li>
+          <li>
+            <p>
+              
+                <m>\displaystyle \int x^n\ dx=</m>
+                <m>\displaystyle \frac{1}{n+1}x^{n+1}+C, \ n\ne -1</m>
+              
+              
+                <m>\ n\ne -1</m>
+              
+            </p>
+          </li>
+          <li>
+            <p>
+              
+                <m>\displaystyle \int e^x\ dx=</m>
+                <m>\displaystyle e^x+C</m>
+              
+            </p>
+          </li>
+          <li>
+            <p>
+              
+                <m>\displaystyle \int a^x\ dx=</m>
+                <m>\displaystyle \frac{1}{\ln a}\cdot a^x+C</m>
+              
+            </p>
+          </li>
+          <li>
+            <p>
+              
+                <m>\displaystyle \int \frac{1}{x}\ dx=</m>
+                <m>\displaystyle \ln |x| + C</m>
+              
+            </p>
+          </li>
+          <li>
+            <p>
+              
+                <m>\displaystyle \int \cos x\ dx=</m>
+                <m>\displaystyle \sin x+C</m>
+              
+            </p>
+          </li>
+          <li>
+            <p>
+              
+                <m>\displaystyle \int \sin x\ dx=</m>
+                <m>\displaystyle -\cos x+C</m>
+              
+            </p>
+          </li>
+        </ol>
+      
+      
+        <ol>
+          <li>
+            <p>
+              
+                <m>\displaystyle \int \tan x\ dx=</m>
+                <m>\displaystyle -\ln |\cos x|+C</m>
+              
+            </p>
+          </li>
+          <li>
+            <p>
+              
+                <m>\displaystyle \int \sec x\ dx=</m>
+                <m>\displaystyle \ln |\sec x+\tan x|+C</m>
+              
+            </p>
+          </li>
+          <li>
+            <p>
+              
+                <m>\displaystyle \int \csc x\ dx=</m>
+                <m>\displaystyle -\ln |\csc x+\cot x|+C</m>
+              
+            </p>
+          </li>
+          <li>
+            <p>
+              
+                <m>\displaystyle \int \cot x\ dx=</m>
+                <m>\displaystyle \ln |\sin x|+C</m>
+              
+            </p>
+          </li>
+          <li>
+            <p>
+              
+                <m>\displaystyle \int \sec ^2 x\ dx=</m>
+                <m>\displaystyle \tan x+C</m>
+              
+            </p>
+          </li>
+          <li>
+            <p>
+              
+                <m>\displaystyle \int \csc ^2x\ dx=</m>
+                <m>\displaystyle -\cot x+C</m>
+              
+            </p>
+          </li>
+          <li>
+            <p>
+              
+                <m>\displaystyle \int \sec x\tan x\ dx=</m>
+                <m>\displaystyle \sec x+C</m>
+              
+            </p>
+          </li>
+          <li>
+            <p>
+              
+                <m>\displaystyle \int \csc x\cot x\ dx=</m>
+                <m>\displaystyle -\csc x+C</m>
+              
+            </p>
+          </li>
+          <li>
+            <p>
+              
+                <m>\displaystyle \int \cos ^2x\ dx=</m>
+                <m>\displaystyle \frac{1}{2}x+\frac{1}{4}\sin \big (2x\big )+C</m>
+              
+            </p>
+          </li>
+          <li>
+            <p>
+              
+                <m>\displaystyle \int \sin ^2x\ dx=</m>
+                <m>\displaystyle \frac{1}{2}x-\frac{1}{4}\sin \big (2x\big )+C</m>
+              
+            </p>
+          </li>
+          <li>
+            <p>
+              
+                <m>\displaystyle \int \frac{1}{x^2+a^2}\ dx=</m>
+                <m>\displaystyle \frac{1}{a}\tan ^{-1}\left(\frac{x}{a}\right)+C</m>
+              
+            </p>
+          </li>
+        </ol>
+      
+      
+        <ol>
+          <li>
+            <p>
+              
+                <m>\displaystyle \int \frac{1}{\sqrt{a^2-x^2}}\ dx=</m>
+                <m>\displaystyle \sin ^{-1}\left(\frac{x}{a}\right)+C</m>
+              
+            </p>
+          </li>
+          <li>
+            <p>
+              
+                <m>\displaystyle \int \frac{1}{x\sqrt{x^2-a^2}}\ dx=</m>
+                <m>\displaystyle \frac{1}{a}\sec ^{-1}\left(\frac{x}{a}\right)+C</m>
+              
+            </p>
+          </li>
+          <li>
+            <p>
+              
+                <m>\displaystyle \int \cosh x\ dx=</m>
+                <m>\displaystyle \sinh x+C</m>
+              
+            </p>
+          </li>
+          <li>
+            <p>
+              
+                <m>\displaystyle \int \sinh x\ dx=</m>
+                <m>\displaystyle \cosh x+C</m>
+              
+            </p>
+          </li>
+          <li>
+            <p>
+              
+                <m>\displaystyle \int \tanh x\ dx=</m>
+                <m>\displaystyle \ln (\cosh x)+C</m>
+              
+            </p>
+          </li>
+          <li>
+            <p>
+              
+                <m>\displaystyle \int \coth x\ dx=</m>
+                <m>\displaystyle \ln |\sinh x|+C</m>
+              
+            </p>
+          </li>
+          <li>
+            <p>
+              
+                <m>\displaystyle \int \frac{1}{\sqrt{x^2-a^2}}\ dx=</m>
+                <m>\displaystyle \ln \big |x+\sqrt{x^2-a^2}\big |+C</m>
+              
+            </p>
+          </li>
+          <li>
+            <p>
+              
+                <m>\displaystyle \int \frac{1}{\sqrt{x^2+a^2}}\ dx=</m>
+                <m>\displaystyle \ln \big |x+\sqrt{x^2+a^2}\big |+C</m>
+              
+            </p>
+          </li>
+          <li>
+            <p>
+              
+                <m>\displaystyle \int \frac{1}{a^2-x^2}\ dx=</m>
+                <m>\displaystyle \frac{1}{2}\ln \left|\frac{a+x}{a-x}\right|+C</m>
+              
+            </p>
+          </li>
+          <li>
+            <p>
+              
+                <m>\displaystyle \int \frac{1}{x\sqrt{a^2-x^2}}\ dx=</m>
+                <m>\displaystyle \frac{1}{a}\ln \left(\frac{x}{a+\sqrt{a^2-x^2}}\right)+C</m>
+              
+            </p>
+          </li>
+          <li>
+            <p>
+              
+                <m>\displaystyle \int \frac{1}{x\sqrt{x^2+a^2}}\ dx=</m>
+                <m>\displaystyle \frac{1}{a}\ln \left|\frac{x}{a+\sqrt{x^2+a^2}}\right|+C</m>
+              
+            </p>
+          </li>
+        </ol>
+      
+    
+  </section>
+  <section>
+    <title>The Unit Circle</title>
+      <image>
+        <latex-image> \begin{tikzpicture}[scale=3] \draw [-,&gt;=latex] (-1.5,0) -- (1.4,0) node [right] {\scriptsize $x$}; \draw [-,&gt;=latex] (0,-1.3) -- (0,1.3) node [above] {\scriptsize $y$}; \foreach \x / \y / \z / \w / \v in { 								0/0/{1,0}/right/white, 								30/{\pi/6}/{\frac{\sqrt{3}}2,\frac 12}/above right/none,% 								45/{\pi/4}/{\frac{\sqrt{2}}2,\frac{\sqrt{2}}2}/above right/none, 								60/{\pi/3}/{\frac{1}2,\frac{\sqrt{3}}2}/{above right}/none, 								90/ {\pi/2}/{0,1}/above/white,% 								120/{2\pi/3}/{-\frac{1}2,\frac{\sqrt{3}}2}/above left/none, 								135/{3\pi/4}/{-\frac{\sqrt{2}}2,\frac{\sqrt{2}}2}/above left/none, 								150/ {5\pi/6}/{-\frac{\sqrt{3}}2,\frac{1}2}/above left/none,% 								180/ {\pi}/{-1,0}/left/white, 								210/{7\pi/6}/{-\frac{\sqrt{3}}2,-\frac{1}2}/below left/none, 								225/{5\pi/4}/{-\frac{\sqrt{2}}2,-\frac{\sqrt{2}}2}/below left/none, 								240/{4\pi/3}/{-\frac{1}2,-\frac{\sqrt{3}}2}/below left/none, 								270/{3\pi/2}/{0,-1}/below/white, 								300/{5\pi/3}/{\frac{1}2,-\frac{\sqrt{3}}2}/below right/none, 								315/{7\pi/4}/{\frac{\sqrt{2}}2,-\frac{\sqrt{2}}2}/below right/none, 								330/{11\pi/6}/{\frac{\sqrt{3}}2,-\frac{1}2}/below right/none% 										} 	{% 		\draw (\x:.65cm) node [fill=\v] {\scriptsize \x$^\circ$}; 		\draw (\x:.85cm) node [fill=\v] {\scriptsize $\y$}; 		\draw (\x:1cm) node [\w,fill=\v] {\scriptsize $\left(\z\right)$}; 		\draw [fill=black] (\x:1) circle (.5pt); 	}  \draw [thick] (0,0) circle (1);  \end{tikzpicture}</latex-image>
+      </image>
+    
+    </section>
+    <section>
+      <title>Definitions of the Trigonometric Functions
+        
+        Unit Circle Definition
+        </title>
+      <p>
+        
+          
+            <image>
+              <latex-image> \begin{tikzpicture}[&gt;=latex,scale=1.5,thick] \draw [-](-1.3,0)--(1.3,0) node [right] {$x$}; \draw [-] (0,-1.3) -- (0,1.3) node [above] {$y$}; \draw (0,0) circle (1); \draw [fill= black] (-.6,.8) circle (1pt); \draw (0,0) -- (-.6,.8) node [above left] {$(x,y)$}; \draw [-&gt;] (.5,0) arc (0:127:.5); \draw [dashed,thin] (-.6,.8) -- (-.6,0) node [pos=.5,left] {$y$}; \draw (-.3,0) node [below] {$x$}; \draw (.45,.45) node {$\theta$}; \end{tikzpicture}</latex-image>
+            </image>
+          
+          
+            <table rend="inline">
+              <row>
+                <cell halign="center">
+                  <m>\sin \theta = y</m>
+                </cell>
+                <cell halign="center">
+                  <m>\cos \theta = x</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="center" />
+              </row>
+              <row>
+                <cell halign="center">
+                  <m>\displaystyle \csc \theta = \frac{1}{y}</m>
+                </cell>
+                <cell halign="center">
+                  <m>\displaystyle \sec \theta = \frac{1}{x}</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="center" />
+              </row>
+              <row>
+                <cell halign="center">
+                  <m>\displaystyle \tan \theta = \frac{y}{x}</m>
+                </cell>
+                <cell halign="center">
+                  <m>\displaystyle \cot \theta = \frac{x}{y}</m>
+                </cell>
+              </row>
+            </table>
+            <p>
+               
+            </p>
+          
+        
+         
+                
+        Right Triangle Definition
+      </p>
+      <p>
+        
+          
+            <image>
+              <latex-image> \begin{tikzpicture}[thick] \draw (0,0) -- (2.5,0) node [below,pos=.5] {Adjacent} -- (2.5,2) node [pos=.5,rotate=-90,shift={(0pt,7pt)}] {Opposite} -- (0,0) node [pos=.5,above,rotate=38.7] {Hypotenuse} node [shift={(20pt,8pt)}] {$\theta$}; \draw[-&gt;,&gt;=latex] (1,0) arc (0:38.7:1); \draw (2.2,0) -- (2.2,.3) -- (2.5,.3); \end{tikzpicture}</latex-image>
+            </image>
+          
+          
+ 
+            <table rend="inline">
+              <row>
+                <cell halign="center">
+                  <m>\displaystyle \sin \theta = \frac{\text{O}}{\text{H}}</m>
+                </cell>
+                <cell halign="center">
+                  <m>\displaystyle \csc \theta = \frac{\text{H}}{\text{O}}</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="center" />
+              </row>
+              <row>
+                <cell halign="center">
+                  <m>\displaystyle \cos \theta = \frac{\text{A}}{\text{H}}</m>
+                </cell>
+                <cell halign="center">
+                  <m>\displaystyle \sec \theta = \frac{\text{H}}{\text{A}}</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="center" />
+              </row>
+              <row>
+                <cell halign="center">
+                  <m>\displaystyle \tan \theta = \frac{\text{O}}{\text{A}}</m>
+                </cell>
+                <cell halign="center">
+                  <m>\displaystyle \cot \theta = \frac{\text{A}}{\text{O}}</m>
+                </cell>
+              </row>
+            </table>
+            <p>
+               
+            </p>
+          
+        
+         
+      </p>
+    
+  </section>
+  <section>
+    <title>Common Trigonometric Identities</title>
+    
+      <p>
+        Pythagorean Identities
+      </p>
+      <p spacebefore="5.0pt">
+        <m>\displaystyle \sin ^2x+\cos ^2x= 1</m>
+      </p>
+      <p spacebefore="5.0pt">
+        <m>\displaystyle \tan ^2x+ 1 = \sec ^2 x</m>
+      </p>
+      <p spacebefore="5.0pt">
+        <m>\displaystyle 1 + \cot ^2x=\csc ^2 x</m>
+      </p>
+      <p spacebefore="5.0pt" />
+    
+    
+      <p>
+        Cofunction Identities
+      </p>
+      <p spacebefore="5.0pt">
+        
+          <p>
+            <m>\displaystyle \sin \left(\frac{\pi }{2}-x\right) = \cos x</m>
+          </p>
+          <p spacebefore="5.0pt">
+            <m>\displaystyle \cos \left(\frac{\pi }{2}-x\right) = \sin x</m>
+          </p>
+          <p spacebefore="5.0pt">
+            <m>\displaystyle \tan \left(\frac{\pi }{2}-x\right) = \cot x</m>
+          </p>
+          <p spacebefore="5.0pt" />
+        
+        
+          <p>
+            <m>\displaystyle \csc \left(\frac{\pi }{2}-x\right) = \sec x</m>
+          </p>
+          <p spacebefore="5.0pt">
+            <m>\displaystyle \sec \left(\frac{\pi }{2}-x\right) = \csc x</m>
+          </p>
+          <p spacebefore="5.0pt">
+            <m>\displaystyle \cot \left(\frac{\pi }{2}-x\right) = \tan x</m>
+          </p>
+          <p spacebefore="5.0pt" />
+        
+      </p>
+    
+    
+      <p>
+        Double Angle Formulas
+      </p>
+      <p spacebefore="5.0pt">
+        <m>\sin 2x = 2\sin x\cos x</m>
+      </p>
+      <p spacebefore="5.0pt">
+        <m>\cos 2x = \cos ^2x - \sin ^2 x</m>
+      </p>
+      <p spacebefore="5.0pt">
+        <m>\phantom{\cos 2x}= 2\cos ^2x-1</m>
+      </p>
+      <p spacebefore="5.0pt">
+        <m>\phantom{\cos 2x}= 1-2\sin ^2x</m>
+      </p>
+      <p spacebefore="5.0pt">
+        <m>\displaystyle \tan 2x = \frac{2\tan x}{1-\tan ^2 x}</m>
+      </p>
+    
+ 
+  <p spacebefore="0.0pt">
+    
+      <p>
+        Sum to Product Formulas
+      </p>
+      <p spacebefore="5.0pt">
+        <m>\displaystyle \sin x+\sin y = 2\sin \left(\frac{x+y}{2}\right)\cos \left(\frac{x-y}{2}\right)</m>
+      </p>
+      <p spacebefore="5.0pt">
+        <m>\displaystyle \sin x-\sin y = 2\sin \left(\frac{x-y}{2}\right)\cos \left(\frac{x+y}{2}\right)</m>
+      </p>
+      <p spacebefore="5.0pt">
+        <m>\displaystyle \cos x+\cos y = 2\cos \left(\frac{x+y}{2}\right)\cos \left(\frac{x-y}{2}\right)</m>
+      </p>
+      <p spacebefore="5.0pt">
+        <m>\displaystyle \cos x-\cos y = -2\sin \left(\frac{x+y}{2}\right)\sin \left(\frac{x-y}{2}\right)</m>
+      </p>
+      <p spacebefore="5.0pt" />
+    
+    
+      <p>
+        Power–Reducing Formulas
+      </p>
+      <p spacebefore="5.0pt">
+        <m>\displaystyle \sin ^2 x = \frac{1-\cos 2x}{2}</m>
+      </p>
+      <p spacebefore="5.0pt">
+        <m>\displaystyle \cos ^2 x = \frac{1+\cos 2x}{2}</m>
+      </p>
+      <p spacebefore="5.0pt">
+        <m>\displaystyle \tan ^2x = \frac{1-\cos 2x}{1+\cos 2x}</m>
+      </p>
+    
+    
+      <p>
+        Even/Odd Identities
+      </p>
+      <p spacebefore="5.0pt">
+        <m>\sin (-x) = -\sin x</m>
+      </p>
+      <p spacebefore="5.0pt">
+        <m>\cos (-x) = \cos x</m>
+      </p>
+      <p spacebefore="5.0pt">
+        <m>\tan (-x) = -\tan x</m>
+      </p>
+      <p spacebefore="5.0pt">
+        <m>\csc (-x) = -\csc x</m>
+      </p>
+      <p spacebefore="5.0pt">
+        <m>\sec (-x) = \sec x</m>
+      </p>
+      <p spacebefore="5.0pt">
+        <m>\cot (-x) = -\cot x</m>
+      </p>
+      <p spacebefore="5.0pt" />
+    
+  </p>
+  <p spacebefore="0.0pt">
+    
+      <p>
+        Product to Sum Formulas
+      </p>
+      <p spacebefore="5.0pt">
+        <m>\displaystyle \sin x\sin y = \frac{1}{2} \big (\cos (x-y) - \cos (x+y)\big )</m>
+      </p>
+      <p spacebefore="5.0pt">
+        <m>\displaystyle \cos x\cos y = \frac{1}{2}\big (\cos (x-y) +\cos (x+y)\big )</m>
+      </p>
+      <p spacebefore="5.0pt">
+        <m>\displaystyle \sin x\cos y = \frac{1}{2} \big (\sin (x+y) + \sin (x-y)\big )</m>
+      </p>
+      <p spacebefore="5.0pt" />
+    
+    
+      <p>
+        Angle Sum/Difference Formulas
+      </p>
+      <p spacebefore="5.0pt">
+        <m>\sin (x\pm y) = \sin x\cos y \pm \cos x\sin y</m>
+      </p>
+      <p spacebefore="5.0pt">
+        <m>\cos (x\pm y) = \cos x\cos y \mp \sin x\sin y</m>
+      </p>
+      <p spacebefore="5.0pt">
+        <m>\displaystyle \tan (x\pm y) = \frac{\tan x\pm \tan y}{1\mp \tan x\tan y}</m>
+      </p>
+    
+  </p>
+  <clearpage />
+  <p>
+    
+      Areas and Volumes
+    
+  </p>
+  <p spacebefore="0.0pt">
+    
+      <p>
+        
+          <p>
+            Triangles
+          </p>
+          <p spacebefore="5.0pt">
+            <m>h=a\sin \theta </m>
+          </p>
+          <p spacebefore="5.0pt">
+            Area = <m>\frac{1}{2}bh</m>
+          </p>
+          <p spacebefore="5.0pt">
+            Law of Cosines:
+            </p>
+          <p>
+            <m>c^2=a^2+b^2-2ab\cos \theta </m>
+          </p>
+          <p spacebefore="5.0pt" />
+        
+        
+          <image>
+            <latex-image> \begin{tikzpicture}[x=30pt,y=30pt,thick] 			\draw (0,0) -- node [below,pos=.5]  { $b$} (3,0) node [shift={(-15pt,8pt)}] {$\theta$} -- node [pos=.5,right] { $a$} (2,1.5) -- node [pos=.5,above left] { $c$} (0,0); 			\draw (2.7,0) arc (180:125:.3); 			\draw [dashed] (2,1.5) -- (2,0) node [pos=.5,left] {$h$}; 			\draw (2,.2) -- (1.8,.2) -- (1.8,0); 			\end{tikzpicture}</latex-image>
+          </image>
+        
+      </p>
+    
+    
+      <p spacebefore="0.0pt">
+        
+          <p>
+            Right Circular Cone
+          </p>
+          <p spacebefore="5.0pt">
+            Volume = <m>\frac{1}{3} \pi r^2h</m>
+          </p>
+          <p spacebefore="5.0pt">
+            Surface Area =
+            </p>
+          <p spacebefore="3.0pt">
+            <m>\pi r\sqrt{r^2+h^2} +\pi r^2</m>
+          </p>
+        
+        
+          <image>
+            <latex-image> \begin{tikzpicture}[x=13pt,y=15pt,thick] 			\begin{scope}[xscale=2] 			\draw (-1,0) arc (-180:0:1); 			\draw [dashed] (1,0) arc (0:180:1); 			\draw (-1,.1) -- (0,3) -- (1,.15); 			\draw [dashed] (0,3) -- node [pos=.5,left] {\small $h$} (0,0); 			\draw [dashed] (0,0) -- (1,0) node [pos=.5,above] {\small $r$}; 			\end{scope} 			\draw [fill=black] (0,0) circle (1pt); 			\end{tikzpicture}</latex-image>
+          </image>
+        
+      </p>
+    
+  </p>
+  <p spacebefore="0.0pt">
+    
+      <p>
+        
+          <p>
+            Parallelograms
+          </p>
+          <p spacebefore="5.0pt">
+            Area = <m>bh</m> 
+          </p>
+        
+        
+          <image>
+            <latex-image> \begin{tikzpicture}[x=30pt,y=25pt,thick] 			\draw (0,0) -- node [below,pos=.5]  { $b$} (2,0) -- (3,1.5) -- (1,1.5) -- (0,0); 			\draw [dashed] (1,1.5) -- (1,0) node [pos=.5,right] {$h$}; 			\draw (.8,0) -- (.8,.2) -- (1,.2); 			\end{tikzpicture}</latex-image>
+          </image>
+        
+      </p>
+    
+    
+      <p spacebefore="0.0pt">
+        
+          <p>
+            Right Circular Cylinder
+          </p>
+          <p spacebefore="5.0pt">
+            Volume = <m>\pi r^2h</m>
+          </p>
+          <p spacebefore="5.0pt">
+            Surface Area =
+            </p>
+          <p spacebefore="3.0pt">
+            <m>2\pi rh +2\pi r^2</m>
+          </p>
+        
+        
+          <image>
+            <latex-image> \begin{tikzpicture}[x=13pt,y=14pt,thick] 			\begin{scope}[xscale=2] 			\draw (-1,0) arc (-180:0:1); 			\draw [dashed] (1,0) arc (0:180:1); 			\draw (0,2.5) circle (1); 			\draw (-1,0) -- (-1,2.5) (1,0)-- (1,2.5) node [right,pos=.5] {$h$}; 			\draw (0,2.5) -- (1,2.5) node [above,pos=.5] {$r$}; 			\end{scope} 			\draw [fill=black] (0,2.5) circle (1pt); 			\end{tikzpicture}</latex-image>
+          </image>
+        
+      </p>
+    
+  </p>
+  <p spacebefore="0.0pt">
+    
+      <p>
+        
+          <p>
+            Trapezoids
+          </p>
+          <p spacebefore="5.0pt">
+            Area = <m>\frac{1}{2}(a+b)h</m> 
+          </p>
+        
+        
+          <image>
+            <latex-image> \begin{tikzpicture}[x=30pt,y=25pt,thick] 			\draw (0,0) -- node [below,pos=.7]  { $b$} (3,0) -- (2.5,1.5) -- node [above,pos=.5] {$a$} (1.5,1.5) -- (0,0); 			\draw [dashed] (1.5,1.5) -- (1.5,0) node [pos=.5,right] {$h$}; 			\draw (1.3,0) -- (1.3,.2) -- (1.5,.2); 			\end{tikzpicture}</latex-image>
+          </image>
+        
+      </p>
+    
+    
+      <p spacebefore="0.0pt">
+        
+          <p>
+            Sphere
+          </p>
+          <p spacebefore="5.0pt">
+            Volume = <m>\frac{4}{3}\pi r^3</m>
+          </p>
+          <p spacebefore="5.0pt">
+            Surface Area =<m>4\pi r^2</m> 
+          </p>
+        
+        
+          <image>
+            <latex-image> \begin{tikzpicture}[x=13pt,y=13pt,thick] 			\begin{scope}[xscale=2] 			\draw (-1,0) arc (-180:0:1); 			\draw [dashed] (1,0) arc (0:180:1); 			\end{scope} 			\draw (0,0) circle (2); 			\draw [dashed] (0,0) -- (2,0) node [pos=.5,above] {$r$}; 			\draw [fill=black] (0,0) circle (1pt); 			\end{tikzpicture}</latex-image>
+          </image>
+        
+      </p>
+    
+  </p>
+  <p spacebefore="0.0pt">
+    
+      <p>
+        
+          <p>
+            Circles
+          </p>
+          <p spacebefore="5.0pt">
+            Area = <m>\pi r^2</m>
+          </p>
+          <p spacebefore="5.0pt">
+            Circumference = <m>2\pi r</m> 
+          </p>
+        
+        
+          <image>
+            <latex-image> \begin{tikzpicture}[x=30pt,y=30pt,thick] 			\draw (0,0) circle (1); 			\draw [dashed] (0,0) -- (1,0) node [pos=.5,above] {$r$}; 			\draw [fill=black] (0,0) circle (1pt); 			\end{tikzpicture}</latex-image>
+          </image>
+        
+      </p>
+    
+    
+      <p spacebefore="0.0pt">
+        
+          <p>
+            General Cone
+          </p>
+          <p spacebefore="5.0pt">
+            Area of Base = <m>A</m>
+          </p>
+          <p spacebefore="5.0pt">
+            Volume = <m>\frac{1}{3}Ah</m>
+          </p>
+          <p spacebefore="5.0pt" />
+        
+        
+          <image>
+            <latex-image> \begin{tikzpicture}[x=13pt,y=10pt,thick] 			\begin{scope} 			\clip (0,0) rectangle (4,-2.5); 			\draw [smooth] plot coordinates {(0,0) (1,1.5) (2,1.5) (4,0) (3,-1) (2,-1.5) (1,-2) (0,0)}; 			\end{scope} 			\begin{scope} 			\clip (0,0) rectangle (4,2.5); 			\draw [smooth,dashed] plot coordinates {(0,0) (1,1.5) (2,1.5) (4,0) (3,-1) (2,-1.5) (1,-2) (0,0)}; 			\end{scope} 			\draw (0,0) -- (2,4)--(4,0); 			\draw [dashed] (2,0)--(2,4) node [pos=.5,right] {$h$}; 			\draw [fill=black](2,0) circle (1pt); 			\draw (1.5,-.75) node {$A$}; 			\end{tikzpicture}</latex-image>
+          </image>
+        
+      </p>
+    
+  </p>
+  <p spacebefore="0.0pt">
+    
+      <p>
+        
+          <p>
+            Sectors of Circles
+          </p>
+          <p spacebefore="5.0pt">
+            <m>\theta </m> in radians</p>
+          <p spacebefore="5.0pt">
+            Area = <m>\frac{1}{2}\theta r^2</m>
+          </p>
+          <p spacebefore="5.0pt">
+            <m>s=r\theta </m>
+          </p>
+        
+        
+          <image>
+            <latex-image> \begin{tikzpicture}[x=30pt,y=30pt,thick] 			\draw (2,0) arc (0:50:2) -- (0,0); 			\draw [] (0,0) -- (2,0) node [pos=.5,below] {$r$}; 			\draw [fill=black] (0,0) circle (1pt); 			\draw (1.95,1.0) node {$s$}; 			\draw (0,0) node [shift={(15pt,8pt)}] {$\theta$}; 			\end{tikzpicture}</latex-image>
+          </image>
+        
+      </p>
+    
+    
+      <p spacebefore="0.0pt">
+        
+          <p>
+            General Right Cylinder
+          </p>
+          <p spacebefore="5.0pt">
+            Area of Base = <m>A</m>
+          </p>
+          <p spacebefore="5.0pt">
+            Volume = <m>Ah</m>
+          </p>
+          <p spacebefore="5.0pt" />
+        
+        
+          <image>
+            <latex-image> \begin{tikzpicture}[x=13pt,y=10pt,thick] 			\begin{scope} 			\clip (0,0) rectangle (4,-2.5); 			\draw [smooth] plot coordinates {(0,0) (1,1.5) (2,1.5) (4,0) (3,-1) (2,-1.5) (1,-2) (0,0)}; 			\end{scope} 			\begin{scope} 			\clip (0,0) rectangle (4,2.5); 			\draw [smooth,dashed] plot coordinates {(0,0) (1,1.5) (2,1.5) (4,0) (3,-1) (2,-1.5) (1,-2) (0,0)}; 			\end{scope} 			\begin{scope}[shift={(0,4)}] 			\draw [smooth] plot coordinates {(0,0) (1,1.5) (2,1.5) (4,0) (3,-1) (2,-1.5) (1,-2) (0,0)}; 			\end{scope} 			\draw (0,0) -- (0,4) (4,0) -- (4,4) node [pos=.5,right] {$h$}; 			\draw (2,0) node {$A$}; 			\end{tikzpicture}</latex-image>
+          </image>
+        
+      </p>
+    
+  </p>
+  <clearpage />
+  <p>
+    
+      Algebra
+    
+  </p>
+  <p spacebefore="0.0pt">
+    
+      Factors and Zeros of Polynomials
+    Let <m>p(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_1 x + a_0</m> be a polynomial. If <m>p(a)=0</m>, then <m>a</m> is a <m>zero</m> of the polynomial and a solution of the equation <m>p(x)=0</m>. Furthermore, <m>(x-a)</m> is a <m>factor</m> of the polynomial.</p>
+  <p spacebefore="0.0pt">
+    
+      Fundamental Theorem of Algebra
+    An <m>n</m>th degree polynomial has <m>n</m> (not necessarily distinct) zeros. Although all of these zeros may be imaginary, a real polynomial of odd degree must have at least one real zero.</p>
+  <p spacebefore="0.0pt">
+    
+      Quadratic Formula
+    If <m>p(x) = ax^2 + bx + c</m>, and <m>0 \le b^2 - 4ac</m>, then the real zeros of <m>p</m> are <m>x=(-b\pm \sqrt{b^2-4ac})/2a</m>
+  </p>
+  <p spacebefore="0.0pt">
+    
+      Special Factors
+    
+    <m> \begin{array}{ll} x^2 - a^2 = (x-a)(x+a) \qquad \qquad \qquad &amp; x^3 - a^3 = (x-a)(x^2+ax+a^2)\\ x^3 + a^3 = (x+a)(x^2-ax+a^2) \qquad \qquad \qquad &amp; x^4 - a^4 = (x^2-a^2)(x^2+a^2)\\ \end{array} </m>
+  </p>
+  <p>
+    <m>\begin{array}{l} (x+y)^n =x^n + nx^{n-1}y+\frac{n(n-1)}{2!}x^{n-2}y^2+\cdots +nxy^{n-1}+y^n\\ (x-y)^n =x^n - nx^{n-1}y+\frac{n(n-1)}{2!}x^{n-2}y^2-\cdots \pm nxy^{n-1}\mp y^n \end{array}</m>
+  </p>
+  <p spacebefore="0.0pt">
+    
+      Binomial Theorem
+    
+    <m> \begin{array}{ll} (x+y)^2 = x^2 + 2xy + y^2 \qquad &amp; (x-y)^2 = x^2 -2xy +y^2\\ (x+y)^3 = x^3 + 3x^2y + 3xy^2 + y^3 \qquad &amp; (x-y)^3 = x^3 -3x^2y + 3xy^2 -y^3\\ (x+y)^4 = x^4 + 4x^3y + 6x^2y^2 + 4xy^3 + y^4 \qquad &amp; (x-y)^4 = x^4 - 4x^3y + 6x^2y^2 - 4xy^3 + y^4\\ \end{array} </m>
+  </p>
+  <p spacebefore="0.0pt">
+    
+      Rational Zero Theorem
+    If <m>p(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_1 x + a_0</m> has integer coefficients, then every <m>rational</m>
+    <m>zero</m> of <m>p</m> is of the form <m>x=r/s</m>, where <m>r</m> is a factor of <m>a_0</m> and <m>s</m> is a factor of <m>a_n</m>.</p>
+  <p spacebefore="0.0pt">
+    
+      Factoring by Grouping
+    
+    <m>ac x^3 + adx^2 + bcx + bd = ax^2(cx+d)+b(cx+d)=(ax^2+b)(cx+d)</m>
+  </p>
+  <p spacebefore="0.0pt">
+    
+      Arithmetic Operations
+    
+    <m> \begin{array}{lll} ab+ac=a(b+c) \qquad \qquad &amp; \displaystyle \frac{a}{b}+\frac{c}{d} = \frac{ad+bc}{bd} \qquad \qquad &amp; \displaystyle \frac{a+b}{c} = \frac{a}{c} + \frac{b}{c}\\ \\ \displaystyle \frac{\left(\displaystyle \frac{a}{b}\right)}{\left(\displaystyle \frac{c}{d}\right)}=\left(\frac{a}{b}\right)\left(\frac{d}{c}\right)=\frac{ad}{bc} &amp;\displaystyle \frac{\left(\displaystyle \frac{a}{b}\right)}{c} =\displaystyle \frac{a}{bc} &amp;\displaystyle \frac{a}{\left(\displaystyle \frac{b}{c}\right)} =\displaystyle \frac{ac}{b}\\ \\ a\left(\displaystyle \frac{b}{c}\right)= \displaystyle \frac{ab}{c}&amp;\displaystyle \frac{a-b}{c-d}=\frac{b-a}{d-c}&amp;\displaystyle \frac{ab+ac}{a}=b+c\\ \end{array} </m>
+  </p>
+  <p spacebefore="0.0pt">
+    
+      Exponents and Radicals
+    
+  </p>
+  <p spacebefore="5.0pt">
+    <m> \begin{array}{llllll} a^0=1, \; \; a \ne 0 \quad &amp; (ab)^x=a^xb^x \quad &amp; a^xa^y = a^{x+y}\quad &amp; \sqrt{a}=a^{1/2} &amp;\displaystyle \frac{a^x}{a^y}=a^{x-y} &amp;\@root n \of {a}=a^{1/n}\\[15pt] \left(\displaystyle \frac{a}{b}\right)^x=\displaystyle \frac{a^x}{b^x} &amp;\@root n \of {a^m}=a^{m/n} &amp; a^{-x}=\displaystyle \frac{1}{a^x} &amp; \@root n \of {ab}=\@root n \of {a}\@root n \of {b} \quad &amp; (a^x)^y=a^{xy} \quad &amp; \displaystyle \@root n \of {\frac{a}{b}}=\frac{\@root n \of {a}}{\@root n \of {b}} \end{array} </m>
+  </p>
+  <clearpage />
+  <p>
+    
+      Additional Formulas
+    
+  </p>
+  <p spacebefore="0.0pt">
+    
+      Summation Formulas:
+    
+  </p>
+  <table rend="inline">
+    <row>
+      <cell halign="left">
+        <m>\displaystyle \sum ^n_{i=1}{c} = cn</m>
+      </cell>
+      <cell halign="left">
+        <m>\displaystyle \sum ^n_{i=1}{i} = \frac{n(n+1)}{2}</m>
+      </cell>
+    </row>
+    <row>
+      <cell halign="left">
+        <m>\displaystyle \sum ^n_{i=1}{i\hspace{1.0pt}^2} = \frac{n(n+1)(2n+1)}{6}</m>
+      </cell>
+      <cell halign="left">
+        <m>\displaystyle \sum ^n_{i=1}{i\hspace{1.0pt}^3}= \left(\frac{n(n+1)}{2}\right)^2</m>
+      </cell>
+    </row>
+  </table>
+  <p spacebefore="5.0pt">
+    
+      Trapezoidal Rule:
+    
+    <m>\displaystyle \int _a^b{f(x)}\ dx \approx \frac{\Delta x}{2}\big [f(x_1)+2f(x_2) + 2f(x_3) + ... + 2f(x_{n}) + f(x_{n+1})\big ]</m>
+  </p>
+  <p spacebefore="5.0pt">
+    with <m>\displaystyle \text{Error} \le \frac{(b-a)^3}{12n^2}\big [ \max \big | f^{\prime \prime }(x) \big |\big ]</m>
+  </p>
+  <p spacebefore="0.0pt">
+    
+      Simpson's Rule:
+    
+    <m>\displaystyle \int _a^b{f(x)}\ dx \approx \frac{\Delta x}{3}\big [f(x_1)+4f(x_2) + 2f(x_3) + 4f(x_4) + ... + 2f(x_{n-1}) + 4f(x_{n}) + f(x_{n+1})\big ] </m>
+  </p>
+  <p spacebefore="5.0pt">
+    with <m>\displaystyle \text{Error} \le \frac{(b-a)^5}{180n^4}\big [ \max \big | f^{(4)}(x) \big |\big ] </m>
+  </p>
+  <p spacebefore="0.0pt">
+    
+      <p>
+        
+          Arc Length:
+        
+      </p>
+      <p spacebefore="5.0pt">
+        <m>\displaystyle L = \int _a^b{\sqrt{1+ f\,^{\prime }(x)^2}}\phantom{a}dx </m>
+      </p>
+    
+    
+      <p spacebefore="5.0pt">
+        
+          Surface of Revolution:
+        
+      </p>
+      <p spacebefore="5.0pt">
+        <m>\displaystyle S = 2\pi \int _a^b{f(x) \sqrt{1+ f\,^{\prime }(x)^2}}\phantom{a}dx </m>
+      </p>
+      <p spacebefore="3.0pt">
+        (where <m>f(x)\ge 0</m>)
+      </p>
+      <p spacebefore="5.0pt">
+        <m>\displaystyle S = 2\pi \int _a^b{x \sqrt{1+ f\,^{\prime }(x)^2}}\phantom{a}dx </m>
+      </p>
+      <p spacebefore="3.0pt">
+        (where <m>a,b \ge 0</m>)
+      </p>
+    
+  </p>
+  <p spacebefore="0.0pt">
+    
+      <p>
+        
+          Work Done by a Variable Force:
+        
+      </p>
+      <p spacebefore="5.0pt">
+        <m>\displaystyle W = \int _a^b{F(x)}\phantom{a}dx </m>
+      </p>
+    
+    
+      <p>
+        
+          Force Exerted by a Fluid:
+        
+      </p>
+      <p spacebefore="5.0pt">
+        <m>\displaystyle F = \int _a^b{w\,d(y)\,\ell (y)}\phantom{a}dy </m>
+      </p>
+    
+  </p>
+  <p spacebefore="0.0pt">
+    
+      Taylor Series Expansion for <m>f(x)</m>:
+    
+  </p>
+  <p spacebefore="5.0pt">
+    <m>\displaystyle p_n(x) = f(c) + f\,^{\prime }(c)(x-c) + \frac{f\,^{\prime \prime }(c)}{2!}(x-c)^2 + \frac{f\,^{\prime \prime \prime }(c)}{3!}(x-c)^3 + ... + \frac{f\,^{(n)}(c)}{n!}(x-c)^n </m>
+  </p>
+  <p spacebefore="0.0pt">
+    
+      Maclaurin Series Expansion for <m>f(x)</m>, where <m>c=0</m>:
+    
+  </p>
+  <p spacebefore="5.0pt">
+    <m>\displaystyle p_n(x) = f(0) + f\,^{\prime }(0)x + \frac{f\,^{\prime \prime }(0)}{2!}x^2 + \frac{f\,^{\prime \prime \prime }(0)}{3!}x^3 + ... + \frac{f\,^{(n)}(0)}{n!}x^n </m>
+  </p>
+  <clearpage />
+  <p>
+    
+      Summary of Tests for Series:
+    
+  </p>
+  <table rend="inline">
+    <row bottom-border="true" top-border="true">
+      <cell right-border="true" halign="center" left-border="true">Test</cell>
+      <cell right-border="true" halign="center">Series</cell>
+      <cell right-border="true" halign="center">
+        <rule width="0.0pt" depth="15.0pt" height="18.0pt" />Condition(s) of Convergence</cell>
+      <cell right-border="true" halign="center">Condition(s) of Divergence</cell>
+      <cell right-border="true" halign="center">Comment</cell>
+    </row>
+    <row bottom-border="true">
+      <cell right-border="true" halign="center" left-border="true">
+        <m>n</m>th-Term</cell>
+      <cell right-border="true" halign="center">
+        <rule width="0.0pt" depth="15.0pt" height="18.0pt" />
+        <m>\displaystyle {\sum ^\infty _{n=1}{a_n}}</m>
+      </cell>
+      <cell right-border="true" halign="center" />
+      <cell right-border="true" halign="center">
+        <m>\displaystyle {\lim _{n \rightarrow \infty } a_n \ne 0}</m>
+      </cell>
+      <cell right-border="true" halign="center">This test cannot be used to show convergence.</cell>
+    </row>
+    <row bottom-border="true">
+      <cell right-border="true" halign="center" left-border="true">Geometric Series</cell>
+      <cell right-border="true" halign="center">
+        <rule width="0.0pt" depth="15.0pt" height="18.0pt" />
+        <m>\displaystyle {\sum ^\infty _{n=0}{r^n}}</m>
+      </cell>
+      <cell right-border="true" halign="center">
+        <m> \left| r \right| \lt  1</m>
+      </cell>
+      <cell right-border="true" halign="center">
+        <m>\left| r \right| \ge 1</m>
+      </cell>
+      <cell right-border="true" halign="center">
+        <m>\displaystyle {\text{Sum} = \frac{1}{1-r}}</m>
+      </cell>
+    </row>
+    <row bottom-border="true">
+      <cell right-border="true" halign="center" left-border="true">Telescoping Series</cell>
+      <cell right-border="true" halign="center">
+        <rule width="0.0pt" depth="15.0pt" height="18.0pt" />
+        <m>\displaystyle {\sum ^\infty _{n=1}{(b_n-b_{n+a})}}</m>
+      </cell>
+      <cell right-border="true" halign="center">
+        <m>\displaystyle {\lim _{n \rightarrow \infty } b_n = L}</m>
+      </cell>
+      <cell right-border="true" halign="center" />
+      <cell right-border="true" halign="center">
+        <m>\displaystyle \text{Sum}= \left(\sum ^a_{n=1}b_n\right) -L</m>
+      </cell>
+    </row>
+    <row bottom-border="true">
+      <cell right-border="true" halign="center" left-border="true">
+        <m>p</m>-Series</cell>
+      <cell right-border="true" halign="center">
+        <rule width="0.0pt" depth="15.0pt" height="18.0pt" />
+        <m>\displaystyle {\sum ^\infty _{n=1}{\frac{1}{(an+b)^p}}}</m>
+      </cell>
+      <cell right-border="true" halign="center">
+        <m>p\gt1</m>
+      </cell>
+      <cell right-border="true" halign="center">
+        <m>p\le 1</m>
+      </cell>
+      <cell right-border="true" halign="center" />
+    </row>
+    <row bottom-border="true">
+      <cell right-border="true" halign="center" left-border="true">Integral Test</cell>
+      <cell right-border="true" halign="center">
+        <rule width="0.0pt" depth="20.0pt" height="20.0pt" />
+        <m>\displaystyle {\sum ^\infty _{n=0}{a_n}}</m>
+      </cell>
+      <cell right-border="true" halign="center">
+        <rule width="0.0pt" depth="15.0pt" height="25.0pt" />
+        <m>\displaystyle \int _1^\infty a(n)\ dn</m> is convergent</cell>
+      <cell right-border="true" halign="center">
+        <m>\displaystyle \int _1^\infty a(n)\ dn</m> is divergent</cell>
+      <cell right-border="true" halign="center">
+        <m>a_n = a(n)</m> must be continuous</cell>
+    </row>
+    <row bottom-border="true">
+      <cell right-border="true" halign="center" left-border="true">Direct Comparison</cell>
+      <cell right-border="true" halign="center">
+        <rule width="0.0pt" depth="30.0pt" height="35.0pt" />
+        <m>\displaystyle {\sum ^\infty _{n=0}{a_n}}</m>
+      </cell>
+      <cell right-border="true" halign="center">
+        <m>\displaystyle \sum _{n=0}^\infty b_n </m> converges and  <m>0\le a_n\le b_n</m>
+      </cell>
+      <cell right-border="true" halign="center">
+        <m>\displaystyle \sum _{n=0}^\infty b_n </m> diverges and  <m>0\le b_n\le a_n</m>
+      </cell>
+      <cell right-border="true" halign="center" />
+    </row>
+    <row bottom-border="true">
+      <cell right-border="true" halign="center" left-border="true">Limit Comparison</cell>
+      <cell right-border="true" halign="center">
+        <rule width="0.0pt" depth="30.0pt" height="35.0pt" />
+        <m>\displaystyle {\sum ^\infty _{n=0}{a_n}}</m>
+      </cell>
+      <cell right-border="true" halign="center">
+        <m>\displaystyle \sum _{n=0}^\infty b_n </m> converges and  <m>\displaystyle \lim _{n\rightarrow \infty } a_n/b_n \ge 0</m>
+      </cell>
+      <cell right-border="true" halign="center">
+        <m>\displaystyle \sum _{n=0}^\infty b_n </m> diverges and  <m>\displaystyle \lim _{n\rightarrow \infty } a_n/b_n \gt 0</m>
+      </cell>
+      <cell right-border="true" halign="center">Also diverges if <m>\displaystyle \lim _{n\rightarrow \infty } a_n/b_n=\infty </m>
+      </cell>
+    </row>
+    <row bottom-border="true">
+      <cell right-border="true" halign="center" left-border="true">Ratio Test</cell>
+      <cell right-border="true" halign="center">
+        <rule width="0.0pt" depth="30.0pt" height="35.0pt" />
+        <m>\displaystyle {\sum ^\infty _{n=0}{a_n}}</m>
+      </cell>
+      <cell right-border="true" halign="center">
+        <m>\displaystyle \lim _{n\rightarrow \infty } \frac{a_{n+1}}{a_n} \lt  1</m>
+      </cell>
+      <cell right-border="true" halign="center">
+        <m>\displaystyle \lim _{n\rightarrow \infty } \frac{a_{n+1}}{a_n} \gt 1</m>
+      </cell>
+      <cell right-border="true" halign="center">
+        <m>\lbrace a_n\rbrace </m> must be positive Also diverges if <m>\displaystyle \lim _{n\rightarrow \infty } a_{n+1}/a_n=\infty </m>
+      </cell>
+    </row>
+    <row bottom-border="true">
+      <cell right-border="true" halign="center" left-border="true">Root Test</cell>
+      <cell right-border="true" halign="center">
+        <rule width="0.0pt" depth="30.0pt" height="35.0pt" />
+        <m>\displaystyle {\sum ^\infty _{n=0}{a_n}}</m>
+      </cell>
+      <cell right-border="true" halign="center">
+        <m>\displaystyle \lim _{n\rightarrow \infty } \big (a_n\big )^{1/n} \lt  1</m>
+      </cell>
+      <cell right-border="true" halign="center">
+        <m>\displaystyle \lim _{n\rightarrow \infty } \big (a_n\big )^{1/n} \gt 1</m>
+      </cell>
+      <cell right-border="true" halign="center">
+        <m>\lbrace a_n\rbrace </m> must be positive Also diverges if <m>\displaystyle \lim _{n\rightarrow \infty } \big (a_n\big )^{1/n}=\infty </m>
+      </cell>
+    </row>
+  </table>
+  <p spacebefore="5.0pt" />
+</section>
+</chapter>

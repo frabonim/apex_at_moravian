@@ -1,0 +1,663 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<exercises>
+  <exercise>
+    <statement>
+      <p>
+        List the different indeterminate forms described in this section.
+        </p>
+    </statement>
+    <answer>
+      <p>
+        <m>0/0, \infty /\infty , 0\cdot \infty ,\infty -\infty ,0^0,1^\infty ,\infty ^0</m>
+      </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        T/F: l'Hôpital's Rule provides a faster method of computing derivatives.
+        </p>
+    </statement>
+    <answer>
+      <p>
+        F
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        T/F: l'Hôpital's Rule states that <m>\displaystyle \frac{d}{dx}\left[\frac{f(x)}{g(x)}\right] = \frac{f\,^{\prime }(x)}{g^{\prime }(x)}.</m>
+      </p>
+    </statement>
+    <answer>
+      <p>
+        F
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        Explain what the indeterminate form “<m>1^\infty </m>” means.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        The base of an expression is approaching 1 while its power is growing without bound.
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        Fill in the blanks:
+        </p>
+      <p>
+        The Quotient Rule is applied to <m>\displaystyle \frac{f(x)}{g(x)}</m> when taking <fillin/>;
+      </p>
+      <p>
+        l'Hôpital's Rule is applied to <m>\displaystyle \frac{f(x)}{g(x)}</m> when taking certain <fillin/>.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        derivatives; limits
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        Create (but do not evaluate!) a limit that returns “<m>\infty ^0</m>”.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        Answers will vary.
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        Create a function <m>f(x)</m> such that <m>\displaystyle \lim _{x\rightarrow 1}f(x)</m> returns “<m>0^0</m>”.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        Answers will vary.
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        Create a function <m>f(x)</m> such that <m>\displaystyle \lim _{x\rightarrow \infty }f(x)</m> returns “<m>0\cdot \infty </m>”.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        Answers will vary.
+        </p>
+    </answer>
+  </exercise>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 9–54, evaluate the given limit.
+        </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lim _{x\rightarrow 1} \frac{x^2+x-2}{x-1}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          3
+          </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lim _{x\rightarrow 2} \frac{x^2+x-6}{x^2-7x+10}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>-5/3</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lim _{x\rightarrow \pi } \frac{\sin x}{x-\pi }</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>-1</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lim _{x\rightarrow \pi /4} \frac{\sin x-\cos x}{\cos (2x)}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>-\sqrt{2}/2</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lim _{x\rightarrow 0} \frac{\sin (5x)}{x}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>5</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lim _{x\rightarrow 0} \frac{\sin (2x)}{x+2}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>0</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lim _{x\rightarrow 0} \frac{\sin (2x)}{\sin (3x)}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>2/3</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lim _{x\rightarrow 0} \frac{\sin (ax)}{\sin (bx)}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>a/b</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lim _{x\rightarrow 0^+} \frac{e^x-1}{x^2}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\infty </m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lim _{x\rightarrow 0^+} \frac{e^x-x-1}{x^2}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>1/2</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lim _{x\rightarrow 0^+} \frac{x-\sin x}{x^3-x^2}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>0</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lim _{x\rightarrow \infty } \frac{x^4}{e^x}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>0</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lim _{x\rightarrow \infty } \frac{\sqrt{x}}{e^x}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>0</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lim _{x\rightarrow \infty } \frac{1}{x^2}e^x</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\infty </m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lim _{x\rightarrow \infty } \frac{e^x}{\sqrt{x}}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\infty </m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lim _{x\rightarrow \infty } \frac{e^x}{2^x}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\infty </m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lim _{x\rightarrow \infty } \frac{e^x}{3^x}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>0</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lim _{x\rightarrow 3} \frac{x^3-5x^2+3x+9}{x^3-7x^2+15x-9}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>2</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lim _{x\rightarrow -2} \frac{x^3+4x^2+4x}{x^3+7x^2+16x+12}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>-2</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lim _{x\rightarrow \infty } \frac{\ln x}{x}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>0</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lim _{x\rightarrow \infty } \frac{\ln (x^2)}{x}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>0</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lim _{x\rightarrow \infty } \frac{\Big (\ln x\Big )^2}{x}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>0</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lim _{x\rightarrow 0^+} x\cdot \ln x</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>0</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lim _{x\rightarrow 0^+} \sqrt{x}\cdot \ln x</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>0</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lim _{x\rightarrow 0^+} xe^{1/x}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\infty </m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lim _{x\rightarrow \infty } x^3-x^2</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\infty </m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lim _{x\rightarrow \infty } \sqrt{x}-\ln x</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\infty </m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lim _{x\rightarrow -\infty } xe^x</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>0</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lim _{x\rightarrow 0^+} \frac{1}{x^2}e^{-1/x}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>0</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lim _{x\rightarrow 0^+} (1+x)^{1/x}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>e</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lim _{x\rightarrow 0^+} (2x)^{x}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>1</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lim _{x\rightarrow 0^+} (2/x)^{x}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>1</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lim _{x\rightarrow 0^+} (\sin x)^{x}</m>    Hint: use the Squeeze Theorem.</p>
+      </statement>
+      <answer>
+        <p>
+          <m>1</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lim _{x\rightarrow 1^+} (1-x)^{1-x}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>1</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lim _{x\rightarrow \infty } (x)^{1/x}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>1</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lim _{x\rightarrow \infty } (1/x)^{x}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>0</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lim _{x\rightarrow 1^+} (\ln x)^{1-x}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>1</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lim _{x\rightarrow \infty } (1+x)^{1/x}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>1</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lim _{x\rightarrow \infty } (1+x^2)^{1/x}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>1</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lim _{x\rightarrow \pi /2} \tan x\cos x</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>1</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lim _{x\rightarrow \pi /2} \tan x\sin (2x)</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>2</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lim _{x\rightarrow 1^+} \frac{1}{\ln x} - \frac{1}{x-1}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>1/2</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lim _{x\rightarrow 3^+} \frac{5}{x^2-9} - \frac{x}{x-3}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>-\infty </m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lim _{x\rightarrow \infty } x\tan (1/x)</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>1</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lim _{x\rightarrow \infty } \frac{(\ln x)^3}{x}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>0</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lim _{x\rightarrow 1} \frac{x^2+x-2}{\ln x}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>3</m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+</exercises>

@@ -1,0 +1,1637 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec_parametric_surfaces">
+  <title>Parametrized Surfaces and Surface Area</title>
+  <introduction>
+    <p>
+      Thus far we have focused mostly on 2-dimensional vector fields,
+      measuring flow and flux along/across curves in the plane.
+      Both Green's Theorem and the Divergence Theorem make connections between planar regions and their boundaries.
+      We now move our attention to 3-dimensional vector fields,
+      considering both curves and surfaces in space.
+    </p>
+  </introduction>
+
+  <subsection xml:id="subsec-parametrized-surfaces">
+    <title>Parametrizing surfaces</title>
+
+    <figure xml:id="vid-veccalc-parasurf-intro">
+      <caption>Introducing parametrized surfaces</caption>
+      <video youtube="dPB3NGtuEhU"/>
+    </figure>
+    <p>
+      We are accustomed to describing surfaces as functions of two variables,
+      usually written as <m>z=f(x,y)</m>.
+      For our coming needs,
+      this method of describing surfaces will prove to be insufficient.
+      Instead, we will <em>parametrize</em> our surfaces,
+      describing them as the set of terminal points of some vector-valued function <m>\vec r(u,v) =\langle f(u,v),g(u,v),h(u,v)\rangle</m>.
+      The bulk of this section is spent practicing the skill of describing a surface <m>\surfaceS</m>using a vector-valued function.
+      Once this skill is developed,
+      we'll show how to find the surface area <m>S</m> of a parametrically-defined surface <m>\surfaceS</m>, a skill needed in the remaining sections of this chapter.
+    </p>
+    <aside>
+      <p>
+        We use the letter <m>S</m> to denote Surface Area.
+        This section begins a study into surfaces,
+        and it is natural to label a surface with the letter <q>S</q>.
+        We distinguish a surface from its surface area by using a calligraphic S to denote a surface: <m>\surfaceS</m>. When writing this letter by hand,
+        it may be useful to add serifs to the letter, such as:
+      </p>
+
+      <image xml:id="img_param_intro" width="20%">
+        <latex-image>
+
+        \begin{tikzpicture}[x={(.55ex,0)},y={(0,.55ex)}]
+
+        \draw [smooth, line width=.6pt] (0.9667,0.545) -- (0.8273,0.6541) -- (0.6696,0.7624)
+                                     -- (0.5,0.866) -- (0.3254,0.961) -- (0.1528,1.043)
+                                     -- (-0.01133,1.11) -- (-0.1607,1.156) -- (-0.2899,1.181)
+                                     -- (-0.3945,1.181) -- (-0.471,1.155) -- (-0.5173,1.103)
+                                     -- (-0.5326,1.025) -- (-0.5173,0.9226) -- (-0.4734,0.7971)
+                                     -- (-0.4038,0.6515) -- (-0.3127,0.4894) -- (-0.2051,0.3147)
+                                     -- (-0.08684,0.1318) -- (0.03595,-0.05447) -- (0.1569,-0.2394)
+                                     -- (0.2696,-0.418) -- (0.3682,-0.5859) -- (0.4473,-0.7388)
+                                     -- (0.5024,-0.873) -- (0.5299,-0.9855) -- (0.5274,-1.074)
+                                     -- (0.494,-1.137) -- (0.4299,-1.173) -- (0.3366,-1.184)
+                                     -- (0.2172,-1.169) -- (0.07558,-1.132) -- (-0.08312,-1.073)
+                                     -- (-0.253,-0.9971) -- (-0.4276,-0.9068) -- (-0.6001,-0.8063)
+                                     -- (-0.7635,-0.6994) -- (-0.9113,-0.5902);
+
+        \draw [line width=.6pt] (-1.18431, -0.959643) -- (-0.638322, -0.220787)
+                                (0.693671, 0.175596) -- (1.23965, 0.914452);
+
+        \end{tikzpicture}
+
+        </latex-image>
+      </image>
+    </aside>
+
+    <definition xml:id="def_parametrized_surface">
+      <title>Parametrized Surface</title>
+      <statement>
+        <p>
+          Let <m>\vec r(u,v) = \langle\, f(u,v),g(u,v),h(u,v)\rangle</m>
+          be a vector-valued function that is continuous and one to one on the interior of its domain <m>R</m> in the <m>u</m>-<m>v</m> plane.
+          The set of all terminal points of <m>\vec r</m> (<ie/>, the <term>range</term>
+          of <m>\vec r</m> ) is the <term>surface</term>
+          <m>\surfaceS</m>, and <m>\vec r</m> along with its domain <m>R</m> form a
+          <term>parametrization</term> of <m>\surfaceS</m>.
+        </p>
+
+        <p>
+          This parametrization is <term>smooth</term>
+          on <m>R</m> if <m>\vec r_u</m> and <m>\vec r_v</m> are continuous and
+          <m>\vec r_u\times \vec r_v</m> is never <m>\vec 0</m> on the interior of <m>R</m>.
+              <idx><h>surface</h></idx>
+              <idx><h>parametric equations</h><h>of a surface</h></idx>
+              <idx><h>parametrized surface</h></idx>
+              <idx><h>smooth</h><h>surface</h></idx>
+              <idx><h>surface</h><h>smooth</h></idx>
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      Given a point <m>(u_0,v_0)</m> in the domain of a vector-valued function <m>\vec r</m>,
+      the vectors <m>\vec r_u(u_0,v_0)</m> and
+      <m>\vec r_v(u_0,v_0)</m> are tangent to the surface <m>\surfaceS</m> at
+      <m>\vec r(u_0,v_0)</m> (a proof of this is developed later in this section).
+      The definition of smoothness dictates that <m>\vec r_u\times \vec r_v \neq \vec 0</m>;
+      this ensures that neither <m>\vec r_u</m> nor <m>\vec r_v</m> are <m>\vec 0</m>,
+      nor are they ever parallel.
+      Therefore smoothness guarantees that <m>\vec r_u</m> and
+      <m>\vec r_v</m> determine a plane that is tangent to <m>\surfaceS</m>.
+    </p>
+
+    <aside>
+      <p>
+        Recall that function is <em>one to one</em>
+        on its domain if the function never repeats an output value over the domain.
+        In the case of <m>\vec r(u,v)</m>,
+        <m>\vec r</m> is one to one if <m>\vec r(u_1,v_1) \neq \vec r(u_2,v_2)</m> for all points
+        <m>(u_1,v_1) \neq (u_2,v_2)</m> in the domain of <m>\vec r</m>.
+            <idx><h>one to one</h></idx>
+      </p>
+    </aside>
+
+    <p>
+      A surface <m>\surfaceS</m> is said to be <em>orientable</em>
+          <idx><h>orientable</h></idx>
+      if a field of normal vectors can be defined on <m>\surfaceS</m> that vary continuously along <m>\surfaceS</m>. This definition may be hard to understand;
+      it may help to know that orientable surfaces are often called <q>two sided.</q>
+      A sphere is an orientable surface,
+      and one can easily envision an <q>inside</q>
+      and <q>outside</q> of the sphere.
+      A paraboloid is orientable,
+      where again one can generally envision
+      <q>inside</q> and <q>outside</q> sides
+      (or <q>top</q> and <q>bottom</q> sides)
+      to this surface.
+      Just about every surface that one can imagine is orientable,
+      and we'll assume all surfaces we deal with in this text are orientable.
+    </p>
+
+    <p>
+      <idx><h>Möbius band</h></idx>
+
+      It is enlightening to examine a classic non-orientable surface:
+      the Möbius band, shown in <xref ref="fig_mobius">Figure</xref>.
+      Vectors normal to the surface are given,
+      starting at the point indicated in the figure.
+      These normal vectors <q>vary continuously</q>
+      as they move along the surface.
+      Letting each vector indicate the
+      <q>top</q> side of the band,
+      we can easily see near any vector which side is the <q>top</q>.
+    </p>
+
+    <p>
+      However, if as we progress along the band,
+      we recognize that we are labeling
+      <q>both sides</q> of the band as the top;
+      in fact, there are not two <q>sides</q> to this band, but one.
+      The Möbius band is a non-orientable surface.
+    </p>
+
+    <figure xml:id="fig_mobius">
+      <caption>A Möbius band, a non-orientable surface</caption>
+      <image xml:id="img_mobius_3D" width="47%">
+        <description></description>
+        <asymptote>
+
+
+
+          //ASY file for fig3d_proj3D.asy in Chapter 13
+
+          size(282,282,Aspect);
+          //currentprojection=perspective(7,2,1);
+          currentprojection=orthographic(6.7,-2,1.9);
+          defaultrender.merge=true;
+
+          // setup and draw the axes
+          //real[] myxchoice={2};
+          //real[] myychoice={1,2};
+          //real[] myzchoice={2,4};
+          //defaultpen(0.5mm);
+
+          //pair xbounds=(-0.5,2.5);
+          //pair ybounds=(-0.5,2.25);
+          //pair zbounds=(-0.5,4.5);
+
+          //xaxis3("",xbounds.x,xbounds.y,black,OutTicks(myxchoice),Arrow3(size=3mm));
+          //yaxis3("",ybounds.x,ybounds.y,black,OutTicks(myychoice),Arrow3(size=3mm));
+          //zaxis3("",zbounds.x,zbounds.y,black,OutTicks(myzchoice),Arrow3(size=3mm));
+
+          //label("$x$",(xbounds.y+0.05*(xbounds.y-xbounds.x),0,0));
+          //label("$y$",(0,ybounds.y+0.05*(ybounds.y-ybounds.x),0));
+          //label("$z$",(0,0,zbounds.y+0.05*(zbounds.y-zbounds.x)));
+
+          //plane z=2y
+          triple f(pair t) {
+            return ((1+t.y/2*cos(t.x/2))*cos(t.x),(1+t.y/2*cos(t.x/2))*sin(t.x),t.y/2*sin(t.x/2));
+          }
+          surface s=surface(f,(0,-.3),(2*pi,.3),50,5);
+          pen p=bluepen+.1mm;
+          draw(s,simplesurfacepen,meshpen=p);
+
+          triple g(real t) {
+            return f((t,.3));
+          }
+
+          path3 mypath=graph(g,-2pi,2pi,operator ..);
+          draw(mypath,bluepen+linewidth(1));
+
+          //
+          //  Attempted various ways of getting a normal vector. Turns out all
+          //  were probably ok, it was just that the aspect ratio was off.
+          //  Used ``Aspect'' in the orthographic line above to fix it.
+          //
+
+          triple n(real t) {
+            return (.5*cos(t)*sin(t/2),(1/2)*(sin(t/2)*sin(t)),-.5*cos(t/2));
+            }
+          //(.5*cos(t)*sin(t/2),(1/4)*(cos(t/2)-cos(3*t/2)),-.5*cos(t/2))
+
+          //for(real i=0; i&lt;=2*pi;i=i+2pi/10) {
+          //draw(f((i,0.)) -- (f((i,0.))+n(i)),rgb(1-i/(2pi),0,i/(2pi))+.2mm,Arrow3);
+          //}
+
+          //draw((f((0,0)).x,0,0) -- (1,0,-.5),redpen+.2mm,Arrow3);
+          //draw((0.309017, 0.951057, 0.) -- (0.399835, 1.23057, -0.404508),rgb(.9,0,.1)+.2mm,Arrow3);
+          //draw((-0.809017, 0.587785, 0.) -- (-1.19373, 0.867294, -0.154508),rgb(.5,0,.5)+.2mm,Arrow3);
+          //draw((0.309017, -0.951057, 0.) -- (0.399835, -1.23057, 0.404508),rgb(.1,0,.9)+.2mm,Arrow3);
+
+          //
+          //  Final method of drawing normal vectors.
+          //
+
+          if(incolor) {
+            for(real i=0; i&lt;=2pi; i=i+2pi/20) {
+            triple a = f((i+.1,0))-f((i-.1,0));
+            triple b = f((i,.1))-f((i,-.1));
+            triple c = .3*(a.y*b.z-a.z*b.y,a.z*b.x-a.x*b.z,a.x*b.y-a.y*b.x)/sqrt(((a.y*b.z-a.z*b.y)^2+(a.z*b.x-a.x*b.z)^2+(a.x*b.y-a.y*b.x)^2));
+            draw(f((i,0)) -- (f((i,0))+c),rgb(1-i/(2pi),0,i/(2pi))+.2mm,Arrow3);
+            }
+          } else {
+            for(real i=0; i&lt;=2pi; i=i+2pi/20) {
+            triple a = f((i+.1,0))-f((i-.1,0));
+            triple b = f((i,.1))-f((i,-.1));
+            triple c = .3*(a.y*b.z-a.z*b.y,a.z*b.x-a.x*b.z,a.x*b.y-a.y*b.x)/sqrt(((a.y*b.z-a.z*b.y)^2+(a.z*b.x-a.x*b.z)^2+(a.x*b.y-a.y*b.x)^2));
+            draw(f((i,0)) -- (f((i,0))+c),rgb(.75*i/(2pi),.75*i/(2pi),.75*i/(2pi))+.2mm,Arrow3);
+            }
+          }
+
+          triple a = f((0+.1,0))-f((0-.1,0));
+          triple b = f((0,.1))-f((0,-.1));
+          triple c = .3*(a.y*b.z-a.z*b.y,a.z*b.x-a.x*b.z,a.x*b.y-a.y*b.x)/sqrt(((a.y*b.z-a.z*b.y)^2+(a.z*b.x-a.x*b.z)^2+(a.x*b.y-a.y*b.x)^2));
+          label("end",(f((0,0))+c-(0,0,.1)));
+
+          triple a = f((2pi+.1,0))-f((2pi-.1,0));
+          triple b = f((2pi,.1))-f((2pi,-.1));
+          triple c = .3*(a.y*b.z-a.z*b.y,a.z*b.x-a.x*b.z,a.x*b.y-a.y*b.x)/sqrt(((a.y*b.z-a.z*b.y)^2+(a.z*b.x-a.x*b.z)^2+(a.x*b.y-a.y*b.x)^2));
+          label("start",(f((2pi,0))+c+(0,0,.1)));
+
+        </asymptote>
+      </image>
+    </figure>
+
+    <p>
+      We now practice parametrizing surfaces.
+    </p>
+
+    <example xml:id="ex_parsurf1">
+      <title>Parametrizing a surface over a rectangle</title>
+      <statement>
+        <p>
+          Parametrize the surface <m>z=x^2+2y^2</m> over the rectangular region <m>R</m> defined by
+          <m>-3\leq x\leq 3</m>, <m>-1\leq y\leq 1</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          There is a straightforward way to parametrize a surface of the form
+          <m>z=f(x,y)</m> over a rectangular domain.
+          We let <m>x=u</m> and <m>y=v</m>,
+          and let <m>\vec r(u,v) = \langle u,v, f(u,v)\rangle</m>.
+          In this instance,
+          we have <m>\vec r(u,v) = \langle u,v,u^2+2v^2\rangle</m>,
+          for <m>-3\leq u\leq 3</m>, <m>-1\leq v\leq 1</m>.
+          This surface is graphed in <xref ref="fig_parsurf1">Figure</xref>.
+        </p>
+
+        <figure xml:id="fig_parsurf1">
+          <caption>The surface parametrized in <xref ref="ex_parsurf1">Example</xref></caption>
+          <image xml:id="img_parsurf1" width="47%">
+            <description></description>
+            <asymptote>
+
+
+
+              //ASY file for figparsurf1_3D.asy in Chapter 13
+
+              size(282,282,IgnoreAspect);
+              //currentprojection=perspective(7,2,1);
+              currentprojection=orthographic(11.9,9.6,17.8);
+              defaultrender.merge=true;
+
+              // setup and draw the axes
+              real[] myxchoice={-3,3};
+              real[] myychoice={-3,3};
+              real[] myzchoice={5,10};
+              defaultpen(0.5mm);
+
+              pair xbounds=(-3.5,3.5);
+              pair ybounds=(-3.5,3.5);
+              pair zbounds=(-1,12);
+
+              xaxis3("",xbounds.x,xbounds.y,black,OutTicks(myxchoice),Arrow3(size=3mm));
+              yaxis3("",ybounds.x,ybounds.y,black,OutTicks(myychoice),Arrow3(size=3mm));
+              zaxis3("",zbounds.x,zbounds.y,black,OutTicks(myzchoice),Arrow3(size=3mm));
+
+              label("$x$",(xbounds.y+0.05*(xbounds.y-xbounds.x),0,0));
+              label("$y$",(0,ybounds.y+0.05*(ybounds.y-ybounds.x),0));
+              label("$z$",(0,0,zbounds.y+0.05*(zbounds.y-zbounds.x)));
+
+              //Draw the top half of the surface z^2 = x^2+2y^2
+              triple f(pair t) {
+                return (t.x,t.y,t.x^2+2*t.y^2);//
+              }
+              surface s=surface(f,(-3,-1),(3,1),16,16,usplinetype=new splinetype[] {notaknot,notaknot,monotonic},vsplinetype=new splinetype[] {notaknot,notaknot,monotonic});
+              pen p=apexmeshpen;
+              draw(s,surfacepen,meshpen=p);
+
+              //triple g(real t) {return(cos(t),sin(t),t/(2*pi));}
+              //path3 mypath=graph(g,0,2pi,operator ..);
+              draw(surface((3,1,0)--(3,-1,0)--(-3,-1,0)--(-3,1,0)--cycle),curvepen+opacity(.5));
+              draw((3,1,0)--(3,-1,0)--(-3,-1,0)--(-3,1,0)--cycle,curvepen);
+
+            </asymptote>
+          </image>
+        </figure>
+      </solution>
+    </example>
+
+    <example xml:id="ex_parsurf2">
+      <title>Parametrizing a surface over a circular disk</title>
+      <statement>
+        <p>
+          Parametrize the surface <m>z=x^2+2y^2</m> over the circular region <m>R</m> enclosed by the circle of radius 2 that is centered at the origin.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We can parametrize the circular boundary of <m>R</m> with the vector-valued function <m>\la 2\cos u,2\sin u\ra</m>,
+          where <m>0\leq u\leq 2\pi</m>.
+          We can obtain the interior of <m>R</m> by scaling this function by a variable amount,
+          <ie/>, by multiplying by <m>v</m>:
+          <m>\la 2v\cos u,2v\sin u\ra</m>,
+          where <m>0\leq v\leq 1</m>.
+        </p>
+
+        <p>
+          It is important to understand the role of <m>v</m> in the above function.
+          When <m>v=1</m>,
+          we get the boundary of <m>R</m>, a circle of radius 2.
+          When <m>v=0</m>, we simply get the point <m>(0,0)</m>,
+          the center of <m>R</m>
+          (which can be thought of as a circle with radius of 0).
+          When <m>v=1/2</m>,
+          we get the circle of radius <m>1</m> that is centered at the origin,
+          which is the circle <em>halfway</em>
+          between the boundary and the center.
+          As <m>v</m> varies from 0 to 1, we create a series of concentric circles that fill out all of <m>R</m>.
+        </p>
+
+        <figure xml:id="fig_parsurf2">
+          <caption>The surface parametrized in <xref ref="ex_parsurf2">Example</xref></caption>
+          <image xml:id="fig_parsurf2_3D" width="47%">
+            <description></description>
+            <asymptote>
+
+
+
+              //ASY file for figparsurf1_3D.asy in Chapter 13
+
+              size(282,282,IgnoreAspect);
+              //currentprojection=perspective(7,2,1);
+              currentprojection=orthographic(11.9,9.6,17.8);
+              defaultrender.merge=true;
+
+              // setup and draw the axes
+              real[] myxchoice={-3,3};
+              real[] myychoice={-3,3};
+              real[] myzchoice={5,10};
+              defaultpen(0.5mm);
+
+              pair xbounds=(-3.5,3.5);
+              pair ybounds=(-3.5,3.5);
+              pair zbounds=(-1,12);
+
+              xaxis3("",xbounds.x,xbounds.y,black,OutTicks(myxchoice),Arrow3(size=3mm));
+              yaxis3("",ybounds.x,ybounds.y,black,OutTicks(myychoice),Arrow3(size=3mm));
+              zaxis3("",zbounds.x,zbounds.y,black,OutTicks(myzchoice),Arrow3(size=3mm));
+
+              label("$x$",(xbounds.y+0.05*(xbounds.y-xbounds.x),0,0));
+              label("$y$",(0,ybounds.y+0.05*(ybounds.y-ybounds.x),0));
+              label("$z$",(0,0,zbounds.y+0.05*(zbounds.y-zbounds.x)));
+
+
+              //Draw the top half of the surface z^2 = x^2+2y^2
+              triple f(pair t) {
+                return (2*t.y*cos(t.x),2*t.y*sin(t.x),(2*t.y*cos(t.x))^2+2*(2*t.y*sin(t.x))^2);//
+              }
+              surface s=surface(f,(0,0),(2pi,1),16,16,usplinetype=new splinetype[] {notaknot,notaknot,monotonic},vsplinetype=new splinetype[] {notaknot,notaknot,monotonic});
+              pen p=apexmeshpen;
+              draw(s,surfacepen,meshpen=p);
+
+
+              triple g(real t) {
+                return (2*cos(t),2*sin(t),0);
+                }
+
+              //triple g(real t) {return(cos(t),sin(t),t/(2*pi));}
+              path3 mypath=graph(g,0,2pi,operator ..);
+              draw(surface(mypath--cycle),curvepen+opacity(.5));
+              draw(mypath,curvepen);
+
+
+            </asymptote>
+          </image>
+        </figure>
+
+        <p>
+          Thus far, we have determined the <m>x</m> and <m>y</m> components of our parametrization of the surface:
+          <m>x=2v\cos u</m> and <m>y=2v\sin u</m>.
+          We find the <m>z</m> component simply by using <m>z = f(x,y) = x^2+2y^2</m>:
+          <me>
+            z = (2v\cos u)^2+2(2v\sin u)^2 = 4v^2\cos^2u+8v^2\sin^2u
+          </me>.
+        </p>
+
+        <p>
+          Thus <m>\vec r(u,v) = \langle 2v\cos u,2v\sin u,4v^2\cos^2u+8v^2\sin^2u\rangle</m>,
+          <m>0\leq u\leq 2\pi</m>, <m>0\leq v\leq 1</m>,
+          which is graphed in <xref ref="fig_parsurf2">Figure</xref>.
+          The way that this graphic was generated highlights how the surface was parametrized.
+          When viewing from above, one can see lines emanating from the origin;
+          they represent different values of <m>u</m> as <m>u</m> sweeps from an angle of 0 up to <m>2\pi</m>.
+          One can also see concentric circles,
+          each corresponding to a different value of <m>v</m>.
+        </p>
+      </solution>
+    </example>
+
+    <p>
+      <xref ref="ex_parsurf1">Examples</xref>
+      and <xref ref="ex_parsurf2"/>
+      demonstrate an important principle when parametrizing surfaces given in the form
+      <m>z=f(x,y)</m> over a region <m>R</m>:
+      if one can determine <m>x</m> and <m>y</m> in terms of <m>u</m> and <m>v</m>,
+      then <m>z</m> follows directly as <m>z=f(x,y)</m>.
+    </p>
+
+    <p>
+      In the following two examples,
+      we parametrize the same surface over triangular regions.
+      Each will use <m>v</m> as a <q>scaling factor</q>
+      as done in <xref ref="ex_parsurf2">Example</xref>.
+    </p>
+
+    <example xml:id="ex_parsurf3">
+      <title>Parametrizing a surface over a triangle</title>
+      <statement>
+        <p>
+          Parametrize the surface <m>z=x^2+2y^2</m> over the triangular region <m>R</m> enclosed by the coordinate axes and the line <m>y=2-2x/3</m>,
+          as shown in <xref ref="fig_parsurf3a">Figure</xref>.
+        </p>
+        <figure xml:id="fig_parsurf3">
+          <caption>Part (a) shows a graph of the region <m>R</m>, and part (b) shows the surface over <m>R</m>, as defined in <xref ref="ex_parsurf3">Example</xref></caption>
+          <sidebyside widths="47% 47%" valign="bottom" margins="0%">
+            <figure xml:id="fig_parsurf3a">
+              <caption/>
+              <image xml:id="img_parsurf3a">
+                <description></description>
+                <latex-image>
+
+                \begin{tikzpicture}
+
+                \begin{axis}[
+                  xtick={1,2,3},
+                  ytick={1,2,3},
+                  ymin=-.5,ymax=3.5,
+                  xmin=-.5,xmax=3.5,
+                ]
+
+                \filldraw [thick,draw=firstcolor,fill=firstcolor!15] (axis cs: 0,0) -- (axis cs: 0,2) -- (axis cs: 3,0) node [pos=.5,sloped,above] { $y = 2-2x/3$} -- cycle;
+
+                \draw [thick,dashed,draw=secondcolor] (axis cs: 3,0) -- (axis cs: 0,1);
+                \draw (axis cs: .5,.5) node {$R$};
+
+                \end{axis}
+
+                \end{tikzpicture}
+
+                </latex-image>
+              </image>
+            </figure>
+
+            <figure xml:id="fig_parsurf3b_3D">
+              <caption/>
+              <image xml:id="img_parsurf3b_3D">
+                <description></description>
+                <asymptote>
+
+
+
+                  //ASY file for figparsurf1_3D.asy in Chapter 13
+
+                  size(282,282,IgnoreAspect);
+                  //currentprojection=perspective(7,2,1);
+                  currentprojection=orthographic(11.9,9.6,17.8);
+                  defaultrender.merge=true;
+
+                  // setup and draw the axes
+                  real[] myxchoice={-3,3};
+                  real[] myychoice={-3,3};
+                  real[] myzchoice={5,10};
+                  defaultpen(0.5mm);
+
+                  pair xbounds=(-3.5,3.5);
+                  pair ybounds=(-3.5,3.5);
+                  pair zbounds=(-1,12);
+
+                  xaxis3("",xbounds.x,xbounds.y,black,OutTicks(myxchoice),Arrow3(size=3mm));
+                  yaxis3("",ybounds.x,ybounds.y,black,OutTicks(myychoice),Arrow3(size=3mm));
+                  zaxis3("",zbounds.x,zbounds.y,black,OutTicks(myzchoice),Arrow3(size=3mm));
+
+                  label("$x$",(xbounds.y+0.05*(xbounds.y-xbounds.x),0,0));
+                  label("$y$",(0,ybounds.y+0.05*(ybounds.y-ybounds.x),0));
+                  label("$z$",(0,0,zbounds.y+0.05*(zbounds.y-zbounds.x)));
+
+                  //Draw the top half of the surface z^2 = x^2+2y^2
+                  triple f(pair t) {
+                    return (t.x,t.y*(2-.666*t.x),(t.x)^2+2*(t.y*(2-.666*t.x))^2);//
+                  }
+                  surface s=surface(f,(0,0),(3,1),16,16,usplinetype=new splinetype[] {notaknot,notaknot,monotonic},vsplinetype=new splinetype[] {notaknot,notaknot,monotonic});
+                  pen p=apexmeshpen;
+                  draw(s,surfacepen,meshpen=p);
+
+                  //triple g(real t) {return(cos(t),sin(t),t/(2*pi));}
+                  //path3 mypath=graph(g,0,2pi,operator ..);
+                  draw(surface((0,0,0)--(0,2,0)--(3,0,0)--cycle),curvepen+opacity(.5));
+                  draw((0,0,0)--(0,2,0)--(3,0,0)--cycle,curvepen);
+
+                </asymptote>
+              </image>
+            </figure>
+          </sidebyside>
+        </figure>
+      </statement>
+      <solution>
+        <p>
+          We may begin by letting <m>x=u</m>,
+          <m>0\leq u\leq 3</m>, and <m>y = 2-2u/3</m>.
+          This gives only the line on the
+          <q>upper</q> side of the triangle.
+          To get all of the region <m>R</m>,
+          we can once again scale <m>y</m> by a variable factor,
+          <m>v</m>.
+        </p>
+
+        <p>
+          Still letting <m>x = u</m>,
+          <m>0\leq u\leq 3</m>, we let
+          <m>y = v(2-2u/3)</m>, <m>0\leq v\leq 1</m>.
+          When <m>v=0</m>,
+          all <m>y</m>-values are 0, and we get the portion of the <m>x</m>-axis between <m>x=0</m> and <m>x=3</m>.
+          When <m>v=1</m>, we get the upper side of the triangle.
+          When <m>v=1/2</m>, we get the line <m>y=1/2(2-2u/3) = 1-u/3</m>,
+          which is the line <q>halfway up</q> the triangle,
+          shown in the figure with a dashed line.
+        </p>
+
+        <p>
+          Letting <m>z = f(x,y) = x^2+2y^2</m>,
+          we have <m>\vec r(u,v) = \langle u, v(2-2u/3),
+          u^2+2\big(v(2-2u/3)\big)^2\rangle</m>,
+          <m>0\leq u\leq 3</m>, <m>0\leq v\leq 1</m>.
+          This surface is graphed in <xref ref="fig_parsurf3b_3D">Figure</xref>.
+          Again, when one looks from above,
+          we can see the scaling effects of <m>v</m>:
+          the series of lines that run to the point <m>(3,0)</m> each represent a different value of <m>v</m>.
+        </p>
+
+        <p>
+          Another common way to parametrize the surface is to begin with <m>y=u</m>,
+          <m>0\leq u\leq 2</m>.
+          Solving the equation of the line <m>y=2-2x/3</m> for <m>x</m>,
+          we have <m>x = 3-3y/2</m>,
+          leading to using <m>x=v(3-3u/2)</m>, <m>0\leq v\leq 1</m>.
+          With <m>z=x^2+2y^2</m>,
+          we have <m>\vec r(u,v) = \langle v(3-3u/2),u, \big(v(3-3u/2)\big)^2+2v^2\rangle</m>,
+          <m>0\leq u\leq 2</m>, <m>0\leq v\leq 1</m>.
+        </p>
+      </solution>
+    </example>
+
+    <example xml:id="ex_parsurf4">
+      <title>Parametrizing a surface over a triangle</title>
+      <statement>
+        <p>
+          Parametrize the surface <m>z=x^2+2y^2</m> over the triangular region <m>R</m> enclosed by the lines <m>y=3-2x/3</m>,
+          <m>y=1</m> and <m>x=0</m> as shown in <xref ref="fig_parsurf4a">Figure</xref>.
+        </p>
+        <figure xml:id="fig_parsurf4">
+          <caption>Part (a) shows a graph of the region <m>R</m>, and part (b) shows the surface over <m>R</m>, as defined in <xref ref="ex_parsurf4">Example</xref></caption>
+          <sidebyside widths="47% 47%" valign="bottom" margins="0%">
+            <figure xml:id="fig_parsurf4a">
+              <caption/>
+              <image xml:id="img_parsurf4a">
+                <description></description>
+                <latex-image>
+
+                \begin{tikzpicture}
+
+                \begin{axis}[
+                  xtick={1,2,3},
+                  ytick={1,2,3},
+                  ymin=-.5,ymax=3.5,
+                  xmin=-.5,xmax=3.5,
+                ]
+
+                \filldraw [thick,draw=firstcolor,fill=firstcolor!15] (axis cs: 0,1) -- (axis cs: 0,3) -- (axis cs: 3,1) node [pos=.5,sloped,above] { $y = 3-2x/3$} -- cycle;
+
+                \draw (axis cs: 1,1.75) node {$R$};
+
+                \end{axis}
+                \end{tikzpicture}
+
+                </latex-image>
+              </image>
+            </figure>
+
+            <figure xml:id="fig_parsurf4b_3D">
+              <caption/>
+              <image xml:id="img_parsurf4b_3D">
+                <description></description>
+                <asymptote>
+
+
+
+                  //ASY file for figparsurf4_3D.asy in Chapter 13
+
+                  size(282,282,IgnoreAspect);
+                  //currentprojection=perspective(7,2,1);
+                  currentprojection=orthographic(11.9,9.6,17.8);
+                  defaultrender.merge=true;
+
+                  // setup and draw the axes
+                  real[] myxchoice={-3,3};
+                  real[] myychoice={-3,3};
+                  real[] myzchoice={5,10};
+                  defaultpen(0.5mm);
+
+                  pair xbounds=(-3.5,3.5);
+                  pair ybounds=(-3.5,3.5);
+                  pair zbounds=(-1,12);
+
+                  xaxis3("",xbounds.x,xbounds.y,black,OutTicks(myxchoice),Arrow3(size=3mm));
+                  yaxis3("",ybounds.x,ybounds.y,black,OutTicks(myychoice),Arrow3(size=3mm));
+                  zaxis3("",zbounds.x,zbounds.y,black,OutTicks(myzchoice),Arrow3(size=3mm));
+
+                  label("$x$",(xbounds.y+0.05*(xbounds.y-xbounds.x),0,0));
+                  label("$y$",(0,ybounds.y+0.05*(ybounds.y-ybounds.x),0));
+                  label("$z$",(0,0,zbounds.y+0.05*(zbounds.y-zbounds.x)));
+
+                  //Draw the top half of the surface z^2 = x^2+2y^2
+                  triple f(pair t) {
+                    return (t.x,1+t.y*(2-.666*t.x),(t.x)^2+2*(1+t.y*(2-.666*t.x))^2);//
+                  }
+                  surface s=surface(f,(0,0),(3,1),16,16,usplinetype=new splinetype[] {notaknot,notaknot,monotonic},vsplinetype=new splinetype[] {notaknot,notaknot,monotonic});
+                  pen p=apexmeshpen;
+                  draw(s,surfacepen,meshpen=p);
+
+                  //triple g(real t) {return(cos(t),sin(t),t/(2*pi));}
+                  //path3 mypath=graph(g,0,2pi,operator ..);
+                  draw(surface((0,1,0)--(0,3,0)--(3,1,0)--cycle),curvepen+opacity(.5));
+                  draw((0,1,0)--(0,3,0)--(3,1,0)--cycle,curvepen);
+
+                </asymptote>
+              </image>
+            </figure>
+          </sidebyside>
+
+        </figure>
+      </statement>
+      <solution>
+        <p>
+          While the region <m>R</m> in this example is very similar to the region <m>R</m> in the previous example,
+          and our method of parametrizing the surface is fundamentally the same,
+          it will feel as though our answer is much different than before.
+        </p>
+
+        <p>
+          We begin with letting <m>x=u</m>, <m>0\leq u\leq 3</m>.
+          We may be tempted to let <m>y = v(3-2u/3)</m>,
+          <m>0\leq v\leq 1</m>, but this is incorrect.
+          When <m>v = 1</m>,
+          we obtain the upper line of the triangle as desired.
+          However, when <m>v=0</m>,
+          the <m>y</m>-value is 0, which does not lie in the region <m>R</m>.
+        </p>
+
+        <p>
+          We will describe the general method of proceeding following this example.
+          For now, consider <m>y = 1+v(2-2u/3)</m>, <m>0\leq v\leq 1</m>.
+          Note that when <m>v=1</m>,
+          we have <m>y=3-2u/3</m>, the upper line of the boundary of <m>R</m>.
+          Also, when <m>v=0</m>, we have <m>y=1</m>,
+          which is the lower boundary of <m>R</m>.
+          With <m>z=x^2+2y^2</m>,
+          we determine <m>\vec r(u,v) = \langle u, 1+v(2-2u/3),
+          u^2+2\big(1+v(2-2u/3)\big)^2\rangle</m>,
+          <m>0\leq u\leq 3</m>, <m>0\leq v\leq 1</m>.
+        </p>
+
+        <p>
+          The surface is graphed in <xref ref="fig_parsurf4b_3D">Figure</xref>.
+        </p>
+      </solution>
+    </example>
+
+    <p>
+      Given a surface of the form <m>z=f(x,y)</m>,
+      one can often determine a parametrization of the surface over a region <m>R</m> in a manner similar to determining bounds of integration over a region <m>R</m>.
+      Using the techniques of <xref ref="sec_iterated_integrals">Section</xref>,
+      suppose a region <m>R</m> can be described by <m>a\leq x\leq b</m>,
+      <m>g_1(x) \leq y\leq g_2(x)</m>,
+      <ie/>, the area of <m>R</m> can be found using the iterated integral
+      <me>
+        \int_a^b\int_{g_1(x)}^{g_2(x)}\, dy\, dx
+      </me>.
+    </p>
+
+    <p>
+      When parametrizing the surface,
+      we can let <m>x=u</m>, <m>a\leq u\leq b</m>,
+      and we can let <m>y = g_1(u)+v\big(g_2(u)-g_1(u)\big)</m>,
+      <m>0\leq v\leq 1</m>.
+      The parametrization of <m>x</m> is straightforward,
+      but look closely at how <m>y</m> is determined.
+      When <m>v=0</m>, <m>y=g_1(u) = g_1(x)</m>.
+      When <m>v=1</m>, <m>y= g_2(u)=g_2(x)</m>.
+    </p>
+
+    <p>
+      As a specific example,
+      consider the triangular region <m>R</m> from <xref ref="ex_parsurf4">Example</xref>,
+      shown in <xref ref="fig_parsurf4a">Figure</xref>.
+      Using the techniques of <xref ref="sec_iterated_integrals">Section</xref>,
+      we can find the area of <m>R</m> as
+      <me>
+        \int_0^3\int_1^{3-2x/3} dy\, dx
+      </me>.
+    </p>
+
+    <p>
+      Following the above discussion,
+      we can set <m>x=u</m>, where <m>0\leq u\leq 3</m>,
+      and set <m>y = 1+ v\big(3-2u/3-1\big) = 1+v(2-2u/3)</m>,
+      <m>0\leq v\leq 1</m>, as used in that example.
+    </p>
+
+    <p>
+      One can do a similar thing if <m>R</m> is bounded by <m>c\leq y\leq d</m>,
+      <m>h_1(y)\leq x\leq h_2(y)</m>,
+      but for the sake of simplicity we leave it to the reader to flesh out those details.
+      The principles outlined above are given in the following Key Idea for reference.
+    </p>
+
+    <insight xml:id="idea_parametrizing_surfaces">
+      <title>Parametrizing Surfaces</title>
+      <p>
+        Let a surface <m>\surfaceS</m> be the graph of a function <m>f(x,y)</m>,
+        where the domain of <m>f</m> is a closed,
+        bounded region <m>R</m> in the <m>xy</m>-plane.
+        Let <m>R</m> be bounded by <m>a\leq x\leq b</m>,
+        <m>g_1(x)\leq y\leq g_2(x)</m>,
+        <ie/>, the area of <m>R</m> can be found using the iterated integral <m>\int_a^b\int_{g_1(x)}^{g_2(x)}\, dy\, dx</m>,
+        and let <m>h(u,v) = g_1(u)+v\big(g_2(u)-g_1(u)\big)</m>.
+      </p>
+
+      <p>
+        <m>\surfaceS</m> can be parametrized as
+        <me>
+          \vec r(u,v) = \la u, h(u,v), f\big(u,h(u,v)\big)\ra, a\leq u\leq b,\ 0\leq v\leq 1
+        </me>.
+      </p>
+    </insight>
+
+    <example xml:id="ex_parsurf5">
+      <title>Parametrizing a cylindrical surface</title>
+      <statement>
+        <p>
+          Find a parametrization of the cylinder <m>x^2 + z^2/4=1</m>,
+          where <m>-1\leq y\leq 2</m>,
+          as shown in <xref ref="fig_parsurf5">Figure</xref>.
+        </p>
+        <figure xml:id="fig_parsurf5">
+          <caption>The cylinder parametrized in <xref ref="ex_parsurf5">Example</xref></caption>
+          <image xml:id="img_parsurf5_3D" width="47%">
+            <description></description>
+            <asymptote>
+
+
+
+              //ASY file for figparsurf5_3D.asy in Chapter 13
+
+              size(282,282,IgnoreAspect);
+              //currentprojection=perspective(7,2,1);
+              currentprojection=orthographic(20.4,10,4.6);
+              defaultrender.merge=true;
+
+              // setup and draw the axes
+              real[] myxchoice={-2,2};
+              real[] myychoice={-2,2};
+              real[] myzchoice={-2,2};
+              defaultpen(0.5mm);
+
+              pair xbounds=(-2.5,2.5);
+              pair ybounds=(-2.5,2.5);
+              pair zbounds=(-2.5,2.5);
+
+              xaxis3("",xbounds.x,xbounds.y,black,OutTicks(myxchoice),Arrow3(size=3mm));
+              yaxis3("",ybounds.x,ybounds.y,black,OutTicks(myychoice),Arrow3(size=3mm));
+              zaxis3("",zbounds.x,zbounds.y,black,OutTicks(myzchoice),Arrow3(size=3mm));
+
+              label("$x$",(xbounds.y+0.05*(xbounds.y-xbounds.x),0,0));
+              label("$y$",(0,ybounds.y+0.05*(ybounds.y-ybounds.x),0));
+              label("$z$",(0,0,zbounds.y+0.05*(zbounds.y-zbounds.x)));
+
+              //Draw the cylinder  x^2+z^2/4=1
+              triple f(pair t) {
+                return (cos(t.x),t.y,2sin(t.x));//
+              }
+              surface s=surface(f,(0,-1),(2pi,2),16,16,usplinetype=new splinetype[] {notaknot,notaknot,monotonic},vsplinetype=new splinetype[] {notaknot,notaknot,monotonic});
+              pen p=apexmeshpen;
+              draw(s,surfacepen,meshpen=p);
+
+              triple g(real t) {return(cos(t),-1,2sin(t));}
+              path3 mypath=graph(g,0,2pi,operator ..);
+              draw(mypath,curvepen);
+
+              triple g(real t) {return(cos(t),2,2sin(t));}
+              path3 mypath=graph(g,0,2pi,operator ..);
+              draw(mypath,curvepen);
+
+              //draw((0,1,0)--(0,3,0)--(3,1,0)--cycle,curvepen);
+
+            </asymptote>
+          </image>
+        </figure>
+      </statement>
+      <solution>
+        <p>
+          The equation <m>x^2+z^2/4=1</m> can be envisioned to describe an ellipse in the <m>xz</m>-plane;
+          as the equation lacks a <m>y</m>-term,
+          the equation describes a cylinder
+          (recall <xref ref="def_cylinder">Definition</xref>)
+          that extends without bound parallel to the <m>y</m>-axis.
+          This ellipse has a vertical major axis of length 4, a horizontal minor axis of length 2, and is centered at the origin.
+          We can parametrize this ellipse using sines and cosines;
+          our parametrization can begin with
+          <me>
+            \vec r(u,v) = \la \cos u, \text{ ??? } , 2\sin u\ra, 0\leq u\leq 2\pi
+          </me>,
+          where we still need to determine the <m>y</m> component.
+        </p>
+
+        <p>
+          While the cylinder <m>x^2+z^2/4=1</m> is satisfied by any <m>y</m> value,
+          the problem states that all <m>y</m> values are to be between <m>y=-1</m> and <m>y=2</m>.
+          Since the value of <m>y</m> does not depend at all on the values of <m>x</m> or <m>z</m>,
+          we can use another variable, <m>v</m>, to describe <m>y</m>.
+          Our final answer is
+          <me>
+            \vec r(u,v) = \la \cos u, v, 2\sin u\ra,  0\leq u\leq 2\pi, -1\leq v\leq 2
+          </me>.
+        </p>
+      </solution>
+    </example>
+
+    <example xml:id="ex_parsurf6">
+      <title>Parametrizing an elliptic cone</title>
+      <statement>
+        <p>
+          Find a parametrization of the elliptic cone <m>z^2 = \frac{x^2}{4}+\frac{y^2}{9}</m>,
+          where <m>-2\leq z\leq 3</m>,
+          as shown in <xref ref="fig_parsurf6a">Figure</xref>.
+        </p>
+        <figure xml:id="fig_parsurf6a">
+          <caption>The elliptic cone as described in  <xref ref="ex_parsurf6">Example</xref></caption>
+          <image xml:id="img_parsurf6a" width="47%">
+            <description></description>
+            <asymptote>
+
+
+
+              //ASY file for figparsurf6a_3D.asy in Chapter 13
+
+              size(282,282,IgnoreAspect);
+              //currentprojection=perspective(7,2,1);
+              currentprojection=orthographic(20.4,10,4.6);
+              defaultrender.merge=true;
+
+              // setup and draw the axes
+              real[] myxchoice={-10,-5,5,10};
+              real[] myychoice={-10,-5,5,10};
+              real[] myzchoice={-3,3};
+              defaultpen(0.5mm);
+
+              pair xbounds=(-10.5,10.5);
+              pair ybounds=(-10.5,10.5);
+              pair zbounds=(-3.5,3.5);
+
+              xaxis3("",xbounds.x,xbounds.y,black,OutTicks(myxchoice),Arrow3(size=3mm));
+              yaxis3("",ybounds.x,ybounds.y,black,OutTicks(myychoice),Arrow3(size=3mm));
+              zaxis3("",zbounds.x,zbounds.y,black,OutTicks(myzchoice),Arrow3(size=3mm));
+
+              label("$x$",(xbounds.y+0.05*(xbounds.y-xbounds.x),0,0));
+              label("$y$",(0,ybounds.y+0.05*(ybounds.y-ybounds.x),0));
+              label("$z$",(0,0,zbounds.y+0.05*(zbounds.y-zbounds.x)));
+
+              //Draw the cone  z^2=x^2/4+y^2/9
+              triple f(pair t) {
+                return (2*t.y*cos(t.x),3*t.y*sin(t.x),t.y);//
+              }
+              surface s=surface(f,(0,-2),(2pi,3),16,16,usplinetype=new splinetype[] {notaknot,notaknot,monotonic},vsplinetype=new splinetype[] {notaknot,notaknot,monotonic});
+              pen p=apexmeshpen;
+              draw(s,surfacepen,meshpen=p);
+
+              triple g(real t) {return(-4cos(t),-6sin(t),-2);}
+              path3 mypath=graph(g,0,2pi,operator ..);
+              draw(mypath,curvepen);
+
+              triple g(real t) {return(6cos(t),9sin(t),3);}
+              path3 mypath=graph(g,0,2pi,operator ..);
+              draw(mypath,curvepen);
+
+              //draw((0,1,0)--(0,3,0)--(3,1,0)--cycle,curvepen);
+
+            </asymptote>
+          </image>
+        </figure>
+      </statement>
+      <solution>
+        <p>
+          One way to parametrize this cone is to recognize that given a <m>z</m> value,
+          the cross section of the cone at that <m>z</m> value is an ellipse with equation <m>\frac{x^2}{(2z)^2} + \frac{y^2}{(3z)^2}=1</m>.
+          We can let <m>z=v</m>, for
+          <m>-2\leq v\leq 3</m> and then parametrize the above ellipses using sines,
+          cosines and <m>v</m>.
+        </p>
+
+        <p>
+          We can parametrize the <m>x</m> component of our surface with
+          <m>x=2z\cos u</m> and the <m>y</m> component with <m>y=3z\sin u</m>,
+          where <m>0\leq u\leq 2\pi</m>.
+          Putting all components together, we have
+          <me>
+            \vec r(u,v) = \la 2v\cos u, 3v\sin u, v\ra, 0\leq u\leq 2\pi, -2\leq v\leq 3
+          </me>.
+        </p>
+
+        <p>
+          When <m>v</m> takes on negative values,
+          the radii of the cross-sectional ellipses become <q>negative,</q>
+          which can lead to some surprising results.
+          Consider <xref ref="fig_parsurf6b_3D">Figure</xref>,
+          where the cone is graphed for <m>0\leq u\leq \pi</m>.
+          Because <m>v</m> is negative below the <m>xy</m>-plane,
+          the radii of the cross-sectional ellipses are negative,
+          and the opposite side of the cone is sketched below the <m>xy</m>-plane.
+        </p>
+
+        <figure xml:id="fig_parsurf6b_3D">
+          <caption>The elliptic cone as described in  <xref ref="ex_parsurf6">Example</xref> with restricted domain</caption>
+          <image xml:id="img_parsurf6b_3D" width="47%">
+            <description></description>
+            <asymptote>
+
+
+
+              //ASY file for figparsurf6a_3D.asy in Chapter 13
+
+              size(282,282,IgnoreAspect);
+              //currentprojection=perspective(7,2,1);
+              currentprojection=orthographic(20.4,10,4.6);
+              defaultrender.merge=true;
+
+              // setup and draw the axes
+              real[] myxchoice={-10,-5,5,10};
+              real[] myychoice={-10,-5,5,10};
+              real[] myzchoice={-3,3};
+              defaultpen(0.5mm);
+
+              pair xbounds=(-10.5,10.5);
+              pair ybounds=(-10.5,10.5);
+              pair zbounds=(-3.5,3.5);
+
+              xaxis3("",xbounds.x,xbounds.y,black,OutTicks(myxchoice),Arrow3(size=3mm));
+              yaxis3("",ybounds.x,ybounds.y,black,OutTicks(myychoice),Arrow3(size=3mm));
+              zaxis3("",zbounds.x,zbounds.y,black,OutTicks(myzchoice),Arrow3(size=3mm));
+
+              label("$x$",(xbounds.y+0.05*(xbounds.y-xbounds.x),0,0));
+              label("$y$",(0,ybounds.y+0.05*(ybounds.y-ybounds.x),0));
+              label("$z$",(0,0,zbounds.y+0.05*(zbounds.y-zbounds.x)));
+
+              //Draw the cone  z^2=x^2/4+y^2/9
+              triple f(pair t) {
+                return (2*t.y*cos(t.x),3*t.y*sin(t.x),t.y);//
+              }
+              surface s=surface(f,(0,-2),(pi,3),16,16,usplinetype=new splinetype[] {notaknot,notaknot,monotonic},vsplinetype=new splinetype[] {notaknot,notaknot,monotonic});
+              pen p=apexmeshpen;
+              draw(s,surfacepen,meshpen=p);
+
+              triple g(real t) {return(-4cos(t),-6sin(t),-2);}
+              path3 mypath=graph(g,0,pi,operator ..);
+              draw(mypath,curvepen);
+
+              triple g(real t) {return(6cos(t),9sin(t),3);}
+              path3 mypath=graph(g,0,pi,operator ..);
+              draw(mypath,curvepen);
+
+              //draw((0,1,0)--(0,3,0)--(3,1,0)--cycle,curvepen);
+
+            </asymptote>
+          </image>
+        </figure>
+      </solution>
+    </example>
+
+    <example xml:id="ex_parsurf7">
+      <title>Parametrizing an ellipsoid</title>
+      <statement>
+        <p>
+          Find a parametrization of the ellipsoid
+          <m>\frac{x^2}{25}+y^2+\frac{z^2}{4}=1</m> as shown in <xref ref="fig_parsurf7a_3D">Figure</xref>.
+        </p>
+        <figure xml:id="fig_parsurf7">
+          <caption>An ellipsoid in (a), drawn again in (b) with its domain restricted, as described in  <xref ref="ex_parsurf7">Example</xref></caption>
+          <sidebyside widths="47% 47%" margins="0%">
+            <figure xml:id="fig_parsurf7a_3D">
+              <caption/>
+              <image xml:id="img_parsurf7a_3D">
+                <description></description>
+                <asymptote>
+
+
+
+                  //ASY file for figparsurf7a_3D.asy in Chapter 13
+
+                  size(282,282,IgnoreAspect);
+                  //currentprojection=perspective(7,2,1);
+                  currentprojection=orthographic(20.4,10,4.6);
+                  defaultrender.merge=true;
+
+                  // setup and draw the axes
+                  real[] myxchoice={-5,5};
+                  real[] myychoice={-1,1};
+                  real[] myzchoice={-2,2};
+                  defaultpen(0.5mm);
+
+                  pair xbounds=(-6,6);
+                  pair ybounds=(-3,3);
+                  pair zbounds=(-3,3);
+
+                  xaxis3("",xbounds.x,xbounds.y,black,OutTicks(myxchoice),Arrow3(size=3mm));
+                  yaxis3("",ybounds.x,ybounds.y,black,OutTicks(myychoice),Arrow3(size=3mm));
+                  zaxis3("",zbounds.x,zbounds.y,black,OutTicks(myzchoice),Arrow3(size=3mm));
+
+                  label("$x$",(xbounds.y+0.05*(xbounds.y-xbounds.x),0,0));
+                  label("$y$",(0,ybounds.y+0.05*(ybounds.y-ybounds.x),0));
+                  label("$z$",(0,0,zbounds.y+0.05*(zbounds.y-zbounds.x)));
+
+                  //Draw the ellipoid  x^2/25+y^2+z^2/4=1
+                  triple f(pair t) {
+                    return (5*cos(t.y)*sin(t.x),sin(t.y)*sin(t.x),2cos(t.x));//
+                  }
+                  surface s=surface(f,(0,0),(pi,2pi),16,16,usplinetype=new splinetype[] {notaknot,notaknot,monotonic},vsplinetype=new splinetype[] {notaknot,notaknot,monotonic});
+                  pen p=apexmeshpen;
+                  draw(s,surfacepen,meshpen=p);
+
+                  //draw((0,1,0)--(0,3,0)--(3,1,0)--cycle,curvepen);
+
+                </asymptote>
+              </image>
+            </figure>
+
+            <figure xml:id="fig_parsurf7b_3D">
+              <caption/>
+              <image xml:id="img_parsurf7b_3D">
+                <description></description>
+                <asymptote>
+
+
+
+                  //ASY file for figparsurf7b_3D.asy in Chapter 13
+
+                  size(282,282,IgnoreAspect);
+                  //currentprojection=perspective(7,2,1);
+                  currentprojection=orthographic(20.4,10,4.6);
+                  defaultrender.merge=true;
+
+                  // setup and draw the axes
+                  real[] myxchoice={-5,5};
+                  real[] myychoice={-1,1};
+                  real[] myzchoice={-2,2};
+                  defaultpen(0.5mm);
+
+                  pair xbounds=(-6,6);
+                  pair ybounds=(-3,3);
+                  pair zbounds=(-3,3);
+
+                  xaxis3("",xbounds.x,xbounds.y,black,OutTicks(myxchoice),Arrow3(size=3mm));
+                  yaxis3("",ybounds.x,ybounds.y,black,OutTicks(myychoice),Arrow3(size=3mm));
+                  zaxis3("",zbounds.x,zbounds.y,black,OutTicks(myzchoice),Arrow3(size=3mm));
+
+                  label("$x$",(xbounds.y+0.05*(xbounds.y-xbounds.x),0,0));
+                  label("$y$",(0,ybounds.y+0.05*(ybounds.y-ybounds.x),0));
+                  label("$z$",(0,0,zbounds.y+0.05*(zbounds.y-zbounds.x)));
+
+                  //Draw the ellipoid  x^2/25+y^2+z^2/4=1, restricted domain
+                  triple f(pair t) {
+                    return (5*cos(t.y)*sin(t.x),sin(t.y)*sin(t.x),2cos(t.x));//
+                  }
+                  surface s=surface(f,(pi/4,pi/4),(2pi/3,3pi/2),16,16,usplinetype=new splinetype[] {notaknot,notaknot,monotonic},vsplinetype=new splinetype[] {notaknot,notaknot,monotonic});
+                  pen p=apexmeshpen;
+                  draw(s,surfacepen,meshpen=p);
+
+                  //draw((0,1,0)--(0,3,0)--(3,1,0)--cycle,curvepen);
+
+                </asymptote>
+              </image>
+            </figure>
+          </sidebyside>
+
+        </figure>
+      </statement>
+      <solution>
+        <p>
+          Recall <xref ref="idea_unit_vectors">Key Idea</xref>
+          from <xref ref="sec_vector_intro">Section</xref>,
+          which states that all unit vectors in space have the form
+          <m>\langle \sin\theta\cos\varphi,\sin\theta\sin\varphi,\cos\theta\rangle</m> for some angles <m>\theta</m> and <m>\varphi</m>.
+          If we choose our angles appropriately,
+          this allows us to draw the unit sphere.
+          To get an ellipsoid,
+          we need only scale each component of the sphere appropriately.
+        </p>
+
+        <p>
+          The <m>x</m>-radius of the given ellipsoid is 5, the <m>y</m>-radius is 1 and the <m>z</m>-radius is 2.
+          Substituting <m>u</m> for <m>\theta</m> and <m>v</m> for <m>\varphi</m>,
+          we have
+          <me>
+            \vec r(u,v) = \langle 5\sin u\cos v, \sin u\sin v,2\cos u\rangle
+          </me>,
+          where we still need to determine the ranges of <m>u</m> and <m>v</m>.
+        </p>
+
+        <p>
+          Note how the <m>x</m> and <m>y</m> components of <m>\vec r</m> have <m>\cos v</m> and <m>\sin v</m> terms,
+          respectively.
+          This hints at the fact that ellipses are drawn parallel to the <m>xy</m>-plane as <m>v</m> varies,
+          which implies we should have <m>v</m> range from <m>0</m> to <m>2\pi</m>.
+        </p>
+
+        <p>
+          One may be tempted to let <m>0\leq u\leq 2\pi</m> as well,
+          but note how the <m>z</m> component is <m>2\cos u</m>.
+          We only need <m>\cos u</m> to take on values between <m>-1</m> and <m>1</m> once,
+          therefore we can restrict <m>u</m> to <m>0\leq u\leq \pi</m>.
+        </p>
+
+        <p>
+          The final parametrization is thus
+          <me>
+            \vec r(u,v) = \langle 5\sin u\cos v, \sin u\sin v,2\cos u\rangle,  0\leq u\leq\pi, 0\leq v\leq 2\pi
+          </me>.
+        </p>
+
+        <p>
+          In <xref ref="fig_parsurf7b_3D">Figure</xref>,
+          the ellipsoid is graphed on <m>\frac{\pi}{4}\leq u\leq \frac{2\pi}{3}</m>,
+          <m>\frac{\pi}4\leq v\leq \frac{3\pi}2</m> to demonstrate how each variable affects the surface.
+        </p>
+      </solution>
+    </example>
+
+    <p>
+      Parametrization is a powerful way to represent surfaces.
+      One of the advantages of the methods of parametrization described in this section is that the domain of
+      <m>\vec r(u,v)</m> is always a rectangle;
+      that is, the bounds on <m>u</m> and <m>v</m> are constants.
+      This will make some of our future computations easier to evaluate.
+    </p>
+
+    <p>
+      Just as we could parametrize curves in more than one way,
+      there will always be multiple ways to parametrize a surface.
+      Some ways will be more <q>natural</q> than others,
+      but these other ways are not incorrect.
+      Because technology is often readily available,
+      it is often a good idea to check one's work by graphing a parametrization of a surface to check if it indeed represents what it was intended to.
+    </p>
+  </subsection>
+
+  <subsection>
+    <title>Surface Area</title>
+    <figure xml:id="vid-veccalc-paramsurf-tangent-normal">
+      <caption>Tangent and normal vectors for parametric surfaces</caption>
+      <video youtube="9TtJ6xpuadQ"/>
+    </figure>
+    <p>
+      It will become important in the following sections to be able to compute the surface area of a surface <m>\surfaceS</m> given a smooth parametrization <m>\vec r(u,v)</m>,
+      <m>a\leq u\leq b</m>, <m>c\leq v\leq d</m>.
+      Following the principles given in the integration review at the beginning of this chapter,
+      we can say that<idx><h>surface area</h><h>of parametrized surface</h></idx>
+      <me>
+        \text{ Surface Area of }\surfaceS\, =S = \iint_{\surfaceS}\, dS
+      </me>,
+      where <m>dS</m> represents a small amount of surface area.
+      That is, to compute total surface area <m>S</m>,
+      add up lots of small amounts of surface area <m>dS</m> across the entire surface <m>\surfaceS</m>. The key to finding surface area is knowing how to compute <m>dS</m>.
+      We begin by approximating.
+    </p>
+
+    <p>
+      In <xref ref="sec_surface_area">Section</xref>
+      we used the area of a plane to approximate the surface area of a small portion of a surface.
+      We will do the same here.
+    </p>
+
+    <p>
+      Let <m>R</m> be the region of the <m>u</m>-<m>v</m> plane bounded by <m>a\leq u\leq b</m>,
+      <m>c\leq v\leq d</m> as shown in <xref ref="fig_parsurfareaa">Figure</xref>.
+      Partition <m>R</m> into rectangles of width
+      <m>\Delta u = \frac{b-a}n</m> and height <m>\Delta v = \frac{d-c}n</m>,
+      for some <m>n</m>.
+      Let <m>p=(u_0,v_0)</m> be the lower left corner of some rectangle in the partition,
+      and let <m>m</m> and <m>q</m> be neighboring corners as shown.
+    </p>
+
+    <p>
+      The point <m>p</m> maps to a point
+      <m>P = \vec r(u_0,v_0)</m> on the surface <m>\surfaceS</m>, and the rectangle with corners <m>p</m>,
+      <m>m</m> and <m>q</m> maps to some region
+      (probably not rectangular)
+      on the surface as shown in <xref ref="fig_parsurfareab_3D">Figure</xref>,
+      where <m>M = \vec r(m)</m> and <m>Q = \vec r(q)</m>.
+      We wish to approximate the surface area of this mapped region.
+    </p>
+
+    <p>
+      Let <m>\vec u = M-P</m> and <m>\vec v = Q-P</m>.
+      These two vectors form a parallelogram,
+      illustrated in <xref ref="fig_parsurfareac_3D">Figure</xref>,
+      whose area <em>approximates</em>
+      the surface area we seek.
+      In this particular illustration,
+      we can see that parallelogram does not particularly match well the region we wish to approximate,
+      but that is acceptable;
+      by increasing the number of partitions of <m>R</m>,
+      <m>\Delta u</m> and <m>\Delta v</m> shrink and our approximations will become better.
+    </p>
+
+    <figure xml:id="fig_parsurfarea">
+      <caption>Illustrating the process of finding surface area by approximating with planes</caption>
+      <sidebyside widths="31% 31% 31%" margins="0%">
+        <figure xml:id="fig_parsurfareaa">
+          <caption/>
+          <image xml:id="img_parsurfareaa">
+            <description></description>
+            <latex-image>
+
+            \begin{tikzpicture}
+
+            \begin{axis}[
+              xtick=\empty,
+              ytick=\empty,
+              extra x ticks={.5,2.25,1,1.5},
+              extra x tick labels={$a$,$b$,$u_0$,$u_0+\Delta u$},
+              extra y ticks={.1,2,.75,1},
+              extra y tick labels={$c$,$d$,$v_0$,$v_0+\Delta v$},
+              ymin=-.1,ymax=2.5,
+              xmin=-.1,xmax=2.5,
+              xlabel={$u$},
+              ylabel={$v$}
+            ]
+
+            \filldraw [thick,draw=firstcolor,fill=firstcolor!15] (axis cs: .5,.1) -- (axis cs: .5,2) -- (axis cs: 2.25,2)  -- (axis cs: 2.25,.1) -- cycle;
+
+            \coordinate (P) at (axis cs: 1,.75);
+            \coordinate (Q) at (axis cs: 1.5,.75);
+            \coordinate (R) at (axis cs: 1,1);
+            \coordinate (d) at (axis cs: 1.5,1);
+
+            \draw [thick,draw=secondcolor,fill=secondcolor!15] (P) -- (Q) -- (d) -- (R) -- cycle;
+
+            \filldraw (P) circle (1pt) node [below left] {$p$};
+            \filldraw (R) circle (1pt) node [above left] {$q$};
+            \filldraw (Q) circle (1pt) node [below right] {$m$};
+
+            \draw (axis cs: .5,2) node [below right] {$R$};
+
+            \end{axis}
+
+
+            \end{tikzpicture}
+
+            </latex-image>
+          </image>
+        </figure>
+
+        <figure xml:id="fig_parsurfareab_3D">
+          <caption/>
+          <image xml:id="img_parsurfareab_3D">
+            <description></description>
+            <asymptote>
+
+
+
+              //ASY file for figparsurfareaA_3D.asy in Chapter 14, developing surface area
+
+              size(198,198,IgnoreAspect);
+              //currentprojection=perspective(7,2,1);
+              currentprojection=orthographic(15.5,18.6,18.1,true,true);
+              defaultrender.merge=true;
+
+              // setup and draw the axes
+              real[] myxchoice={};
+              real[] myychoice={};
+              real[] myzchoice={};
+              defaultpen(0.5mm);
+
+              pair xbounds=(-.1,1.5);
+              pair ybounds=(-.1,1.5);
+              pair zbounds=(-.1,2.5);
+
+              xaxis3("",xbounds.x,xbounds.y,black,OutTicks(myxchoice),Arrow3(size=3mm));
+              yaxis3("",ybounds.x,ybounds.y,black,OutTicks(myychoice),Arrow3(size=3mm));
+              zaxis3("",zbounds.x,zbounds.y,black,OutTicks(myzchoice),Arrow3(size=3mm));
+
+              label("$x$",(xbounds.y+0.05*(xbounds.y-xbounds.x),0,0));
+              label("$y$",(0,ybounds.y+0.05*(ybounds.y-ybounds.x),0));
+              label("$z$",(0,0,zbounds.y+0.05*(zbounds.y-zbounds.x)));
+
+              //Draw the top half of the surface z = x^2+2y^2
+              triple ff(pair t) {
+                return (t.y*(cos(t.x)+.1*sin(3t.x)),t.y*sin(t.x),2-(t.y*(cos(t.x)+.1*sin(3t.x)))^2-(t.y*sin(t.x))^2);//
+              }
+
+              triple f(pair t) {
+                return -ff(t)+(1,1,3);
+              }
+
+              surface s=surface(f,(0,0),(2pi/4,1),4,16,usplinetype=new splinetype[] {notaknot,notaknot,monotonic},vsplinetype=new splinetype[] {notaknot,notaknot,monotonic});
+              pen p=apexmeshpen;
+              draw(s,surfacepen,meshpen=p);
+
+              surface s=surface(f,(2pi/16,9/16),(4pi/16,11/16),8,8,usplinetype=new splinetype[] {notaknot,notaknot,monotonic},vsplinetype=new splinetype[] {notaknot,notaknot,monotonic});
+              pen p=apexmeshpen;
+              draw(s,surfacepen2,meshpen=invisible);
+
+              real u0=2pi/16;
+              real v0=9/16;
+              real du=2pi/16;
+              real dv=2/16;
+              triple ru=f((u0+du,v0))-f((u0,v0));
+              triple rv=f((u0+du,v0))-f((u0,v0+dv));
+
+              draw(f((u0+du,v0))--f((u0,v0)),curvepen2,Arrow3(5));
+              draw(f((u0+du,v0))--f((u0+du,v0+dv)),curvepen2,Arrow3(5));
+
+              label("$P$",f((u0+du,v0))+(.05,-.05,.1));
+              label("$M$",f((u0,v0))+(0,+.1,.1));
+              label("$Q$",f((u0+du,v0+dv))+(.05,-.05,.1));
+
+              dot(f((u0+du,v0)),.7mm+black);
+              dot(f((u0,v0)),.7mm+black);
+              dot(f((u0+du,v0+dv)),.7mm+black);
+            </asymptote>
+          </image>
+        </figure>
+
+        <figure xml:id="fig_parsurfareac_3D">
+          <caption/>
+          <image xml:id="img_parsurfareac_3D">
+            <description></description>
+            <asymptote>
+
+
+
+              //ASY file for figparsurfareaA_3D.asy in Chapter 14, developing surface area
+
+              size(198,198,IgnoreAspect);
+              //currentprojection=perspective(7,2,1);
+              currentprojection=orthographic(15.5,18.6,18.1,Z,(0,0,0),1,(0,-.15),true,true);
+              defaultrender.merge=true;
+
+              // setup and draw the axes
+              real[] myxchoice={};
+              real[] myychoice={};
+              real[] myzchoice={};
+              defaultpen(0.5mm);
+
+              pair xbounds=(.3,.8);
+              pair ybounds=(.3,.8);
+              pair zbounds=(.5,1.5);
+
+              //xaxis3("",xbounds.x,xbounds.y,black,OutTicks(myxchoice),Arrow3(size=3mm));
+              //yaxis3("",ybounds.x,ybounds.y,black,OutTicks(myychoice),Arrow3(size=3mm));
+              //zaxis3("",zbounds.x,zbounds.y,black,OutTicks(myzchoice),Arrow3(size=3mm));
+
+              //label("$x$",(xbounds.y+0.05*(xbounds.y-xbounds.x),0,0));
+              //label("$y$",(0,ybounds.y+0.05*(ybounds.y-ybounds.x),0));
+              //label("$z$",(0,0,zbounds.y+0.05*(zbounds.y-zbounds.x)));
+
+              //Draw the top half of the surface z = x^2+2y^2
+              triple ff(pair t) {
+                return (t.y*(cos(t.x)+.1*sin(3t.x)),t.y*sin(t.x),2-(t.y*(cos(t.x)+.1*sin(3t.x)))^2-(t.y*sin(t.x))^2);//
+              }
+
+              triple f(pair t) {
+                return -ff(t)+(1,1,3);
+              }
+
+              surface s=surface(f,(pi/16,8/16),(2pi/4*3/4*10/12,12/16),8,16,usplinetype=new splinetype[] {notaknot,notaknot,monotonic},vsplinetype=new splinetype[] {notaknot,notaknot,monotonic});
+              pen p=apexmeshpen;
+              draw(s,surfacepen,meshpen=p);
+
+              surface s=surface(f,(2pi/16,9/16),(4pi/16,11/16),8,8,usplinetype=new splinetype[] {notaknot,notaknot,monotonic},vsplinetype=new splinetype[] {notaknot,notaknot,monotonic});
+              pen p=apexmeshpen;
+              //draw(s,rgb(1,.5,.5)+opacity(.7),meshpen=invisible);
+
+              real u0=2pi/16;
+              real v0=9/16;
+              real du=2pi/16;
+              real dv=2/16;
+              triple ru=f((u0+du,v0))-f((u0,v0));
+              triple rv=f((u0+du,v0))-f((u0+du,v0+dv));
+
+              triple aa=f((u0+du,v0));
+              triple bb=aa-ru;
+              triple cc=bb-rv;
+              triple dd=cc+ru;
+
+              draw(f((u0+du,v0))--f((u0,v0)),curvepen2,Arrow3(5));
+              draw(f((u0+du,v0))--f((u0+du,v0+dv)),curvepen2,Arrow3(5));
+              draw(f((u0+du,v0+dv))--f((u0+du,v0+dv))-ru--f((u0+du,v0+dv))-ru+rv,curvepen2);
+
+              label("$P$",f((u0+du,v0))+(.005,-.005,.05));
+              label("$M$",f((u0,v0))+(0,+.025,.005));
+              label("$Q$",f((u0+du,v0+dv))+(.005,-.005,.05));
+
+              label("$\vec u$",(f((u0+du,v0))+f((u0,v0)))/2+(.05,.005,0));
+              label("$\vec v$",(f((u0+du,v0))+f((u0+du,v0+dv)))/2+(.005,-.005,.05));
+
+              dot(f((u0+du,v0)),.7mm+black);
+              dot(f((u0,v0)),.7mm+black);
+              dot(f((u0+du,v0+dv)),.7mm+black);
+
+              draw(surface(aa--bb--cc--dd--cycle),surfacepen2);
+
+              //draw(surface(f((u0,v0))--f((u0+du,v0))--f((u0+du,v0+dv))--f((u0,v0+dv))--cycle),surfacepen2);
+
+              dot(f((u0+du,v0)),.7mm+black);
+
+              surface s=surface(f,(2pi/16,9/16),(4pi/16,9/16),8,1,usplinetype=new splinetype[] {notaknot,notaknot,monotonic},vsplinetype=new splinetype[] {notaknot,notaknot,monotonic});
+              pen p=apexmeshpen;
+              draw(s,surfacepen2,meshpen=curvepen2);
+
+              surface s=surface(f,(2pi/16,11/16),(4pi/16,11/16),8,1,usplinetype=new splinetype[] {notaknot,notaknot,monotonic},vsplinetype=new splinetype[] {notaknot,notaknot,monotonic});
+              pen p=apexmeshpen;
+              draw(s,surfacepen2,meshpen=curvepen2);
+
+              surface s=surface(f,(2pi/16,9/16),(2pi/16,11/16),1,8,usplinetype=new splinetype[] {notaknot,notaknot,monotonic},vsplinetype=new splinetype[] {notaknot,notaknot,monotonic});
+              pen p=apexmeshpen;
+              draw(s,surfacepen2,meshpen=curvepen2);
+
+              surface s=surface(f,(4pi/16,9/16),(4pi/16,11/16),1,8,usplinetype=new splinetype[] {notaknot,notaknot,monotonic},vsplinetype=new splinetype[] {notaknot,notaknot,monotonic});
+              pen p=apexmeshpen;
+              draw(s,surfacepen2,meshpen=curvepen2);
+            </asymptote>
+          </image>
+        </figure>
+      </sidebyside>
+
+    </figure>
+
+    <p>
+      From <xref ref="sec_cross_product">Section</xref>
+      we know the area of this parallelogram is <m>\snorm{\vec u\times \vec v}</m>.
+      If we repeat this approximation process for each rectangle in the partition of <m>R</m>,
+      we can sum the areas of all the parallelograms to get an approximation of the surface area <m>S</m>:
+      <me>
+        \text{ Surface area of } \surfaceS \,  =S \approx \sum_{j=1}^n\sum_{i=1}^n \snorm{\vec u_{i,j}\times \vec v_{i,j}}
+      </me>,
+      where <m>\vec u_{i,j} = \vec r(u_i+\Delta u,v_j) - \vec r(u_i,v_j)</m> and <m>\vec v_{i,j} = \vec r(u_i,v_j+\Delta v)-\vec r(u_i,v_j)</m>.
+    </p>
+
+    <p>
+      From our previous calculus experience,
+      we expect that taking a limit as
+      <m>n\to \infty</m> will result in the exact surface area.
+      However, the current form of the above double sum makes it difficult to realize what the result of that limit is.
+      The following rewriting of the double summation will be helpful:
+      <md>
+        <mrow>\amp \sum_{j=1}^n\sum_{i=1}^n \snorm{\vec u_{i,j}\times \vec v_{i,j}}=</mrow>
+        <mrow>\amp \sum_{j=1}^n\sum_{i=1}^n \snorm{\big(\vec r(u_i+\Delta u,v_j) - \vec r(u_i,v_j)\big) \times \big(\vec r(u_i,v_j+\Delta v)-\vec r(u_i,v_j)\big)}=</mrow>
+        <mrow>\amp \sum_{j=1}^n\sum_{i=1}^n \snorm{\frac{\vec r(u_i+\Delta u,v_j) - \vec r(u_i,v_j)}{\Delta u} \times \frac{\vec r(u_i,v_j+\Delta v)-\vec r(u_i,v_j)}{\Delta v}}\Delta u\Delta v</mrow>
+      </md>.
+    </p>
+
+    <p>
+      We now take the limit as <m>n\to\infty</m>,
+      forcing <m>\Delta u</m> and <m>\Delta v</m> to 0.
+      As <m>\Delta u\to 0</m>,
+      <me>
+        \frac{\vec r(u_i+\Delta u,v_j) - \vec r(u_i,v_j)}{\Delta u} \to \vec r_u(u_i,v_j) \text{ and }
+      </me>
+      <me>
+        \frac{\vec r(u_i,v_j+\Delta v)-\vec r(u_i,v_j)}{\Delta v} \to \vec r_v(u_i,v_j)
+      </me>.
+    </p>
+
+    <p>
+      (This limit process also demonstrates that <m>\vec r_u(u,v)</m> and
+      <m>\vec r_v(u,v)</m> are tangent to the surface <m>\surfaceS</m> at <m>\vec r(u,v)</m>.
+      We don't need this fact now, but it will be important in the next section.)
+    </p>
+
+    <p>
+      Thus, in the limit, the double sum leads to a double integral:
+      <me>
+        \lim_{n\to\infty} \sum_{j=1}^n\sum_{i=1}^n \snorm{\vec u_{i,j}\times \vec v_{i,j}}= \int_c^d\int_a^b \snorm{\vec r_u\times\vec r_v}\, du\, dv
+      </me>.
+    </p>
+
+    <theorem xml:id="thm_par_surface_area">
+      <title>Surface Area of Parametrically Defined Surfaces</title>
+      <statement>
+        <p>
+          Let <m>\vec r(u,v)</m> be a smooth parametrization of a surface <m>\surfaceS</m> over a closed,
+          bounded region <m>R</m> of the <m>u</m>-<m>v</m> plane.
+              <idx><h>surface area</h><h>of parametrized surface</h></idx>
+          <ul>
+            <li>
+              <p>
+                The surface area differential <m>dS</m> is:
+                <m>dS = \snorm{\vec r_u\times \vec r_v}\, dA</m>.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                The surface area <m>S</m> of <m>\surfaceS</m> is
+                <me>
+                  S = \iint_\surfaceS\, dS = \iint_R \snorm{\vec r_u\times \vec r_v}\, dA
+                </me>.
+              </p>
+            </li>
+          </ul>
+        </p>
+      </statement>
+    </theorem>
+
+    <figure xml:id="vid-veccalc-paramsurf-area">
+      <caption>Area of parametric surfaces</caption>
+      <video youtube="ezVITWloEfA"/>
+    </figure>
+
+    <example xml:id="ex_parsurfarea1">
+      <title>Finding the surface area of a parametrized surface</title>
+      <statement>
+        <p>
+          Using the parametrization found in <xref ref="ex_parsurf2">Example</xref>,
+          find the surface area of <m>z=x^2+2y^2</m> over the circular disk of radius 2, centered at the origin.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          In <xref ref="ex_parsurf2">Example</xref>,
+          we parametrized the surface as <m>\vec r(u,v) = \la 2v\cos u, 2v\sin u, 4v^2\cos^2u+8v^2\sin^2u\ra</m>,
+          for <m>0\leq u\leq 2\pi</m>, <m>0\leq v\leq 1</m>.
+          To find the surface area using <xref ref="thm_par_surface_area">Theorem</xref>,
+          we need <m>\snorm{\vec r_u\times\vec r_v}</m>.
+          We find:
+          <md>
+            <mrow>\vec r_u \amp = \la -2v\sin u, 2v\cos u, 8v^2\cos u\sin u\ra</mrow>
+            <mrow>\vec r_v \amp = \la 2\cos u, 2\sin v, 8v\cos^2 u+16v\sin^2u\ra</mrow>
+            <mrow>\vec r_u\times\vec r_v \amp = \la 16v^2\cos u, 32v^2\sin u, -4v\ra</mrow>
+            <mrow>\snorm{\vec r_u\times\vec r_v} \amp = \sqrt{256v^4\cos^2u+1024v^4\sin^2u+16v^2}</mrow>
+          </md>.
+        </p>
+
+        <p>
+          Thus the surface area is
+          <md>
+            <mrow>S = \iint_\surfaceS \, dS \amp = \iint_R\snorm{\vec r_u\times \vec r_v}\, dA</mrow>
+            <mrow>\amp  = \int_0^1\int_0^{2\pi} \sqrt{256v^4\cos^2u+1024v^4\sin^2u+16v^2}\, du\, dv</mrow>
+            <mrow>\amp \approx 53.59</mrow>
+          </md>.
+        </p>
+
+        <p>
+          There is a lot of tedious work in the above calculations and the final integral is nontrivial.
+          The use of a computer-algebra system is highly recommended.
+        </p>
+      </solution>
+    </example>
+
+    <figure xml:id="vid-veccalc-paramsurf-area-sphere">
+      <caption>Surface area of a sphere</caption>
+      <video youtube="9tIGTOpQ5WE"/>
+    </figure>
+
+    <p>
+      In <xref ref="sec_line_int_intro">Section</xref>,
+      we recalled the arc length differential <m>ds=\snorm{\vrp(t)}dt</m>.
+      In subsequent sections, we used that differential,
+      but in most applications the <q><m>\snorm{\vrp(t)}</m></q>
+      part of the differential canceled out of the integrand
+      (to our benefit,
+      as integrating the square roots of functions is generally difficult).
+      We will find a similar thing happens when we use the surface area differential <m>dS</m> in the following sections.
+      That is, our main goal is not to be able to compute surface area;
+      rather, surface area is a tool to obtain other quantities that are more important and useful.
+      In our applications, we will use <m>dS</m>,
+      but most of the time the <q><m>\snorm{\vec r_u\times \vec r_v}</m></q>
+      part will cancel out of the integrand,
+      making the subsequent integration easier to compute.
+    </p>
+  </subsection>
+
+  <xi:include href="exer_sec_parametric_surfaces.ptx" />
+</section>

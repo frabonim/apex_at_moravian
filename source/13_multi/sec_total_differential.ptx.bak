@@ -1,0 +1,702 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sec_total_differential">
+  <title>Differentiability and the Total Differential</title>
+  <introduction>
+    <p>
+      We studied <em>differentials</em>
+      in <xref ref="sec_differentials">Section</xref>,
+      where <xref ref="def_differential">Definition</xref>
+      states that if <m>y=f(x)</m> and <m>f</m> is differentiable,
+      then <m>dy=\fp(x)dx</m>.
+      One important use of this differential is in Integration by Substitution.
+      Another important application is approximation.
+      Let <m>\dx = dx</m> represent a change in <m>x</m>.
+      When <m>dx</m> is small, <m>dy\approx \dy</m>,
+      the change in <m>y</m> resulting from the change in <m>x</m>.
+      Fundamental in this understanding is this:
+      as <m>dx</m> gets small,
+      the difference between <m>\dy</m> and <m>dy</m> goes to 0.
+      Another way of stating this:
+      as <m>dx</m> goes to 0, the <em>error</em>
+      in approximating <m>\dy</m> with <m>dy</m> goes to 0.
+    </p>
+
+    <p>
+      We extend this idea to functions of two variables.
+      Let <m>z=f(x,y)</m>, and let
+      <m>\dx = dx</m> and <m>\dy=dy</m> represent changes in <m>x</m> and <m>y</m>,
+      respectively.
+      Let <m>\ddz = f(x+dx,y+dy) - f(x,y)</m> be the change in <m>z</m> over the change in <m>x</m> and <m>y</m>.
+      Recalling that <m>f_x</m> and <m>f_y</m> give the instantaneous rates of <m>z</m>-change in the <m>x</m>- and <m>y</m>-directions,
+      respectively,
+      we can approximate <m>\ddz</m> with <m>dz = f_xdx+f_ydy</m>;
+      in words, the total change in <m>z</m> is approximately the change caused by changing <m>x</m> plus the change caused by changing <m>y</m>.
+      In a moment we give an indication of whether or not this approximation is any good.
+      First we give a name to <m>dz</m>.
+    </p>
+  </introduction>
+
+  <subsection xml:id="subsec-total-differential-intro">
+    <title>The Total Differential</title>
+
+    <definition xml:id="def_total_differential">
+      <title>Total Differential</title>
+      <statement>
+        <p>
+          Let <m>z=f(x,y)</m> be continuous on a set <m>S</m>.
+          Let <m>dx</m> and <m>dy</m> represent changes in <m>x</m> and <m>y</m>,
+          respectively.
+          Where the partial derivatives <m>f_x</m> and <m>f_y</m> exist,
+          the <term>total differential</term> of <m>z</m> is
+              <idx><h>total differential</h></idx>
+              <idx><h>partial derivative</h><h>total differential</h></idx>
+          <me>
+            dz = f_x(x,y)\,dx + f_y(x,y)\,dy
+          </me>.
+        </p>
+      </statement>
+    </definition>
+
+    <aside>
+      <p>
+        From <xref ref="def_total_differential">Definition</xref>,
+        we can write
+        <me>
+          dz = \langle\, f_x,f_y\rangle\cdot\langle dx,dy\rangle
+        </me>.
+      </p>
+
+      <p>
+        While not explored in this section,
+        the vector <m>\langle f_x,f_y\rangle</m> is seen again in the next section and fully defined in <xref ref="sec_directional_derivative">Section</xref>.
+      </p>
+    </aside>
+
+    <example xml:id="ex_total_diff_10">
+      <title>Finding the total differential</title>
+      <statement>
+        <p>
+          Let <m>z = x^4e^{3y}</m>.
+          Find <m>dz</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We compute the partial derivatives:
+          <m>f_x = 4x^3e^{3y}</m> and <m>f_y = 3x^4e^{3y}</m>.
+          Following <xref ref="def_total_differential">Definition</xref>, we have
+          <me>
+            dz = 4x^3e^{3y}dx+3x^4e^{3y}dy
+          </me>.
+        </p>
+      </solution>
+    </example>
+
+    <p>
+      We <em>can</em> approximate <m>\ddz</m> with <m>dz</m>,
+      but as with all approximations, there is error involved.
+      A good approximation is one in which the error is small.
+      At a given point <m>(x_0,y_0)</m>,
+      let <m>E_x</m> and <m>E_y</m> be functions of <m>dx</m> and <m>dy</m> such that
+      <m>E_xdx+E_ydy</m> describes this error.
+      Then
+      <md>
+        <mrow>\ddz \amp = dz + E_xdx+ E_ydy</mrow>
+        <mrow>\amp = f_x(x_0,y_0)dx+f_y(x_0,y_0)dy + E_xdx+E_ydy</mrow>
+      </md>.
+    </p>
+
+    <p>
+      If the approximation of <m>\ddz</m> by <m>dz</m> is good,
+      then as <m>dx</m> and <m>dy</m> get small,
+      so does <m>E_xdx+E_ydy</m>.
+      The approximation of <m>\ddz</m> by <m>dz</m> is even better if,
+      as <m>dx</m> and <m>dy</m> go to 0, so do <m>E_x</m> and <m>E_y</m>.
+      This leads us to our definition of differentiability.
+    </p>
+
+    <definition xml:id="def_multi_differentiability">
+      <title>Multivariable Differentiability</title>
+      <statement>
+        <p>
+          Let <m>z=f(x,y)</m> be defined on a set <m>S</m> containing <m>(x_0,y_0)</m> where
+          <m>f_x(x_0,y_0)</m> and <m>f_y(x_0,y_0)</m> exist.
+          Let <m>dz</m> be the total differential of <m>z</m> at <m>(x_0,y_0)</m>,
+          let <m>\ddz = f(x_0+dx,y_0+dy) - f(x_0,y_0)</m>,
+          and let <m>E_x</m> and <m>E_y</m> be functions of <m>dx</m> and <m>dy</m> such that
+          <me>
+            \ddz = dz + E_xdx + E_ydy
+          </me>.
+        </p>
+
+        <p>
+          <ol>
+            <li>
+              <p>
+                We say <m>f</m> is <em>differentiable at <m>(x_0,y_0)</m></em> if,
+                given <m>\varepsilon \gt 0</m>,
+                there is a <m>\delta \gt 0</m> such that if <m>\norm{\la dx,dy\ra} \lt \delta</m>,
+                then <m>\norm{\la E_x,E_y\ra} \lt \varepsilon</m>.
+                That is, as <m>dx</m> and <m>dy</m> go to 0, so do <m>E_x</m> and <m>E_y</m>.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                We say <m>f</m> is <em>differentiable on <m>S</m></em>
+                if <m>f</m> is differentiable at every point in <m>S</m>.
+                If <m>f</m> is differentiable on <m>\mathbb{R}^2</m>,
+                we say that <m>f</m> is <em>differentiable everywhere</em>.
+                  <idx><h>differentiable</h></idx>
+                  <idx><h>derivative</h><h>multivariable differentiability</h></idx>
+                  <idx><h>multivariable function</h><h>differentiability</h></idx>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </definition>
+
+    <figure xml:id="vid-multi-differentiability">
+      <caption>Another approach to defining differentiability</caption>
+      <video youtube="hJaLxYbPgdM"/>
+    </figure>
+
+    <example xml:id="ex_totaldiff1">
+      <title>Showing a function is differentiable</title>
+      <statement>
+        <p>
+          Show <m>f(x,y) = xy+3y^2</m> is differentiable using <xref ref="def_multi_differentiability">Definition</xref>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We begin by finding <m>f(x+dx,y+dy)</m>,
+          <m>\ddz</m>, <m>f_x</m> and <m>f_y</m>.
+          <md>
+            <mrow>f(x+dx,y+dy) \amp = (x+dx)(y+dy) + 3(y+dy)^2</mrow>
+            <mrow>\amp = xy + xdy+ydx+dxdy + 3y^2+6ydy+3dy^2</mrow>
+          </md>.
+        </p>
+
+        <p>
+          <m>\ddz = f(x+dx,y+dy) - f(x,y)</m>, so
+          <me>
+            \ddz = xdy + ydx + dxdy + 6ydy+3dy^2
+          </me>.
+        </p>
+
+        <p>
+          It is straightforward to compute <m>f_x = y</m> and <m>f_y = x+6y</m>.
+          Consider once more <m>\ddz</m>:
+          <md>
+            <mrow>\ddz \amp = xdy + ydx + dxdy + 6ydy+3dy^2 \qquad \text{ (now reorder) }</mrow>
+            <mrow>\amp = ydx + xdy+6ydy+ dxdy + 3dy^2</mrow>
+            <mrow>\amp = \underbrace{(y)}_{f_x}dx + \underbrace{(x+6y)}_{f_y}dy + \underbrace{(dy)}_{E_x}dx+\underbrace{(3dy)}_{E_y}dy</mrow>
+            <mrow>\amp = f_xdx + f_ydy + E_xdx+E_ydy</mrow>
+          </md>.
+        </p>
+
+        <p>
+          With <m>E_x = dy</m> and <m>E_y = 3dy</m>,
+          it is clear that as <m>dx</m> and <m>dy</m> go to 0, <m>E_x</m> and <m>E_y</m> also go to 0.
+          Since this did not depend on a specific point <m>(x_0,y_0)</m>,
+          we can say that <m>f(x,y)</m> is differentiable for all pairs <m>(x,y)</m> in <m>\mathbb{R}^2</m>,
+          or, equivalently, that <m>f</m> is differentiable everywhere.
+        </p>
+      </solution>
+    </example>
+
+    <figure xml:id="vid-multi-differentiability-example">
+      <caption>Establishing differentiability using the definition in <xref ref="vid-multi-differentiability"/></caption>
+      <video youtube="rYvDghlxlUA"/>
+    </figure>
+
+    <p>
+      Our intuitive understanding of differentiability of functions <m>y=f(x)</m> of one variable was that the graph of <m>f</m> was <q>smooth.</q>
+      A similar intuitive understanding of functions
+      <m>z=f(x,y)</m> of two variables is that the surface defined by <m>f</m> is also <q>smooth,</q>
+      not containing cusps, edges, breaks, etc.
+      The following theorem states that differentiable functions are continuous,
+      followed by another theorem that provides a
+      more tangible way of determining whether a great number of functions are differentiable or not.
+    </p>
+
+    <theorem xml:id="thm_diff_cont_multi">
+      <title>Continuity and Differentiability of Multivariable Functions</title>
+      <statement>
+        <p>
+          Let <m>z=f(x,y)</m> be defined on a set <m>S</m> containing <m>(x_0,y_0)</m>.
+          If <m>f</m> is differentiable at <m>(x_0,y_0)</m>,
+          then <m>f</m> is continuous at <m>(x_0,y_0)</m>.
+              <idx><h>multivariable function</h><h>differentiability</h></idx>
+              <idx><h>multivariable function</h><h>continuity</h></idx>
+        </p>
+      </statement>
+    </theorem>
+
+    <theorem xml:id="thm_differentiable">
+      <title>Differentiability of Multivariable Functions</title>
+      <statement>
+        <p>
+          Let <m>z=f(x,y)</m> be defined on a set <m>S</m>.
+          If <m>f_x</m> and <m>f_y</m> are both continuous on <m>S</m>,
+          then <m>f</m> is differentiable on <m>S</m>.
+              <idx><h>multivariable function</h><h>differentiability</h></idx>
+        </p>
+      </statement>
+    </theorem>
+
+    <p>
+      The theorems assure us that essentially all functions that we see in the course of our studies here are differentiable
+      (and hence continuous)
+      on their natural domains.
+      There is a difference between <xref ref="def_multi_differentiability">Definition</xref>
+      and <xref ref="thm_differentiable">Theorem</xref>, though:
+      it is possible for a function <m>f</m> to be differentiable yet <m>f_x</m> and/or <m>f_y</m> is
+      <em>not</em> continuous.
+      Such strange behavior of functions is a source of delight for many mathematicians.
+    </p>
+
+    <p>
+      When <m>f_x</m> and <m>f_y</m> exist at a point but are not continuous at that point,
+      we need to use other methods to determine whether or not <m>f</m> is differentiable at that point.
+    </p>
+
+    <p>
+      For instance, consider the function
+      <me>
+        f(x,y) = \begin{cases}
+                   \frac{xy}{x^2+y^2} \amp  (x,y)\neq (0,0) \\
+                   0 \amp  (x,y) = (0,0)
+                 \end{cases}
+      </me>.
+    </p>
+
+    <p>
+      We can find <m>f_x(0,0)</m> and
+      <m>f_y(0,0)</m> using <xref ref="def_partial_derivative">Definition</xref>:
+      <md>
+        <mrow>f_x(0,0) \amp = \lim_{h\to 0} \frac{f(0+h,0) - f(0,0)}{h}</mrow>
+        <mrow>\amp = \lim_{h\to 0} \frac{0}{h^2} = 0;</mrow>
+        <mrow>f_y(0,0) \amp = \lim_{h\to 0} \frac{f(0,0+h) - f(0,0)}{h}</mrow>
+        <mrow>\amp = \lim_{h\to 0} \frac{0}{h^2} = 0</mrow>
+      </md>.
+    </p>
+
+    <p>
+      Both <m>f_x</m> and <m>f_y</m> <em>exist</em> at <m>(0,0)</m>,
+      but they are not continuous at <m>(0,0)</m>, as
+      <me>
+        f_x(x,y) = \frac{y(y^2-x^2)}{(x^2+y^2)^2} \qquad \text{ and } \qquad f_y(x,y) = \frac{x(x^2-y^2)}{(x^2+y^2)^2}
+      </me>
+      are not continuous at <m>(0,0)</m>. (Take the limit of <m>f_x</m> as
+      <m>(x,y)\to(0,0)</m> along the <m>x</m>- and <m>y</m>-axes;
+      they give different results.) So even though <m>f_x</m> and <m>f_y</m> <em>exist</em>
+      at every point in the <m>xy</m>-plane, they are not continuous.
+      Therefore it is possible,
+      by <xref ref="thm_differentiable">Theorem</xref>,
+      for <m>f</m> to not be differentiable.
+    </p>
+
+    <p>
+      Indeed, it is not.
+      One can show that <m>f</m> is not continuous at <m>(0,0)</m>
+      (see <xref ref="ex_multilimit4">Example</xref>),
+      and by <xref ref="thm_diff_cont_multi">Theorem</xref>,
+      this means <m>f</m> is not differentiable at <m>(0,0)</m>.
+    </p>
+  </subsection>
+
+  <subsection xml:id="subsec-total-differential-approx">
+    <title>Approximating with the Total Differential</title>
+    <p>
+      By the definition,
+      when <m>f</m> is differentiable <m>dz</m> is a good approximation for <m>\ddz</m> when <m>dx</m> and <m>dy</m> are small.
+      We give some simple examples of how this is used here.
+    </p>
+
+    <example xml:id="ex_totaldiff2">
+      <title>Approximating with the total differential</title>
+      <statement>
+        <p>
+          Let <m>z = \sqrt{x}\sin(y)</m>.
+          Approximate <m>f(4.1,0.8)</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Recognizing that <m>\pi/4 \approx 0.785\approx 0.8</m>,
+          we can approximate <m>f(4.1,0.8)</m> using <m>f(4,\pi/4)</m>.
+          We can easily compute <m>f(4,\pi/4) = \sqrt{4}\sin(\pi/4) = 2\left(\frac{\sqrt{2}}2\right) = \sqrt{2}\approx 1.414</m>.
+          Without calculus,
+          this is the best approximation we could reasonably come up with.
+          The total differential gives us a way of adjusting this initial approximation to hopefully get a more accurate answer.
+        </p>
+
+        <p>
+          We let <m>\ddz = f(4.1,0.8) - f(4,\pi/4)</m>.
+          The total differential <m>dz</m> is approximately equal to <m>\ddz</m>, so
+          <men xml:id="eq_totaldiff2">
+            f(4.1,0.8) - f(4,\pi/4) \approx dz  \Rightarrow  f(4.1,0.8) \approx dz + f(4,\pi/4)
+          </men>.
+        </p>
+
+        <p>
+          To find <m>dz</m>, we need <m>f_x</m> and <m>f_y</m>.
+          <md>
+            <mrow>f_x(x,y) \amp = \frac{\sin(y) }{2\sqrt{x}} \Rightarrow\amp
+            f_x(4,\pi/4) \amp = \frac{\sin(\pi) /4}{2\sqrt{4}}</mrow>
+            <mrow>\amp  \amp \amp = \frac{\sqrt{2}/2}{4} = \sqrt{2}/8.</mrow>
+            <mrow>f_y(x,y) \amp = \sqrt{x}\cos(y) \Rightarrow\amp
+            f_y(4,\pi/4) \amp = \sqrt{4}\frac{\sqrt{2}}2</mrow>
+            <mrow>\amp  \amp  \amp = \sqrt{2}</mrow>
+          </md>.
+        </p>
+
+        <p>
+          Approximating <m>4.1</m> with 4 gives <m>dx = 0.1</m>;
+          approximating <m>0.8</m> with <m>\pi/4</m> gives <m>dy \approx 0.015</m>.
+          Thus
+          <md>
+            <mrow>dz(4,\pi/4) \amp =  f_x(4,\pi/4)(0.1) + f_y(4,\pi/4)(0.015)</mrow>
+            <mrow>\amp = \frac{\sqrt{2}}8(0.1) + \sqrt{2}(0.015)</mrow>
+            <mrow>\amp \approx 0.039</mrow>
+          </md>.
+        </p>
+
+        <p>
+          Returning to Equation <xref ref="eq_totaldiff2"/>, we have
+          <me>
+            f(4.1,0.8) \approx 0.039 + 1.414 = 1.4531
+          </me>.
+        </p>
+
+        <p>
+          We, of course,
+          can compute the actual value of <m>f(4.1,0.8)</m> with a calculator;
+          the actual value, accurate to 5 places after the decimal,
+          is <m>1.45254</m>.
+          Obviously our approximation is quite good.
+        </p>
+      </solution>
+    </example>
+
+    <p>
+      The point of the previous example was <em>not</em>
+      to develop an approximation method for known functions.
+      After all, we can very easily compute
+      <m>f(4.1,0.8)</m> using readily available technology.
+      Rather, it serves to illustrate how well this method of approximation works,
+      and to reinforce the following concept:
+    </p>
+
+    <p>
+      <q>New position = old position <m>+</m> amount of change,</q> so
+    </p>
+
+    <p>
+      <q>New position <m>\approx</m> old position + approximate amount of change.</q>
+    </p>
+
+    <p>
+      In the previous example,
+      we could easily compute <m>f(4,\pi/4)</m> and could approximate the amount of <m>z</m>-change when computing <m>f(4.1,0.8)</m>,
+      letting us approximate the new <m>z</m>-value.
+    </p>
+
+    <p>
+      It may be surprising to learn that it is not uncommon to know the values of <m>f</m>,
+      <m>f_x</m> and <m>f_y</m> at a particular point without actually knowing the function <m>f</m>.
+      The total differential gives a good method of approximating <m>f</m> at nearby points.
+    </p>
+
+    <example xml:id="ex_totaldiff3">
+      <title>Approximating an unknown function</title>
+      <statement>
+        <p>
+          Given that <m>f(2,-3) = 6</m>,
+          <m>f_x(2,-3) = 1.3</m> and <m>f_y(2,-3) = -0.6</m>,
+          approximate <m>f(2.1,-3.03)</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          The total differential approximates how much <m>f</m> changes from the point <m>(2,-3)</m> to the point <m>(2.1,-3.03)</m>.
+          With <m>dx = 0.1</m> and <m>dy = -0.03</m>, we have
+          <md>
+            <mrow>dz \amp = f_x(2,-3)dx + f_y(2,-3)dy</mrow>
+            <mrow>\amp = 1.3(0.1) + (-0.6)(-0.03)</mrow>
+            <mrow>\amp = 0.148</mrow>
+          </md>.
+        </p>
+
+        <p>
+          The change in <m>z</m> is approximately <m>0.148</m>,
+          so we approximate <m>f(2.1,-3.03)\approx 6.148</m>.
+        </p>
+      </solution>
+    </example>
+  </subsection>
+
+  <subsection xml:id="subsec-tangent-plane-approximation">
+    <title>Tangent Plane Approximation</title>
+    <p>
+      Recall from <xref ref="chapter_derivatives">Chapter</xref> that in one variable,
+      the essence of differentiability is the tangent line approximation.
+      This idea is emphasized in <xref ref="sec_differentials">Section</xref>,
+      where we first introduced the differential.
+    </p>
+
+    <p>
+      In <xref ref="subsec-tangent-plane">Section</xref> we saw that the partial derivatives of a function <m>f(x,y)</m>
+      can be used to define the tangent <em>plane</em> to a graph <m>z=f(x,y)</m>.
+      We will now see that this plane plays the same role for functions of two variables as the tangent line to a graph <m>y=f(x)</m> for a function of one variable.
+    </p>
+
+    <p>
+      Recall that for a function <m>f(x)</m>,
+      when <m>x</m> is near <m>c</m> we have the linear approximation <m>f(x)\approx \ell(x)</m>,
+      where
+      <me>
+        \ell(x) = f(c)+f'(c)(x-c)
+      </me>
+      is the linearization of <m>f</m> at <m>c</m>. If we set <m>dx=\dx = x-c</m>,
+      and evaluate the differential <m>dy = f'(x)\,dx</m> at <m>c</m>,
+      then we have
+      <md>
+        <mrow>\dy \amp = f(x)-f(c)</mrow>
+        <mrow>dy \amp = \ell(x)-f(c)</mrow>
+      </md>.
+    </p>
+
+    <p>
+      Given the graph <m>y=f(x)</m>, we know that <m>y=\ell(x)</m> gives the tangent line to the graph at <m>c</m>.
+      For the graph <m>z=f(x,y)</m> of a function of two variables, we similarly have the tangent plane
+      <me>
+        z=f(a,b)+f_x(a,b)(x-a)+f_y(a,b)(y-b)
+      </me>
+      defined in <xref ref="def-tangent-plane"/>,
+      suggesting that we define the two variable linearization
+      <me>
+        \ell(x,y) = f(a,b)+f_x(a,b)(x-a)+f_y(a,b)(y-b)
+      </me>.
+    </p>
+
+    <p>
+      Consider the total differential <m>dz</m> at <m>(a,b)</m>:
+      <me>
+        dz = f_x(a,b)\,dx + f_y(a,b)\,dy
+      </me>.
+      If we assume that <m>(x,y)</m> is <q>close</q> to <m>(a,b)</m>,
+      and set <m>dx = x-a</m>, <m>dy = y-b</m>,
+      then we have
+			<me>
+        dz = f_x(a,b)\,dx + f_y(a,b)\,dy = f_x(a,b)(x-a)+f_y(a,b)(y-b)
+      </me>.
+			Since <m>\ell(a,b)=f(a,b)</m>, we have
+			<m>\ell(x,y)-\ell(a,b) = dz</m>,
+      which agrees with the one-variable situation,
+      and reinforces the concept of the differential as the <q>linear change</q> in a function.
+    </p>
+
+    <p>
+      If we recast <xref ref="def_multi_differentiability"/> in the language of tangent planes,
+      we can more easily see the analogy with functions of a single variable.
+      We can now say that <m>f(x,y)</m> is differentiable at <m>(a,b)</m> if it has a valid tangent plane approximation at <m>(a,b)</m>.
+      Note that <m>f(x,y)-\ell(x,y)</m> is equal to the error term <m>E_x\,dx+E_y\,dy</m>.
+    </p>
+
+    <p>
+      By <xref ref="thm_diff_cont_multi"/>, we know that the tangent plane at <m>(a,b,f(a,b))</m>
+      exists, and gives a good approximation to the graph <m>z=f(x,y)</m>,
+      as long as the partial derivatives of <m>f</m> exist and are continuous at <m>(a,b)</m>.
+    </p>
+  </subsection>
+
+  <subsection xml:id="subsec-error-analysis-total-diff">
+    <title>Error/Sensitivity Analysis</title>
+    <p>
+      The total differential gives an approximation of the change in <m>z</m> given small changes in <m>x</m> and <m>y</m>.
+      We can use this to approximate error propagation;
+      that is, if the input is a little off from what it should be,
+      how far from correct will the output be?
+      We demonstrate this in an example.
+    </p>
+
+    <p>
+          <idx><h>sensitivity analysis</h></idx>
+          <idx><h>total differential</h><h>sensitivity analysis</h></idx>
+    </p>
+
+    <example xml:id="ex_totaldiff4">
+      <title>Sensitivity analysis</title>
+      <statement>
+        <p>
+          A cylindrical steel storage tank is to be built that is 10ft tall and 4ft across in diameter.
+          It is known that the steel will expand/contract with temperature changes;
+          is the overall volume of the tank more sensitive to changes in the diameter or in the height of the tank?
+        </p>
+      </statement>
+      <solution>
+        <p>
+          A cylindrical solid with height <m>h</m> and radius <m>r</m> has volume <m>V = \pi r^2h</m>.
+          We can view <m>V</m> as a function of two variables, <m>r</m> and <m>h</m>.
+          We can compute partial derivatives of <m>V</m>:
+          <me>
+            \frac{\partial V}{\partial r} = V_r(r,h) = 2\pi rh \qquad \text{ and } \qquad \frac{\partial V}{\partial h} = V_h(r,h) = \pi r^2
+          </me>.
+        </p>
+
+        <p>
+          The total differential is <m>dV = (2\pi rh)dr + (\pi r^2)dh</m>.
+          When <m>h = 10</m> and <m>r = 2</m>,
+          we have <m>dV = 40\pi dr + 4\pi dh</m>.
+          Note that the coefficient of <m>dr</m> is <m>40\pi\approx 125.7</m>;
+          the coefficient of <m>dh</m> is a tenth of that,
+          approximately <m>12.57</m>.
+          A small change in radius will be multiplied by 125.7, whereas a small change in height will be multiplied by 12.57.
+          Thus the volume of the tank is more sensitive to changes in radius than in height.
+        </p>
+      </solution>
+    </example>
+
+    <p>
+      The previous example showed that the volume of a particular tank was more sensitive to changes in radius than in height.
+      Keep in mind that this analysis only applies to a tank of those dimensions.
+      A tank with a height of 1ft and radius of 5ft would be more sensitive to changes in height than in radius.
+    </p>
+
+    <p>
+      One could make a chart of small changes in radius and height and find exact changes in volume given specific changes.
+      While this provides exact numbers,
+      it does not give as much insight as the error analysis using the total differential.
+    </p>
+  </subsection>
+
+  <subsection xml:id="subsec-differentiable-three-var">
+    <title>Differentiability of Functions of Three Variables</title>
+    <p>
+      The definition of differentiability for functions of three variables is very similar to that of functions of two variables.
+      We again start with the total differential.
+    </p>
+
+    <definition xml:id="def_total_differential3">
+      <title>Total Differential</title>
+      <statement>
+        <p>
+          Let <m>w=f(x,y,z)</m> be continuous on a set <m>D</m>.
+          Let <m>dx</m>,
+          <m>dy</m> and <m>dz</m> represent changes in <m>x</m>,
+          <m>y</m> and <m>z</m>, respectively.
+          Where the partial derivatives <m>f_x</m>,
+          <m>f_y</m> and <m>f_z</m> exist,
+          the <term>total differential</term> of <m>w</m> is
+              <idx><h>total differential</h></idx>
+              <idx><h>partial derivative</h><h>total differential</h></idx>
+          <me>
+            dw = f_x(x,y,z)\,dx + f_y(x,y,z)\,dy+f_z(x,y,z)\,dz
+          </me>.
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      This differential can be a good approximation of the change in <m>w</m> when <m>w = f(x,y,z)</m> is
+      <em>differentiable</em>.
+    </p>
+
+    <definition xml:id="def_multi_differentiability3">
+      <title>Multivariable Differentiability</title>
+      <statement>
+        <p>
+          Let <m>w=f(x,y,z)</m> be defined on a set <m>D</m> containing
+          <m>(x_0,y_0,z_0)</m> where <m>f_x(x_0,y_0,z_0)</m>,
+          <m>f_y(x_0,y_0,z_0)</m> and <m>f_z(x_0,y_0,z_0)</m> exist.
+          Let <m>dw</m> be the total differential of <m>w</m> at <m>(x_0,y_0,z_0)</m>,
+          let <m>\Delta w = f(x_0+dx,y_0+dy,z_0+dz) - f(x_0,y_0,z_0)</m>,
+          and let <m>E_x</m>,
+          <m>E_y</m> and <m>E_z</m> be functions of <m>dx</m>,
+          <m>dy</m> and <m>dz</m> such that
+              <idx><h>differentiable</h></idx>
+              <idx><h>derivative</h><h>multivariable differentiability</h></idx>
+              <idx><h>multivariable function</h><h>differentiability</h></idx>
+          <me>
+            \Delta w = dw + E_xdx + E_ydy + E_zdz
+          </me>.
+        </p>
+
+        <p>
+          <ol>
+            <li>
+              <p>
+                We say <m>f</m> is <em>differentiable at <m>(x_0,y_0,z_0)</m></em> if,
+                given <m>\varepsilon \gt 0</m>,
+                there is a <m>\delta \gt 0</m> such that if <m>\norm{\la dx,dy,dz\ra} \lt \delta</m>,
+                then <m>\norm{\la E_x,E_y,E_z\ra} \lt \varepsilon</m>.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                We say <m>f</m> is <em>differentiable on <m>B</m></em>
+                if <m>f</m> is differentiable at every point in <m>B</m>.
+                If <m>f</m> is differentiable on <m>\mathbb{R}^3</m>,
+                we say that <m>f</m> is <em>differentiable everywhere</em>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      Just as before,
+      this definition gives a rigorous statement about what it means to be differentiable that is not very intuitive.
+      We follow it with a theorem similar to <xref ref="thm_differentiable">Theorem</xref>.
+    </p>
+
+    <theorem xml:id="thm_differentiable3">
+      <title>Continuity and Differentiability of Functions of Three Variables</title>
+      <statement>
+        <p>
+          Let <m>w=f(x,y,z)</m> be defined on a set <m>D</m> containing <m>(x_0,y_0,z_0)</m>.
+        </p>
+
+        <p>
+          <ol>
+            <li>
+              <p>
+                If <m>f</m> is differentiable at <m>(x_0,y_0,z_0)</m>,
+                then <m>f</m> is continuous at <m>(x_0,y_0,z_0)</m>.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                If <m>f_x</m>,
+                <m>f_y</m> and <m>f_z</m> are continuous on <m>B</m>,
+                then <m>f</m> is differentiable on <m>B</m>.
+                  <idx><h>multivariable function</h><h>differentiability</h></idx>
+                  <idx><h>multivariable function</h><h>continuity</h></idx>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </theorem>
+
+    <p>
+      This set of definition and theorem extends to functions of any number of variables.
+      The theorem again gives us a simple way of verifying that most functions that we encounter are differentiable on their natural domains.
+    </p>
+
+    <p>
+      This section has given us a formal definition of what it means for a functions to be <q>differentiable,</q>
+      along with a theorem that gives a more accessible understanding.
+      The following sections return to notions prompted by our study of partial derivatives that make use of the fact that most functions we encounter are differentiable.
+    </p>
+  </subsection>
+
+  <xi:include href="exer_sec_total_differential.ptx" />
+</section>

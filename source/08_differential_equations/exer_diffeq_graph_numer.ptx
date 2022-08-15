@@ -1,0 +1,763 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<exercises>
+  <exercise>
+    <statement>
+      <p>
+        In your own words, what is an initial value problem, and how is it different than a differential equation?
+        </p>
+    </statement>
+    <answer>
+      <p>
+        An initial value problems is a differential equation that is paired with one or more initial conditions. A differential equation is simply the equation without the initial conditions.
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        In your own words, describe what it means for a function to be a solution to a differential equation.
+        </p>
+    </statement>
+    <answer>
+      <p>
+        Answers will vary.
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        How can we verify that a function is a solution to a differential equation?
+        </p>
+    </statement>
+    <answer>
+      <p>
+        Substitute the proposed function into the differential equation, and show the the statement is satisfied.
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        Describe the difference between a particular solution and a general solution.
+        </p>
+    </statement>
+    <answer>
+      <p>
+        A particular solution is one specifica member of a family of solutions, and has no arbitrary constants. A general solution is a family of solutions, includes all possible solutions to the differential equation, and typically includes one or more arbitrary constants.
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        Why might we use a graphical or numerical technique to study solutions to a differential equation instead of simply solving the differential equation to find an analytic solution?
+        </p>
+    </statement>
+    <answer>
+      <p>
+        Many differential equations are impossible to solve analytically.
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        Describe the considerations that should be made when choosing an <m>h</m> value to use in a numerical method like Euler's Method.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        A smaller <m>h</m> value leads to a numerical solution that is closer to the true solution, but decreasing the <m>h</m> value leads to more computational effort.
+      </p>
+    </answer>
+  </exercise>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 7–10, verify that the given function is a solution to the differential equation or initial value problem.
+        </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>y = Ce^{-6x^2}</m>;      <m>y'= -12xy</m>.</p>
+      </statement>
+      <answer>
+        <p>
+          Answers will vary.
+          </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>y = x\sin x</m>;      <m>y'- x\cos x= (x^2+1)\sin x - xy,</m> with <m>y(\pi ) = 0</m>.</p>
+      </statement>
+      <answer>
+        <p>
+          Answers will vary.
+          </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>2x^2-y^2=C</m>;      <m>yy'-2x = 0</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          Answers will vary.
+          </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>y=xe^x</m>;      <m>y'' - 2y'+ y = 0</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          Answers will vary.
+          </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 11–12, verify that the given function is a solution to the differential equation and find the <m>C</m> value required to make the function satisfy the initial condition.
+      </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>y = 4e^{3x}\sin x + Ce^{3x}</m>;      <m>y'- 3y = 4e^{3x}\cos x,</m> with <m>y(0)=2</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>C = 2</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>y(x^2+y) = C</m>;     <m>2xy + (x^2+2y)y'= 0,</m> with <m>y(1)=2</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>C = 6</m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 13–16, sketch a slope field for the given differential equation. Let <m>x</m> and <m>y</m> range between <m>-2</m> and <m>2</m>.
+      </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>y'= y-x</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <sidebyside width="30%">
+            <image xml:id="img_diffeq_ex_11ans">
+              <latex-image>
+                \def\length{sqrt(1+(y-x)^2)}
+                \begin{tikzpicture}
+                \begin{axis}[width=\marginparwidth+25pt,
+                tick label style={font=\scriptsize},
+                %axis y line=middle,axis x line=middle,
+                axis lines = center,
+                name=myplot,%
+                view={0}{90},
+                domain = -2:2,
+                %     xtick={-2,-1,..,2},%
+                %     xticklabels={-2,-1,..,2},
+                      ytick={-2,-1,0,1,2},
+                %     yticklabels = {-2,-1,0,1,2},
+                %     minor x tick num=1,
+                %     extra x ticks={.25,.75},%
+                %     ymin=-.1,ymax=1.1,%
+                %     xmin=-.1,xmax=1.1%
+                ]
+                \addplot3 [{\colortwo},quiver = {u = {1/(\length)}, v = {(y-x)/(\length)},scale arrows=.25},samples=9]{0};
+                \end{axis}
+                \node [right] at (myplot.right of origin) {\scriptsize $x$};
+                \node [above] at (myplot.above origin) {\scriptsize $y$};
+                \end{tikzpicture}
+              </latex-image>
+            </image>
+          </sidebyside>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>y'= \displaystyle \frac{x}{2y}</m>
+        </p>
+      </statement>
+      <answer>
+        <sidebyside width="30%">
+          <image xml:id="img_diffeq_ex_12ans">
+            <latex-image>
+              \def\length{sqrt(1+(x/(2*y))^2)}
+              \begin{tikzpicture}
+              \begin{axis}[width=\marginparwidth+25pt,
+              tick label style={font=\scriptsize},
+              %axis y line=middle,axis x line=middle,
+              axis lines = center,
+              name=myplot,%
+              view={0}{90},
+              domain = -2:2,
+              %     xtick={-2,-1,..,2},%
+              %     xticklabels={-2,-1,..,2},
+                    ytick={-2,-1,0,1,2},
+              %     yticklabels = {-2,-1,0,1,2},
+              %     minor x tick num=1,
+              %     extra x ticks={.25,.75},%
+              %     ymin=-.1,ymax=1.1,%
+              %     xmin=-.1,xmax=1.1%
+              ]
+              \addplot3 [{\colortwo},quiver = {u = {1/(\length)}, v = {(x/(2*y))/(\length)},scale arrows=.2},samples=10]{0};
+              \end{axis}
+              \node [right] at (myplot.right of origin) {\scriptsize $x$};
+              \node [above] at (myplot.above origin) {\scriptsize $y$};
+              \end{tikzpicture}
+            </latex-image>
+          </image>
+        </sidebyside>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>y'= \sin (\pi y)</m>
+        </p>
+      </statement>
+      <answer>
+          <sidebyside width="30%">
+            <image xml:id="img_diffeq_ex_13ans">
+              <latex-image>
+                \def\length{sqrt(1+(sin(deg pi*y))^2)}
+                \begin{tikzpicture}
+                \begin{axis}[width=\marginparwidth+25pt,
+                tick label style={font=\scriptsize},
+                %axis y line=middle,axis x line=middle,
+                axis lines = center,
+                name=myplot,%
+                view={0}{90},
+                domain = -2:2,
+                %     xtick={-2,-1,..,2},%
+                %     xticklabels={-2,-1,..,2},
+                      ytick={-2,-1,0,1,2},
+                %     yticklabels = {-2,-1,0,1,2},
+                %     minor x tick num=1,
+                %     extra x ticks={.25,.75},%
+                %     ymin=-.1,ymax=1.1,%
+                %     xmin=-.1,xmax=1.1%
+                ]
+                \addplot3 [{\colortwo},quiver = {u = {1/(\length)}, v = {(sin(deg pi*y))/(\length)},scale arrows=.15},samples=20]{0};
+                \end{axis}
+                \node [right] at (myplot.right of origin) {\scriptsize $x$};
+                \node [above] at (myplot.above origin) {\scriptsize $y$};
+                \end{tikzpicture}
+              </latex-image>
+            </image>
+          </sidebyside>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>y'= \frac{y}{4}</m>
+        </p>
+      </statement>
+      <answer>
+        <sidebyside width="30%">
+          <image xml:id="img_diffeq_ex_30ans">
+            <latex-image>
+              \def\length{sqrt(1+(y/4)^2)}
+              \begin{tikzpicture}
+              \begin{axis}[width=\marginparwidth+25pt,
+              tick label style={font=\scriptsize},
+              %axis y line=middle,axis x line=middle,
+              axis lines = center,
+              name=myplot,%
+              view={0}{90},
+              domain = -2:2,
+              %     xtick={-2,-1,..,2},%
+              %     xticklabels={-2,-1,..,2},
+                    ytick={-2,-1,0,1,2},
+              %     yticklabels = {-2,-1,0,1,2},
+              %     minor x tick num=1,
+              %     extra x ticks={.25,.75},%
+              %     ymin=-.1,ymax=1.1,%
+              %     xmin=-.1,xmax=1.1%
+              ]
+              \addplot3 [{\colortwo},quiver = {u = {1/(\length)}, v = {(y/4)/(\length)},scale arrows=.2},samples=10]{0};
+              \end{axis}
+              \node [right] at (myplot.right of origin) {\scriptsize $x$};
+              \node [above] at (myplot.above origin) {\scriptsize $y$};
+              \end{tikzpicture}
+            </latex-image>
+          </image>
+        </sidebyside>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 17–20, match the slope field with the appropriate differential equation.
+      </p>
+        <sbsgroup>
+          <sidebyside width="40%">
+            <image xml:id="img_diffeq_ex_14a"><latex-image>
+              \def\length{sqrt(1+(x*(1-x))^2)}
+              \begin{tikzpicture}
+              \begin{axis}[width=\marginparwidth+25pt,
+              tick label style={font=\scriptsize},
+              %axis y line=middle,axis x line=middle,
+              axis lines = center,
+              name=myplot,%
+              view={0}{90},
+              domain = -2:2,
+              y domain = -2:2,
+              %     xtick={-2,-1,..,2},%
+              %     xticklabels={-2,-1,..,2},
+                    ytick={-3,-2,-1,0,1,2,3},
+              %     yticklabels = {-2,-1,0,1,2},
+              %     minor x tick num=1,
+              %     extra x ticks={.25,.75},%
+              %     ymin=-.1,ymax=1.1,%
+              %     xmin=-.1,xmax=1.1%
+              ]
+              \addplot3 [{\colortwo},quiver = {u = {1/(\length)}, v = {(x*(1-x))/(\length)},scale arrows=.1},samples=15]{0};
+              \end{axis}
+              \node [right] at (myplot.right of origin) {\scriptsize $x$};
+              \node [above] at (myplot.above origin) {\scriptsize $y$};
+              \end{tikzpicture}
+            </latex-image></image>
+            <image xml:id="img_diffeq_ex_14c"><latex-image>
+              \def\length{sqrt(1+(-y)^2)}
+              \begin{tikzpicture}
+              \begin{axis}[width=\marginparwidth+25pt,
+              tick label style={font=\scriptsize},
+              %axis y line=middle,axis x line=middle,
+              axis lines = center,
+              name=myplot,%
+              view={0}{90},
+              domain = -2:2,
+              y domain = -2:2,
+              %     xtick={-2,-1,..,2},%
+              %     xticklabels={-2,-1,..,2},
+                    ytick={-3,-2,-1,0,1,2,3},
+              %     yticklabels = {-2,-1,0,1,2},
+              %     minor x tick num=1,
+              %     extra x ticks={.25,.75},%
+              %     ymin=-.1,ymax=1.1,%
+              %     xmin=-.1,xmax=1.1%
+              ]
+              \addplot3 [{\colortwo},quiver = {u = {1/(\length)}, v = {(-y)/(\length)},scale arrows=.1},samples=15]{0};
+              \end{axis}
+              \node [right] at (myplot.right of origin) {\scriptsize $x$};
+              \node [above] at (myplot.above origin) {\scriptsize $y$};
+              \end{tikzpicture}
+            </latex-image></image>
+          </sidebyside>
+          <sidebyside width="40%"><p>(a)</p><p>(c)</p></sidebyside>
+          <sidebyside width="40%">
+            <image xml:id="img_diffeq_ex_14b"><latex-image>
+              \def\length{sqrt(1+(x*y)^2)}
+              \begin{tikzpicture}
+              \begin{axis}[width=\marginparwidth+25pt,
+              tick label style={font=\scriptsize},
+              %axis y line=middle,axis x line=middle,
+              axis lines = center,
+              name=myplot,%
+              view={0}{90},
+              domain = -2:2,
+              y domain = -2:2,
+              %     xtick={-2,-1,..,2},%
+              %     xticklabels={-2,-1,..,2},
+                    ytick={-3,-2,-1,0,1,2,3},
+              %     yticklabels = {-2,-1,0,1,2},
+              %     minor x tick num=1,
+              %     extra x ticks={.25,.75},%
+              %     ymin=-.1,ymax=1.1,%
+              %     xmin=-.1,xmax=1.1%
+              ]
+              \addplot3 [{\colortwo},quiver = {u = {1/(\length)}, v = {(x*y)/(\length)},scale arrows=.1},samples=15]{0};
+              \end{axis}
+              \node [right] at (myplot.right of origin) {\scriptsize $x$};
+              \node [above] at (myplot.above origin) {\scriptsize $y$};
+              \end{tikzpicture}
+            </latex-image></image>
+            <image xml:id="img_diffeq_ex_14d"><latex-image>
+              \def\length{sqrt(1+(-x)^2)}
+              \begin{tikzpicture}
+              \begin{axis}[width=\marginparwidth+25pt,
+              tick label style={font=\scriptsize},
+              %axis y line=middle,axis x line=middle,
+              axis lines = center,
+              name=myplot,%
+              view={0}{90},
+              domain = -2:2,
+              y domain = -2:2,
+              %     xtick={-2,-1,..,2},%
+              %     xticklabels={-2,-1,..,2},
+                    ytick={-3,-2,-1,0,1,2,3},
+              %     yticklabels = {-2,-1,0,1,2},
+              %     minor x tick num=1,
+              %     extra x ticks={.25,.75},%
+              %     ymin=-.1,ymax=1.1,%
+              %     xmin=-.1,xmax=1.1%
+              ]
+              \addplot3 [{\colortwo},quiver = {u = {1/(\length)}, v = {(-x)/(\length)},scale arrows=.1},samples=15]{0};
+              \end{axis}
+              \node [right] at (myplot.right of origin) {\scriptsize $x$};
+              \node [above] at (myplot.above origin) {\scriptsize $y$};
+              \end{tikzpicture}
+            </latex-image></image>
+          </sidebyside>
+          <sidebyside width="40%"><p>(b)</p><p>(d)</p></sidebyside>
+        </sbsgroup>
+    </introduction>
+
+    <exercise>
+      <statement>
+        <p>
+          <m>y'= xy</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          b
+          </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>y'= -y</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          c
+          </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>y'= -x</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          d
+          </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>y'= x(1-x)</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          a
+          </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 21–24, sketch the slope field for the differential equation, and use it to draw a sketch of the solution to the initial value problem.
+      </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>y'= \displaystyle \frac{y}{x} - y</m>, with <m>y(0.5)=1.</m>
+        </p>
+      </statement>
+      <answer>
+          <sidebyside width="30%">
+            <image xml:id="img_diffeq_ex_18ans"><latex-image>
+              \def\length{sqrt(1+(y/x-y)^2)}
+              \begin{tikzpicture}
+              \begin{axis}[width=\marginparwidth+25pt,
+              tick label style={font=\scriptsize},
+              %axis y line=middle,axis x line=middle,
+              axis lines = center,
+              name=myplot,%
+              view={0}{90},
+              y domain = -.5:1.5,
+              domain = -.5:5,
+              %     xtick={-1,0,..,5},%
+              %     xticklabels={-1,0,1,2,3,4,5},
+              %     ytick={-2,-1,0,1,2},
+              %     yticklabels = {-2,-1,0,1,2},
+                    minor x tick num=1,
+                    extra x ticks={1,3,5},%
+                    ymin=-.1,ymax=1.6,%
+                    xmin=-.1,xmax=5.2%
+              ]
+              \addplot3 [{\colortwo},quiver = {u = {1/(\length)}, v = {(y/x-y)/(\length)},scale arrows=.15},samples=15]{0};
+              \addplot [{\colorone},thick,domain=0.5:5.1,samples = 51] {2*x*exp(1/2-x)};
+              \fill[black,draw=black] (axis cs:.5,1) circle (1.5pt);
+              \end{axis}
+              \node [right] at (myplot.right of origin) {\scriptsize $x$};
+              \node [above] at (myplot.above origin) {\scriptsize $y$};
+              \end{tikzpicture}
+            </latex-image></image>
+          </sidebyside>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>y'= y\sin x</m>, with <m>y(0)=1.</m>
+        </p>
+      </statement>
+      <answer>
+        <sidebyside width="30%">
+          <image xml:id="img_diffeq_ex_19ans"><latex-image>
+            \def\length{sqrt(1+(y*sin(deg x))^2)}
+            \begin{tikzpicture}
+            \begin{axis}[width=\marginparwidth+25pt,
+            tick label style={font=\scriptsize},
+            %axis y line=middle,axis x line=middle,
+            axis lines = center,
+            name=myplot,%
+            view={0}{90},
+            %y domain = -.5:10,
+            domain = -.5:10,
+            %     xtick={0,1,..,10},%
+            %     xticklabels={-1,0,1,2,3,4,5},
+            %     ytick={-2,-1,0,1,2},
+            %     yticklabels = {-2,-1,0,1,2},
+                  minor x tick num=1,
+                  extra x ticks={2.5,7.5},%
+                  minor y tick num=1,
+                  extra y ticks={2.5,7.5},
+            %     ymin=-.1,ymax=1.6,%
+            %     xmin=-.1,xmax=5.2%
+            ]
+            \addplot3 [{\colortwo},quiver = {u = {1/(\length)}, v = {(y*sin(deg x))/(\length)},scale arrows=.4},samples=15]{0};
+            \addplot [{\colorone},thick,domain=0:10,samples = 100] {exp(1-cos(deg x))};
+            \fill[black,draw=black] (axis cs:0,1) circle (1.5pt);
+            \end{axis}
+            \node [right] at (myplot.right of origin) {\scriptsize $x$};
+            \node [above] at (myplot.above origin) {\scriptsize $y$};
+            \end{tikzpicture}
+          </latex-image></image>
+        </sidebyside>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>y'= y^2-3y+2</m>, with <m>y(0)=2.</m>
+        </p>
+      </statement>
+      <answer>
+        <sidebyside width="30%">
+          <image xml:id="img_diffeq_ex_20ans"><latex-image>
+            \def\length{sqrt(1+(y^2-3*y+2)^2)}
+            \begin{tikzpicture}
+            \begin{axis}[width=\marginparwidth+25pt,
+            tick label style={font=\scriptsize},
+            %axis y line=middle,axis x line=middle,
+            axis lines = center,
+            name=myplot,%
+            view={0}{90},
+            y domain = -.15:3,
+            domain = -.15:4,
+            %     xtick={0,1,..,10},%
+            %     xticklabels={-1,0,1,2,3,4,5},
+            %     ytick={-2,-1,0,1,2},
+            %     yticklabels = {-2,-1,0,1,2},
+                  minor x tick num=1,
+                  extra x ticks={1,3},%
+            %     minor y tick num=1,
+            %     extra y ticks={2.5,7.5},
+            %     ymin=-.1,ymax=1.6,%
+            %     xmin=-.1,xmax=5.2%
+            ]
+            \addplot3 [{\colortwo},quiver = {u = {1/(\length)}, v = {(y^2-3*y+2)/(\length)},scale arrows=.2},samples=15]{0};
+            \addplot [{\colorone},thick] coordinates{(0,2) (4.1,2)};
+            \fill[black,draw=black] (axis cs:0,2) circle (1.5pt);
+            \end{axis}
+            \node [right] at (myplot.right of origin) {\scriptsize $x$};
+            \node [above] at (myplot.above origin) {\scriptsize $y$};
+            \end{tikzpicture}
+          </latex-image></image>
+        </sidebyside>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle y'= -\frac{xy}{1+x^2}</m>, with <m>y(0)=1.</m>
+        </p>
+      </statement>
+      <answer>
+        <sidebyside width="30%">
+          <image xml:id="img_diffeq_ex_31ans"><latex-image>
+            \def\length{sqrt(1+(-x*y/(1+x^2))^2)}
+            \begin{tikzpicture}
+            \begin{axis}[width=\marginparwidth+25pt,
+            tick label style={font=\scriptsize},
+            %axis y line=middle,axis x line=middle,
+            axis lines = center,
+            name=myplot,%
+            view={0}{90},
+            y domain = -.15:3,
+            domain = -.15:4,
+            %     xtick={0,1,..,10},%
+            %     xticklabels={-1,0,1,2,3,4,5},
+            %     ytick={-2,-1,0,1,2},
+            %     yticklabels = {-2,-1,0,1,2},
+                  minor x tick num=1,
+                  extra x ticks={1,3},%
+            %     minor y tick num=1,
+            %     extra y ticks={2.5,7.5},
+            %     ymin=-.1,ymax=1.6,%
+            %     xmin=-.1,xmax=5.2%
+            ]
+            \addplot3 [{\colortwo},quiver = {u = {1/(\length)}, v = {(-x*y/(1+x^2))/(\length)},scale arrows=.2},samples=15]{0};
+            \addplot [{\colorone},thick,domain=0:4,samples=50] {1/sqrt(1+x^2)};
+            \fill[black,draw=black] (axis cs:0,1) circle (1.5pt);
+            \end{axis}
+            \node [right] at (myplot.right of origin) {\scriptsize $x$};
+            \node [above] at (myplot.above origin) {\scriptsize $y$};
+            \end{tikzpicture}
+          </latex-image></image>
+        </sidebyside>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 25–28, use Euler's Method to make a table of values that approximates the solution to the initial value problem on the given interval. Use the specified <m>h</m> or <m>N</m> value.
+      </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>y'= x+2y</m>
+          <m>y(0)=1</m>interval: <m>[0,1]</m>
+          <m>h=0.25</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\begin{array}{l | l} x_i &amp; y_i \\ \hline 0.00 &amp; 1.0000 \\ 0.25 &amp; 1.5000 \\ 0.50 &amp; 2.3125 \\ 0.75 &amp; 3.5938 \\ 1.00 &amp; 5.5781 \end{array}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>y'= xe^{-y}</m>
+          <m>y(0)=1</m>interval: <m>[0,0.5]</m>
+          <m>N=5</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\begin{array}{l | l} x_i &amp; y_i \\ \hline 0.0 &amp; 1.0000 \\ 0.1 &amp; 1.0000 \\ 0.2 &amp; 1.0037 \\ 0.3 &amp; 1.0110 \\ 0.4 &amp; 1.0219 \\ 0.5 &amp; 1.0363 \end{array}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>y'= y + \sin x</m>
+          <m>y(0)=2</m>interval: <m>[0,1]</m>
+          <m>h = 0.2</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\begin{array}{l | l} x_i &amp; y_i \\ \hline 0.0 &amp; 2.0000 \\ 0.2 &amp; 2.4000 \\ 0.4 &amp; 2.9197 \\ 0.6 &amp; 3.5816 \\ 0.8 &amp; 4.4108 \\ 1.0 &amp; 5.4364 \end{array}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>y'= e^{x-y}</m>
+          <m>y(0)=0</m>interval: <m>[0,2]</m>
+          <m>h = 0.5</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\begin{array}{l | l} x_i &amp; y_i \\ \hline 0.0 &amp; 0.0000 \\ 0.5 &amp; 0.5000 \\ 1.0 &amp; 1.8591 \\ 1.5 &amp; 10.5824 \\ 2.0 &amp; 88378.1190 \\ \end{array}</m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 29–30, use the provided solution <m>y(x)</m> and Euler's Method with <m>h=0.2</m> and <m>h=0.1</m> to complete the following table.<md>
+          <mrow> \begin{array}{| l | l | l | l | l | l | l |} \hline x \amp 0.0 \amp 0.2 \amp 0.4 \amp 0.6 \amp 0.8 \amp 1.0 </mrow>
+          <mrow> \hline y(x) \amp \amp \amp \amp \amp \amp </mrow>
+          <mrow> \hline h = 0.2 \amp \amp \amp \amp \amp \amp </mrow>
+          <mrow> \hline h = 0.1 \amp \amp \amp \amp \amp \amp</mrow>
+          <mrow> \hline \end{array} </mrow>
+        </md>
+        
+      </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>y'= xy^2</m>,
+          <m>y(0)=1</m>; solution: <m>\displaystyle y(x) = \frac{2}{1-x^2}</m>
+        </p>
+      </statement>
+      <answer>
+        <error c="Extra $ ignored..." l="1796" n="$" />
+        <error c="Extra $ ignored..." l="1796" n="$" />
+        <p>
+          <m>\begin{array}{l | l | l | l} x_i &amp; y(x) &amp; h=0.2 &amp; h = 0.1 \\ \hline 0.0 &amp; 1.0000 &amp; 1.0000 &amp; 1.0000 \\ 0.2 &amp; 1.0204 &amp; 1.0000 &amp; 1.0100 \\ 0.4 &amp; 1.0870 &amp; 1.0400 &amp; 1.0623 \\ 0.6 &amp; 1.2195 &amp; 1.1265 &amp; 1.1687 \\ 0.8 &amp; 1.4706 &amp; 1.2788 &amp; 1.3601 \\ 1.0 &amp; 2.0000 &amp; 1.5405 &amp; 1.7129 \end{array}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle y'= xe^{x^2}+\frac{1}{2}xy</m>,
+          <m>\displaystyle y(0)=\frac{1}{2}</m>; solution: <m>\displaystyle y(x) = \frac{1}{2}(x^2+1)e^{x^2}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\begin{array}{l | l | l | l} x_i &amp; y(x) &amp; h = 0.2 &amp; h = 0.1 \\ \hline 0.0 &amp; 0.5000 &amp; 0.5000 &amp; 0.5000 \\ 0.2 &amp; 0.5412 &amp; 0.5000 &amp; 0.5201 \\ 0.4 &amp; 0.6806 &amp; 0.5816 &amp; 0.6282 \\ 0.6 &amp; 0.9747 &amp; 0.7686 &amp; 0.8622 \\ 0.8 &amp; 1.5551 &amp; 1.1250 &amp; 1.3132 \\ 1.0 &amp; 2.7183 &amp; 1.7885 &amp; 2.1788 \end{array}</m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+
+</exercises>

@@ -1,0 +1,1000 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<exercises>
+  <subexercises>
+    <title>Terms and Concepts</title>
+
+    <exercise>
+          <statement>
+            <p>
+              What is the difference between degenerate and nondegenerate conics?
+            </p>
+          </statement>
+          <answer>
+            <p>
+              When defining the conics as the intersections of a plane and a double napped cone,
+              degenerate conics are created when the plane intersects the tips of the cones
+              (usually taken as the origin).
+              Nondegenerate conics are formed when this plane does not contain the origin.
+            </p>
+          </answer>
+    </exercise>
+
+    <exercise>
+          <statement>
+            <p>
+              Use your own words to explain what the eccentricity of an ellipse measures.
+            </p>
+          </statement>
+          <answer>
+            <p>
+              Answers will vary.
+            </p>
+          </answer>
+    </exercise>
+
+    <exercise>
+          <statement>
+            <p>
+              What has the largest eccentricity:
+              an ellipse or a hyperbola?
+            </p>
+          </statement>
+          <answer>
+            <p>
+              Hyperbola
+            </p>
+          </answer>
+    </exercise>
+
+    <exercise>
+          <statement>
+            <p>
+              Explain why the following is true:
+              <q>If the coefficient of the <m>x^2</m> term in the equation of an ellipse in standard form is smaller than the coefficient of the <m>y^2</m> term,
+              then the ellipse has a horizontal major axis.</q>
+            </p>
+          </statement>
+          <answer>
+            <p>
+              With the equation <m>\frac{(x-h)^2}{a^2}+\frac{(y-k)^2}{b^2}=1</m>,
+              the ellipse has a horizontal major axis if <m>a \gt b</m>.
+              But the coefficient of the <m>x^2</m> term is <m>1/a^2</m>
+              (not <m>a^2</m>),
+              so if <m>1/a^2\lt 1/b^2</m>, then <m>a \gt b</m> and the major axis is horizontal.
+            </p>
+          </answer>
+    </exercise>
+
+    <exercise>
+          <statement>
+            <p>
+              Explain how one can quickly look at the equation of a hyperbola in standard form and determine whether the transverse axis is horizontal or vertical.
+            </p>
+          </statement>
+          <answer>
+            <p>
+              With a horizontal transverse axis,
+              the <m>x^2</m> term has a positive coefficient;
+              with a vertical transverse axis,
+              the <m>y^2</m> term has a positive coefficient.
+            </p>
+          </answer>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Fill in the blank: It can be said that ellipses and hyperbolas share the
+          <em>same</em> reflective property:
+          <q>A ray emanating from one focus will reflect off the conic along a <fillin /> that contains the other focus.</q>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          line
+        </p>
+      </answer>
+    </exercise>
+  </subexercises>
+  <subexercises>
+    <title>Problems</title>
+    <exercisegroup cols="2">
+
+      <introduction>
+        <p>
+          In the following exercises,
+          find the equation of the parabola defined by the given information.
+          Sketch the parabola.
+        </p>
+      </introduction>
+
+      <exercise>
+            <statement>
+              <p>
+                Focus: <m>(3,2)</m>; directrix: <m>y=1</m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                <m>y=\frac12(x-3)^2+\frac32</m>
+              </p>
+            </answer>
+      </exercise>
+
+      <exercise>
+            <statement>
+              <p>
+                Focus: <m>(-1,-4)</m>; directrix: <m>y=2</m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                <m>y=\frac{-1}{12}(x+1)^2-1</m>
+              </p>
+            </answer>
+      </exercise>
+
+      <exercise>
+            <statement>
+              <p>
+                Focus: <m>(1,5)</m>; directrix: <m>x=3</m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                <m>x=-\frac14(y-5)^2+2</m>
+              </p>
+            </answer>
+      </exercise>
+
+      <exercise>
+            <statement>
+              <p>
+                Focus: <m>(1/4,0)</m>; directrix: <m>x=-1/4</m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                <m>x=y^2</m>
+              </p>
+            </answer>
+      </exercise>
+
+      <exercise>
+            <statement>
+              <p>
+                Focus: <m>(1,1)</m>; vertex: <m>(1,2)</m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                <m>y=-\frac14(x-1)^2+2</m>
+              </p>
+            </answer>
+      </exercise>
+
+      <exercise>
+            <statement>
+              <p>
+                Focus: <m>(-3,0)</m>; vertex: <m>(0,0)</m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                <m>x=-\frac1{12}y^2</m>
+              </p>
+            </answer>
+      </exercise>
+
+      <exercise>
+            <statement>
+              <p>
+                Vertex: <m>(0,0)</m>; directrix: <m>y=-1/16</m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                <m>y=4x^2</m>
+              </p>
+            </answer>
+      </exercise>
+
+      <exercise>
+            <statement>
+              <p>
+                Vertex: <m>(2,3)</m>; directrix: <m>x=4</m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                <m>x=-\frac18(y-3)^2+2</m>
+              </p>
+            </answer>
+      </exercise>
+
+    </exercisegroup>
+    <exercisegroup cols="2">
+
+      <introduction>
+        <p>
+          In the following exercises,
+          the equation of a parabola and a point on its graph are given.
+          Find the focus and directrix of the parabola,
+          and verify that the given point is equidistant from the focus and directrix.
+        </p>
+      </introduction>
+
+      <exercise>
+            <statement>
+              <p>
+                <m>y=\frac14x^2</m>, <m>P=(2,1)</m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                focus: <m>(0,1)</m>; directrix: <m>y=-1</m>.
+                The point <m>P</m> is 2 units from each.
+              </p>
+            </answer>
+      </exercise>
+
+      <exercise>
+            <statement>
+              <p>
+                <m>x=\frac18(y-2)^2+3</m>, <m>P=(11,10)</m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                focus: <m>(5,2)</m>; directrix: <m>x=1</m>.
+                The point <m>P</m> is 10 units from each.
+              </p>
+            </answer>
+      </exercise>
+
+    </exercisegroup>
+    <exercisegroup cols="2">
+
+      <introduction>
+        <p>
+          In the following exercises, sketch the ellipse defined by the given equation.
+          Label the center, foci and vertices.
+        </p>
+      </introduction>
+
+      <exercise>
+            <statement>
+              <p>
+                <m>\ds \frac{(x-1)^2}{3}+\frac{(y-2)^2}{5}=1</m>
+              </p>
+            </statement>
+            <!-- <answer>
+
+            </answer> -->
+      </exercise>
+
+      <exercise>
+            <statement>
+              <p>
+                <m>\ds \frac{1}{25}x^2+\frac{1}{9}(y+3)^2=1</m>
+              </p>
+            </statement>
+            <!-- <answer>
+
+            </answer> -->
+      </exercise>
+
+    </exercisegroup>
+    <exercisegroup cols="2">
+
+      <introduction>
+        <p>
+          In the following exercises,
+          find the equation of the ellipse shown in the graph.
+          Give the location of the foci and the eccentricity of the ellipse.
+        </p>
+      </introduction>
+
+      <exercise>
+            <statement>
+
+            <!-- START figures/fig_09_01_ex_20.tex -->
+                <image>
+                  <description></description>
+                  <latex-image>
+
+                  \begin{tikzpicture}
+
+                  \begin{axis}[
+                  axis on top,
+                  ymin=-1.2,ymax=5.2,
+                  xmin=-5.2,xmax=3.2
+                  ]
+
+                  \addplot+ [-,domain=0:360,samples=60] ({3*cos(x)-1},{2*sin(x)+2)});
+
+                  \end{axis}
+
+                  \end{tikzpicture}
+
+                  </latex-image>
+                </image>
+            <!-- figures/fig_09_01_ex_20.tex END -->
+
+            </statement>
+            <answer>
+              <p>
+                <m>\frac{(x+1)^2}{9}+\frac{(y-2)^2}{4}=1</m>;
+                foci at <m>(-1\pm\sqrt{5},2)</m>; <m>e=\sqrt{5}/3</m>
+              </p>
+            </answer>
+      </exercise>
+
+      <exercise>
+            <statement>
+
+            <!-- START figures/fig_09_01_ex_21.tex -->
+                <image>
+                  <description></description>
+                  <latex-image>
+
+                  \begin{tikzpicture}
+
+                  \begin{axis}[
+                  axis on top,
+                  ymin=-3.5,ymax=3.5,
+                  xmin=-1.2,xmax=2.2
+                  ]
+
+                  \addplot+ [-,domain=0:360,samples=60] ({.5*cos(x)+1},{3*sin(x))});
+
+                  \end{axis}
+
+                  \end{tikzpicture}
+
+                  </latex-image>
+                </image>
+            <!-- figures/fig_09_01_ex_21.tex END -->
+
+            </statement>
+            <answer>
+              <p>
+                <m>\frac{(x-1)^2}{1/4}+\frac{y^2}{9}=1</m>;
+                foci at <m>(1,\pm \sqrt{8.75})</m>;
+                <m>e=\sqrt{8.75}/3\approx 0.99</m>
+              </p>
+            </answer>
+      </exercise>
+
+    </exercisegroup>
+    <exercisegroup cols="2">
+
+      <introduction>
+        <p>
+          In the following exercises,
+          find the equation of the ellipse defined by the given information.
+          Sketch the elllipse.
+        </p>
+      </introduction>
+
+      <exercise>
+            <statement>
+              <p>
+                Foci: <m>(\pm 2,0)</m>; vertices: <m>(\pm 3,0)</m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                <m>\frac{x^2}{9}+\frac{y^2}{5}=1</m>
+              </p>
+            </answer>
+      </exercise>
+
+      <exercise>
+            <statement>
+              <p>
+                Foci: <m>(-1,3)</m> and <m>(5,3)</m>; vertices:
+                <m>(-3,3)</m> and <m>(7,3)</m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                <m>\frac{(x-2)^2}{25}+\frac{(y-3)^2}{16}=1</m>
+              </p>
+            </answer>
+      </exercise>
+
+      <exercise>
+            <statement>
+              <p>
+                Foci: <m>(2,\pm 2)</m>; vertices: <m>(2,\pm 7)</m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                <m>\frac{(x-2)^2}{45}+\frac{y^2}{49}=1</m>
+              </p>
+            </answer>
+      </exercise>
+
+      <exercise>
+            <statement>
+              <p>
+                Focus: <m>(-1,5)</m>; vertex:
+                <m>(-1,-4)</m>; center: <m>(-1,1)</m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                <m>\frac{(x+1)^2}{9}+\frac{(y-1)^2}{25}=1</m>
+              </p>
+            </answer>
+      </exercise>
+
+    </exercisegroup>
+    <exercisegroup cols="2">
+
+      <introduction>
+        <p>
+          In the following exercises,
+          write the equation of the given ellipse in standard form.
+        </p>
+      </introduction>
+
+      <exercise>
+            <statement>
+              <p>
+                <m>x^2-2x+2y^2-8y=-7</m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                <m>\frac{(x-1)^2}{2}+(y-2)^2=1</m>
+              </p>
+            </answer>
+      </exercise>
+
+      <exercise>
+            <statement>
+              <p>
+                <m>5x^2+3y^2=15</m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                <m>\frac{x^2}{3}+\frac{y^2}{5}=1</m>
+              </p>
+            </answer>
+      </exercise>
+
+      <exercise>
+            <statement>
+              <p>
+                <m>3x^2+2y^2-12y+6=0</m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                <m>\frac{x^2}{4}+\frac{(y-3)^2}{6}=1</m>
+              </p>
+            </answer>
+      </exercise>
+
+      <exercise>
+            <statement>
+              <p>
+                <m>x^2+y^2-4x-4y+4=0</m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                <m>\frac{(x-2)^2}{4}+\frac{(y-2)^2}{4}=1</m>
+              </p>
+            </answer>
+      </exercise>
+
+    </exercisegroup>
+    <exercisegroup cols="2">
+
+      <introduction>
+        <p>
+          In the following exercises,
+          find the equation of the hyperbola shown in the graph.
+        </p>
+      </introduction>
+
+      <exercise>
+            <statement>
+
+            <!-- START figures/fig_09_01_ex_27.tex -->
+                <image>
+                  <description></description>
+                  <latex-image>
+
+                  \begin{tikzpicture}
+
+                  \begin{axis}[
+                  axis on top,
+                  xtick={-1,1,2,-2},
+                  ymin=-3.5,ymax=3.5,
+                  xmin=-3.5,xmax=3.5
+                  ]
+
+                  \addplot [firstcurvestyle,-,domain=-70:70] ({sec(x)},{1.73*tan(x))});
+                  \addplot [firstcurvestyle,-,domain=-70:70] ({-sec(x)},{1.73*tan(x))});
+
+                  \filldraw (axis cs: 2,0) circle (1.5pt)
+                            (axis cs: -2,0) circle (1.5pt);
+
+                  \end{axis}
+
+                  \end{tikzpicture}
+
+                  </latex-image>
+                </image>
+            <!-- figures/fig_09_01_ex_27.tex END -->
+
+            </statement>
+            <answer>
+              <p>
+                <m>x^2-\frac{y^2}{3}=1</m>
+              </p>
+            </answer>
+      </exercise>
+
+      <exercise>
+            <statement>
+
+            <!-- START figures/fig_09_01_ex_28.tex -->
+                <image>
+                  <description></description>
+                  <latex-image>
+
+                  \begin{tikzpicture}
+
+                  \begin{axis}[
+                  axis on top,
+                  minor x tick num=4,
+                  minor y tick num=4,
+                  ymin=-6.5,ymax=6.5,
+                  xmin=-8.5,xmax=8.5
+                  ]
+
+                  \addplot [firstcurvestyle,-,domain=-70:70] ({4.9*tan(x)},{sec(x))});
+                  \addplot [firstcurvestyle,-,domain=-70:70] ({4.9*tan(x)},{-sec(x))});
+
+                  \filldraw (axis cs: 0,5) circle (1.5pt)
+                            (axis cs: 0,-5) circle (1.5pt);
+
+                  \end{axis}
+
+                  \end{tikzpicture}
+
+                  </latex-image>
+                </image>
+            <!-- figures/fig_09_01_ex_28.tex END -->
+
+            </statement>
+            <answer>
+              <p>
+                <m>y^2-\frac{x^2}{24}=1</m>
+              </p>
+            </answer>
+      </exercise>
+
+      <exercise>
+            <statement>
+
+            <!-- START figures/fig_09_01_ex_29.tex -->
+                <image>
+                  <description></description>
+                  <latex-image>
+
+                  \begin{tikzpicture}
+
+                  \begin{axis}[
+                  axis on top,
+                  minor x tick num=4,
+                  ymin=-1.5,ymax=7.5,
+                  xmin=-4.5,xmax=6.5
+                  ]
+
+                  \addplot [firstcurvestyle,-,domain=-70:70] ({3*tan(x)+1},{2*sec(x)+3});
+                  \addplot [firstcurvestyle,-,domain=-70:70] ({3*tan(x)+1},{-2*sec(x)+3});
+
+                  \addplot [secondcurvestyle,-,domain=-8:8] (x,{2/3*(x-1)+3});
+                  \addplot [secondcurvestyle,-,domain=-8:8] (x,{-2/3*(x-1)+3});
+
+                  \draw [thick,dashed,gray] (axis cs: -2,5) -- (axis cs:4,5) -- (axis cs:4,1) -- (axis cs: -2,1) --cycle;
+
+                  \filldraw (axis cs: 1,3) circle (1.5pt);
+
+                  \end{axis}
+
+                  \end{tikzpicture}
+
+                  </latex-image>
+                </image>
+            <!-- figures/fig_09_01_ex_29.tex END -->
+
+            </statement>
+            <answer>
+              <p>
+                <m>\frac{(y-3)^2}{4}-\frac{(x-1)^2}{9}=1</m>
+              </p>
+            </answer>
+      </exercise>
+
+      <exercise>
+            <statement>
+
+            <!-- START figures/fig_09_01_ex_30.tex -->
+                <image>
+                  <description></description>
+                  <latex-image>
+
+                  \begin{tikzpicture}
+
+                  \begin{axis}[
+                  minor x tick num=4,
+                  ymin=-1.5,ymax=7.5,
+                  xmin=-4.5,xmax=6.5
+                  ]
+
+                  \addplot [firstcurvestyle,-,domain=-70:70] ({3*sec(x)+1},{2*tan(x)+3});
+                  \addplot [firstcurvestyle,-,domain=-70:70] ({-3*sec(x)+1},{2*tan(x)+3});
+
+                  \addplot [secondcurvestyle,-,domain=-8:8] (x,{2/3*(x-1)+3});
+                  \addplot [secondcurvestyle,-,domain=-8:8] (x,{-2/3*(x-1)+3});
+
+                  \draw [thick,dashed,gray] (axis cs: -2,5) -- (axis cs:4,5) -- (axis cs:4,1) -- (axis cs: -2,1) --cycle;
+
+                  \filldraw (axis cs: 1,3) circle (1.5pt);
+
+                  \end{axis}
+
+                  \end{tikzpicture}
+
+                  </latex-image>
+                </image>
+            <!-- figures/fig_09_01_ex_30.tex END -->
+
+            </statement>
+            <answer>
+              <p>
+                <m>\frac{(x-1)^2}{9}-\frac{(y-3)^2}{4}=1</m>
+              </p>
+            </answer>
+      </exercise>
+
+    </exercisegroup>
+    <exercisegroup cols="2">
+
+      <introduction>
+        <p>
+          In the following exercises,
+          sketch the hyperbola defined by the given equation.
+          Label the center and foci.
+        </p>
+      </introduction>
+
+      <exercise>
+            <statement>
+              <p>
+                <m>\ds \frac{(x-1)^2}{16}-\frac{(y+2)^2}{9}=1</m>
+              </p>
+            </statement>
+            <!-- <answer>
+
+            </answer> -->
+      </exercise>
+
+      <exercise>
+            <statement>
+              <p>
+                <m>\ds (y-4)^2-\frac{(x+1)^2}{25}=1</m>
+              </p>
+            </statement>
+            <!-- <answer>
+
+            </answer> -->
+      </exercise>
+
+    </exercisegroup>
+    <exercisegroup cols="2">
+
+      <introduction>
+        <p>
+          In the following exercises,
+          find the equation of the hyperbola defined by the given information.
+          Sketch the hyperbola.
+        </p>
+      </introduction>
+
+      <exercise>
+            <statement>
+              <p>
+                Foci: <m>(\pm 3,0)</m>; vertices: <m>(\pm 2, 0)</m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                <m>\frac{x^2}{4}-\frac{y^2}{5}=1</m>
+              </p>
+            </answer>
+      </exercise>
+
+      <exercise>
+          <statement>
+            <p>
+              Foci: <m>(0,\pm 3)</m>; vertices: <m>(0,\pm 2)</m>
+            </p>
+          </statement>
+          <answer>
+            <p>
+              <m>\frac{y^2}{4}-\frac{x^2}{5}=1</m>
+            </p>
+          </answer>
+      </exercise>
+
+      <exercise>
+            <statement>
+              <p>
+                Foci: <m>(-2,3)</m> and <m>(8,3)</m>; vertices:
+                <m>(-1,3)</m> and <m>(7,3)</m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                <m>\frac{(x-3)^2}{16}-\frac{(y-3)^2}{9}=1</m>
+              </p>
+            </answer>
+      </exercise>
+
+      <exercise>
+            <statement>
+              <p>
+                Foci: <m>(3,-2)</m> and <m>(3,8)</m>; vertices:
+                <m>(3,0)</m> and <m>(3,6)</m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                <m>\frac{(y-3)^2}{9}-\frac{(x-3)^2}{16}=1</m>
+              </p>
+            </answer>
+      </exercise>
+
+    </exercisegroup>
+    <exercisegroup cols="2">
+
+      <introduction>
+        <p>
+          In the following exercises,
+          write the equation of the hyperbola in standard form.
+        </p>
+      </introduction>
+
+      <exercise>
+            <statement>
+              <p>
+                <m>3x^2-4y^2=12</m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                <m>\frac{x^2}{4}-\frac{y^2}{3}=1</m>
+              </p>
+            </answer>
+      </exercise>
+
+      <exercise>
+            <statement>
+              <p>
+                <m>3x^2-y^2+2y=10</m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                <m>\frac{x^2}{3}-\frac{(y-1)^2}{9}=1</m>
+              </p>
+            </answer>
+      </exercise>
+
+      <exercise>
+            <statement>
+              <p>
+                <m>x^2-10y^2+40y=30</m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                <m>(y-2)^2-\frac{x^2}{10}=1</m>
+              </p>
+            </answer>
+      </exercise>
+
+      <exercise>
+            <statement>
+              <p>
+                <m>(4y-x)(4y+x)=4</m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                <m>4y^2-\frac{x^2}{4}=1</m>
+              </p>
+            </answer>
+      </exercise>
+    </exercisegroup>
+
+    <exercise>
+          <statement>
+            <p>
+              Consider the ellipse given by <m>\ds \frac{(x-1)^2}{4}+\frac{(y-3)^2}{12}=1</m>.
+            </p>
+
+            <p>
+              <ol>
+                <li>
+                  <p>
+                    Verify that the foci are located at <m>(1,3\pm 2\sqrt{2})</m>.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    The points <m>P_1 = (2,6)</m> and <m>P_2 = (1+\sqrt{2},3+\sqrt{6}) \approx (2.414,5.449)</m> lie on the ellipse.
+                    Verify that the sum of distances from each point to the foci is the same.
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </statement>
+          <answer>
+            <p>
+              <ol>
+                <li>
+                  <p>
+                    <m>c=\sqrt{12-4} = 2\sqrt{2}</m>.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    The sum of distances for each point is <m>2\sqrt{12}\approx 6.9282</m>.
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </answer>
+    </exercise>
+
+    <exercise>
+          <statement>
+            <p>
+              Johannes Kepler discovered that the planets of our solar system have elliptical orbits with the Sun at one focus.
+              The Earth's elliptical orbit is used as a standard unit of distance;
+              the distance from the center of Earth's elliptical orbit to one vertex is 1 Astronomical Unit, or A.U.
+            </p>
+
+            <p>
+              The following table gives information about the orbits of three planets.
+            </p>
+
+            <tabular>
+              <row bottom="minor">
+                <cell>Planet</cell>
+                <cell><line>Distance from</line><line>center to vertex</line></cell>
+                <cell><line>Orbit</line><line>eccentricity</line></cell>
+              </row>
+              <row>
+                <cell>Mercury</cell>
+                <cell><m>0.387</m> A.U.</cell>
+                <cell><m>0.2056</m></cell>
+              </row>
+              <row>
+                <cell>Earth</cell>
+                <cell>1 A.U.</cell>
+                <cell><m>0.0167</m></cell>
+              </row>
+              <row>
+                <cell>Mars</cell>
+                <cell><m>1.524</m> A.U.</cell>
+                <cell><m>0.0934</m></cell>
+              </row>
+            </tabular>
+
+            <p>
+              <ol>
+                <li>
+                  <p>
+                    In an ellipse,
+                    knowing <m>c^2=a^2-b^2</m> and <m>e=c/a</m> allows us to find <m>b</m> in terms of <m>a</m> and <m>e</m>.
+                    Show <m>b=a\sqrt{1-e^2}</m>.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    For each planet,
+                    find equations of their elliptical orbit of the form
+                    <m>\ds\frac{x^2}{a^2}+\frac{y^2}{b^2}=1</m>. (This places the center at <m>(0,0)</m>,
+                    but the Sun is in a different location for each planet.)
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Shift the equations so that the Sun lies at the origin.
+                    Plot the three elliptical orbits.
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </statement>
+          <answer>
+            <p>
+              <ol>
+                <li>
+                  <p>
+                    Solve for <m>c</m> in <m>e=c/a</m>: <m>c=ae</m>.
+                    Thus <m>a^2e^2=a^2-b^2</m>, and <m>b^2=a^2-a^2e^2</m>.
+                    The result follows.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Mercury: <m>x^2/(0.387)^2 + y^2/(0.3787)^2=1</m>
+
+                    Earth:	<m>x^2+y^2/(0.99986)^2 = 1</m>
+
+                    Mars: <m>x^2/(1.524)^2+y^2/(1.517)^2=1</m>
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    Mercury: <m>(x-0.08)^2/(0.387)^2 + y^2/(0.3787)^2=1</m>
+
+                    Earth: <m>(x-0.0167)^2+y^2/(0.99986)^2 = 1</m>
+
+                    Mars: <m>(x-0.1423)^2/(1.524)^2+y^2/(1.517)^2=1</m>
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </answer>
+    </exercise>
+
+    <exercise>
+          <statement>
+            <p>
+              A loud sound is recorded at three stations that lie on a line as shown in the figure below.
+              Station <m>A</m> recorded the sound 1 second after Station <m>B</m>,
+              and Station <m>C</m> recorded the sound 3 seconds after <m>B</m>.
+              Using the speed of sound as 340m/s, determine the location of the sound's origination.
+            </p>
+
+            <image width="47%">
+              <description></description>
+              <latex-image>
+
+              \begin{tikzpicture}
+
+              \draw [fill=black] (0,0) circle (1.5pt) node [below] {\(A\)} -- node [pos=.5,above] {1000m} (1.5,0) circle (1.5pt) node [below] {\(B\)} -- node [pos=.5,above] {2000m} (4.5,0) circle (1.5pt) node [below] {\(C\)};
+
+              \end{tikzpicture}
+
+              </latex-image>
+            </image>
+          </statement>
+          <answer>
+            <p>
+              The sound originated from a point approximately 31m to the left of <m>B</m> and 1340m above it.
+            </p>
+          </answer>
+    </exercise>
+  </subexercises>      
+</exercises>

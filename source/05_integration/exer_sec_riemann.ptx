@@ -1,0 +1,712 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<exercises>
+  <exercise>
+    <statement>
+      <p>
+        A fundamental calculus technique is to use <fillin/> to refine approximations to get an exact answer.
+      </p>
+    </statement>
+    <answer>
+      <p>
+        limits
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        What is the upper bound in the summation
+        </p>
+      <p>
+        <m>\displaystyle \sum_{i=7}^{14} (48i-201)</m>?</p>
+    </statement>
+    <answer>
+      <p>
+        14
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        This section approximates definite integrals using what geometric shape?
+        </p>
+    </statement>
+    <answer>
+      <p>
+        Rectangles.
+        </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        T/F: A sum using the Right Hand Rule is an example of a Riemann Sum.
+        </p>
+    </statement>
+    <answer>
+      <p>
+        T
+        </p>
+    </answer>
+  </exercise>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 5–12, write out each term of the summation and compute the sum.
+        </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \sum _{i=2}^{4} i^2</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          2^2+3^2+4^2 = 29
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \sum _{i=-1}^{3} (4i-2)</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          -6-2+2+6+10=10
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \sum _{i=-2}^{2} \sin (\pi i/2)</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          0-1+0+1+0 = 0
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \sum _{i=1}^{10} 5</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>5+5+\ldots +5=50</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \sum _{i=1}^{5} \frac{1}{i}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          1+1/2+1/3+1/4+1/5 = 137/60
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \sum _{i=1}^{6} (-1)^ii</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          -1+2-3+4-5+6=3
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \sum _{i=1}^{4} \left(\frac{1}{i} - \frac{1}{i+1}\right)</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          1/2+1/6+1/12+1/20=4/5
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \sum _{i=0}^{5} (-1)^i\cos (\pi i)</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          1+1+1+1+1+1=6
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 13–16, write each sum in summation notation.
+        </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>3+6+9+12+15</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          Answers may vary; <m>\sum _{i=1}^5 3i</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>-1+0+3+8+15+24+35+48+63</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          Answers may vary; <m>\sum _{i=0}^8 (i^2-1)</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \frac{1}{2}+\frac{2}{3}+\frac{3}{4}+\frac{4}{5}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          Answers may vary; <m>\sum _{i=1}^4 \frac{i}{i+1}</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle 1-e+e^2-e^3+e^4</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          Answers may vary; <m>\sum _{i=0}^4 (-1)^ie^i</m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 17–24, evaluate the summation using <xref ref="thm_summation" />.
+      </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \sum _{i=1}^{10} 5</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>5\cdot 10=50</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \sum _{i=1}^{25} i</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          325
+          </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \sum _{i=1}^{10} (3i^2-2i)</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          1045
+          </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \sum _{i=1}^{15} (2i^3-10)</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          28,650
+          </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \sum _{i=1}^{10} (-4i^3+10i^2-7i+11)</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>-8525</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \sum _{i=1}^{10} (i^3-3i^2+2i+7)</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>2050</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>1+2+3+ \ldots + 99+100</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>5050</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>1+4+9+ \ldots +361+400</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>2870</m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        <xref ref="thm_summation" /> states
+        <me>\displaystyle \sum _{i=1}^na_i = \sum _{i=1}^k a_i + \sum _{i=k+1}^n a_i</me>, so
+        <me>\displaystyle \sum _{i=k+1}^na_i = \sum _{i=1}^n a_i - \sum _{i=1}^k a_i.</me> Use this fact, along with other parts of <xref ref="thm_summation" />, to evaluate the summations given in Exercises 25–28.
+      </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \sum _{i=11}^{20} i</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>155</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \sum _{i=16}^{25} i^3</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>91,225</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \sum _{i=7}^{12} 4</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>24</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \sum _{i=5}^{10} 4i^3</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>11,700</m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 29–34, a definite integral <m>\displaystyle \int _a^b f(x) \ dx</m> is given.</p>
+      <ol>
+        <li>
+          <p>
+            Graph <m>f(x)</m> on <m>[a,b]</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Add to the sketch rectangles using the provided rule.
+            </p>
+        </li>
+        <li>
+          <p>
+            Approximate <m>\displaystyle \int _a^b f(x) \ dx</m> by summing the areas of the rectangles.
+          </p>
+        </li>
+      </ol>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{-3}^3 x^2\ dx</m>, with 6 rectangles using the Left Hand Rule.</p>
+      </statement>
+      <answer>
+        <p>
+          <m>19</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{0}^2 (5-x^2)\ dx</m>, with 4 rectangles using the Midpoint Rule.</p>
+      </statement>
+      <answer>
+        <p>
+          <m>59/8</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{0}^\pi \sin x\ dx</m>, with 6 rectangles using the Right Hand Rule.</p>
+      </statement>
+      <answer>
+        <p>
+          <m>\pi /3+\pi /(2\sqrt{3}) \approx 1.954</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{0}^3 2^x\ dx</m>, with 5 rectangles using the Left Hand Rule.</p>
+      </statement>
+      <answer>
+        <p>
+          <m>8.144</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{1}^2 \ln x\ dx</m>, with 3 rectangles using the Midpoint Rule.</p>
+      </statement>
+      <answer>
+        <p>
+          <m>0.388584</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{1}^9 \frac{1}{x}\ dx</m>, with 4 rectangles using the Right Hand Rule.</p>
+      </statement>
+      <answer>
+        <p>
+          <m>496/315\approx 1.5746</m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 35–40, a definite integral <m>\displaystyle \int _a^b f(x) \ dx</m> is given. As demonstrated in <xref ref="ex_rie9"/> and <xref ref="ex_rie10"/>, do the following.</p>
+      <ol>
+        <li>
+          <p>
+            Find a formula to approximate <m>\displaystyle \int _a^bf(x)\ dx</m> using <m>n</m> subintervals and the provided rule.
+          </p>
+        </li>
+        <li>
+          <p>
+            Evaluate the formula using <m>n=10</m>, <m>100</m> and <m>1,000</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Find the limit of the formula, as <m>n\rightarrow \infty </m>, to find the exact value of <m>\displaystyle \int _a^bf(x)\ dx</m>.
+          </p>
+        </li>
+      </ol>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{0}^1 x^3\ dx</m>, using the Right Hand Rule.</p>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              Exact expressions will vary; <m>\frac{(1+n)^2}{4n^2}</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>121/400</m>, <m>10201/40000</m>, <m>1002001/4000000</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>1/4</m>
+            </p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{-1}^1 3x^2\ dx</m>, using the Left Hand Rule.</p>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              Exact expressions will vary; <m>2+4/n^2</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>51/25</m>, <m>5001/2500</m>, <m>500001/250000</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>2</m>
+            </p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{-1}^3 (3x-1)\ dx</m>, using the Midpoint Rule.</p>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              8.
+              </p>
+          </li>
+          <li>
+            <p>
+              8, 8, 8
+              </p>
+          </li>
+          <li>
+            <p>
+              <m>8</m>
+            </p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{1}^4 (2x^2-3)\ dx</m>, using the Left Hand Rule.</p>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              Exact expressions will vary; <m>20/3-96/(3n)+64/(3n^2)</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>92/25</m>, <m>3968/625</m>, <m>103667/15625</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>20/3</m>
+            </p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{-10}^{10} (5-x)\ dx</m>, using the Right Hand Rule.</p>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              Exact expressions will vary; <m>100-200/n</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>80</m>, <m>98</m>, <m>499/5</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>100</m>
+            </p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \int _{0}^{1} (x^3-x^2)\ dx</m>, using the Right Hand Rule.</p>
+      </statement>
+      <answer>
+        <ol>
+          <li>
+            <p>
+              Exact expressions will vary; <m>-1/12(1-1/n^2)</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>-33/400</m>, <m>-3333/40000</m>, <m>-333333/4000000</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>-1/12</m>
+            </p>
+          </li>
+        </ol>
+      </answer>
+    </exercise>
+  </exercisegroup>
+  <exercisegroup>
+    <introduction>
+      <p>
+        In Exercises 41–46, find an antiderivative of the given function.
+        </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <m>f(x) = 5\sec ^2 x</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>F(x) = 5\tan x+ 4</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x) = \frac{7}{x}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>F(x) = 7\ln |x| + 14</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle g(t) = 4t^5-5t^3+8</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>G(t) = 4/6t^6-5/4t^4+8t+9</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle g(t) = 5\cdot 8^t</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>G(t) = 5\cdot 8^t/\ln 8 + 900</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle g(t) = \cos t + \sin t</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>G(t) = \sin t-\cos t -78</m>
+        </p>
+      </answer>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle f(x) = \frac{1}{\sqrt{x}}</m>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>F(x) = 2\sqrt{x} -\pi </m>
+        </p>
+      </answer>
+    </exercise>
+  </exercisegroup>
+</exercises>
