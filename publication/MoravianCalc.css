@@ -1,0 +1,53 @@
+/* my makefile copies this to the html output, then adds a line to the <head> 
+   of every html file to include it */
+
+
+/* This multiplied with hard-coded widths, and the margins messed up asy figs
+.pretext-content figure.figure-like {
+  width: 50%; 
+  margin-left:auto;
+  margin-right:auto;
+  margin-bottom:20px;
+}
+*/
+
+body.pretext-book {
+  font-size: 18px;
+}
+
+section>figure figcaption {
+  width: 90%;
+}
+
+/* no author in the top header, make title bigger */
+.byline {
+  display: none;
+  line-height: 0;
+}
+.title {
+  line-height: 1.8;
+}
+
+/* make these blues match Moravian blues */
+:root {
+  --documenttitle: #10267A;
+  --sectiontoctext: #10267a;
+}
+
+
+/* line down the side of exercise groups */
+.pretext-content .exercisegroup-exercises {
+  border-left: 1px solid #569;
+  padding-top: 0;
+  margin-top: 1.5em;
+}
+/* short line at the bottom of exercise group, just like examples */
+.pretext-content .exercisegroup-exercises::after {
+  content: '';
+  border-bottom: 1px solid #569;
+  display: block;
+  margin-right: auto;
+  margin-left: 0;
+  padding-top: 0.25em;
+  width: 1.5em;
+}
