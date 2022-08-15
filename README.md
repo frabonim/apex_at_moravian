@@ -11,5 +11,7 @@ To compile:
 * If you edit project.ptx you can build just one chapter/section using `pretext build subset`
 
 
-Finally, I add my css and publish to my server using `scripts/publish_to_webwork.sh`
+Finally, I add my css and publish to my server using `scripts/upload_site.sh`
+
+I haven't tried to compile to pdf or print yet.
 
