@@ -1,0 +1,16 @@
+installed pretext command line tool following instructions on site
+
+if you make changes to figures, need to recompile them with
+pretext generate
+
+to just remake website:
+pretext build web
+
+If you edit project.ptx you can build just one chapter/section using 
+pretext build subset
+
+
+Finally, add my css and publish to the server using:
+scripts/publish_to_webwork.sh
+
+

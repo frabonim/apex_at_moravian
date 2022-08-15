@@ -1,0 +1,15 @@
+INFO    : PreTeXt project found in `/Users/memjf02/books/apex_at_Moravian`.
+WARNING : Assets like latex-images will not be regenerated for this build
+WARNING : (previously generated assets will be used if they exist).
+WARNING : To generate these assets before building, run `pretext build -g`.
+INFO    : Preparing to build into /Users/memjf02/books/apex_at_Moravian/output/print-latex.
+INFO    : 
+Now building LaTeX into /Users/memjf02/books/apex_at_Moravian/output/print-latex
+
+INFO    : converting /Users/memjf02/books/apex_at_Moravian/source/index.ptx to LaTeX as /Users/memjf02/books/apex_at_Moravian/output/print-latex/index.tex
+INFO    : XSL conversion of /Users/memjf02/books/apex_at_Moravian/source/index.ptx by /Users/memjf02/.ptx/xsl/pretext-latex.xsl
+INFO    : comprehensive messages, warnings, and errors:
+INFO    : successful application of /Users/memjf02/.ptx/xsl/pretext-latex.xsl
+INFO    : 
+Success! Run `pretext view print-latex` to see the results.
+
