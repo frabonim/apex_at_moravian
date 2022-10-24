@@ -253,7 +253,7 @@
         </p>
       </answer>
     </exercise>
-    <exercise>
+    <exercise xml:id="exer-levels1">
       <statement>
         <p>
           <m>\displaystyle f(x,y) = \sqrt{x^2+4y^2}</m>; <m>c = 1,2,3,4</m>
@@ -265,7 +265,7 @@
         </p>
       </answer>
     </exercise>
-    <exercise>
+    <exercise xml:id="exer-levels2">
       <statement>
         <p>
           <m>\displaystyle f(x,y) = x^2+4y^2</m>; <m>c = 1,2,3,4</m>
@@ -391,7 +391,7 @@
   <exercise>
     <statement>
       <p>
-        Compare the level curves of Exercises <ref target="uid1" /> and <ref target="uid1" />. How are they similar, and how are they different? Each surface is a quadric surface; describe how the level curves are consistent with what we know about each surface.
+        Compare the level curves of Exercises <xref text="local" ref="exer-levels1" /> and <xref text="local" ref="exer-levels2" />. How are they similar, and how are they different? Each surface is a quadric surface; describe how the level curves are consistent with what we know about each surface.
       </p>
     </statement>
     <answer>

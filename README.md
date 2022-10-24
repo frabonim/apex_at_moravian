@@ -2,7 +2,7 @@ A lightly modified version of [APEX calculus](https://www.apexcalculus.com/) for
 
 
 To compile:
-* instal Pretext command line tool following [instructions on their site](https://pretextbook.org/doc/guide/html/quickstart-getting-pretext.html)
+* install Pretext command line tool following [instructions on their site](https://pretextbook.org/doc/guide/html/quickstart-getting-pretext.html)
 
 * if you make changes to figures, need to recompile them with `pretext build -g`
 
